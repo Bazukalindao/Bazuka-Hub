@@ -1,7 +1,7 @@
 -- discord.gg/25ms
 
 
-shared.LoaderTitle = "ÄÄƒng KÃ½ KÃªnh Bazuka Hub";
+shared.LoaderTitle = "Bazuka Hub";
 shared.LoaderKeyFrames = {
     [1] = {
         1,
@@ -105,7 +105,7 @@ local v8 = CreateObject("TextLabel", {
     Name = "UserName",
     Parent = v6,
     BackgroundTransparency = 1,
-    Text = "Youtube: Bazuka Hub",
+    Text = "Youtube: Bazuka_yt",
     Position = UDim2.new(0, 75, 0, 10),
     Size = UDim2.new(0, 200, 0, 50),
     Font = Enum.Font.GothamBold,
@@ -323,49 +323,49 @@ local v15 = v14:CreateWindow({
 });
 local v16 = {
     Home = v15:AddTab({
-        Title = "ThÃ´ng Tin"
+        Title = "Home"
     }),
     Main = v15:AddTab({
-        Title = "CÃ y"
+        Title = "Main"
     }),
     Sea = v15:AddTab({
-        Title = "Sá»± Kiá»‡n"
+        Title = "Sea"
     }),
     ITM = v15:AddTab({
-        Title = "Váº­t Pháº©m"
+        Title = "ITM"
     }),
     Setting = v15:AddTab({
-        Title = "CÃ i Äáº·t"
+        Title = "Setting"
     }),
     Status = v15:AddTab({
-        Title = "MÃ¡y Chá»§"
+        Title = "Status"
     }),
     Stats = v15:AddTab({
-        Title = "Chá»‰ Sá»‘"
+        Title = "Stats"
     }),
     Player = v15:AddTab({
-        Title = "NgÆ°á»i ChÆ¡i"
+        Title = "Player"
     }),
     Teleport = v15:AddTab({
-        Title = "Dá»‹ch Chuyá»ƒn"
+        Title = "Teleport"
     }),
     Visual = v15:AddTab({
-        Title = "Giáº£"
+        Title = "Visual"
     }),
     Fruit = v15:AddTab({
-        Title = "TrÃ¡i"
+        Title = "Fruit"
     }),
     Raid = v15:AddTab({
-        Title = "Táº­p KÃ­ch"
+        Title = "Raid"
     }),
     Race = v15:AddTab({
-        Title = "Tá»™c"
+        Title = "Race"
     }),
     Shop = v15:AddTab({
-        Title = "Cá»­a HÃ ng"
+        Title = "Shop"
     }),
     Misc = v15:AddTab({
-        Title = "KhÃ¡c"
+        Title = "Misc"
     })
 };
 local v17 = v14.Options;
@@ -2678,9 +2678,9 @@ if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Respawn
 end
 v16.Home:AddButton({
     Title = "Discord",
-    Description = "Giao LÆ°u",
+    Description = "entra ae",
     Callback = function()
-        setclipboard("https://discord.gg/25ms");
+        setclipboard("https://discord.gg/ckggnhbPa2");
     end
 });
 _G.FastAttackStrix_Mode = "Super Fast Attack";
@@ -2696,7 +2696,7 @@ spawn(function()
     end
 end);
 local v48 = v16.Main:AddDropdown("DropdownSelectWeapon", {
-    Title = "VÅ© KhÃ­",
+    Title = "Select Weapon",
     Description = "",
     Values = {
         "Melee",
@@ -2742,7 +2742,7 @@ task.spawn(function()
     end
 end);
 local v49 = v16.Main:AddToggle("ToggleLevel", {
-    Title = "CÃ y Cáº¥p",
+    Title = "Level",
     Description = "",
     Default = false
 });
@@ -2802,7 +2802,7 @@ spawn(function()
     end
 end);
 local v50 = v16.Main:AddToggle("ToggleMobAura", {
-    Title = "Äáº¥m QuÃ¡i Gáº§n",
+    Title = "Mob Aura",
     Description = "",
     Default = false
 });
@@ -2848,7 +2848,7 @@ spawn(function()
     end
 end);
 local v51 = v16.Main:AddToggle("ToggleCastleRaid", {
-    Title = "Äáº¥m Háº£i Táº·c",
+    Title = "Castle Raid",
     Description = "",
     Default = false
 });
@@ -2885,7 +2885,7 @@ spawn(function()
     end
 end);
 local v52 = v16.Main:AddToggle("ToggleHakiFortress", {
-    Title = "Báº­t Haki MÃ u PhÃ¡o ÄÃ i",
+    Title = "Haki Fortress",
     Description = "",
     Default = false
 });
@@ -2936,7 +2936,7 @@ spawn(function()
     end
 end);
 local v55 = v16.Main:AddToggle("ToggleCollectChest", {
-    Title = "Lá»¥m RÆ°Æ¡ng",
+    Title = "Auto chest",
     Description = "",
     Default = false
 });
@@ -2968,9 +2968,9 @@ spawn(function()
         end
     end
 end);
-local v56 = v16.Main:AddSection("ThÃ´ng Tháº¡o");
+local v56 = v16.Main:AddSection("General");
 local v57 = v16.Main:AddDropdown("DropdownMastery", {
-    Title = "CÃ y ThÃ´ng Tháº¡o",
+    Title = "Mastery",
     Description = "",
     Values = {
         "Near Mobs"
@@ -2983,7 +2983,7 @@ v57:OnChanged(function(v249)
     TypeMastery = v249;
 end);
 local v58 = v16.Main:AddToggle("ToggleMasteryFruit", {
-    Title = "CÃ y TrÃ¡i",
+    Title = "Mastery Fruit",
     Description = "",
     Default = false
 });
@@ -2992,7 +2992,7 @@ v58:OnChanged(function(v250)
 end);
 v17.ToggleMasteryFruit:SetValue(false);
 local v59 = v16.Main:AddSlider("SliderHealt", {
-    Title = "MÃ¡u QuÃ¡i",
+    Title = "SliderHealt",
     Description = "",
     Default = 20,
     Min = 0,
@@ -3092,21 +3092,21 @@ spawn(function()
     end
 end);
 if Sea3 then
-    local v484 = v16.Main:AddSection("XÆ°Æ¡ng");
+    local v484 = v16.Main:AddSection("General");
     local v485 = v16.Main:AddParagraph({
-        Title = "XÆ°Æ¡ng Tráº¡ng ThÃ¡i",
+        Title = "Bones Mode",
         Content = ""
     });
     spawn(function()
         pcall(function()
             while wait() do
                 local v768 = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones", "Check");
-                v485:SetDesc("MÃ y CÃ³: " .. tostring(v768) .. " XÆ°Æ¡ng");
+                v485:SetDesc("MANO: " .. tostring(v768) .. " olha essa roupa");
             end
         end);
     end);
     local v486 = v16.Main:AddToggle("ToggleBone", {
-        Title = "CÃ y XÆ°Æ¡ng",
+        Title = "Bone",
         Description = "",
         Default = false
     });
@@ -3204,7 +3204,7 @@ if Sea3 then
         end
     end);
     v16.Main:AddButton({
-        Title = "Cáº§u Nguyá»‡n",
+        Title = "A Mano",
         Description = "",
         Callback = function()
             local v572 = {
@@ -3215,7 +3215,7 @@ if Sea3 then
         end
     });
     v16.Main:AddButton({
-        Title = "Thá»­ Váº­n May",
+        Title = "a mano",
         Description = "",
         Callback = function()
             local v573 = {
@@ -3226,7 +3226,7 @@ if Sea3 then
         end
     });
     local v489 = v16.Main:AddToggle("ToggleRandomBone", {
-        Title = "Random XÆ°Æ¡ng",
+        Title = "Random Bone",
         Description = "",
         Default = false
     });
@@ -3249,9 +3249,9 @@ if Sea3 then
     end);
 end
 if Sea3 then
-    local v490 = v16.Main:AddSection("TÆ° Lá»‡nh BÃ¡nh");
+    local v490 = v16.Main:AddSection("Meu amigo");
     local v491 = v16.Main:AddParagraph({
-        Title = "Tráº¡ng ThÃ¡i NÃ³ Ra",
+        Title = "meu amigo",
         Content = ""
     });
     spawn(function()
@@ -3264,13 +3264,13 @@ if Sea3 then
                 elseif (string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86) then
                     v491:SetDesc("CÃ²n: " .. string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"), 39, 39) .. " ");
                 else
-                    v491:SetDesc("TÆ° Lá»‡nh BÃ¡nh : âœ…ï¸");
+                    v491:SetDesc("hehe");
                 end
             end);
         end
     end);
     local v492 = v16.Main:AddToggle("ToggleCake", {
-        Title = "CÃ y TÆ° Lá»‡nh BÃ¡nh",
+        Title = "ToggleCake",
         Description = "",
         Default = false
     });
@@ -3344,7 +3344,7 @@ if Sea3 then
         end
     end);
     local v494 = v16.Main:AddToggle("ToggleDoughKing", {
-        Title = "Äáº¥m Vua Bá»™t",
+        Title = "Dough King",
         Description = "",
         Default = false
     });
@@ -3384,7 +3384,7 @@ if Sea3 then
         end
     end);
     local v495 = v16.Main:AddToggle("ToggleSpawnCake", {
-        Title = "Triá»‡u Há»“i TÆ° Lá»‡nh BÃ¡nh",
+        Title = "Spawn Cake Prince",
         Description = "",
         Default = true
     });
@@ -3458,7 +3458,7 @@ if Sea2 then
         end
     end);
 end
-local v60 = v16.Main:AddSection("TrÃ¹m");
+local v60 = v16.Main:AddSection("FarmBoss");
 if Sea1 then
     tableBoss = {
         "The Gorilla King",
@@ -3503,7 +3503,7 @@ elseif Sea3 then
     };
 end
 local v61 = v16.Main:AddDropdown("DropdownBoss", {
-    Title = "Chá»n TrÃ¹m",
+    Title = "Dropdown",
     Description = "",
     Values = tableBoss,
     Multi = false,
@@ -3514,7 +3514,7 @@ v61:OnChanged(function(v253)
     _G.SelectBoss = v253;
 end);
 local v62 = v16.Main:AddToggle("ToggleAutoFarmBoss", {
-    Title = "Äáº¥m TrÃ¹m",
+    Title = "Auto Farm Boss",
     Description = "",
     Default = false
 });
@@ -3584,7 +3584,7 @@ elseif Sea3 then
     };
 end
 local v64 = v16.Main:AddDropdown("DropdownMaterial", {
-    Title = "Chá»n NguyÃªn Liá»‡u",
+    Title = "material",
     Description = "",
     Values = MaterialList,
     Multi = false,
@@ -3595,7 +3595,7 @@ v64:OnChanged(function(v255)
     SelectMaterial = v255;
 end);
 local v65 = v16.Main:AddToggle("ToggleMaterial", {
-    Title = "CÃ y NguyÃªn Liá»‡u",
+    Title = "Material",
     Description = "",
     Default = false
 });
@@ -3651,16 +3651,16 @@ spawn(function()
     end
 end);
 if Sea3 then
-    local v498 = v16.Sea:AddSection("Äáº£o CÃ¡o");
+    local v498 = v16.Sea:AddSection("Sea");
     local v499 = v16.Sea:AddParagraph({
-        Title = "Tráº¡ng ThÃ¡i Äáº£o CÃ¡o",
+        Title = "Sea",
         Content = ""
     });
     function UpdateKitsune()
         if game:GetService("Workspace").Map:FindFirstChild("KitsuneIsland") then
-            v499:SetDesc("Äáº£o CÃ¡o : âœ…ï¸");
+            v499:SetDesc("Kitsune island");
         else
-            v499:SetDesc("Äáº£o CÃ¡o : âŒï¸");
+            v499:SetDesc("kitsine island");
         end
     end
     spawn(function()
@@ -3671,7 +3671,7 @@ if Sea3 then
         end);
     end);
     local v500 = v16.Sea:AddToggle("ToggleEspKitsune", {
-        Title = "Äá»‹nh Vá»‹ Äáº£o CÃ¡o",
+        Title = "Esp Kitsune island",
         Description = "",
         Default = false
     });
@@ -3715,7 +3715,7 @@ if Sea3 then
         end
     end
     local v501 = v16.Sea:AddToggle("ToggleTPKitsune", {
-        Title = "Bay VÃ´ Äáº£o CÃ¡o",
+        Title = "tp kitsune Island",
         Description = "",
         Default = false
     });
@@ -3743,7 +3743,7 @@ if Sea3 then
         end
     end);
     local v502 = v16.Sea:AddToggle("ToggleCollectAzure", {
-        Title = "Lá»¥m Linh Há»“n Xanh",
+        Title = "collect azure ember",
         Description = "",
         Default = false
     });
@@ -3764,7 +3764,7 @@ if Sea3 then
     end);
 end
 v16.Sea:AddButton({
-    Title = "Äá»•i Linh Há»“n Xanh",
+    Title = "acho que troca as azure ember",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RF/KitsuneStatuePray"):InvokeServer();
@@ -3778,7 +3778,7 @@ if Sea3 then
     local v507 = game:GetService("Workspace");
     local v508 = 350;
     local v509 = v16.Sea:AddSlider("SliderSpeedBoat", {
-        Title = "Tá»‘c Äá»™ Thuyá»n",
+        Title = "Speed Boat",
         Description = "",
         Default = v508,
         Min = 0,
@@ -3790,7 +3790,7 @@ if Sea3 then
     });
     v509:SetValue(v508);
     local v510 = v16.Sea:AddToggle("AutoFindPrehistoric", {
-        Title = "TÃ¬m Äáº£o Dung Nham",
+        Title = "Find Prehistoric island",
         Description = "",
         Default = false
     });
@@ -3875,7 +3875,7 @@ if Sea3 then
             if not v513 then
                 v14:Notify({
                     Title = "Bazuka Hub",
-                    Content = "Äáº£o Dung Nham TÃ¬m Tháº¥y",
+                    Content = "kkk sla",
                     Duration = 10
                 });
                 v513 = true;
@@ -3884,7 +3884,7 @@ if Sea3 then
         end
     end);
     local v514 = v16.Sea:AddToggle("AutoFindMirage", {
-        Title = "TÃ¬m Äáº£o BÃ­ áº¨n",
+        Title = "Auto Find Mirage",
         Description = "",
         Default = false
     });
@@ -3969,7 +3969,7 @@ if Sea3 then
             if not v513 then
                 v14:Notify({
                     Title = "Bazuka Hub",
-                    Content = "Äáº£o BÃ­ áº¨n TÃ¬m Tháº¥y",
+                    Content = "🇧🇷",
                     Duration = 10
                 });
                 v513 = true;
@@ -3978,8 +3978,8 @@ if Sea3 then
         end
     end);
     local v515 = v16.Sea:AddToggle("AutoFindFrozen", {
-        Title = "TÃ¬m Äáº£o Leviathan",
-        Description = "Cáº§n 5 NgÆ°á»i KhÃ´ng Idk",
+        Title = "Auto Find Frozen Island",
+        Description = "eu não sei sueco kkk",
         Default = false
     });
     v17.AutoFindFrozen:SetValue(false);
@@ -4063,7 +4063,7 @@ if Sea3 then
             if not v513 then
                 v14:Notify({
                     Title = "Bazuka Hub",
-                    Content = "Äáº£o Leviathan TÃ¬m Tháº¥y",
+                    Content = "acho que o Leviatã spawnou",
                     Duration = 10
                 });
                 v513 = true;
@@ -4072,7 +4072,7 @@ if Sea3 then
         end
     end);
     local v516 = v16.Sea:AddToggle("AutoComeTiki", {
-        Title = "LÃ¡i Thuyá»n Vá» Äáº£o Tiki",
+        Title = "Come Tiki",
         Description = "",
         Default = false
     });
@@ -4114,7 +4114,7 @@ if Sea3 then
         end
     end);
     local v517 = v16.Sea:AddToggle("AutoComeHydra", {
-        Title = "LÃ¡i Thuyá»n Vá» Äáº£o Hydra",
+        Title = "Come Hydra",
         Description = "",
         Default = false
     });
@@ -4156,7 +4156,7 @@ if Sea3 then
         end
     end);
     v16.Sea:AddButton({
-        Title = "Bay Äáº¿n Khu Vá»±c SÄƒn",
+        Title = "Sea Event",
         Description = "",
         Callback = function()
             Tween2(CFrame.new(- 16917.154296875, 7.757596015930176, 511.8203125));
@@ -4179,7 +4179,7 @@ if Sea3 then
         "MarineSloop"
     };
     local v519 = v16.Sea:AddDropdown("DropdownBoat", {
-        Title = "Chá»n Thuyá»n",
+        Title = "boat",
         Description = "",
         Values = v518,
         Multi = false,
@@ -4221,21 +4221,21 @@ if Sea3 then
         end
     end);
     v16.Sea:AddButton({
-        Title = "Mua Thuyá»n",
+        Title = "Sei nn",
         Description = "",
         Callback = function()
             v520(selectedBoat);
         end
     });
     v16.Sea:AddButton({
-        Title = "Bay Äáº¿n Thuyá»n",
-        Description = "Duy Nháº¥t Thuyá»n Báº¡n Mua á»ž Chá»— Chá»n",
+        Title = "Mano n sei",
+        Description = "Se vira, Google tradutor n faz isso",
         Callback = function()
             v521();
         end
     });
     local v522 = v16.Sea:AddToggle("ToggleTerrorshark", {
-        Title = "Äáº¥m CÃ¡ Máº­p",
+        Title = "Terror Shark",
         Description = "",
         Default = false
     });
@@ -4273,7 +4273,7 @@ if Sea3 then
         end
     end);
     local v523 = v16.Sea:AddToggle("TogglePiranha", {
-        Title = "Äáº¥m Piranha",
+        Title = Piranha",
         Description = "",
         Default = false
     });
@@ -4311,7 +4311,7 @@ if Sea3 then
         end
     end);
     local v524 = v16.Sea:AddToggle("ToggleShark", {
-        Title = "Äáº¥m CÃ¡ Con",
+        Title = "Shark",
         Description = "",
         Default = false
     });
@@ -4353,7 +4353,7 @@ if Sea3 then
         end
     end);
     local v525 = v16.Sea:AddToggle("ToggleFishCrew", {
-        Title = "Äáº¥m TÃ u CÃ¡",
+        Title = "Fish Crew",
         Description = "",
         Default = false
     });
@@ -4395,7 +4395,7 @@ if Sea3 then
         end
     end);
     local v526 = v16.Sea:AddToggle("ToggleShip", {
-        Title = "Äáº¥m TÃ u",
+        Title = "Toggle Ship",
         Description = "",
         Default = false
     });
@@ -4438,7 +4438,7 @@ if Sea3 then
         end
     end);
     local v527 = v16.Sea:AddToggle("ToggleGhostShip", {
-        Title = "Äáº¥m TÃ u Ma",
+        Title = "Ghost Ship",
         Description = "",
         Default = false
     });
@@ -4561,22 +4561,22 @@ if Sea3 then
     end);
     local v528 = v16.Main:AddSection("Elite");
     local v529 = v16.Main:AddParagraph({
-        Title = "Tráº¡ng ThÃ¡i Elite",
+        Title = "Misc Elite",
         Content = ""
     });
     spawn(function()
         while wait() do
             pcall(function()
                 if (game:GetService("ReplicatedStorage"):FindFirstChild("Diablo") or game:GetService("ReplicatedStorage"):FindFirstChild("Deandre") or game:GetService("ReplicatedStorage"):FindFirstChild("Urban") or game:GetService("Workspace").Enemies:FindFirstChild("Diablo") or game:GetService("Workspace").Enemies:FindFirstChild("Deandre") or game:GetService("Workspace").Enemies:FindFirstChild("Urban")) then
-                    v529:SetDesc("Elite Boss: âœ…ï¸ | Killed:  " .. game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter", "Progress"));
+                    v529:SetDesc("Elite Boss: | Killed:  " .. game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter", "Progress"));
                 else
-                    v529:SetDesc("Elite Boss: âŒï¸ | Killed: " .. game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter", "Progress"));
+                    v529:SetDesc("Elite Boss: | Killed: " .. game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter", "Progress"));
                 end
             end);
         end
     end);
     local v530 = v16.Main:AddToggle("ToggleElite", {
-        Title = "Äáº¥m Elite",
+        Title = "Farm Elite",
         Description = "",
         Default = false
     });
@@ -4625,9 +4625,9 @@ if Sea3 then
     end);
 end
 if Sea3 then
-    local v531 = v16.Sea:AddSection("Äáº£o BÃ­ áº¨n");
+    local v531 = v16.Sea:AddSection("vou ver dps");
     local v532 = v16.Sea:AddParagraph({
-        Title = "Tráº¡ng ThÃ¡i",
+        Title = "Se vira mn",
         Content = ""
     });
     task.spawn(function()
@@ -4664,12 +4664,12 @@ if Sea3 then
     spawn(function()
         pcall(function()
             while wait() do
-                v532:SetDesc("Äáº£o BÃ­ áº¨n: " .. MirageStatus .. " | TrÄƒng TrÃ²n: " .. FullMoonStatus);
+                v532:SetDesc("sla: " .. MirageStatus .. " | mn: " .. FullMoonStatus);
             end
         end);
     end);
     v16.Sea:AddButton({
-        Title = "Bay Äáº¿n Chá»— Cao",
+        Title = "acho que isso aqui acha miragem",
         Description = "",
         Callback = function()
             TweenToHighestPoint();
@@ -4695,7 +4695,7 @@ if Sea3 then
     end
 end
 local v66 = v16.Sea:AddToggle("ToggleTpAdvanced", {
-    Title = "Bay Äáº¿n Advanced Fruit Dealer",
+    Title = "Tp Advanced Fruit Dealer",
     Description = "",
     Default = false
 });
@@ -4716,7 +4716,7 @@ spawn(function()
     end
 end);
 local v67 = v16.Sea:AddToggle("ToggleTweenGear", {
-    Title = "Bay Äáº¿n BÃ¡nh RÄƒng",
+    Title = "Tween Gear",
     Description = "",
     Default = false
 });
@@ -4742,7 +4742,7 @@ spawn(function()
     end);
 end);
 local v68 = v16.Sea:AddToggle("Togglelockmoon", {
-    Title = "NhÃ¬n TrÄƒng VÃ  DÃ¹ng Tá»™c",
+    Title = "lock moon",
     Description = "",
     Default = false
 });
@@ -4923,7 +4923,7 @@ spawn(function()
     end
 end);
 local v72 = v16.ITM:AddToggle("ToggleAutoSaw", {
-    Title = "CÆ°a CÃ¡ Máº­p",
+    Title = "Auto Saw",
     Description = "",
     Default = false
 });
@@ -4965,7 +4965,7 @@ spawn(function()
     end
 end);
 local v73 = v16.ITM:AddToggle("ToggleAutoWarden", {
-    Title = "Kiáº¿m Quáº£n Ngá»¥c",
+    Title = "Auto Warden",
     Description = "",
     Default = false
 });
@@ -5008,7 +5008,7 @@ spawn(function()
 end);
 if Sea3 then
     local v533 = v16.ITM:AddToggle("ToggleHallow", {
-        Title = "LÆ°á»¡i HÃ¡i",
+        Title = "Hallow Sycthe",
         Description = "",
         Default = false
     });
@@ -5124,7 +5124,7 @@ if Sea3 then
         end
     end);
     local v536 = v16.ITM:AddToggle("ToggleHoly", {
-        Title = "Äá»‘t Äuá»‘c",
+        Title = "Holy Torch",
         Description = "",
         Default = false
     });
@@ -5209,7 +5209,7 @@ spawn(function()
     end
 end);
 local v76 = v16.ITM:AddToggle("ToggleAutoMusketeerHat", {
-    Title = "MÅ© LÃ­nh Ngá»± LÃ¢m",
+    Title = "Auto Musketeer Hat",
     Description = "",
     Default = false
 });
@@ -5293,7 +5293,7 @@ spawn(function()
     end);
 end);
 local v77 = v16.ITM:AddToggle("ToggleAutoObservationV2", {
-    Title = "Haki Quan SÃ¡t V2",
+    Title = "Auto Observation V2",
     Description = "",
     Default = false
 });
@@ -5341,7 +5341,7 @@ spawn(function()
     end
 end);
 local v78 = v16.ITM:AddToggle("ToggleAutoRainbowHaki", {
-    Title = "Haki 7 MÃ u",
+    Title = "Auto Rainbow Haki",
     Description = "",
     Default = false
 });
@@ -5589,7 +5589,7 @@ spawn(function()
     end
 end);
 local v80 = v16.ITM:AddToggle("ToggleAutoBuddy", {
-    Title = "Kiáº¿m Buddy",
+    Title = "Auto Buddy",
     Description = "",
     Default = false
 });
@@ -5631,7 +5631,7 @@ spawn(function()
     end
 end);
 local v82 = v16.ITM:AddToggle("ToggleAutoDualKatana", {
-    Title = "Song Kiáº¿m",
+    Title = "Auto Cursed Katana",
     Description = "",
     Default = false
 });
@@ -6061,7 +6061,7 @@ spawn(function()
 end);
 if Sea2 then
     local v537 = v16.ITM:AddToggle("ToggleFactory", {
-        Title = "Äáº¥m NhÃ  MÃ¡y",
+        Title = "Factory",
         Description = "",
         Default = false
     });
@@ -6106,7 +6106,7 @@ if Sea2 then
     end);
 end
 local v83 = v16.ITM:AddToggle("ToggleAutoFarmSwan", {
-    Title = "Äáº¥m Swan",
+    Title = "Farm Swan",
     Description = "",
     Default = false
 });
@@ -6188,7 +6188,7 @@ spawn(function()
 end);
 if (Sea2 or Sea3) then
     local v538 = v16.ITM:AddToggle("ToggleHakiColor", {
-        Title = "Mua MÃ u Haki",
+        Title = "Haki Color",
         Description = "",
         Default = false
     });
@@ -6210,7 +6210,7 @@ if (Sea2 or Sea3) then
 end
 if Sea2 then
     local v539 = v16.Main:AddToggle("ToggleSwordLengend", {
-        Title = "Mua Kiáº¿m Huyá»n Thoáº¡i",
+        Title = "Sword Legend",
         Description = "",
         Default = false
     });
@@ -6295,7 +6295,7 @@ if Sea2 then
     end);
 end
 local v85 = v16.Setting:AddToggle("ToggleAutoT", {
-    Title = "Báº­t Tá»™c V3",
+    Title = "Auto T",
     Description = "",
     Default = false
 });
@@ -6313,7 +6313,7 @@ spawn(function()
     end
 end);
 local v86 = v16.Setting:AddToggle("ToggleAutoY", {
-    Title = "Báº­t Tá»™c V4",
+    Title = "Auto V4",
     Description = "",
     Default = false
 });
@@ -6333,7 +6333,7 @@ spawn(function()
     end
 end);
 local v87 = v16.Setting:AddToggle("ToggleAutoKen", {
-    Title = "Báº­t Haki Quan SÃ¢t",
+    Title = "Haki Sla oq",
     Description = "",
     Default = false
 });
@@ -6356,7 +6356,7 @@ spawn(function()
     end
 end);
 local v88 = v16.Setting:AddToggle("ToggleSaveSpawn", {
-    Title = "LÆ°u Äiá»ƒm Há»“i Sinh",
+    Title = "Save Spawn",
     Description = "",
     Default = false
 });
@@ -6385,7 +6385,7 @@ end);
 local v89 = require(game.ReplicatedStorage.Util.CameraShaker);
 v89:Stop();
 local v90 = v16.Setting:AddToggle("ToggleBringMob", {
-    Title = "Gom QuÃ¡i",
+    Title = "Bring Mob",
     Description = "",
     Default = true
 });
@@ -6434,7 +6434,7 @@ spawn(function()
     end
 end);
 local v91 = v16.Setting:AddToggle("ToggleRemoveNotify", {
-    Title = "XÃ³a ThÃ´ng BÃ¡o",
+    Title = "Remove Notify",
     Description = "",
     Default = false
 });
@@ -6452,7 +6452,7 @@ spawn(function()
     end
 end);
 local v92 = v16.Setting:AddToggle("ToggleWhite", {
-    Title = "MÃ n HÃ¬nh Tráº¯ng",
+    Title = " Tela White",
     Description = "",
     Default = false
 });
@@ -6465,9 +6465,9 @@ v92:OnChanged(function(v279)
     end
 end);
 v17.ToggleWhite:SetValue(false);
-local v93 = v16.Setting:AddSection("KÄ© NÄƒng ThÃ´ng Tháº¡o");
+local v93 = v16.Setting:AddSection(" Tab");
 local v94 = v16.Setting:AddToggle("ToggleZ", {
-    Title = "KÄ© NÄƒng Z",
+    Title = "Sla mn",
     Description = "",
     Default = true
 });
@@ -6593,7 +6593,7 @@ v16.Status:AddButton({
     end
 });
 v16.Status:AddButton({
-    Title = "Sao ChÃ©p Job ID",
+    Title = "Job ID",
     Description = "",
     Callback = function()
         setclipboard(tostring(game.JobId));
@@ -6614,7 +6614,7 @@ spawn(function()
     end
 end);
 local v107 = v16.Stats:AddToggle("ToggleMelee", {
-    Title = "NÃ¢ng Äáº¥m",
+    Title = "Melee",
     Description = "",
     Default = false
 });
@@ -6623,7 +6623,7 @@ v107:OnChanged(function(v303)
 end);
 v17.ToggleMelee:SetValue(false);
 local v108 = v16.Stats:AddToggle("ToggleDe", {
-    Title = "NÃ¢ng MÃ¡u",
+    Title = "Melee",
     Description = "",
     Default = false
 });
@@ -6632,7 +6632,7 @@ v108:OnChanged(function(v304)
 end);
 v17.ToggleDe:SetValue(false);
 local v109 = v16.Stats:AddToggle("ToggleSword", {
-    Title = "NÃ¢ng Kiáº¿m",
+    Title = "Sword",
     Description = "",
     Default = false
 });
@@ -6641,7 +6641,7 @@ v109:OnChanged(function(v305)
 end);
 v17.ToggleSword:SetValue(false);
 local v110 = v16.Stats:AddToggle("ToggleGun", {
-    Title = "NÃ¢ng SÃºng",
+    Title = "Gun",
     Description = "",
     Default = false
 });
@@ -6650,7 +6650,7 @@ v110:OnChanged(function(v306)
 end);
 v17.ToggleGun:SetValue(false);
 local v111 = v16.Stats:AddToggle("ToggleFruit", {
-    Title = "NÃ¢ng TrÃ¡i",
+    Title = "Fruit",
     Description = "",
     Default = false
 });
@@ -6834,7 +6834,7 @@ spawn(function()
 end);
 local v118 = v16.Teleport:AddSection("Tháº¿ Giá»›i");
 local v119 = v16.Teleport:AddToggle("ToggleAutoSea2", {
-    Title = "Nhiá»‡m Vá»¥ Qua Biá»ƒn 2",
+    Title = "Auto Sea 2",
     Description = "",
     Default = false
 });
@@ -9276,7 +9276,7 @@ spawn(function()
     end
 end);
 local v176 = v16.Sea:AddToggle("ToggleCollectBone", {
-    Title = "Lá»¥m XÆ°Æ¡ng",
+    Title = "Collect Bone",
     Description = "",
     Default = false
 });
