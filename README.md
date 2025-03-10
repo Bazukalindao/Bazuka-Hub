@@ -1,4 +1,4 @@
-"local Library = loadstring(game:HttpGet("https://you.whimper.xyz/sources/btteam/SystemUI.lua"))() -- LIBRARY
+local Library = loadstring(game:HttpGet("https://you.whimper.xyz/sources/btteam/SystemUI.lua"))() -- LIBRARY
 
 local Window = Library:CreateWindow('Bazuka') -- CREATE WINDOW
 
