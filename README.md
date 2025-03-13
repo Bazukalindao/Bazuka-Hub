@@ -6,26 +6,27 @@ local MyLevel, CFrameQuest, CFrameMon, Mon, NameMon, NameQuest, LevelQuest
 
 local Vector2,CFrame,Instance,UDim2=Vector2,CFrame,Instance,UDim2 -- yes this will barely add performance but ya
 local _25msShared={} -- getgenv = bad and it crashes on second execution anyways :3
-if getgenv().CokkaRan then
+if shared.CokkaRan then
 	warn("ALREADY OPEN")
 	return
 end
-getgenv().CokkaRan=true
+shared.CokkaRan=true
 
 
 spawn(function()
-	loadstring(game:HttpGet("https://you.whimper.xyz/cute"))()
+-- [CUIDADO] CÃ³digo externo foi removido por seguranÃ§a
+-- 	loadstring(game:HttpGet("https://you.whimper.xyz/cute"))()
 end)
 
 local player = game:GetService("Players").LocalPlayer
-while not player.Character do
+repeat wait() until player.Character
     task.wait(3)
 end
 
 local L_1_ = os.clock()
 local L_2_ = get_hidden_gui or gethui;
 if syn and typeof(syn) == "table" and RenderWindow then
-	syn.protect_gui = gethui
+-- ProteÃ§Ã£o GUI pode nÃ£o ser compatÃ­vel, removido
 end;
 local function L_3_func(L_60_arg0)
 	if L_2_ then
@@ -1297,7 +1298,8 @@ function CheckBossDimension()
 		end
 	end
 end;
-local L_33_ = loadstring(game:HttpGet("https://you.whimper.xyz/sources/CokkaHub/ui.lua"))()
+-- [CUIDADO] CÃ³digo externo foi removido por seguranÃ§a
+-- local L_33_ = loadstring(game:HttpGet("https://you.whimper.xyz/sources/CokkaHub/ui.lua"))()
 local L_34_ = L_33_:Window("Bazuka Hub 25ms was here", Enum.KeyCode.LeftControl)
 print("|COKKA DEBUG| Anti AFK")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
@@ -2326,7 +2328,7 @@ function CheckDimension()
 	if L_281_ then
 		return "A Dimension Need More: " .. L_281_
 	elseif CheckBossDimension() then
-		return "A Dimension: 🟢"
+		return "A Dimension: ðŸŸ¢"
 	else
 		return "A Dimension Need More: None"
 	end
@@ -2348,23 +2350,23 @@ function CheckBribe()
 end;
 function CheckElite()
 	if L_5_:FindFirstChild("Diablo") or game:GetService("ReplicatedStorage"):FindFirstChild("Deandre") or game:GetService("ReplicatedStorage"):FindFirstChild("Urban") or game:GetService("Workspace").Enemies:FindFirstChild("Diablo") or game:GetService("Workspace").Enemies:FindFirstChild("Deandre") or game:GetService("Workspace").Enemies:FindFirstChild("Urban") then
-		return "Elite: 🟢"
+		return "Elite: ðŸŸ¢"
 	else
-		return "Elite: 🔴"
+		return "Elite: ðŸ”´"
 	end
 end;
 function CheckMirage()
 	if L_13_.Locations:FindFirstChild("Mirage Island") then
-		return "Mirage Island: 🟢"
+		return "Mirage Island: ðŸŸ¢"
 	else
-		return "Mirage Island: 🔴"
+		return "Mirage Island: ðŸ”´"
 	end
 end;
 function CheckKitsune()
 	if L_13_:FindFirstChild("Kitsune Island") then
-		return "Kitsune Island: 🟢"
+		return "Kitsune Island: ðŸŸ¢"
 	else
-		return "Kitsune Island: 🔴"
+		return "Kitsune Island: ðŸ”´"
 	end
 end;
 function MoonTextureId()
@@ -2434,9 +2436,9 @@ function CheckLegendarySword()
 	elseif L_24_ and L_5_.Remotes.CommF_:InvokeServer("LegendarySwordDealer", "1") == "Wando" then
 		return "Legendary Sword: Wando"
 	elseif L_25_ then
-		return "Legendary Sword: 🔴"
+		return "Legendary Sword: ðŸ”´"
 	else
-		return "Legendary Sword: 🔴"
+		return "Legendary Sword: ðŸ”´"
 	end
 end;
 local L_37_ = L_35_.Status:Label("?")
