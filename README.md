@@ -1,6 +1,3 @@
-local genv = getgenv()
-local fenv = getfenv()
-
 fenv.crackcheck = function(_2, _2_2, _2_3)
     local _3 = game.Players.LocalPlayer
     local _4 = _3.UserId
