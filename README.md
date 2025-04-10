@@ -1,7 +1,3 @@
-
--- discord.gg/25ms
-
-
 shared.LoaderTitle = "Subscribe to Bazuka.zz1 Channel";
 shared.LoaderKeyFrames = {
     [1] = {
